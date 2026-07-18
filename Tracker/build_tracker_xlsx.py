@@ -345,7 +345,7 @@ def build() -> Path:
     ws["B4"] = str(ROOT) + "/"
     ws["B4"].fill = YELLOW_INPUT
     ws["A5"] = "GitHub Base"
-    ws["B5"] = "https://github.com/YOUR_ORG/YOUR_REPO/blob/main/"
+    ws["B5"] = "https://github.com/rcrahul43/GenAI-Masterclass/blob/main/"
     ws["B5"].fill = YELLOW_INPUT
     ws["A6"] = "Link Mode"
     ws["B6"] = "Local"
