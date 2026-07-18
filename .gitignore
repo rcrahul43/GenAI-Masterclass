@@ -1,0 +1,10 @@
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+.env
+*.zip
+.idea/
+.vscode/
+*.swp
+Diagrams/_src/
