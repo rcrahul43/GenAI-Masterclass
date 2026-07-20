@@ -1,12 +1,12 @@
-# 01-05 — Provider SDKs: OpenAI, Claude & Gemini
+# 01-05 — Provider SDKs: OpenAI, Claude, Gemini & DeepSeek
 
 | Meta | Value |
 |------|-------|
-| **Estimated Time** | 6–8 hours (read 3h · lab 3h · comparison matrix 2h) |
+| **Estimated Time** | 7–9 hours (read 3.5h · lab 3.5h · comparison matrix 2h) |
 | **Difficulty** | Intermediate (SDK usage) · Advanced (production hardening) |
 | **Prerequisites** | [01-04 Model Routing with LiteLLM](01-04-Model-Routing-LiteLLM.md) · Python 3.11+ · Pydantic v2 · basic async/HTTP |
 | **Module** | 01 — LLM Engineering |
-| **Related** | [01-04](01-04-Model-Routing-LiteLLM.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · [03-02](../03-Agentic-Fundamentals/03-02-Tools-Memory-Control-Flow.md) · [Architecture Index](../../Architecture Index.md) · [08-02 Observability](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) |
+| **Related** | [01-04](01-04-Model-Routing-LiteLLM.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · [03-02](../03-Agentic-Fundamentals/03-02-Tools-Memory-Control-Flow.md) · [Architecture Index](../../Architecture Index.md) · [08-02 Observability](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) · [Master Study Roadmap](../../Master%20Study%20Roadmap.md) |
 
 ---
 
@@ -14,8 +14,8 @@
 
 By the end of this chapter you will be able to:
 
-1. Choose between **OpenAI Responses API**, **Chat Completions**, **Anthropic Messages API**, and **Google Gemini SDK** for a given workload.
-2. Implement **structured outputs** with Pydantic validation on all three providers.
+1. Choose between **OpenAI Responses API**, **Chat Completions**, **Anthropic Messages API**, **Google Gemini SDK**, and **DeepSeek** for a given workload.
+2. Implement **structured outputs** with Pydantic validation across providers (including OpenAI-compatible DeepSeek).
 3. Implement **tool calling** loops with idempotent handlers and safe retries.
 4. Stream responses with correct **TTFT / token accounting** and client-side parsing.
 5. Handle **rate limits**, **429 backoff**, and **idempotency keys** in production Python services.
@@ -206,23 +206,74 @@ Gemini combines **multimodal `contents`** (text, images, audio) with **JSON sche
 
 ---
 
-### 4) Structured Outputs — Cross-Provider Comparison
+### 4) DeepSeek API (OpenAI-compatible)
+
+#### Definition
+
+DeepSeek exposes an **OpenAI-compatible** chat/completions surface with competitive pricing and strong coding/reasoning models. Official docs: [https://api-docs.deepseek.com/](https://api-docs.deepseek.com/)
+
+| Surface | Use |
+|---------|-----|
+| Chat Completions (`/chat/completions`) | Default integration path via OpenAI SDK `base_url` |
+| Reasoning / specialized models | Check current model cards (`deepseek-chat`, `deepseek-reasoner`, etc.) |
+| LiteLLM route | Prefer unified routing in production ([01-04](01-04-Model-Routing-LiteLLM.md)) |
+
+#### Intuition
+
+Treat DeepSeek as a **fourth cost/quality tier** in your router — not a one-off SDK. Because the wire format is OpenAI-compatible, you reuse adapters and focus engineering on **eval gates**, **data residency**, and **rate-limit isolation**.
+
+#### When to use DeepSeek
+
+- High-volume batch extraction, offline eval judges, coding assistance backends where unit economics dominate.
+- You already normalize providers behind LiteLLM or an OpenAI-compatible client factory.
+- You have golden-set evidence that quality is acceptable for the task class.
+
+#### When NOT to
+
+- Regulated workloads that forbid the provider’s data handling / region model without legal review.
+- You need Claude-style content-block tool loops or Gemini multimodal natives without an adapter.
+- Latency SLOs require a provider with proven regional capacity for your traffic profile.
+
+```python
+# Minimal OpenAI-compatible DeepSeek client (lab pattern)
+from openai import OpenAI
+import os
+
+deepseek = OpenAI(
+    api_key=os.environ["DEEPSEEK_API_KEY"],
+    base_url="https://api.deepseek.com",
+)
+
+resp = deepseek.chat.completions.create(
+    model="deepseek-chat",
+    messages=[{"role": "user", "content": "Summarize RAG in 2 sentences."}],
+    temperature=0.2,
+)
+print(resp.choices[0].message.content)
+print(resp.usage)  # normalize into your billing layer
+```
+
+**Production rule:** Add DeepSeek to the same **Pydantic contracts + idempotent tools + 429 backoff** path as OpenAI. Never special-case it as “just a cheap model” without eval coverage.
+
+---
+
+### 5) Structured Outputs — Cross-Provider Comparison
 
 Deep dive also in [02-02 Structured Outputs & Tool Calling](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md).
 
-| Dimension | OpenAI | Anthropic | Gemini |
-|-----------|--------|-----------|--------|
-| **Mechanism** | `text.format` / `response_format` JSON schema | `output_config.format` with `json_schema` | `response_format` / `response_schema` with MIME `application/json` |
-| **Pydantic helper** | `client.responses.parse(text_format=Model)` | Manual `Model.model_validate_json()` on text block | `Model.model_validate_json(interaction.output_text)` |
-| **Strict mode** | JSON Schema `strict: true` on tools & schema | `strict: true` on tools | Schema required fields enforced per API version |
-| **Streaming structured** | Partial via `responses.create(stream=True)`; validate at end | Stream text deltas; validate at end | Stream; validate at end |
-| **Failure mode** | Truncated JSON → parse error | Refusal / `stop_reason` | Schema rejection at API layer |
+| Dimension | OpenAI | Anthropic | Gemini | DeepSeek |
+|-----------|--------|-----------|--------|----------|
+| **Mechanism** | `text.format` / `response_format` JSON schema | `output_config.format` with `json_schema` | `response_format` / `response_schema` with MIME `application/json` | OpenAI-compatible `response_format` (verify model support) |
+| **Pydantic helper** | `client.responses.parse(text_format=Model)` | Manual `Model.model_validate_json()` on text block | `Model.model_validate_json(interaction.output_text)` | Validate JSON text with Pydantic after completion |
+| **Strict mode** | JSON Schema `strict: true` on tools & schema | `strict: true` on tools | Schema required fields enforced per API version | Depends on model; always re-validate in-app |
+| **Streaming structured** | Partial via `responses.create(stream=True)`; validate at end | Stream text deltas; validate at end | Stream; validate at end | Stream; validate at end |
+| **Failure mode** | Truncated JSON → parse error | Refusal / `stop_reason` | Schema rejection at API layer | Truncation / JSON drift → app validation catch |
 
 **Production rule:** Always **validate again in your app** with Pydantic even when the provider promises schema adherence. Providers reduce variance; they do not replace your domain validation.
 
 ---
 
-### 5) Tool Calling — Cross-Provider Comparison
+### 6) Tool Calling — Cross-Provider Comparison
 
 Agent control flow is covered in [03-02 Tools, Memory & Control Flow](../03-Agentic-Fundamentals/03-02-Tools-Memory-Control-Flow.md).
 
@@ -1218,7 +1269,7 @@ Draw the tool loop for Claude vs Gemini, labeling message/content differences.
 
 ## Summary
 
-Provider SDK fluency is the foundation beneath every router and agent framework. OpenAI's **Responses API** modernizes chat + tools + parsing; Anthropic's **Messages API** centers content blocks and explicit `stop_reason`; Gemini's **`google-genai`** SDK unifies multimodal generation and JSON schema outputs. Production code shares **Pydantic contracts**, implements **bounded tool loops** with **idempotent side effects**, streams for UX, and treats **rate limits and secrets** as first-class control-plane concerns—not afterthoughts.
+Provider SDK fluency is the foundation beneath every router and agent framework. OpenAI's **Responses API** modernizes chat + tools + parsing; Anthropic's **Messages API** centers content blocks and explicit `stop_reason`; Gemini's **`google-genai`** SDK unifies multimodal generation and JSON schema outputs; **DeepSeek** adds an OpenAI-compatible cost tier for high-volume and coding workloads. Production code shares **Pydantic contracts**, implements **bounded tool loops** with **idempotent side effects**, streams for UX, and treats **rate limits and secrets** as first-class control-plane concerns—not afterthoughts.
 
 ---
 
@@ -1232,6 +1283,7 @@ Provider SDK fluency is the foundation beneath every router and agent framework.
 | Anthropic Python SDK | https://github.com/anthropics/anthropic-sdk-python | Intro | 30 min | Typed messages + stream context managers | README; streaming |
 | Gemini API Docs | https://ai.google.dev/gemini-api/docs | Intro | 45 min | Structured output + function calling | generateContent; tools; JSON schema |
 | Google GenAI Python SDK | https://github.com/googleapis/python-genai | Intro | 30 min | `Client`, `types`, async patterns | README; samples |
+| DeepSeek API Docs | https://api-docs.deepseek.com/ | Intro | 30 min | OpenAI-compatible cost tier | models; chat; pricing |
 | LiteLLM Routing (prior chapter) | [01-04](01-04-Model-Routing-LiteLLM.md) | Intermediate | 30 min | When to abstract vs go native | Router config; fallbacks |
 | Structured Outputs Deep Dive | [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) | Intermediate | 45 min | Cross-provider schema tactics | Strict mode; repair strategies |
 | Tools & Control Flow | [03-02](../03-Agentic-Fundamentals/03-02-Tools-Memory-Control-Flow.md) | Intermediate | 45 min | Agent loop ownership | Think→Act→Observe; memory |

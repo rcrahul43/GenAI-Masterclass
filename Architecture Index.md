@@ -2,7 +2,7 @@
 
 > Catalog of architectures, patterns, and diagrams across the handbook. Use this when preparing system design interviews.
 
-**Related:** [TOC](TABLE_OF_CONTENTS.md) · [System Design/](System Design/) · [Modules/](Modules/)
+**Related:** [Master Study Roadmap](Master%20Study%20Roadmap.md) · [TOC](TABLE_OF_CONTENTS.md) · [System Design/](System%20Design/) · [Modules/](Modules/)
 
 ---
 
@@ -22,10 +22,13 @@
 | Supervisor multi-agent | 05-01 | Clear specialist roles | Single domain task |
 | Planner–Executor–Critic | 05-02 | Complex deliverables | Cost-sensitive chat |
 | MCP tool servers | 07-01 | Shared tool ecosystem | One-off script |
+| MCP production gateway | 07-04 | Enterprise auth, audit, multi-tenant tools | Prototype with 1 in-process tool |
 | A2A negotiation | 07-02 | Cross-agent consensus | Single owner workflow |
 | Human-in-the-loop | 03-04, 08-03 | Irreversible / high-risk actions | Fully reversible low-risk UX |
 | LLM-as-judge | 08-01 | Subjective quality | Need deterministic compliance only |
 | LoRA domain adapt | 09-01 | Stable style/format/domain language | Facts change often (use RAG) |
+| Coding agent loop | 12-05 | Repo edit → test → repair | Pure chat Q&A with no tools |
+| AI product metric tree | 12-06 | Scoping trust, $/task, launch gates | Feature built before success metrics |
 
 ---
 

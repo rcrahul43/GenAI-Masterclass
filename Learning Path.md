@@ -1,8 +1,29 @@
 # Learning Path
 
-> Role-specific sequencing. Pick one primary track; borrow from others intentionally.
+> Role-specific sequencing on top of the **[Master Study Roadmap](Master%20Study%20Roadmap.md)** (Phases 0–11).
 
-**Related:** [Dashboard](Dashboard.md) · [Study Plan](Study Plan.md) · [TOC](TABLE_OF_CONTENTS.md) · [Career Guides](Career/)
+**Related:** [Dashboard](Dashboard.md) · [Study Plan](Study%20Plan.md) · [TOC](TABLE_OF_CONTENTS.md) · [Career Guides](Career/)
+
+---
+
+## North star
+
+All tracks follow **Phases 0 → 11**. Difference is **depth** and **extra leadership hours**, not a different topic list.
+
+```mermaid
+flowchart LR
+    P0[0 Foundations] --> P1[1 LLM]
+    P1 --> P2[2 Agents]
+    P2 --> P3[3 RAG]
+    P3 --> P4[4 Multi-Agent + MCP]
+    P4 --> P5[5 Multimodal]
+    P5 --> P6[6 LLMOps]
+    P6 --> P7[7 Fine-Tune]
+    P7 --> P8[8 Production]
+    P8 --> P9[9 Security]
+    P9 --> P10[10 System Design + Coding Agents + Product]
+    P10 --> P11[11 Leadership]
+```
 
 ---
 
@@ -10,42 +31,30 @@
 
 ### Persona
 
-You design and ship AI systems. Interviews test architecture, failure modes, cost, and code judgment.
+You design and ship AI systems. Interviews test architecture, failure modes, cost, code judgment, MCP, LangGraph, evals, and security.
 
 ### Sequence
 
-![Learning-Path-01-1163cc0f](Diagrams/Learning-Path-01-1163cc0f.png)
-
-```mermaid
-flowchart LR
-    A[00 Foundations] --> B[01 LLM Eng]
-    B --> C[02 Prompts]
-    C --> D[03 Agents]
-    D --> E[04 RAG]
-    E --> F[05 Multi-Agent]
-    F --> G[07 Protocols]
-    G --> H[08 LLMOps]
-    H --> I[10 Infra]
-    I --> J[11 Security]
-    J --> K[09 Fine-Tune]
-    K --> L[06 Multimodal]
-    L --> M[12 Advanced]
-    M --> N[System Design x13]
-    N --> O[Capstone]
-```
-
 | Phase | Weeks | Must-complete | Depth rule |
 |-------|-------|---------------|------------|
-| Foundation | 0–2 | 00 + 01 | Implement every lab |
-| Agent core | 3–5 | 02 + 03 | LangGraph fluency required |
-| Knowledge | 6–7 | 04 | Hybrid + rerank mandatory |
-| Systems | 8–11 | 05, 07, 08, 10, 11 | Production project |
-| Specialize | 12–14 | 09, 06, 12 | Pick 2 advanced deep dives |
-| Convert | 15–16 | System Design + Capstone + mocks | Timed designs |
+| 0 Foundations | 1–2 | 00-04, 00-05, 00-06 | Implement every lab |
+| 1 LLM | 3–4 | 01-*, 02-* | All four providers (incl. DeepSeek) |
+| 2 Agents | 5–6 | 03-* | **LangGraph** fluency required |
+| 3 RAG | 7–9 | 04-* | Hybrid + rerank mandatory |
+| 4 Multi-Agent | 10–12 | 05-*, 07-* (incl. **07-04 MCP depth**) | MCP gateway + multi-agent project |
+| 5 Multimodal | 13–14 | 06-* | Voice or doc project shipped |
+| 6 LLMOps | 15–17 | 08-* | Eval CI gate |
+| 7 Fine-Tune | 18–19 | 09-* | Written FT decision memo |
+| 8 Production | 20–22 | 10-* + 01-03 depth | **K8s + GPU + cost** |
+| 9 Security | 23 | 11-* | OWASP + injection CI |
+| 10 Design | 24–26 | System Design + 12-05 + 12-06 | 6–8 designs |
+| 11 Leadership lite | 27–30 | STAR + mocks + selective Leadership | Convert to offers |
 
 ### IC Success Metrics
 
-- 3 production-style repos with evals
+- 12+ production-style apps (roadmap ladder)
+- Reusable RAG platform + LLMOps pipeline
+- Fine-tuned domain adapter with eval compare
 - 8 system design writeups
 - Staff mock score ≥4/5 on architecture
 
@@ -59,33 +68,25 @@ You lead teams building AI products. Interviews test judgment, hiring, execution
 
 ### Sequence
 
-```mermaid
-flowchart LR
-    A[00 Mindset] --> B[03 Agents overview]
-    B --> C[04 RAG judgment]
-    C --> D[05 Multi-Agent]
-    D --> E[08 Eval & Ship]
-    E --> F[11 Security & Governance]
-    F --> G[10 Cost/Infra for leaders]
-    G --> H[Leadership x4]
-    H --> I[EM Interview Guide]
-    I --> J[Selective IC deep dives]
-    J --> K[Capstone as tech reviewer]
-```
-
-| Phase | Weeks | Focus | Skip / skim |
-|-------|-------|-------|-------------|
-| Literacy | 0–3 | 00, 01-02 (skim), 02, 03 | vLLM internals deep lab optional |
-| Product AI | 4–8 | 04, 05, 08 | Framework API minutiae |
-| Operate | 9–12 | 10-04, 11, Leadership | Ray internals optional |
-| Convert | 13–16 | EM mocks, STAR, hiring loops | Full coding contest prep optional |
+| Phase | Focus | Depth adjustment |
+|-------|-------|------------------|
+| 0 | Mindset + API literacy (skim math proofs) | Do FastAPI lab; skim linear algebra proofs |
+| 1–2 | LLM + agents judgment | Skim vLLM internals; run support agent demo |
+| 3–4 | RAG + multi-agent product sense | Critique designs; lighter framework API minutiae |
+| 5–6 | Multimodal UX + **eval/ship criteria** | Own metric trees and launch gates |
+| 7 | FT decision literacy | Read 09-02 deeply; skip training ops lab optional |
+| 8 | Cost / infra for leaders | 10-04 mandatory; K8s concepts required |
+| 9 | Security & governance | OWASP + NIST AI RMF |
+| 10 | Product thinking + selective designs | **12-06** mandatory; 4 designs minimum |
+| 11 | Leadership ×4 + EM Interview Guide | Primary focus (full 4 weeks) |
 
 ### EM Success Metrics
 
 - 8 STAR stories mapped to EM patterns
-- Written AI governance checklist for a fictional product
-- Can run a hiring loop scorecard for AI Engineer L5/L6
-- Can critique a multi-agent design in 20 minutes
+- Written AI governance checklist + roadmap memo
+- Hiring loop scorecard for AI Engineer L5/L6
+- Can critique a multi-agent + MCP design in 20 minutes
+- Can defend $/task and eval ship criteria to executives
 
 ---
 
@@ -95,42 +96,46 @@ Alternate **Tech Deep Day** and **Leadership Day**.
 
 | Day type | Content |
 |----------|---------|
-| Tech Deep | Full IC module lab |
+| Tech Deep | Full IC module lab for current phase |
 | Leadership | STAR + hiring + roadmap exercises |
-| Friday | Integration: write “how I’d staff and ship this system” |
+| Friday | Integration: “how I’d staff and ship this system” |
 
-Follow IC sequence for modules, but every week add 2 hours from `Leadership/` and `Career/EM-Interview-Guide.md`.
+Follow Track A phase order; every week add **2 hours** from `Leadership/` and `Career/EM-Interview-Guide.md`.
 
 ---
 
 ## Prerequisites Matrix
 
-| Module cluster | Required before |
+| Phase / module | Required before |
 |----------------|-----------------|
-| 03 Agents | 02 Structured outputs |
-| 04 RAG | 01-02 tokens + 02 prompts |
-| 05 Multi-Agent | 03 Agents + 04 RAG basics |
-| 07 MCP/A2A | 03 Tools + 05 orchestration concepts |
-| 08 Evals | Any agent or RAG project exists |
-| 09 Fine-Tune | 04 RAG (to compare honestly) |
-| 12 Advanced | 03 + 04 + 08 |
+| Phase 1 LLM | Phase 0 Python + APIs (or equivalent experience) |
+| Phase 2 Agents | Phase 1 structured outputs + tool calling |
+| Phase 3 RAG | Tokens + embeddings intuition (00-04, 01-02) |
+| Phase 4 Multi-Agent / MCP | Phase 2 agents + Phase 3 RAG basics |
+| Phase 6 Evals | Any agent or RAG project exists |
+| Phase 7 Fine-Tune | Phase 3 RAG (to compare honestly) |
+| Phase 8 Production | At least one agent/RAG service to deploy |
+| 12-05 Coding Agents | Phase 2 + MCP intro |
+| 12-06 Product Thinking | Phase 2 + Phase 6 concepts |
 
 ---
 
-## Fast-Track (Experienced LLM Engineers — 8 Weeks)
+## Fast-Track (Experienced LLM Engineers — 12–16 Weeks)
 
 Only if you already ship LLM features:
 
-1. Week 1: 03 + 05 (agents/multi-agent)
-2. Week 2: 04 advanced + 07 protocols
-3. Week 3: 08 evals + 11 security
-4. Week 4: 10 infra + cost
-5. Week 5–6: System Design blitz (2/day)
-6. Week 7: Capstone
-7. Week 8: Mocks
+1. Weeks 1–2: Phase 2–3 (agents + advanced RAG)
+2. Weeks 3–4: Phase 4 (multi-agent + MCP depth)
+3. Weeks 5–6: Phase 6 + 9 (evals + security)
+4. Weeks 7–8: Phase 8 (K8s, GPU, cost)
+5. Weeks 9–10: Phase 10 (designs + coding agents + product)
+6. Weeks 11–12: Capstone
+7. Weeks 13–16: Phase 11 mocks + Leadership
+
+Still complete the Master Roadmap resource maps for papers and docs you have not read.
 
 ---
 
 ## Next Step
 
-Select Track A/B/C → mark it on [Dashboard](Dashboard.md) → open Week 0 in [Weekly Planner](Weekly Planner.md).
+Select Track A/B/C → mark it on [Dashboard](Dashboard.md) → open **Phase 0** in [Master Study Roadmap](Master%20Study%20Roadmap.md) → Week 1 in [Weekly Planner](Weekly%20Planner.md).

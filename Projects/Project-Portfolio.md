@@ -1,20 +1,57 @@
 # Project Portfolio
 
 > Expanded curriculum projects with resume bullets, GitHub milestones, and review checklists.
-> Track completion in [Progress Tracker](../Progress Tracker.md) · [Study Plan](../Study Plan.md)
+> Sequencing follows the **[Master Study Roadmap](../Master%20Study%20Roadmap.md)** project ladder.
+> Track completion in [Progress Tracker](../Progress%20Tracker.md) · [Study Plan](../Study%20Plan.md)
 
-**Related:** [Learning Path](../Learning Path.md) · [Architecture Index](../Architecture Index.md) · [08-01 Evaluation](../Modules/08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [Principal Interview Guide](../Career/Principal-Staff-Interview-Guide.md)
+**Related:** [Learning Path](../Learning%20Path.md) · [Architecture Index](../Architecture%20Index.md) · [08-01 Evaluation](../Modules/08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [Principal Interview Guide](../Career/Principal-Staff-Interview-Guide.md)
 
 ---
 
-## Portfolio Phases
+## Roadmap project ladder (canonical)
 
-| Phase | Weeks | Target artifacts | Interview use |
-|-------|-------|------------------|---------------|
-| **Mini** | 0–3 | CLI + single-service APIs | Coding screen stories |
-| **Intermediate** | 4–7 | LangGraph + RAG repos | Staff deep dives |
-| **Production** | 8–13 | Deployed multi-agent + evals | Architecture panel |
-| **Capstone** | 14–16+ | Enterprise vertical slice | Offer-loop flagship |
+Build **one every 2–3 weeks after Phase 2**. Prefer production milestones (M0–M6) below.
+
+### Beginner
+
+| Project | Phase | Module anchors |
+|---------|------:|----------------|
+| Customer Support Agent | 2 | 03-01 → 03-04 |
+| Internal Knowledge Bot | 3 | 04-01 → 04-04 |
+
+### Intermediate
+
+| Project | Phase | Module anchors |
+|---------|------:|----------------|
+| AI Research Assistant | 4 | 05-*, 12-01 |
+| AI SQL Agent | 4–6 | 12-02 |
+| Meeting Assistant | 5 | 06-01 |
+| Resume Analyzer | 4 / Capstone B | 02-02, 05-* |
+
+### Advanced
+
+| Project | Phase | Notes |
+|---------|------:|-------|
+| Multi-Agent Coding Assistant | 4 + 10 | Pair with [12-05](../Modules/12-Advanced-Topics/12-05-AI-Coding-Agents.md) |
+| AI Product Manager | 10–11 | Pair with [12-06](../Modules/12-Advanced-Topics/12-06-AI-Product-Thinking.md) |
+| AI Architecture Reviewer | 10 | System Design pack |
+| AI Incident Response System | 8–9 | Infra + security |
+| AI Engineering Manager Assistant | 11 | Leadership workflows |
+
+### Expert
+
+**Complete Engineering Organization Agent** — Planner, PM, Architect, Backend, Frontend, iOS, Android, QA, Security, Reviewer, Release Manager — with MCP, shared memory, HITL, eval CI, K8s.
+
+---
+
+## Portfolio Phases (delivery maturity)
+
+| Maturity | Roadmap phases | Target artifacts | Interview use |
+|----------|----------------|------------------|---------------|
+| **Mini** | 0–2 | CLI + single-service APIs | Coding screen stories |
+| **Intermediate** | 3–5 | LangGraph + RAG repos | Staff deep dives |
+| **Production** | 6–9 | Deployed multi-agent + evals + security | Architecture panel |
+| **Capstone** | 10–11+ | Enterprise vertical slice / Org Agent | Offer-loop flagship |
 
 ---
 

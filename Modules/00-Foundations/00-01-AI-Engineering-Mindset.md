@@ -6,7 +6,7 @@
 | **Difficulty** | Intermediate (conceptual) · Advanced (judgment drills) |
 | **Prerequisites** | Comfortable writing Python; basic HTTP/API literacy; no ML PhD required |
 | **Module** | 00 — Foundations |
-| **Related** | [00-02](00-02-From-Rules-to-Agents.md) · [00-03](00-03-BankCo-Decision-Support-Warmup.md) · [Architecture Index](../../Architecture Index.md) · [Leading AI Teams](../../Leadership/Leading-AI-Teams.md) · [Study Plan](../../Study Plan.md) |
+| **Related** | [00-02](00-02-From-Rules-to-Agents.md) · [00-03](00-03-BankCo-Decision-Support-Warmup.md) · [00-04](00-04-Mathematics-for-AI-Engineering.md) · [00-05](00-05-Python-for-AI-Engineering.md) · [00-06](00-06-APIs-for-AI-Engineering.md) · [Architecture Index](../../Architecture Index.md) · [Leading AI Teams](../../Leadership/Leading-AI-Teams.md) · [Study Plan](../../Study Plan.md) |
 
 ---
 

@@ -2,7 +2,7 @@
 
 > Master index. Updated after every new file. Prefer this page for navigation.
 
-**Related:** [Dashboard](Dashboard.md) · [Study Plan](Study Plan.md) · [Learning Path](Learning Path.md) · [Progress](Progress.md) · [Architecture Index](Architecture Index.md)
+**Related:** [Master Study Roadmap](Master%20Study%20Roadmap.md) · [Dashboard](Dashboard.md) · [Study Plan](Study%20Plan.md) · [Learning Path](Learning%20Path.md) · [Progress](Progress.md) · [Architecture Index](Architecture%20Index.md)
 
 ---
 
@@ -10,20 +10,20 @@
 
 | # | Title | File |
 |---|-------|------|
+| 0.0 | **Master Study Roadmap (Phases 0–11)** | [Master Study Roadmap.md](Master%20Study%20Roadmap.md) |
 | 0.1 | README — Handbook Overview | [README.md](README.md) |
 | 0.2 | Dashboard | [Dashboard.md](Dashboard.md) |
-| 0.3 | Study Plan | [Study Plan.md](Study Plan.md) |
-| 0.4 | Weekly Planner | [Weekly Planner.md](Weekly Planner.md) |
-| 0.5 | Progress Tracker (learner) | [Progress Tracker.md](Progress Tracker.md) |
-| 0.6 | Learning Path (role tracks) | [Learning Path.md](Learning Path.md) |
-| 0.7 | Interview Tracker | [Interview Tracker.md](Interview Tracker.md) |
-| 0.8 | Revision Planner | [Revision Planner.md](Revision Planner.md) |
-| 0.9 | Architecture Index | [Architecture Index.md](Architecture Index.md) |
+| 0.3 | Study Plan | [Study Plan.md](Study%20Plan.md) |
+| 0.4 | Weekly Planner | [Weekly Planner.md](Weekly%20Planner.md) |
+| 0.5 | Progress Tracker (learner) | [Progress Tracker.md](Progress%20Tracker.md) |
+| 0.6 | Learning Path (role tracks) | [Learning Path.md](Learning%20Path.md) |
+| 0.7 | Interview Tracker | [Interview Tracker.md](Interview%20Tracker.md) |
+| 0.8 | Revision Planner | [Revision Planner.md](Revision%20Planner.md) |
+| 0.9 | Architecture Index | [Architecture Index.md](Architecture%20Index.md) |
 | 0.10 | Authoring Progress | [Progress.md](Progress.md) |
 | 0.11 | Glossary | [Glossary.md](Glossary.md) |
 | 0.12 | Excel Tracker + sync | [Tracker/](Tracker/) |
-| 0.11 | Glossary | [Glossary.md](Glossary.md) |
-| 0.12 | Examples Index | [Examples/README.md](Examples/README.md) |
+| 0.13 | Examples Index | [Examples/README.md](Examples/README.md) |
 
 ---
 
@@ -34,6 +34,9 @@
 | 1.1 | AI Engineering Mindset for Principal / Staff / EM | [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) | ✅ done |
 | 1.2 | From Rules → ML → Generative AI → Agents | [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) | ✅ done |
 | 1.3 | BankCo Decision-Support Warmup (Agent Mental Model) | [00-03](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) | ✅ done |
+| 1.4 | Mathematics for AI Engineering | [00-04](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) | ✅ done |
+| 1.5 | Python for AI Engineering | [00-05](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md) | ✅ done |
+| 1.6 | APIs for AI Engineering | [00-06](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) | ✅ done |
 
 ---
 
@@ -45,7 +48,7 @@
 | 2.2 | Tokenization, Context Windows & Attention Economics | [01-02](Modules/01-LLM-Engineering/01-02-Tokenization-Context-Windows.md) | ✅ done |
 | 2.3 | Inference Serving with vLLM, Ollama & Quantization | [01-03](Modules/01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) | ✅ done |
 | 2.4 | Model Routing with LiteLLM | [01-04](Modules/01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md) | ✅ done |
-| 2.5 | Provider SDKs: OpenAI, Claude, Gemini | [01-05](Modules/01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) | ✅ done |
+| 2.5 | Provider SDKs: OpenAI, Claude, Gemini, DeepSeek | [01-05](Modules/01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) | ✅ done |
 
 ---
 
@@ -106,6 +109,7 @@
 | 8.1 | Model Context Protocol (MCP) | [07-01](Modules/07-Protocols-MCP-A2A/07-01-MCP-Model-Context-Protocol.md) | ✅ done |
 | 8.2 | Agent-to-Agent (A2A) Protocol | [07-02](Modules/07-Protocols-MCP-A2A/07-02-A2A-Agent-to-Agent.md) | ✅ done |
 | 8.3 | Negotiation & Async Agent Workflows | [07-03](Modules/07-Protocols-MCP-A2A/07-03-Negotiation-Async-Workflows.md) | ✅ done |
+| 8.4 | MCP Production Patterns (Depth) | [07-04](Modules/07-Protocols-MCP-A2A/07-04-MCP-Production-Patterns.md) | ✅ done |
 
 ---
 
@@ -157,6 +161,8 @@
 | 13.2 | Text-to-SQL Reliable Data Agents | [12-02](Modules/12-Advanced-Topics/12-02-Text-to-SQL-Agents.md) | ✅ done |
 | 13.3 | Self-Improving Agents | [12-03](Modules/12-Advanced-Topics/12-03-Self-Improving-Agents.md) | ✅ done |
 | 13.4 | DSPy Programmatic Prompting | [12-04](Modules/12-Advanced-Topics/12-04-DSPy-Programmatic-Prompting.md) | ✅ done |
+| 13.5 | AI Coding Agents (Codex, Claude Code, Cursor) | [12-05](Modules/12-Advanced-Topics/12-05-AI-Coding-Agents.md) | ✅ done |
+| 13.6 | AI Product Thinking | [12-06](Modules/12-Advanced-Topics/12-06-AI-Product-Thinking.md) | ✅ done |
 
 ---
 
