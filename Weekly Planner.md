@@ -1,24 +1,24 @@
 # Weekly Planner
 
-> Printable / Notion-database-friendly weekly operating system.
+> Printable / Notion-database-friendly weekly operating system aligned to the **[Master Study Roadmap](Master%20Study%20Roadmap.md)**.
 
-**Related:** [Study Plan](Study Plan.md) · [Dashboard](Dashboard.md) · [Progress Tracker](Progress Tracker.md) · [Revision Planner](Revision Planner.md)
+**Related:** [Study Plan](Study%20Plan.md) · [Dashboard](Dashboard.md) · [Progress Tracker](Progress%20Tracker.md) · [Revision Planner](Revision%20Planner.md)
 
 ---
 
 ## How to Use
 
 1. Copy the **Week Template** below into a new Notion page or markdown note each Sunday.
-2. Fill **Theme**, **Primary modules**, **Project slice**, **Interview focus**.
+2. Fill **Phase**, **Theme**, **Primary modules**, **Project slice**, **Interview focus**, and **Resource map items** from the Master Roadmap.
 3. Check boxes daily. Do not carry more than **2** unfinished deep-work items into next week.
-4. Friday: run the Weekly Review from [Study Plan](Study Plan.md).
+4. Friday: run the Weekly Review from [Study Plan](Study%20Plan.md).
 
 ---
 
 ## Week Template
 
 ```markdown
-# Week __ — Theme: _______________
+# Week __ — Phase __ — Theme: _______________
 
 Dates: ____ → ____
 Track: [ ] IC Staff/Principal  [ ] EM  [ ] Hybrid
@@ -33,6 +33,11 @@ Hours planned: __ / Hours actual: __
 - [ ] Module file 1
 - [ ] Module file 2
 
+## Resource Map (from Master Study Roadmap)
+- [ ] Docs / book chapter:
+- [ ] Paper:
+- [ ] YouTube / GitHub:
+
 ## Project Slice
 - Repo: ________
 - Definition of done this week: ________
@@ -42,15 +47,15 @@ Hours planned: __ / Hours actual: __
 - Mock scheduled: [ ] Yes [ ] No — date: ____
 
 ## Daily Log
-| Day | Concept (45m) | Build (60m) | Judgment memo (30m) | Interview (15m) | Done? |
-|-----|---------------|-------------|---------------------|-----------------|-------|
-| Mon | | | | | [ ] |
-| Tue | | | | | [ ] |
-| Wed | | | | | [ ] |
-| Thu | | | | | [ ] |
-| Fri | | | | | [ ] |
-| Sat | Project / Design | | | | [ ] |
-| Sun | Revision / Rest | | | | [ ] |
+| Day | Focus (roadmap schedule) | Done? |
+|-----|--------------------------|-------|
+| Mon | Theory 1.5h | [ ] |
+| Tue | Documentation 1.5h | [ ] |
+| Wed | Coding 2h | [ ] |
+| Thu | Build project 2h | [ ] |
+| Fri | Research papers 1h | [ ] |
+| Sat | Hands-on 4h | [ ] |
+| Sun | Review + notes + interview 3h | [ ] |
 
 ## Risks & Mitigations
 - Risk:
@@ -64,66 +69,61 @@ Hours planned: __ / Hours actual: __
 
 ---
 
-## Pre-Filled Weeks 0–3 (Start Here)
+## Pre-Filled Phase Starters
 
-### Week 0 — Foundations & Mental Models
-
-| Field | Value |
-|-------|-------|
-| Modules | [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md), [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md), [00-03](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) |
-| Project | BankCo retention decision-support flow (rules + logging + HITL) |
-| Interview | “When would you NOT use an agent?” |
-| Exit criteria | Explain Agent equation; draw BankCo sequence diagram from memory |
-
-### Week 1 — Transformers & Tokens
+### Week 1 — Phase 0: Mathematics for AI Engineering
 
 | Field | Value |
 |-------|-------|
-| Modules | [01-01](Modules/01-LLM-Engineering/01-01-Transformer-Architecture.md), [01-02](Modules/01-LLM-Engineering/01-02-Tokenization-Context-Windows.md) |
-| Project | Token & cost estimator CLI (Pydantic settings) |
-| Interview | Whiteboard attention + KV-cache implications |
-| Exit criteria | Estimate cost for 1M requests/month within 20% |
+| Modules | [00-04](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) |
+| Resources | 3Blue1Brown Linear Algebra · StatQuest · *Mathematics for Machine Learning* |
+| Project | Cosine similarity + toy vector search lab |
+| Interview | “Explain embeddings and cosine similarity” |
+| Exit criteria | Whiteboard embeddings; NN search code works |
 
-### Week 2 — Serving & Providers
-
-| Field | Value |
-|-------|-------|
-| Modules | [01-03](Modules/01-LLM-Engineering/01-03-Inference-Serving-vLLM.md), [01-04](Modules/01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md), [01-05](Modules/01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) |
-| Project | FastAPI proxy with LiteLLM routing + fallbacks |
-| Interview | vLLM vs API provider tradeoffs |
-| Exit criteria | Working fallback: primary fail → secondary model |
-
-### Week 3 — Production Prompts & Tools
+### Week 2 — Phase 0: Python + APIs
 
 | Field | Value |
 |-------|-------|
-| Modules | [02-01](Modules/02-Prompt-Engineering/02-01-Production-Prompt-Engineering.md), [02-02](Modules/02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) |
-| Project | Intent router with JSON schema + tool contracts |
-| Interview | Structured outputs vs free text in production |
-| Exit criteria | 100% schema-valid outputs on golden set of 30 |
+| Modules | [00-05](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md), [00-06](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) |
+| Resources | RealPython asyncio · Fluent Python (selective) · FastAPI · Pydantic |
+| Project | Async FastAPI warmup + WebSocket stream stub |
+| Interview | “Why asyncio for LLM I/O?” |
+| Exit criteria | Typed FastAPI service packaged with `pyproject.toml` |
 
----
+### Week 3–4 — Phase 1: LLM Foundations
 
-## Capacity Planning
+| Field | Value |
+|-------|-------|
+| Modules | 01-01 → 01-05, 02-01, 02-02 |
+| Resources | Attention paper · OpenAI Cookbook · Claude docs · Gemini docs · **DeepSeek API** · Karpathy |
+| Project | Multi-provider chat CLI + cost/latency matrix |
+| Interview | Transformer whiteboard + provider tradeoffs |
 
-| Life load | Study hours | Rule |
-|-----------|-------------|------|
-| Light week | 12–15 | Full template |
-| Heavy job week | 6–8 | Concept + interview only; defer project |
-| Interview week | 10 + mocks | Freeze new modules; revise + mock only |
+### Week 5–6 — Phase 2: Agent Fundamentals
 
----
+| Field | Value |
+|-------|-------|
+| Modules | 03-01 → 03-04 |
+| Resources | ReAct · CoT · LangGraph docs · LangGraph examples |
+| Project | **Customer Support Agent** (LangGraph + HITL) |
+| Interview | Agent loop critique · pattern selection |
 
-## Energy Matching
+### Week 7–9 — Phase 3: RAG
 
-| Energy | Assign |
-|--------|--------|
-| High | New architecture / coding labs |
-| Medium | Reading + memos |
-| Low | Cheatsheets + flash revision + STAR polish |
+| Field | Value |
+|-------|-------|
+| Modules | 04-01 → 04-04 |
+| Resources | RAG paper · HyDE · Qdrant/Weaviate/Pinecone · LlamaIndex |
+| Project | **Internal Company Knowledge Assistant** |
+| Interview | Chunking · hybrid · citation faithfulness |
+
+### Later phases
+
+Use the Phase → Week table in [Study Plan](Study%20Plan.md) and the full resource maps in [Master Study Roadmap](Master%20Study%20Roadmap.md) for Phases 4–11.
 
 ---
 
 ## Next Step
 
-Copy Week 0 template → begin [00-01-AI-Engineering-Mindset.md](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md).
+Start **Week 1 / Phase 0** above, then keep one Notion page per week using the template.

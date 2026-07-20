@@ -2,7 +2,7 @@
 
 > Your personal completion checklist. Separate from authoring [`Progress.md`](Progress.md).
 
-**Related:** [Dashboard](Dashboard.md) · [TOC](TABLE_OF_CONTENTS.md) · [Study Plan](Study Plan.md)
+**Related:** [Master Study Roadmap](Master%20Study%20Roadmap.md) · [Dashboard](Dashboard.md) · [TOC](TABLE_OF_CONTENTS.md) · [Study Plan](Study%20Plan.md)
 
 ---
 
@@ -28,10 +28,28 @@ Only mark ✅ when lab + memo exist. Only mark ⭐ after a mock question on the 
 
 ## Core Navigation
 
+- [ ] **Master Study Roadmap** (Phases 0–11) reviewed
 - [ ] README
 - [ ] Dashboard orientation
 - [ ] Study Plan customized to your hours
 - [ ] Learning Path selected (IC / EM / Hybrid)
+
+---
+
+## Phase checklist (high level)
+
+- [ ] Phase 0 — AI Foundations (math, Python, APIs)
+- [ ] Phase 1 — LLM Foundations (+ DeepSeek)
+- [ ] Phase 2 — Agent Fundamentals (LangGraph)
+- [ ] Phase 3 — RAG
+- [ ] Phase 4 — Multi-Agent + MCP depth
+- [ ] Phase 5 — Voice & Multimodal
+- [ ] Phase 6 — LLMOps
+- [ ] Phase 7 — Fine-Tuning
+- [ ] Phase 8 — Production AI Engineering
+- [ ] Phase 9 — AI Security
+- [ ] Phase 10 — System Design + Coding Agents + Product
+- [ ] Phase 11 — Leadership & EM prep
 
 ---
 
@@ -40,6 +58,9 @@ Only mark ✅ when lab + memo exist. Only mark ⭐ after a mock question on the 
 - [ ] 00-01 AI Engineering Mindset
 - [ ] 00-02 From Rules to Agents
 - [ ] 00-03 BankCo Decision-Support Warmup
+- [ ] 00-04 Mathematics for AI Engineering
+- [ ] 00-05 Python for AI Engineering
+- [ ] 00-06 APIs for AI Engineering
 
 ## Module 01 — LLM Engineering
 
@@ -47,7 +68,7 @@ Only mark ✅ when lab + memo exist. Only mark ⭐ after a mock question on the 
 - [ ] 01-02 Tokenization & Context Windows
 - [ ] 01-03 Inference Serving (vLLM / Ollama)
 - [ ] 01-04 Model Routing (LiteLLM)
-- [ ] 01-05 Provider SDKs
+- [ ] 01-05 Provider SDKs (OpenAI, Claude, Gemini, DeepSeek)
 
 ## Module 02 — Prompt Engineering
 
@@ -84,6 +105,7 @@ Only mark ✅ when lab + memo exist. Only mark ⭐ after a mock question on the 
 - [ ] 07-01 MCP
 - [ ] 07-02 A2A
 - [ ] 07-03 Negotiation & Async Workflows
+- [ ] 07-04 MCP Production Patterns (Depth)
 
 ## Module 08 — Evaluation & LLMOps
 
@@ -115,6 +137,8 @@ Only mark ✅ when lab + memo exist. Only mark ⭐ after a mock question on the 
 - [ ] 12-02 Text-to-SQL Agents
 - [ ] 12-03 Self-Improving Agents
 - [ ] 12-04 DSPy
+- [ ] 12-05 AI Coding Agents (Codex, Claude Code, Cursor)
+- [ ] 12-06 AI Product Thinking
 
 ---
 
@@ -147,15 +171,16 @@ Only mark ✅ when lab + memo exist. Only mark ⭐ after a mock question on the 
 
 ---
 
-## Portfolio Gates
+## Portfolio Gates (roadmap ladder)
 
 | Gate | Criteria | Date | Done |
 |------|----------|------|------|
-| G1 | Routing agent + README + demo GIF | | [ ] |
-| G2 | RAG assistant with citations + eval report | | [ ] |
-| G3 | Multi-agent system + traces | | [ ] |
-| G4 | Deployed FastAPI service + CI | | [ ] |
-| G5 | Capstone + architecture review doc | | [ ] |
+| G1 | Customer Support Agent (Phase 2) | | [ ] |
+| G2 | Internal Knowledge Bot + citations + eval (Phase 3) | | [ ] |
+| G3 | Multi-agent + MCP gateway + traces (Phase 4) | | [ ] |
+| G4 | Eval dashboard + K8s deploy + cost (Phases 6–8) | | [ ] |
+| G5 | Security sign-off + design pack (Phases 9–10) | | [ ] |
+| G6 | Capstone / Org Agent + architecture review (Phase 11) | | [ ] |
 
 ---
 
@@ -163,8 +188,8 @@ Only mark ✅ when lab + memo exist. Only mark ⭐ after a mock question on the 
 
 | Area | Done / Total |
 |------|--------------|
-| Modules | __ / 42 |
+| Modules | __ / 48 |
 | System Designs | __ / 13 |
 | Leadership/Career | __ / 6 |
-| Portfolio Gates | __ / 5 |
-| **Overall** | __ / 66 |
+| Portfolio Gates | __ / 6 |
+| **Overall** | __ / 73 |

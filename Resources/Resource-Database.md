@@ -1,9 +1,43 @@
 # Resource Database
 
-> 85+ curated resources with official URLs only. Filter by category, difficulty, or tags.
-> **Related:** [TABLE_OF_CONTENTS](../TABLE_OF_CONTENTS.md) · [Paper Database](../Papers/Paper-Database.md) · [Cheatsheet Index](../Cheatsheets/Cheatsheet-Index.md)
+> 100+ curated resources with official URLs only. Filter by category, difficulty, tags, or **Master Roadmap phase**.
+> **Related:** [Master Study Roadmap](../Master%20Study%20Roadmap.md) · [TABLE_OF_CONTENTS](../TABLE_OF_CONTENTS.md) · [Paper Database](../Papers/Paper-Database.md) · [Cheatsheet Index](../Cheatsheets/Cheatsheet-Index.md)
 
-**Search tip:** Use editor search (Cmd+F) on Category, Topic, or Tags.
+**Search tip:** Use editor search (Cmd+F) on Category, Topic, Tags, or `Phase N`.
+
+---
+
+## Phase → Resource quick index
+
+| Phase | Primary resource types | Jump to |
+|------:|------------------------|---------|
+| 0 | Math books/YouTube · Python · FastAPI · Pydantic | [Foundations](#foundations--phase-0) |
+| 1 | Transformer paper · provider docs · DeepSeek · Karpathy | [LLM Engineering](#llm-engineering--transformers) |
+| 2 | ReAct · LangGraph · LangGraph examples | [Agents](#agents--orchestration) |
+| 3 | RAG paper · HyDE · Qdrant/Weaviate/Pinecone | [RAG](#rag--retrieval) |
+| 4 | MCP spec · AutoGen · CrewAI · A2A | [Protocols](#protocols--mcp--a2a) · [Multi-Agent](#multi-agent-frameworks) |
+| 5 | Whisper · ElevenLabs · Vision | [Multimodal](#multimodal--voice) |
+| 6 | DeepEval · LangSmith · Promptfoo · RAGAS | [LLMOps](#evaluation--llmops) |
+| 7 | LoRA · QLoRA · PEFT · TRL | [Fine-Tuning](#fine-tuning--peft) |
+| 8 | Docker · K8s · vLLM · Ray · Redis · Kafka | [Infrastructure](#production-infrastructure) |
+| 9 | OWASP LLM · NIST · Promptfoo red team | [Security](#security--safety) |
+| 10 | Cursor · Codex · Claude Code · System Design | [Coding Agents & Product](#ai-coding-agents--product-thinking) |
+| 11 | SRE · DORA · NIST · Leadership books | [Career](#career-leadership--governance) |
+
+---
+
+## Foundations — Phase 0
+
+| Category | Topic | Difficulty | Time | Official URL | Description | Tags | Related Topics |
+|----------|-------|------------|------|--------------|-------------|------|----------------|
+| Foundations | 3Blue1Brown — Essence of Linear Algebra | Intro | 4–6 h | https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab | Visual linear algebra for embeddings/attention | math, youtube, phase-0 | 00-04 |
+| Foundations | StatQuest YouTube | Intro | 3–4 h | https://www.youtube.com/@joshstarmer | Probability & stats intuition for evals | stats, youtube, phase-0 | 00-04, 08-01 |
+| Foundations | Mathematics for Machine Learning (book site) | Intermediate | Ongoing | https://mml-book.github.io/ | Free textbook — linear algebra, probability, optimization | math, book, phase-0 | 00-04 |
+| Foundations | Real Python | Intro | Ongoing | https://realpython.com/ | asyncio, typing, packaging tutorials | python, phase-0 | 00-05 |
+| Foundations | FastAPI documentation | Intro | Ongoing | https://fastapi.tiangolo.com/ | Async Python API framework | fastapi, python, phase-0 | 00-06, 10-01 |
+| Foundations | Pydantic v2 docs | Intro | 45 min | https://docs.pydantic.dev/latest/ | Data validation and settings | pydantic, validation, phase-0 | 00-05, 02-02 |
+| Foundations | gRPC Python docs | Intermediate | 60 min | https://grpc.io/docs/languages/python/ | Typed RPC for internal agent services | grpc, apis, phase-0 | 00-06 |
+| Foundations | Python asyncio docs | Intermediate | 60 min | https://docs.python.org/3/library/asyncio.html | Concurrent LLM/tool I/O | asyncio, python, phase-0 | 00-05 |
 
 ---
 
@@ -15,7 +49,11 @@
 | LLM Engineering | HuggingFace Transformers docs | Intermediate | Ongoing | https://huggingface.co/docs/transformers | Model APIs, tokenizers, pipelines | huggingface, inference | 01-01, 01-03 |
 | LLM Engineering | OpenAI Platform docs | Intro | Ongoing | https://platform.openai.com/docs | Chat, embeddings, fine-tuning, tools | openai, api | 01-05 |
 | LLM Engineering | Anthropic Claude docs | Intro | Ongoing | https://docs.anthropic.com/ | Messages API, tool use, vision | claude, api | 01-05 |
-| LLM Engineering | Google Gemini API docs | Intro | Ongoing | https://ai.google.dev/gemini-api/docs | Gemini models, multimodal, function calling | gemini, api | 01-05, 06-02 |
+| LLM Engineering | Google Gemini API docs | Intro | Ongoing | https://ai.google.dev/gemini-api/docs | Gemini models, multimodal, function calling | gemini, api, phase-1 | 01-05, 06-02 |
+| LLM Engineering | DeepSeek API docs | Intro | 45 min | https://api-docs.deepseek.com/ | OpenAI-compatible API; cost-tier / coding models | deepseek, api, phase-1 | 01-05 |
+| LLM Engineering | OpenAI Cookbook | Intermediate | Ongoing | https://cookbook.openai.com/ | Official recipes for prompts, tools, evals | openai, cookbook, phase-1 | 01-05, 02-01 |
+| LLM Engineering | Andrej Karpathy YouTube | Intermediate | Ongoing | https://www.youtube.com/@AndrejKarpathy | GPT from scratch / neural nets intuition | youtube, transformers, phase-1 | 01-01 |
+| LLM Engineering | Sebastian Raschka YouTube | Intermediate | Ongoing | https://www.youtube.com/@SebastianRaschka | LLM / ML engineering explainers | youtube, llm, phase-1 | 01-01 |
 | LLM Engineering | tiktoken (OpenAI tokenizer) | Intro | 30 min | https://github.com/openai/tiktoken | BPE token counting for OpenAI models | tokenization | 01-02 |
 | LLM Engineering | vLLM documentation | Advanced | Ongoing | https://docs.vllm.ai/en/latest/ | High-throughput LLM serving, PagedAttention | vllm, gpu, inference | 01-03 |
 | LLM Engineering | Ollama documentation | Intro | 45 min | https://github.com/ollama/ollama/blob/main/docs/README.md | Local model runner for dev/prototype | ollama, local | 01-03 |
@@ -200,22 +238,62 @@
 
 ---
 
+## AI Coding Agents & Product Thinking
+
+| Category | Topic | Difficulty | Time | Official URL | Description | Tags | Related Topics |
+|----------|-------|------------|------|--------------|-------------|------|----------------|
+| Coding Agents | Cursor documentation | Intermediate | Ongoing | https://docs.cursor.com/ | IDE agent, rules, MCP in editor | cursor, coding-agents, phase-10 | 12-05 |
+| Coding Agents | OpenAI Codex docs | Intermediate | 60 min | https://platform.openai.com/docs/codex | Codex agent / coding workflows | openai, codex, phase-10 | 12-05 |
+| Coding Agents | Claude Code overview | Intermediate | 60 min | https://docs.anthropic.com/en/docs/claude-code/overview | Anthropic coding agent CLI | claude, coding-agents, phase-10 | 12-05 |
+| Product | AI Engineering (Chip Huyen) book | Advanced | Ongoing | https://www.oreilly.com/library/view/ai-engineering/9781098166298/ | End-to-end AI engineering & product judgment | book, product, phase-10 | 12-06, Roadmap |
+| Product | DeepLearning.AI | Intro | Ongoing | https://www.deeplearning.ai/ | Short courses for LLM/agent literacy | courses, youtube, phase-1 | Roadmap |
+
+---
+
+## Books (global library)
+
+| Category | Topic | Difficulty | Time | Official URL | Description | Tags | Related Topics |
+|----------|-------|------------|------|--------------|-------------|------|----------------|
+| Books | Hands-On Large Language Models | Intermediate | Ongoing | https://www.oreilly.com/library/view/hands-on-large-language/9781098150952/ | LLM intuition & applied patterns | book, phase-1 | Roadmap |
+| Books | Designing Machine Learning Systems | Advanced | Ongoing | https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/ | ML/LLM ops judgment | book, phase-6 | 08-01, 10-04 |
+| Books | Designing Data-Intensive Applications | Advanced | Ongoing | https://dataintensive.net/ | Queues, storage, distributed systems | book, phase-8 | 10-03 |
+| Books | Building LLM Powered Applications | Intermediate | Ongoing | https://www.packtpub.com/ | Applied LLM app building | book, phase-2 | 03-*, 04-* |
+
+---
+
+## GitHub Repositories (canonical examples)
+
+| Category | Topic | Difficulty | Time | Official URL | Description | Tags | Related Topics |
+|----------|-------|------------|------|--------------|-------------|------|----------------|
+| GitHub | LangGraph examples | Intermediate | Ongoing | https://github.com/langchain-ai/langgraph | Official graphs, HITL, multi-agent | langgraph, github, phase-2 | 03-04, 05-03 |
+| GitHub | OpenAI Cookbook repo | Intermediate | Ongoing | https://github.com/openai/openai-cookbook | Runnable notebooks & recipes | openai, github, phase-1 | 01-05 |
+| GitHub | Microsoft AutoGen | Intermediate | Ongoing | https://github.com/microsoft/autogen | Multi-agent framework | autogen, github, phase-4 | 05-03 |
+| GitHub | CrewAI | Intermediate | Ongoing | https://github.com/crewAIInc/crewAI | Role-based crews | crewai, github, phase-4 | 05-03 |
+| GitHub | LlamaIndex | Intermediate | Ongoing | https://github.com/run-llama/llama_index | Data agents & RAG examples | llamaindex, github, phase-3 | 04-01 |
+| GitHub | Qdrant | Intermediate | Ongoing | https://github.com/qdrant/qdrant | Vector DB + examples | qdrant, github, phase-3 | 04-03 |
+| GitHub | DSPy | Advanced | Ongoing | https://github.com/stanfordnlp/dspy | Programmatic prompting | dspy, github, phase-6 | 12-04 |
+| GitHub | Hugging Face Transformers | Intermediate | Ongoing | https://github.com/huggingface/transformers | Models, tokenizers, trainers | huggingface, github, phase-1 | 01-01, 09-01 |
+| GitHub | MCP Python SDK | Intermediate | Ongoing | https://github.com/modelcontextprotocol/python-sdk | Build MCP servers/clients | mcp, github, phase-4 | 07-01, 07-04 |
+
+---
+
 ## Career, Leadership & Governance
 
 | Category | Topic | Difficulty | Time | Official URL | Description | Tags | Related Topics |
 |----------|-------|------------|------|--------------|-------------|------|----------------|
-| Leadership | Google SRE Book | Advanced | Ongoing | https://sre.google/sre-book/table-of-contents/ | Reliability engineering principles | sre, reliability | 10-02 |
-| Leadership | DORA metrics | Intermediate | 45 min | https://dora.dev/ | DevOps research metrics | dora, metrics | Leadership |
-| Governance | EU AI Act overview | Advanced | 60 min | https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai | EU AI regulation framework | regulation, eu | Leadership |
-| Governance | ISO/IEC 42001 AI MS | Advanced | 60 min | https://www.iso.org/standard/81230.html | AI management system standard | iso, governance | Leadership |
+| Leadership | Google SRE Book | Advanced | Ongoing | https://sre.google/sre-book/table-of-contents/ | Reliability engineering principles | sre, reliability, phase-11 | 10-02 |
+| Leadership | DORA metrics | Intermediate | 45 min | https://dora.dev/ | DevOps research metrics | dora, metrics, phase-11 | Leadership |
+| Governance | EU AI Act overview | Advanced | 60 min | https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai | EU AI regulation framework | regulation, eu, phase-11 | Leadership |
+| Governance | ISO/IEC 42001 AI MS | Advanced | 60 min | https://www.iso.org/standard/81230.html | AI management system standard | iso, governance, phase-11 | Leadership |
 
 ---
 
 ## Resource Count by Category
 
-| Category | Count |
-|----------|-------|
-| LLM Engineering | 11 |
+| Category | Count (approx.) |
+|----------|----------------:|
+| Foundations (Phase 0) | 8 |
+| LLM Engineering | 16 |
 | Prompt Engineering | 7 |
 | Agents | 8 |
 | RAG | 9 |
@@ -229,42 +307,70 @@
 | Multimodal | 5 |
 | Cloud | 5 |
 | Data | 5 |
+| Coding Agents & Product | 5 |
+| Books | 4 |
+| GitHub | 9 |
 | Career & Governance | 4 |
-| **Total** | **89** |
+| **Total** | **~130** |
 
 ---
 
-## Recommended Reading Sequences
+## Recommended Reading Sequences (phase-aligned)
 
-### Week 1 — Foundations
+### Phase 0 — Foundations
 
-1. OpenAI Platform docs (skim)
-2. Transformer paper (architecture sections)
-3. FastAPI documentation (async + dependencies)
+1. 3Blue1Brown Linear Algebra (selected videos)
+2. *Mathematics for Machine Learning* (skim Ch. 2–6)
+3. FastAPI + Pydantic docs
+4. Real Python asyncio / typing
 
-### Week 3 — Agents
+### Phase 1 — LLM Foundations
 
-1. ReAct paper
-2. LangGraph documentation
-3. MCP getting started
+1. Attention Is All You Need (architecture sections)
+2. OpenAI Cookbook + Claude docs + Gemini docs + **DeepSeek API**
+3. Karpathy / Raschka (selective)
+4. *AI Engineering* (start; continue across phases)
 
-### Week 6 — RAG
+### Phase 2 — Agents
 
-1. RAG paper
-2. sentence-transformers docs
+1. ReAct + Chain of Thought papers
+2. LangGraph documentation + examples repo
+3. Handbook 03-04 lab
+
+### Phase 3 — RAG
+
+1. RAG paper + HyDE
+2. Qdrant (or Weaviate/Pinecone) docs
 3. RAGAS documentation
 
-### Week 8 — Production
+### Phase 4 — Multi-Agent / MCP
 
-1. vLLM documentation
-2. LiteLLM documentation
-3. DeepEval + Promptfoo
+1. MCP getting started + specification
+2. MCP Python SDK
+3. LangGraph multi-agent + AutoGen/CrewAI skim
 
-### Week 10 — Security
+### Phase 6 — LLMOps
+
+1. DeepEval + Promptfoo + LangSmith
+2. *Designing Machine Learning Systems* (eval/ops chapters)
+
+### Phase 8 — Production
+
+1. Docker + Kubernetes docs
+2. vLLM documentation
+3. Redis / Kafka / Ray as needed for your project
+
+### Phase 9 — Security
 
 1. OWASP LLM Top 10
 2. Promptfoo red team guide
 3. NIST AI RMF (skim Govern)
+
+### Phase 10 — Coding Agents & Product
+
+1. Cursor docs · Claude Code · OpenAI Codex
+2. Handbook 12-05 + 12-06
+3. System Design writeups (ChatGPT, Copilot, Cursor, Perplexity, RAG)
 
 ---
 
@@ -272,17 +378,22 @@
 
 | Tag | Resource count (approx.) |
 |-----|--------------------------|
-| `openai` | 12 |
+| `openai` | 14 |
 | `rag` | 10 |
 | `agents` | 9 |
-| `langgraph` | 6 |
+| `langgraph` | 7 |
 | `eval` | 8 |
 | `security` | 6 |
 | `gpu` | 5 |
-| `mcp` | 4 |
+| `mcp` | 6 |
+| `deepseek` | 2 |
+| `coding-agents` | 3 |
+| `phase-0` | 8 |
+| `book` | 8 |
+| `github` | 9 |
 
 ---
 
 ## Summary
 
-This database lists **89 official resources** mapped to handbook modules. Prefer primary docs (OpenAI, Anthropic, LangGraph, OWASP, vLLM, LiteLLM, DeepEval, Promptfoo, MCP, FastAPI) over blog summaries. Cross-link to [Paper Database](../Papers/Paper-Database.md) for foundational research and [Cheatsheets](../Cheatsheets/Cheatsheet-Index.md) for rapid revision.
+This database lists **~130 official resources** mapped to handbook modules **and Master Study Roadmap phases**. Prefer primary docs (OpenAI, Anthropic, DeepSeek, LangGraph, OWASP, vLLM, LiteLLM, DeepEval, Promptfoo, MCP, FastAPI, Kubernetes) over blog summaries. For phase-ordered study with books/YouTube/GitHub baked into each week, use [Master Study Roadmap](../Master%20Study%20Roadmap.md). Cross-link to [Paper Database](../Papers/Paper-Database.md) for foundational research and [Cheatsheets](../Cheatsheets/Cheatsheet-Index.md) for rapid revision.
