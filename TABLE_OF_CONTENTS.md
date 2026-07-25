@@ -50,9 +50,9 @@
 |---|-------|------|--------|
 | 2.1 | Transformer Architecture for Engineers | [01-01](Modules/01-LLM-Engineering/01-01-Transformer-Architecture.md) | ✅ done |
 | 2.2 | Tokenization, Context Windows & Attention Economics | [01-02](Modules/01-LLM-Engineering/01-02-Tokenization-Context-Windows.md) | ✅ done |
-| 2.3 | Inference Serving with vLLM, Ollama & Quantization | [01-03](Modules/01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) | ✅ done |
+| 2.3 | Provider SDKs: OpenAI, Claude, Gemini, DeepSeek | [01-03](Modules/01-LLM-Engineering/01-03-Provider-SDKs-OpenAI-Claude-Gemini.md) | ✅ done |
 | 2.4 | Model Routing with LiteLLM | [01-04](Modules/01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md) | ✅ done |
-| 2.5 | Provider SDKs: OpenAI, Claude, Gemini, DeepSeek | [01-05](Modules/01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) | ✅ done |
+| 2.5 | Inference Serving with vLLM, Ollama & Quantization | [01-05](Modules/01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) | ✅ done |
 
 ---
 
@@ -71,8 +71,8 @@
 |---|-------|------|--------|
 | 4.1 | Agent Anatomy & the Think→Act→Observe Loop | [03-01](Modules/03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) | ✅ done |
 | 4.2 | Tools, Memory & Control Flow | [03-02](Modules/03-Agentic-Fundamentals/03-02-Tools-Memory-Control-Flow.md) | ✅ done |
-| 4.3 | Agentic Design Patterns (Routing, Reflection, ReAct…) | [03-03](Modules/03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md) | ✅ done |
-| 4.4 | LangGraph Production Agents | [03-04](Modules/03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) | ✅ done |
+| 4.3 | LangGraph Production Agents | [03-03](Modules/03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) | ✅ done |
+| 4.4 | Agentic Design Patterns (Routing, Reflection, ReAct…) | [03-04](Modules/03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md) | ✅ done |
 
 ---
 
@@ -143,8 +143,8 @@
 |---|-------|------|--------|
 | 11.1 | FastAPI AI Backends | [10-01](Modules/10-Production-Infrastructure/10-01-FastAPI-AI-Backends.md) | ✅ done |
 | 11.2 | Docker, Kubernetes & CI/CD | [10-02](Modules/10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md) | ✅ done |
-| 11.3 | Redis, Kafka & Ray | [10-03](Modules/10-Production-Infrastructure/10-03-Redis-Kafka-Ray.md) | ✅ done |
-| 11.4 | Cost & Latency Optimization | [10-04](Modules/10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) | ✅ done |
+| 11.3 | Cost & Latency Optimization | [10-03](Modules/10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) | ✅ done |
+| 11.4 | Redis, Kafka & Ray | [10-04](Modules/10-Production-Infrastructure/10-04-Redis-Kafka-Ray.md) | ✅ done |
 
 ---
 

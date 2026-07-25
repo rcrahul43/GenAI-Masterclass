@@ -20,7 +20,7 @@
 |---------|------:|--------|
 | Core navigation (+ Master Study Roadmap) | 12 | ✅ |
 | Module 00 Foundations | 6 | ✅ (+ math, Python, APIs) |
-| Module 01 LLM Engineering | 5 | ✅ (+ DeepSeek in 01-05) |
+| Module 01 LLM Engineering | 5 | ✅ (+ DeepSeek in 01-03) |
 | Module 02 Prompt Engineering | 2 | ✅ |
 | Module 03 Agentic Fundamentals | 4 | ✅ |
 | Module 04 RAG | 4 | ✅ |

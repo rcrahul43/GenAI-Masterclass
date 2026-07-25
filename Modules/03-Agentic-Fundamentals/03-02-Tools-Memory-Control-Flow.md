@@ -13,7 +13,7 @@
 | **Difficulty** | Intermediate (tools/memory) · Advanced (control flow + resilience) |
 | **Prerequisites** | [00-01](../00-Foundations/00-01-GenAI-From-Scratch.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · [03-01](03-01-Agent-Anatomy-and-Loop.md) · Python · FastAPI |
 | **Module** | 03 — Agentic Fundamentals |
-| **Related** | [00-01](../00-Foundations/00-01-GenAI-From-Scratch.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · [03-01](03-01-Agent-Anatomy-and-Loop.md) · [03-03](03-03-Agentic-Design-Patterns.md) · [03-04](03-04-LangGraph-Production-Agents.md) · [Architecture Index](../../Architecture Index.md) |
+| **Related** | [00-01](../00-Foundations/00-01-GenAI-From-Scratch.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · [03-01](03-01-Agent-Anatomy-and-Loop.md) · [03-04](03-04-Agentic-Design-Patterns.md) · [03-03](03-03-LangGraph-Production-Agents.md) · [Architecture Index](../../Architecture Index.md) |
 
 ---
 
@@ -192,7 +192,7 @@ Docs: [LangGraph persistence](https://langchain-ai.github.io/langgraph/concepts/
 - Client may supply `thread_id` but server validates ownership.
 - Never embed PII in `thread_id`; use opaque UUID.
 
-Loop basics: [03-01 Agent Anatomy & Loop](03-01-Agent-Anatomy-and-Loop.md) · Production graph: [03-04 LangGraph Production Agents](03-04-LangGraph-Production-Agents.md)
+Loop basics: [03-01 Agent Anatomy & Loop](03-01-Agent-Anatomy-and-Loop.md) · Production graph: [03-03 LangGraph Production Agents](03-03-LangGraph-Production-Agents.md)
 
 ---
 
@@ -240,7 +240,7 @@ stateDiagram-v2
 | Circuit open | Natural language planning |
 | Known workflows | Research tasks |
 
-Patterns catalog: [03-03 Agentic Design Patterns](03-03-Agentic-Design-Patterns.md)
+Patterns catalog: [03-04 Agentic Design Patterns](03-04-Agentic-Design-Patterns.md)
 
 ---
 
@@ -979,7 +979,7 @@ Draw STM, LTM, checkpointer, and breaker on one diagram.
 - **STM** in graph state; **LTM** in store; **checkpoints** for resume/HITL.
 - **Retries** for transient; **breakers** for sustained failure.
 - Control flow in **code** for compliance; LLM for ambiguity.
-- Loop context: [03-01](03-01-Agent-Anatomy-and-Loop.md) · Patterns: [03-03](03-03-Agentic-Design-Patterns.md) · Prod: [03-04](03-04-LangGraph-Production-Agents.md)
+- Loop context: [03-01](03-01-Agent-Anatomy-and-Loop.md) · Patterns: [03-04](03-04-Agentic-Design-Patterns.md) · Prod: [03-03](03-03-LangGraph-Production-Agents.md)
 
 ---
 

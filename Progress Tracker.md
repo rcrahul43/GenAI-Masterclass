@@ -40,7 +40,7 @@ Only mark ✅ when the week’s **ship** item exists.
 
 - [ ] **Block 1** Foundations (Weeks 1–8) — Hello-LLM + FastAPI
 - [ ] **Block 2** LLM apps (Weeks 9–16) — Document helper
-- [ ] **Block 3** RAG + agent (Weeks 17–24) — FAQ bot + support agent
+- [ ] **Block 3** Agents + RAG (Weeks 17–24) — support agent + FAQ bot
 - [ ] **Block 4** Quality + safety (Weeks 25–32) — Golden set + guardrails
 - [ ] **Block 5** Deploy + cost (Weeks 33–40) — Docker + ₹/query
 - [ ] **Block 6** Specialize + jobs (Weeks 41–48) — Flagship + applications
@@ -77,23 +77,23 @@ Only mark ✅ when the week’s **ship** item exists.
 
 - [ ] 01-01 Transformer Architecture (Intuition)
 - [ ] 01-02 Tokenization & Context Windows (Full)
-- [ ] 01-03 Inference Serving (vLLM / Ollama) (Skim + Ollama)
+- [ ] 01-03 Provider SDKs (OpenAI, Claude, Gemini, DeepSeek) (Full)
 - [ ] 01-04 Model Routing (LiteLLM) (Skim)
-- [ ] 01-05 Provider SDKs (OpenAI, Claude, Gemini, DeepSeek) (Full)
+- [ ] 01-05 Inference Serving (vLLM / Ollama) (Skim in Block 5)
 
 ## Module 02 — Prompt Engineering
 
 - [ ] 02-01 Production Prompt Engineering (Full)
 - [ ] 02-02 Structured Outputs & Tool Calling (Full)
 
-## Module 03 — Agentic Fundamentals
+## Module 03 — Agentic Fundamentals *(before Module 04)*
 
 - [ ] 03-01 Agent Anatomy & Loop (Full)
 - [ ] 03-02 Tools, Memory & Control Flow (Full)
-- [ ] 03-03 Agentic Design Patterns *(Advanced / Block 6B)*
-- [ ] 03-04 LangGraph Production Agents (Light)
+- [ ] 03-03 LangGraph Production Agents (Light)
+- [ ] 03-04 Agentic Design Patterns *(Advanced / Block 6B)*
 
-## Module 04 — RAG
+## Module 04 — RAG *(after Module 03)*
 
 - [ ] 04-01 RAG Architecture (Full)
 - [ ] 04-02 Chunking, Metadata & Embeddings (Full)
@@ -134,8 +134,8 @@ Only mark ✅ when the week’s **ship** item exists.
 
 - [ ] 10-01 FastAPI AI Backends
 - [ ] 10-02 Docker / K8s / CI/CD
-- [ ] 10-03 Redis / Kafka / Ray
-- [ ] 10-04 Cost & Latency Optimization
+- [ ] 10-03 Cost & Latency Optimization
+- [ ] 10-04 Redis / Kafka / Ray *(Advanced — skip year 1)*
 
 ## Module 11 — Security
 

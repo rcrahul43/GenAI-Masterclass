@@ -13,7 +13,7 @@
 | **Difficulty** | Intermediate (conceptual) · Advanced (implementation labs) |
 | **Prerequisites** | [00-01 — GenAI From Scratch](00-01-GenAI-From-Scratch.md) completed; one successful (or mocked) LLM API call; comfortable Python; basic HTTP/API literacy |
 | **Module** | 00 — Foundations |
-| **Related** | [00-01](00-01-GenAI-From-Scratch.md) · [00-06](00-06-BankCo-Decision-Support-Warmup.md) · [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [03-03](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md) · [Architecture Index](../../Architecture Index.md) |
+| **Related** | [00-01](00-01-GenAI-From-Scratch.md) · [00-06](00-06-BankCo-Decision-Support-Warmup.md) · [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [03-04](../03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md) · [Architecture Index](../../Architecture Index.md) |
 
 ---
 
@@ -118,7 +118,7 @@ flowchart TB
 
 **Mental model:** Rules are **compiled policy**. Classical ML is **learned policy from features**. LLMs are **soft programs over language**. Agents are **operating systems** that schedule those soft programs and connect them to the world through syscalls (tools).
 
-Deep dives: [03-01 — Agent Anatomy and Loop](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [03-03 — Agentic Design Patterns](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md)
+Deep dives: [03-01 — Agent Anatomy and Loop](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [03-04 — Agentic Design Patterns](../03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md)
 
 ---
 
@@ -1102,7 +1102,7 @@ Router is perfect horizontal scale-out candidate—stateless.
 - Support tier-0 FAQ vs tier-2 agent
 - Code assistants: autocomplete vs agent mode
 
-More patterns: [03-03](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md)
+More patterns: [03-04](../03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md)
 
 ---
 
@@ -1221,7 +1221,7 @@ Parallelize critics; cache validated templates.
 - Medical note drafts with policy checklist critic
 - JSON plan validated against Pydantic before tool exec
 
-Extended catalog: [03-03](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md)
+Extended catalog: [03-04](../03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md)
 
 ---
 
@@ -1996,7 +1996,7 @@ Intelligent systems did not leap from chatbots to agents—they **accumulated ca
 
 Your job as an AI engineer is not to pick the newest box on the diagram. It is to **place each step on the evolution curve deliberately**, instrument the seams, and know—under interview lights—which primitive wins when.
 
-Next: apply hybrid thinking to a concrete domain in [00-06 — BankCo Decision Support Warmup](00-06-BankCo-Decision-Support-Warmup.md), then deepen the loop in [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) and patterns in [03-03](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md).
+Next: apply hybrid thinking to a concrete domain in [00-06 — BankCo Decision Support Warmup](00-06-BankCo-Decision-Support-Warmup.md), then deepen the loop in [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) and patterns in [03-04](../03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md).
 
 ---
 

@@ -31,7 +31,7 @@ Build **one every 2–3 weeks after agents/RAG**. Prefer production milestones (
 
 | Project | Phase | Module anchors |
 |---------|------:|----------------|
-| Customer Support Agent | 2 | 03-01 → 03-04 |
+| Customer Support Agent | 2 | 03-01 → 03-03 |
 | Internal Knowledge Bot | 3 | 04-01 → 04-04 |
 
 ### Intermediate

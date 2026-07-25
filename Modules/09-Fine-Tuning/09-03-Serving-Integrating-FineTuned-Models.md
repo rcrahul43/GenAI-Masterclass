@@ -11,7 +11,7 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2h · lab 2.5h · deploy checklist 1h) |
 | **Difficulty** | Intermediate (merge + HF serve) · Advanced (vLLM LoRA + multi-adapter routing) |
-| **Prerequisites** | [09-01 PEFT LoRA QLoRA](09-01-PEFT-LoRA-QLoRA.md) · [01-03 Inference Serving vLLM](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) · [10-01 FastAPI AI Backends](../10-Production-Infrastructure/10-01-FastAPI-AI-Backends.md) |
+| **Prerequisites** | [09-01 PEFT LoRA QLoRA](09-01-PEFT-LoRA-QLoRA.md) · [01-05 Inference Serving vLLM](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) · [10-01 FastAPI AI Backends](../10-Production-Infrastructure/10-01-FastAPI-AI-Backends.md) |
 | **Module** | 09 — Fine-Tuning |
 | **Related** | [09-02 Decision Framework](09-02-Prompting-vs-RAG-vs-FineTuning.md) · [01-04 Model Routing](../01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md) · [08-01 Evaluation](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [10-02 Docker/K8s](../10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md) · [Architecture Index](../../Architecture Index.md) |
 
@@ -26,7 +26,7 @@ By the end of this chapter you will be able to:
 3. Build a **FastAPI integration layer** that routes tenants to the correct adapter.
 4. Version and roll back **adapter artifacts** safely with eval gates ([08-01](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md)).
 5. Combine fine-tuned tone models with **RAG policy pipelines** ([04-01](../04-RAG/04-01-RAG-Architecture.md)).
-6. Operate fine-tuned endpoints with **observability and cost attribution** ([10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md)).
+6. Operate fine-tuned endpoints with **observability and cost attribution** ([10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md)).
 
 ---
 
@@ -41,7 +41,7 @@ Training a LoRA adapter is half the job. Production asks:
 
 Serving mistakes cause **silent quality regressions**, **2× VRAM** from loading base+adapter wrong, and **tenant bleed** when routing headers are ignored.
 
-This chapter connects [09-01](09-01-PEFT-LoRA-QLoRA.md) training output to [01-03](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) inference and [10-01](../10-Production-Infrastructure/10-01-FastAPI-AI-Backends.md) product APIs.
+This chapter connects [09-01](09-01-PEFT-LoRA-QLoRA.md) training output to [01-05](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) inference and [10-01](../10-Production-Infrastructure/10-01-FastAPI-AI-Backends.md) product APIs.
 
 ---
 
@@ -131,7 +131,7 @@ Client passes `model="novacart-support"` or uses LoRA request fields per vLLM ve
 
 ### 3) OpenAI-Compatible Client Calls
 
-Same SDK as [01-03](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) — only `model` id changes.
+Same SDK as [01-05](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) — only `model` id changes.
 
 ---
 
@@ -382,7 +382,7 @@ Full K8s patterns: [10-02](../10-Production-Infrastructure/10-02-Docker-Kubernet
 
 | Pattern | Impact |
 |---------|--------|
-| Merged + AWQ | Best tokens/sec ([01-03](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md)) |
+| Merged + AWQ | Best tokens/sec ([01-05](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md)) |
 | Runtime LoRA | +memory for adapter slots |
 | RAG + FT | Parallel retrieve while GPU warm |
 
@@ -390,7 +390,7 @@ Full K8s patterns: [10-02](../10-Production-Infrastructure/10-02-Docker-Kubernet
 
 ## Cost
 
-Merged quant model on shared vLLM fleet minimizes **$/token** vs per-tenant full models. See [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md).
+Merged quant model on shared vLLM fleet minimizes **$/token** vs per-tenant full models. See [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md).
 
 ---
 
@@ -444,7 +444,7 @@ Trace fields: `adapter_version`, `base_model`, `lora_request_id`, `rag_index_ver
 | Merge | Single tenant prod |
 | Runtime LoRA | Multi-tenant platform |
 | Managed custom model | No GPU ops |
-| vLLM vs TGI | vLLM default in handbook ([01-03](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md)) |
+| vLLM vs TGI | vLLM default in handbook ([01-05](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md)) |
 
 ---
 
@@ -623,5 +623,5 @@ Serving fine-tuned models means treating adapters as **versioned production arti
 | vLLM GitHub | https://github.com/vllm-project/vllm | Intermediate | 20 min | Flags & examples | LoRA examples |
 | FastAPI | https://fastapi.tiangolo.com/ | Intro | 30 min | Gateway patterns | Dependencies |
 | Train handbook | [09-01](09-01-PEFT-LoRA-QLoRA.md) | Intermediate | 45 min | Merge script | QLoRA |
-| Inference handbook | [01-03](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) | Intermediate | 45 min | Gateway + batching | Implementation |
+| Inference handbook | [01-05](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) | Intermediate | 45 min | Gateway + batching | Implementation |
 | K8s handbook | [10-02](../10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md) | Intermediate | 30 min | GPU deploy | Rolling updates |

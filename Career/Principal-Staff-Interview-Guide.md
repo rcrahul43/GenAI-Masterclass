@@ -129,7 +129,7 @@ Principal hire = "Would they raise our AI engineering bar org-wide?"
 | Chunking + metadata | [04-02](../Modules/04-RAG/04-02-Chunking-Metadata-Embeddings.md) |
 | Hybrid search + rerank | [04-03](../Modules/04-RAG/04-03-Vector-DB-Hybrid-Search-Reranking.md) |
 | Agent loop (ReAct) | [03-01](../Modules/03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) |
-| LangGraph state | [03-04](../Modules/03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) |
+| LangGraph state | [03-03](../Modules/03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) |
 | LiteLLM routing | [01-04](../Modules/01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md) |
 | Eval lifecycle | [08-01](../Modules/08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) |
 | OWASP LLM | [11-01](../Modules/11-Security-Safety/11-01-OWASP-LLM-Top-10.md) |
@@ -242,10 +242,10 @@ Use [Behavioral STAR](../Leadership/Behavioral-STAR-Principal-EM.md) Pattern 23 
 |---|----------|--------|
 | Q5 | Explain transformer attention to an engineer | [01-01](../Modules/01-LLM-Engineering/01-01-Transformer-Architecture.md) |
 | Q6 | How do context windows affect architecture? | [01-02](../Modules/01-LLM-Engineering/01-02-Tokenization-Context-Windows.md) |
-| Q7 | vLLM vs naive serving—why faster? | [01-03](../Modules/01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) |
+| Q7 | vLLM vs naive serving—why faster? | [01-05](../Modules/01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) |
 | Q8 | Design model routing for cost optimization | [01-04](../Modules/01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md) |
-| Q9 | Compare OpenAI vs Claude vs Gemini for enterprise | [01-05](../Modules/01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) |
-| Q10 | Quantization tradeoffs for production | [01-03](../Modules/01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) |
+| Q9 | Compare OpenAI vs Claude vs Gemini for enterprise | [01-03](../Modules/01-LLM-Engineering/01-03-Provider-SDKs-OpenAI-Claude-Gemini.md) |
+| Q10 | Quantization tradeoffs for production | [01-05](../Modules/01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) |
 | Q11 | Estimate monthly inference cost for 1M queries | [01-02](../Modules/01-LLM-Engineering/01-02-Tokenization-Context-Windows.md) |
 | Q12 | KV cache and latency implications | [01-01](../Modules/01-LLM-Engineering/01-01-Transformer-Architecture.md) |
 
@@ -264,10 +264,10 @@ Use [Behavioral STAR](../Leadership/Behavioral-STAR-Principal-EM.md) Pattern 23 
 |---|----------|--------|
 | Q17 | Draw the agent loop (Think→Act→Observe) | [03-01](../Modules/03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) |
 | Q18 | Memory types for long-running agents | [03-02](../Modules/03-Agentic-Fundamentals/03-02-Tools-Memory-Control-Flow.md) |
-| Q19 | ReAct vs Plan-and-Execute | [03-03](../Modules/03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md) |
-| Q20 | LangGraph checkpointing for production | [03-04](../Modules/03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) |
-| Q21 | When is single-agent + tools enough? | [03-03](../Modules/03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md) |
-| Q22 | Design inquiry routing agent | [03-03](../Modules/03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md) |
+| Q19 | ReAct vs Plan-and-Execute | [03-04](../Modules/03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md) |
+| Q20 | LangGraph checkpointing for production | [03-03](../Modules/03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) |
+| Q21 | When is single-agent + tools enough? | [03-04](../Modules/03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md) |
+| Q22 | Design inquiry routing agent | [03-04](../Modules/03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md) |
 
 ### Module 04 — RAG (7 questions)
 
@@ -331,8 +331,8 @@ Use [Behavioral STAR](../Leadership/Behavioral-STAR-Principal-EM.md) Pattern 23 
 |---|----------|--------|
 | Q49 | FastAPI patterns for streaming LLM | [10-01](../Modules/10-Production-Infrastructure/10-01-FastAPI-AI-Backends.md) |
 | Q50 | Docker + K8s for agent services | [10-02](../Modules/10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md) |
-| Q51 | Redis/Kafka/Ray in AI pipelines | [10-03](../Modules/10-Production-Infrastructure/10-03-Redis-Kafka-Ray.md) |
-| Q52 | Cut inference cost 50%—how? | [10-04](../Modules/10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) |
+| Q51 | Redis/Kafka/Ray in AI pipelines | [10-04](../Modules/10-Production-Infrastructure/10-04-Redis-Kafka-Ray.md) |
+| Q52 | Cut inference cost 50%—how? | [10-03](../Modules/10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) |
 
 ### Module 11 — Security (3 questions)
 

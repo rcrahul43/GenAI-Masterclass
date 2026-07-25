@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 6–8 hours (read 2.5h · lab 3h · proxy deploy 2h) |
 | **Difficulty** | Intermediate (SDK routing) · Advanced (proxy mesh + budgets) |
-| **Prerequisites** | [01-03 Inference Serving](01-03-Inference-Serving-vLLM.md) · basic FastAPI · env-based secrets |
+| **Prerequisites** | [01-05 Inference Serving](01-05-Inference-Serving-vLLM.md) · basic FastAPI · env-based secrets |
 | **Module** | 01 — LLM Engineering |
-| **Related** | [01-03](01-03-Inference-Serving-vLLM.md) · [01-05](01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) · [10-04 Cost & Latency](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) · [08-02 Observability](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) · [Architecture Index](../../Architecture Index.md) |
+| **Related** | [01-05](01-05-Inference-Serving-vLLM.md) · [01-03](01-03-Provider-SDKs-OpenAI-Claude-Gemini.md) · [10-03 Cost & Latency](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) · [08-02 Observability](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) · [Architecture Index](../../Architecture Index.md) |
 
 ---
 
@@ -43,7 +43,7 @@ Calling one model from one provider works in a demo. Production systems face:
 
 Without a routing layer, every application team re-implements retries, fallbacks, and spend caps differently. That is how you get silent quality regressions, duplicate API keys in repos, and on-call pages at 2 a.m. because one pod still points at a retired endpoint.
 
-**LiteLLM** is the de facto **model gateway SDK + proxy** for Python teams: one `completion()` surface, 100+ providers, router semantics, and an optional OpenAI-compatible HTTP proxy. Pair it with self-hosted inference from [01-03](01-03-Inference-Serving-vLLM.md) and provider-native features from [01-05](01-05-Provider-SDKs-OpenAI-Claude-Gemini.md).
+**LiteLLM** is the de facto **model gateway SDK + proxy** for Python teams: one `completion()` surface, 100+ providers, router semantics, and an optional OpenAI-compatible HTTP proxy. Pair it with self-hosted inference from [01-05](01-05-Inference-Serving-vLLM.md) and provider-native features from [01-03](01-03-Provider-SDKs-OpenAI-Claude-Gemini.md).
 
 ---
 
@@ -62,7 +62,7 @@ Without a routing layer, every application team re-implements retries, fallbacks
 
 ## Architecture Overview
 
-Production model routing sits between your **application** and **model providers** (cloud APIs + self-hosted vLLM/Ollama from [01-03](01-03-Inference-Serving-vLLM.md)):
+Production model routing sits between your **application** and **model providers** (cloud APIs + self-hosted vLLM/Ollama from [01-05](01-05-Inference-Serving-vLLM.md)):
 
 ```mermaid
 flowchart TB
@@ -124,7 +124,7 @@ Think DNS for models: callers use stable names; ops changes the backing records.
 | OpenAI | `openai/gpt-4.1-mini` | Direct OpenAI API |
 | Anthropic | `anthropic/claude-sonnet-4-20250514` | Claude via Messages API |
 | Azure | `azure/my-gpt4-deployment` | Enterprise contract + data residency |
-| OpenAI-compatible | `openai/gpt-4` + `api_base=http://vllm:8000/v1` | Self-hosted from [01-03](01-03-Inference-Serving-vLLM.md) |
+| OpenAI-compatible | `openai/gpt-4` + `api_base=http://vllm:8000/v1` | Self-hosted from [01-05](01-05-Inference-Serving-vLLM.md) |
 
 Reference: [LiteLLM Docs](https://docs.litellm.ai/docs/) · [GitHub](https://github.com/BerriAI/litellm)
 
@@ -136,7 +136,7 @@ Reference: [LiteLLM Docs](https://docs.litellm.ai/docs/) · [GitHub](https://git
 
 #### When NOT to use
 
-- Single model, single deployment, low traffic — direct SDK from [01-05](01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) is fine until you hit the second provider.
+- Single model, single deployment, low traffic — direct SDK from [01-03](01-03-Provider-SDKs-OpenAI-Claude-Gemini.md) is fine until you hit the second provider.
 
 #### Interview discussion
 
@@ -232,9 +232,9 @@ Reference: [Budget Routing](https://docs.litellm.ai/docs/proxy/provider_budget_r
 
 - Budget caps without **observability** — teams will not know why requests suddenly route to weaker models. See [08-02 Observability](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md).
 
-#### Tie-in to [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md)
+#### Tie-in to [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md)
 
-Budget limits are the **enforcement** layer; [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) covers **optimization** (caching, prompt compression, batching). Use both.
+Budget limits are the **enforcement** layer; [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) covers **optimization** (caching, prompt compression, batching). Use both.
 
 ---
 
@@ -340,7 +340,7 @@ flowchart LR
 
 #### Production rule
 
-Never let the **frontier model** run if a **deterministic rule** or **classifier** already knows the path. This is the highest ROI cost lever before [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) micro-optimizations.
+Never let the **frontier model** run if a **deterministic rule** or **classifier** already knows the path. This is the highest ROI cost lever before [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) micro-optimizations.
 
 ---
 
@@ -550,7 +550,7 @@ def get_router() -> Router:
             },
             "model_info": {"tier": "frontier", "provider": "anthropic"},
         },
-        # --- Self-hosted (from 01-03) ---
+        # --- Self-hosted (from 01-05) ---
         {
             "model_name": "tier-local",
             "litellm_params": {
@@ -986,7 +986,7 @@ def test_budget_hint_forces_fast_tier() -> None:
 | Cross-tenant bleed | Pass `user_id` / `team_id` in metadata; enforce at proxy auth layer |
 | Unauthorized model access | Map virtual keys to allowed `model_name` lists |
 
-Provider-specific auth patterns: [01-05 Provider SDKs](01-05-Provider-SDKs-OpenAI-Claude-Gemini.md).
+Provider-specific auth patterns: [01-03 Provider SDKs](01-03-Provider-SDKs-OpenAI-Claude-Gemini.md).
 
 ---
 
@@ -1009,11 +1009,11 @@ Provider-specific auth patterns: [01-05 Provider SDKs](01-05-Provider-SDKs-OpenA
 |-------|--------|
 | Task-based routing | Largest savings — classify on nano/haiku |
 | Budget fallbacks | Automatic step-down when caps hit |
-| Self-hosted tier-local | Near-zero marginal $; ops cost in [01-03](01-03-Inference-Serving-vLLM.md) |
+| Self-hosted tier-local | Near-zero marginal $; ops cost in [01-05](01-05-Inference-Serving-vLLM.md) |
 | Fallback depth cap | Prevents runaway multi-model spend on retries |
 | Central logging | Find teams bypassing router to call frontier directly |
 
-Deep dive: [10-04 Cost & Latency Optimization](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md).
+Deep dive: [10-03 Cost & Latency Optimization](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md).
 
 ---
 
@@ -1024,7 +1024,7 @@ Deep dive: [10-04 Cost & Latency Optimization](../10-Production-Infrastructure/1
 | LiteLLM Proxy | Horizontal pods + Redis shared state |
 | FastAPI router app | Stateless replicas; Router rebuilt per process |
 | Redis | Required for multi-instance RPM/TPM and cooldown sync |
-| Self-hosted vLLM | Scale GPU pool independently ([01-03](01-03-Inference-Serving-vLLM.md)) |
+| Self-hosted vLLM | Scale GPU pool independently ([01-05](01-05-Inference-Serving-vLLM.md)) |
 
 ---
 
@@ -1163,7 +1163,7 @@ sequenceDiagram
 |-----|----------------|--------|
 | **Enterprises on LiteLLM** | OpenAI-compatible proxy over many providers | Central keys + uniform SDK |
 | **OpenAI / Anthropic customers** | Multi-model products with tiered SKUs | Product tier ≈ model tier mapping |
-| **Self-host adopters** | vLLM + cloud burst ([01-03](01-03-Inference-Serving-vLLM.md)) | Hybrid routing cuts cost |
+| **Self-host adopters** | vLLM + cloud burst ([01-05](01-05-Inference-Serving-vLLM.md)) | Hybrid routing cuts cost |
 
 > Pattern references only — verify against your vendor contracts and data policies.
 
@@ -1214,7 +1214,7 @@ Log 50 sample requests with `inferred_task`. Manually label errors; compute clas
 
 ## Stretch Project
 
-Build a **routing simulator**: replay production traces, compare strategies (`simple-shuffle` vs `latency-based-routing` vs task-based), report cost/latency/quality tradeoffs for [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md).
+Build a **routing simulator**: replay production traces, compare strategies (`simple-shuffle` vs `latency-based-routing` vs task-based), report cost/latency/quality tradeoffs for [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md).
 
 ---
 
@@ -1270,7 +1270,7 @@ Draw task-based routing for a customer support agent with RAG, tools, and HITL.
 
 ## Summary
 
-Model routing is how production teams turn fragile single-provider demos into **reliable, cost-bounded model infrastructure**. LiteLLM provides the Router and Proxy primitives; your architecture still must define **task taxonomy**, **fallback policy**, **budget enforcement**, and **observability**. Master this chapter and you can swap providers, survive outages, and cut spend without rewriting application logic — the bridge between [01-03 self-hosted inference](01-03-Inference-Serving-vLLM.md), [01-05 provider SDKs](01-05-Provider-SDKs-OpenAI-Claude-Gemini.md), and platform operations in [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md).
+Model routing is how production teams turn fragile single-provider demos into **reliable, cost-bounded model infrastructure**. LiteLLM provides the Router and Proxy primitives; your architecture still must define **task taxonomy**, **fallback policy**, **budget enforcement**, and **observability**. Master this chapter and you can swap providers, survive outages, and cut spend without rewriting application logic — the bridge between [01-05 self-hosted inference](01-05-Inference-Serving-vLLM.md), [01-03 provider SDKs](01-03-Provider-SDKs-OpenAI-Claude-Gemini.md), and platform operations in [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md).
 
 ---
 
@@ -1286,8 +1286,8 @@ Model routing is how production teams turn fragile single-provider demos into **
 | Budget Fallbacks | https://docs.litellm.ai/docs/proxy/budget_fallbacks | Intermediate | 20 min | Step-down on key budgets | budget_fallbacks chains |
 | OpenAI API Documentation | https://developers.openai.com/api/docs/ | Intro | 60 min | Baseline OpenAI-compatible contract | Chat Completions; models |
 | Anthropic API Overview | https://docs.anthropic.com/en/api/overview | Intro | 45 min | Claude routing strings | Messages API; models |
-| 01-03 Inference Serving | [01-03-Inference-Serving-vLLM.md](01-03-Inference-Serving-vLLM.md) | Advanced | 3h | Self-hosted `api_base` targets | vLLM OpenAI server |
-| 10-04 Cost & Latency | [10-04-Cost-Latency-Optimization.md](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) | Advanced | 2h | Optimization beyond routing | Caching; batching |
+| 01-05 Inference Serving | [01-05-Inference-Serving-vLLM.md](01-05-Inference-Serving-vLLM.md) | Advanced | 3h | Self-hosted `api_base` targets | vLLM OpenAI server |
+| 10-03 Cost & Latency | [10-03-Cost-Latency-Optimization.md](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) | Advanced | 2h | Optimization beyond routing | Caching; batching |
 | 08-02 Observability | [08-02-Observability-LangSmith-OTel.md](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) | Intermediate | 2h | Trace routing decisions | OTel; LangSmith |
 
 ---

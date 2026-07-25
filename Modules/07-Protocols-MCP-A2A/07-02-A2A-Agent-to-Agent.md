@@ -11,7 +11,7 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2h · lab 3h · discovery design 1h) |
 | **Difficulty** | Intermediate (protocol concepts) · Advanced (multi-org trust) |
-| **Prerequisites** | [07-01](07-01-MCP-Model-Context-Protocol.md) · [05-01](../05-Multi-Agent/05-01-Multi-Agent-Orchestration.md) · [03-03](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md) |
+| **Prerequisites** | [07-01](07-01-MCP-Model-Context-Protocol.md) · [05-01](../05-Multi-Agent/05-01-Multi-Agent-Orchestration.md) · [03-04](../03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md) |
 | **Module** | 07 — Protocols (MCP / A2A) |
 | **Related** | [07-03](07-03-Negotiation-Async-Workflows.md) · [05-02](../05-Multi-Agent/05-02-Planner-Executor-Critic.md) · [08-02](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) · [Design-MA-Engine](../../System Design/Design-Multi-Agent-Workflow-Engine.md) |
 

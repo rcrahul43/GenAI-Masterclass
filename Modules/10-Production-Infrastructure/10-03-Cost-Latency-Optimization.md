@@ -1,4 +1,4 @@
-# 10-04 — Cost & Latency Optimization for LLM Systems
+# 10-03 — Cost & Latency Optimization for LLM Systems
 
 
 <!-- TRACK_D_SCOPE -->
@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2h · spreadsheet lab 2h · SLO workshop 1.5h) |
 | **Difficulty** | Intermediate (metrics) · Advanced (unit economics & multi-objective SLOs) |
-| **Prerequisites** | [01-02 Tokenization](../01-LLM-Engineering/01-02-Tokenization-Context-Windows.md) · [01-03 Inference Serving vLLM](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) · [10-01 FastAPI AI Backends](10-01-FastAPI-AI-Backends.md) |
+| **Prerequisites** | [01-02 Tokenization](../01-LLM-Engineering/01-02-Tokenization-Context-Windows.md) · [10-01 FastAPI AI Backends](10-01-FastAPI-AI-Backends.md) |
 | **Module** | 10 — Production Infrastructure |
-| **Related** | [01-04 Model Routing](../01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md) · [09-02 Prompt vs RAG vs FT](../09-Fine-Tuning/09-02-Prompting-vs-RAG-vs-FineTuning.md) · [10-03 Redis/Kafka/Ray](10-03-Redis-Kafka-Ray.md) · [08-01 Evaluation](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [Architecture Index](../../Architecture Index.md) |
+| **Related** | [01-04 Model Routing](../01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md) · [01-05 Inference Serving](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) *(after this chapter in Track D)* · [09-02 Prompt vs RAG vs FT](../09-Fine-Tuning/09-02-Prompting-vs-RAG-vs-FineTuning.md) · [10-04 Redis/Kafka/Ray](10-04-Redis-Kafka-Ray.md) · [08-01 Evaluation](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [Architecture Index](../../Architecture Index.md) |
 
 ---
 
@@ -25,7 +25,7 @@ By the end of this chapter you will be able to:
 2. Define **latency SLOs** (TTFT, ITL, p95 end-to-end) separate from average throughput.
 3. Build a **$/1M tokens** and **$/successful answer** spreadsheet with defensible assumptions.
 4. Apply optimization levers: routing, caching, quantization, context trimming, batching.
-5. Decide **self-host vs API breakeven** with volume and ops cost ([01-03](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md)).
+5. Decide **self-host vs API breakeven** with volume and ops cost ([01-05](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md)).
 6. Run **cost-aware architecture reviews** without sacrificing eval gates ([08-01](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md)).
 
 ---
@@ -59,9 +59,9 @@ Principal interviews: *"Design NovaCart support copilot within $0.02/conversatio
 
 ## Architecture Overview
 
-![Modules__10-Production-Infrastructure__10-04-Cost-Latency-Optimization-01-af7a418d](../../Diagrams/Modules__10-Production-Infrastructure__10-04-Cost-Latency-Optimization-01-af7a418d.png)
+![Modules__10-Production-Infrastructure__10-03-Cost-Latency-Optimization-01-af7a418d](../../Diagrams/Modules__10-Production-Infrastructure__10-03-Cost-Latency-Optimization-01-af7a418d.png)
 
-![Modules__10-Production-Infrastructure__10-04-Cost-Latency-Optimization-01-af7a418d](../../Diagrams/Modules__10-Production-Infrastructure__10-04-Cost-Latency-Optimization-01-af7a418d.png)
+![Modules__10-Production-Infrastructure__10-03-Cost-Latency-Optimization-01-af7a418d](../../Diagrams/Modules__10-Production-Infrastructure__10-03-Cost-Latency-Optimization-01-af7a418d.png)
 
 ```mermaid
 flowchart TB
@@ -73,8 +73,8 @@ flowchart TB
     end
     subgraph Levers["Optimization Levers"]
       RT[Model Routing 01-04]
-      CACHE[Redis Cache 10-03]
-      QUANT[AWQ / GPTQ 01-03]
+      CACHE[Redis Cache 10-04]
+      QUANT[AWQ / GPTQ 01-05]
       TRIM[Context trim · summarize]
       CAP[max_tokens caps 10-01]
       BATCH[Continuous batching]
@@ -114,7 +114,7 @@ Cross-link: [01-02 Tokenization](../01-LLM-Engineering/01-02-Tokenization-Contex
 | **E2E** | Request → last token | SLA dashboards |
 | **Goodput** | Successful tokens/sec under SLO | Finance + infra |
 
-Optimize TTFT with prefix caching ([01-03](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md)); decode with batching and quant.
+Optimize TTFT with prefix caching ([01-05](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md)); decode with batching and quant.
 
 ---
 
@@ -134,17 +134,17 @@ A cheap model with 40% failure rate can cost more than a premium model at 95% pa
 2. **Smaller model route** — easy queries → 7B; hard → frontier ([01-04](../01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md)).
 3. **Trim context** — rerank to top-5; summarize long threads.
 4. **Cap output** — gateway `max_tokens` ([10-01](10-01-FastAPI-AI-Backends.md)).
-5. **Cache** — Redis hot RAG queries ([10-03](10-03-Redis-Kafka-Ray.md)).
-6. **Quantize self-host** — AWQ 4-bit ([01-03](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md)).
+5. **Cache** — Redis hot RAG queries ([10-04](10-04-Redis-Kafka-Ray.md)).
+6. **Quantize self-host** — AWQ 4-bit ([01-05](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md)).
 7. **Self-host breakeven** — sustained volume only.
 
 ---
 
 ### 5) Self-Host vs API Breakeven
 
-![Modules__10-Production-Infrastructure__10-04-Cost-Latency-Optimization-02-28e37fb5](../../Diagrams/Modules__10-Production-Infrastructure__10-04-Cost-Latency-Optimization-02-28e37fb5.png)
+![Modules__10-Production-Infrastructure__10-03-Cost-Latency-Optimization-02-28e37fb5](../../Diagrams/Modules__10-Production-Infrastructure__10-03-Cost-Latency-Optimization-02-28e37fb5.png)
 
-![Modules__10-Production-Infrastructure__10-04-Cost-Latency-Optimization-02-28e37fb5](../../Diagrams/Modules__10-Production-Infrastructure__10-04-Cost-Latency-Optimization-02-28e37fb5.png)
+![Modules__10-Production-Infrastructure__10-03-Cost-Latency-Optimization-02-28e37fb5](../../Diagrams/Modules__10-Production-Infrastructure__10-03-Cost-Latency-Optimization-02-28e37fb5.png)
 
 ```mermaid
 flowchart TD
@@ -302,7 +302,7 @@ Cost attacks: unbounded prompts → **rate limits + token caps** ([11-01](../11-
 
 ## Performance
 
-See [01-03](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md): continuous batching, prefix caching, speculative decoding.
+See [01-05](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md): continuous batching, prefix caching, speculative decoding.
 
 ---
 
@@ -374,7 +374,7 @@ Dashboard panels: $/hour by model, TTFT p95, tokens/request, cache hit %, succes
 
 ## Architecture Diagram
 
-![Modules__10-Production-Infrastructure__10-04-Cost-Latency-Optimization-03-d7f0084e](../../Diagrams/Modules__10-Production-Infrastructure__10-04-Cost-Latency-Optimization-03-d7f0084e.png)
+![Modules__10-Production-Infrastructure__10-03-Cost-Latency-Optimization-03-d7f0084e](../../Diagrams/Modules__10-Production-Infrastructure__10-03-Cost-Latency-Optimization-03-d7f0084e.png)
 
 ```mermaid
 flowchart LR
@@ -391,7 +391,7 @@ flowchart LR
 
 ## Mermaid Diagram — Sequence
 
-![Modules__10-Production-Infrastructure__10-04-Cost-Latency-Optimization-04-ca2da6d2](../../Diagrams/Modules__10-Production-Infrastructure__10-04-Cost-Latency-Optimization-04-ca2da6d2.png)
+![Modules__10-Production-Infrastructure__10-03-Cost-Latency-Optimization-04-ca2da6d2](../../Diagrams/Modules__10-Production-Infrastructure__10-03-Cost-Latency-Optimization-04-ca2da6d2.png)
 
 ```mermaid
 sequenceDiagram
@@ -523,7 +523,7 @@ Draw router + cache + quant on cost/latency axes.
 - **TTFT ≠ TPS** — measure both.
 - **$/successful answer** > $/token.
 - Levers: route, trim, cap, cache, quant, self-host at scale.
-- Cross: [01-03](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) · [01-04](../01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md) · [10-03](10-03-Redis-Kafka-Ray.md).
+- Cross: [01-05](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) · [01-04](../01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md) · [10-04](10-04-Redis-Kafka-Ray.md).
 
 ---
 
@@ -539,7 +539,7 @@ Cost and latency optimization for LLM systems is **measurement-first engineering
 |-------|-----|------------|--------------|----------|--------------------|
 | vLLM Documentation | https://docs.vllm.ai/en/latest/ | Intermediate | 30 min | Throughput knobs | Optimization |
 | OpenAI Pricing | https://openai.com/api/pricing/ | Intro | 15 min | API unit costs | Model tiers |
-| Inference handbook | [01-03](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) | Intermediate | 45 min | Batching + quant | Cost section |
+| Inference handbook | [01-05](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) | Intermediate | 45 min | Batching + quant | Cost section |
 | Routing handbook | [01-04](../01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md) | Intermediate | 30 min | Model mix | Fallbacks |
 | Decision framework | [09-02](../09-Fine-Tuning/09-02-Prompting-vs-RAG-vs-FineTuning.md) | Intermediate | 30 min | Avoid wrong layer | Cost column |
-| Redis cache | [10-03](10-03-Redis-Kafka-Ray.md) | Intermediate | 20 min | RAG cache | Implementation |
+| Redis cache | [10-04](10-04-Redis-Kafka-Ray.md) | Intermediate | 20 min | RAG cache | Implementation |

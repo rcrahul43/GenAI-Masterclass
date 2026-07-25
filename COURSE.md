@@ -35,7 +35,7 @@ flowchart TB
     subgraph Primary["Primary course — Track D — Year 1"]
       B1[Block 1 Foundations]
       B2[Block 2 LLM apps]
-      B3[Block 3 RAG + agent]
+      B3[Block 3 Agents + RAG]
       B4[Block 4 Quality + safety]
       B5[Block 5 Deploy + cost]
       B6[Block 6 Specialize + jobs]
@@ -55,10 +55,10 @@ flowchart TB
 | Block | Months | Theme | You ship | Core modules |
 |------:|--------|-------|----------|--------------|
 | **1** | 1–2 | GenAI ideas + Python + APIs | Hello-LLM + FastAPI warmup | 00-01 → 00-02 → 00-03 → 00-04 → 00-05 |
-| **2** | 3–4 | LLM apps + prompting + tools | Document helper (JSON extract) | 01-02, 01-05, 02-01, 02-02; intuition 01-01; skim 01-04 |
-| **3** | 5–6 | RAG + bounded agent | Policy FAQ bot + support agent | 04-01, 04-02, skim 04-03, 03-01, 03-02, light 03-04 |
+| **2** | 3–4 | LLM apps + prompting + tools | Document helper (JSON extract) | 01-01 → 01-02 → 01-03 → skim 01-04 → 02-01 → 02-02 |
+| **3** | 5–6 | Agents + RAG | Support agent + policy FAQ bot | 03-01 → 03-02 → light 03-03 → 04-01 → 04-02 → skim 04-03 |
 | **4** | 7–8 | Evals + guardrails | Golden set + safety basics | 08-01, skim 08-02, 08-03, skim 11-01; optional 00-06 |
-| **5** | 9–10 | Deploy + cost + inference awareness | Dockerized API + ₹/query note | 10-01, Docker in 10-02, 10-04, skim 01-03 + Ollama |
+| **5** | 9–10 | Deploy + cost + inference awareness | Dockerized API + ₹/query note | 10-01 → 10-02 → 10-03 → skim 01-05 + Ollama |
 | **6** | 11–12 | Specialize + hire | Flagship demo + applications | One path: deeper RAG **or** agents **or** infra |
 
 Full week rhythm and India job notes: **[Career/India-AI-Career-Learning-Plan.md](Career/India-AI-Career-Learning-Plan.md)**.  
@@ -77,27 +77,46 @@ Week-by-week execution: **[Study Plan](Study%20Plan.md)**.
 | 00-04 | **Skim** | “When not to agent” |
 | 00-05 | **Light** | Cosine + embeddings intuition only (bridge toward RAG) |
 | 00-06 | **Optional** | BFSI / IT-services interview boost |
-
-> Foundation IDs **are** the study order (no more “read 00-05 before 00-02”).
 | 01-01 | **Intuition** | Karpathy talk OK; no paper mastery |
-| 01-02, 01-05 | **Full** | Tokens, cost, Gemini/DeepSeek priority |
-| 01-03, 01-04 | **Skim** | Local Ollama + routing awareness |
+| 01-02, 01-03 | **Full** | Tokens + providers (Gemini/DeepSeek priority) |
+| 01-04 | **Skim** | Routing awareness |
+| 01-05 | **Skim (Block 5)** | Inference / Ollama — last in Module 01 on purpose |
 | 02-01, 02-02 | **Full** | Prompts + structured tools |
 | 03-01, 03-02 | **Full** | One bounded agent |
-| 03-04 | **Light** | One simple LangGraph |
+| 03-03 | **Light** | One simple LangGraph |
+| 03-04 | **Advanced / Block 6B** | Patterns — not year-1 core |
 | 04-01, 04-02 | **Full** | RAG FAQ with citations |
 | 04-03 | **Skim** | Hybrid search awareness |
+| 04-04 | **Advanced / Block 6A** | HyDE/GraphRAG |
 | 08-01, 08-03 | **Full** | Evals + ship criteria |
-| 08-02, 11-01 | **Skim** | Logs + OWASP awareness |
+| 08-02 | **Skim** | Logs / tracing |
+| 11-01 | **Skim (after 08)** | OWASP awareness — pulled into quality block |
 | 09-02 | **Light** | Prompt vs RAG vs FT *decision* only |
-| 10-01, 10-04 | **Full** | FastAPI habits + cost |
+| 10-01, 10-03 | **Full** | FastAPI habits + cost |
 | 10-02 | **Docker only** | K8s conceptual later |
+| 10-04 | **Advanced** | Redis/Kafka/Ray — skip year 1 |
+
+> **Rule:** Within each module series, study in **ascending number order**. Skips are Advanced/optional — never “read a higher number before a lower one.”
 
 ### Advanced optional (year 2+ / Track A)
 
-Multi-agent (05-*), MCP/A2A (07-*), voice/multimodal (06-*), LoRA training (09-01/09-03), Redis/Kafka/Ray (10-03), prompt-injection depth (11-02), advanced topics (12-*), full System Design pack, Leadership/EM.
+Multi-agent (05-*), MCP/A2A (07-*), voice/multimodal (06-*), LoRA training (09-01/09-03), Redis/Kafka/Ray (10-04), prompt-injection depth (11-02), advanced topics (12-*), full System Design pack, Leadership/EM.
 
 ---
+
+## Sequence rules (so numbers mean something)
+
+| Series | Study as | Notes |
+|--------|----------|-------|
+| **00** | 00-01 → … → 00-06 | Numbers = Block 1 order |
+| **01** | 01-01 → 01-02 → 01-03 → 01-04 → *(later)* 01-05 | Inference last; revisited in Block 5 |
+| **02** | 02-01 → 02-02 | After Module 01 apps |
+| **03** | 03-01 → 03-02 → 03-03 *(skip 03-04)* | Before Module 04 |
+| **04** | 04-01 → 04-02 → 04-03 *(04-04 later)* | After Module 03 |
+| **08** | 08-01 → 08-02 → 08-03 | Then skim **11-01** for safety |
+| **10** | 10-01 → 10-02 → 10-03 *(skip 10-04)* | Then **01-05** inference |
+
+**Intentional cross-series pulls (not renumbered):** `11-01` after evals; `01-05` after deploy; `00-06` optional in quality block; `09-02` light decision in Block 6.
 
 ## India relevance (built into the course)
 
@@ -132,8 +151,8 @@ Multi-agent (05-*), MCP/A2A (07-*), voice/multimodal (06-*), LoRA training (09-0
 | 1 | Block 1 | Hello-LLM CLI (+ mock without key) |
 | 2 | Block 1 | FastAPI JSON warmup |
 | 3 | Block 2 | Document helper (structured extract) |
-| 4 | Block 3 | BharatCorp-style policy FAQ (RAG + citations) |
-| 5 | Block 3 | Support agent (2–3 tools, step budget) |
+| 4 | Block 3 | Support agent (2–3 tools, step budget) |
+| 5 | Block 3 | BharatCorp-style policy FAQ (RAG + citations) |
 | 6 | Block 4–5 | Same apps + eval CSV + Docker + cost note |
 | 7 | Block 6 | One flagship specialization demo |
 

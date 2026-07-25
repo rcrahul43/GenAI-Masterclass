@@ -13,7 +13,7 @@
 | **Difficulty** | Advanced (multi-hop + graph indexing) |
 | **Prerequisites** | [04-01](04-01-RAG-Architecture.md) · [04-02](04-02-Chunking-Metadata-Embeddings.md) · [04-03](04-03-Vector-DB-Hybrid-Search-Reranking.md) · [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) |
 | **Module** | 04 — RAG Knowledge Agents |
-| **Related** | [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [03-04 LangGraph Agents](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) · [08-01 Evaluation Lifecycle](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [11-02 Prompt Injection Defense](../11-Security-Safety/11-02-Prompt-Injection-Defense.md) · [Architecture Index](../../Architecture Index.md) |
+| **Related** | [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [03-03 LangGraph Agents](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) · [08-01 Evaluation Lifecycle](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [11-02 Prompt Injection Defense](../11-Security-Safety/11-02-Prompt-Injection-Defense.md) · [Architecture Index](../../Architecture Index.md) |
 
 ---
 
@@ -833,7 +833,7 @@ Build labeled set (simple / hyde / multi-hop); measure router accuracy.
 ## Production Project
 
 **Title:** Agentic NovaCart copilot  
-**Done when:** LangGraph agent ([03-04](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md)) with KB search + order lookup tool; hop budget enforced.
+**Done when:** LangGraph agent ([03-03](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md)) with KB search + order lookup tool; hop budget enforced.
 
 ---
 

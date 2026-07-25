@@ -184,7 +184,7 @@ Use full structure from [Hiring AI Engineers](../Leadership/Hiring-AI-Engineers.
 | Eval strategy | Golden sets, CI, online sampling | [08-01](../Modules/08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) |
 | Prompt vs RAG vs FT | Decision criteria | [09-02](../Modules/09-Fine-Tuning/09-02-Prompting-vs-RAG-vs-FineTuning.md) |
 | Security basics | Injection, OWASP LLM | [11-01](../Modules/11-Security-Safety/11-01-OWASP-LLM-Top-10.md) |
-| Cost | $/task, routing | [10-04](../Modules/10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) |
+| Cost | $/task, routing | [10-03](../Modules/10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) |
 
 ### Technical judgment interview format
 

@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2h · lab 2.5h · API design review 1h) |
 | **Difficulty** | Intermediate (FastAPI + async) · Advanced (streaming, auth, multi-tenant) |
-| **Prerequisites** | Python async basics · [01-03 Inference Serving vLLM](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) · HTTP/REST literacy |
+| **Prerequisites** | Python async basics · [01-05 Inference Serving vLLM](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) · HTTP/REST literacy |
 | **Module** | 10 — Production Infrastructure |
-| **Related** | [10-02 Docker/K8s/CI/CD](10-02-Docker-Kubernetes-CICD.md) · [10-03 Redis/Kafka/Ray](10-03-Redis-Kafka-Ray.md) · [10-04 Cost & Latency](10-04-Cost-Latency-Optimization.md) · [04-01 RAG Architecture](../04-RAG/04-01-RAG-Architecture.md) · [11-02 Prompt Injection](../11-Security-Safety/11-02-Prompt-Injection-Defense.md) · [Architecture Index](../../Architecture Index.md) |
+| **Related** | [10-02 Docker/K8s/CI/CD](10-02-Docker-Kubernetes-CICD.md) · [10-04 Redis/Kafka/Ray](10-04-Redis-Kafka-Ray.md) · [10-03 Cost & Latency](10-03-Cost-Latency-Optimization.md) · [04-01 RAG Architecture](../04-RAG/04-01-RAG-Architecture.md) · [11-02 Prompt Injection](../11-Security-Safety/11-02-Prompt-Injection-Defense.md) · [Architecture Index](../../Architecture Index.md) |
 
 ---
 
@@ -38,7 +38,7 @@ Clients need stable contracts: authentication, JSON schemas, error codes, trace 
 
 Teams that expose vLLM directly to the internet inherit **OWASP LLM risks** ([11-01](../11-Security-Safety/11-01-OWASP-LLM-Top-10.md)), unbounded token spend, and breaking changes when inference engines swap.
 
-Every handbook implementation chapter ([04-01](../04-RAG/04-01-RAG-Architecture.md), [01-03](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md), [09-03](../09-Fine-Tuning/09-03-Serving-Integrating-FineTuned-Models.md)) assumes this gateway pattern.
+Every handbook implementation chapter ([04-01](../04-RAG/04-01-RAG-Architecture.md), [01-05](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md), [09-03](../09-Fine-Tuning/09-03-Serving-Integrating-FineTuned-Models.md)) assumes this gateway pattern.
 
 ---
 
@@ -47,7 +47,7 @@ Every handbook implementation chapter ([04-01](../04-RAG/04-01-RAG-Architecture.
 | Outcome | FastAPI layer delivers |
 |---------|------------------------|
 | **Ship faster** | OpenAPI docs auto-generated for frontend/mobile |
-| **Control cost** | Rate limits + max_tokens at edge ([10-04](10-04-Cost-Latency-Optimization.md)) |
+| **Control cost** | Rate limits + max_tokens at edge ([10-03](10-03-Cost-Latency-Optimization.md)) |
 | **Audit compliance** | Request logs with tenant_id, model, token usage |
 | **Vendor flexibility** | Swap vLLM ↔ API without client changes |
 
@@ -72,7 +72,7 @@ flowchart TB
       LLM[LLM Client OpenAI SDK]
     end
     subgraph Upstream
-      VLLM[vLLM 01-03]
+      VLLM[vLLM 01-05]
       OAI[Managed API]
       VDB[(Vector DB 04-03)]
     end
@@ -118,7 +118,7 @@ async def chat():
     return await async_client.chat.completions.create(...)
 ```
 
-CPU-heavy work (PDF parse, embedding batch) → **background tasks** or [10-03 Ray](10-03-Redis-Kafka-Ray.md) workers.
+CPU-heavy work (PDF parse, embedding batch) → **background tasks** or [10-04 Ray](10-04-Redis-Kafka-Ray.md) workers.
 
 ---
 
@@ -126,7 +126,7 @@ CPU-heavy work (PDF parse, embedding batch) → **background tasks** or [10-03 R
 
 Chat UX requires **Server-Sent Events**. Gateway translates OpenAI stream chunks to client SSE.
 
-Benefits: lower perceived latency ([10-04](10-04-Cost-Latency-Optimization.md)); users see partial answers.
+Benefits: lower perceived latency ([10-03](10-03-Cost-Latency-Optimization.md)); users see partial answers.
 
 ---
 
@@ -190,7 +190,7 @@ DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "gpt-4o-mini")
 MAX_TOKENS_CAP = int(os.getenv("MAX_TOKENS_CAP", "2048"))
 RATE_LIMIT_RPM = int(os.getenv("RATE_LIMIT_RPM", "60"))
 
-# Simple in-memory rate limiter (use Redis in prod — 10-03)
+# Simple in-memory rate limiter (use Redis in prod — 10-04)
 _rate_bucket: dict[str, list[float]] = {}
 
 
@@ -427,13 +427,13 @@ Register: `app.include_router(chat_router)`.
 
 ## Cost
 
-Gateway enforces `MAX_TOKENS_CAP`, rate limits, and model routing ([01-04](../01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md)) — see [10-04](10-04-Cost-Latency-Optimization.md).
+Gateway enforces `MAX_TOKENS_CAP`, rate limits, and model routing ([01-04](../01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md)) — see [10-03](10-03-Cost-Latency-Optimization.md).
 
 ---
 
 ## Scalability
 
-Stateless FastAPI pods → HPA on CPU/RPS ([10-02](10-02-Docker-Kubernetes-CICD.md)). Rate limits → Redis ([10-03](10-03-Redis-Kafka-Ray.md)).
+Stateless FastAPI pods → HPA on CPU/RPS ([10-02](10-02-Docker-Kubernetes-CICD.md)). Rate limits → Redis ([10-04](10-04-Redis-Kafka-Ray.md)).
 
 ---
 
@@ -498,7 +498,7 @@ flowchart TB
     end
     LB[Ingress LB] --> UV
     APP --> VLLM[vLLM Service]
-    APP --> REDIS[Redis Rate Limit 10-03]
+    APP --> REDIS[Redis Rate Limit 10-04]
 ```
 
 ---
@@ -567,7 +567,7 @@ Make `/readyz` fail when upstream down; test K8s probe.
 
 ## Coding Assignments
 
-1. Redis rate limiter replacing in-memory dict ([10-03](10-03-Redis-Kafka-Ray.md)).
+1. Redis rate limiter replacing in-memory dict ([10-04](10-04-Redis-Kafka-Ray.md)).
 2. Prometheus middleware for latency histograms.
 3. Split monolith into `APIRouter` modules.
 
@@ -634,8 +634,8 @@ Draw request path: client → FastAPI → vLLM with auth and trace ID.
 
 - **FastAPI = product contract**; inference = upstream.
 - Async + pooled clients; never block event loop.
-- Auth, rate limits, caps at edge ([10-04](10-04-Cost-Latency-Optimization.md)).
-- Deploy: [10-02](10-02-Docker-Kubernetes-CICD.md) · queue: [10-03](10-03-Redis-Kafka-Ray.md).
+- Auth, rate limits, caps at edge ([10-03](10-03-Cost-Latency-Optimization.md)).
+- Deploy: [10-02](10-02-Docker-Kubernetes-CICD.md) · queue: [10-04](10-04-Redis-Kafka-Ray.md).
 
 ---
 
@@ -652,6 +652,6 @@ FastAPI AI backends wrap LLM inference with **production API discipline**: authe
 | FastAPI Documentation | https://fastapi.tiangolo.com/ | Intro | 60 min | Official patterns | Async; Dependencies; Streaming |
 | Uvicorn | https://www.uvicorn.org/ | Intro | 15 min | ASGI server tuning | Workers |
 | OpenAI Python SDK | https://github.com/openai/openai-python | Intro | 20 min | Async client | Streaming |
-| vLLM handbook | [01-03](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) | Intermediate | 45 min | Upstream gateway | Gateway code |
+| vLLM handbook | [01-05](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) | Intermediate | 45 min | Upstream gateway | Gateway code |
 | K8s deploy | [10-02](10-02-Docker-Kubernetes-CICD.md) | Intermediate | 30 min | Probes & deploy | Health checks |
 | Security | [11-02](../11-Security-Safety/11-02-Prompt-Injection-Defense.md) | Intermediate | 30 min | Input defense | Gateway controls |

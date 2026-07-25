@@ -13,7 +13,7 @@
 | **Difficulty** | Intermediate (tokenization) · Advanced (context economics, packing) |
 | **Prerequisites** | [01-01 Transformer Architecture](01-01-Transformer-Architecture.md) (attention basics); Python + FastAPI comfort |
 | **Module** | 01 — LLM Engineering |
-| **Related** | [01-01](01-01-Transformer-Architecture.md) · [01-03 Inference Serving](01-03-Inference-Serving-vLLM.md) · [04-01 RAG Architecture](../04-RAG/04-01-RAG-Architecture.md) · [10-04 Cost & Latency](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) · [Architecture Index](../../Architecture%20Index.md) · [Study Plan](../../Study%20Plan.md) |
+| **Related** | [01-01](01-01-Transformer-Architecture.md) · [01-05 Inference Serving](01-05-Inference-Serving-vLLM.md) · [04-01 RAG Architecture](../04-RAG/04-01-RAG-Architecture.md) · [10-03 Cost & Latency](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) · [Architecture Index](../../Architecture%20Index.md) · [Study Plan](../../Study%20Plan.md) |
 
 ---
 
@@ -54,7 +54,7 @@ Tokenization is the **unit of account** for cost, latency, memory, and attention
 | **Latency SLOs** | Shorter prompts → faster prefill; fewer tokens → faster decode |
 | **Quality** | Right truncation preserves instructions; wrong truncation drops system prompt |
 | **Compliance** | Audit what entered context; prove PII was not over-retained |
-| **Capacity planning** | KV cache scales with context × concurrency—see [01-03](01-03-Inference-Serving-vLLM.md) |
+| **Capacity planning** | KV cache scales with context × concurrency—see [01-05](01-05-Inference-Serving-vLLM.md) |
 
 ---
 
@@ -100,7 +100,7 @@ flowchart TB
     PREFILL --> KV
 ```
 
-**Mental model:** Tokens are **bytes of working memory**. The context window is **RAM**. RAG and summarization are **paging to disk**. Cost controls live in [10-04](10-04-Cost-Latency-Optimization.md).
+**Mental model:** Tokens are **bytes of working memory**. The context window is **RAM**. RAG and summarization are **paging to disk**. Cost controls live in [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md).
 
 ---
 
@@ -239,7 +239,7 @@ Self-attention cost scales **O(n²)** with sequence length *n* during prefill (a
 - **Larger KV cache** during decode (linear in context length)
 - **Higher GPU memory** per concurrent request
 
-This is why [01-03 Inference Serving](01-03-Inference-Serving-vLLM.md) discusses continuous batching, paged attention, and quantization—the serving stack exists to amortize token economics.
+This is why [01-05 Inference Serving](01-05-Inference-Serving-vLLM.md) discusses continuous batching, paged attention, and quantization—the serving stack exists to amortize token economics.
 
 ![Modules__01-LLM-Engineering__01-02-Tokenization-Context-Windows-03-93d172f4](../../Diagrams/Modules__01-LLM-Engineering__01-02-Tokenization-Context-Windows-03-93d172f4.png)
 
@@ -294,7 +294,7 @@ Turn *i* re-sends **all prior context** unless you compact. Agent loops are **su
 \text{\$/successful task} = \frac{\sum \text{session costs}}{\text{tasks completed without human repair}}
 \]
 
-This is the metric EM and Principal interviews probe—see [10-04](10-04-Cost-Latency-Optimization.md).
+This is the metric EM and Principal interviews probe—see [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md).
 
 #### Break-even: summarize vs retrieve vs long-context
 
@@ -839,7 +839,7 @@ def pack_context(req: PackRequest) -> PackResponse:
 |-------|-----------------|-------|
 | Prefill | Input token count | Shorter prompts, cache prefixes |
 | Decode | Output token count | Lower `max_tokens`, stop sequences |
-| KV cache | Context × batch size | Quantization, paged attention — [01-03](01-03-Inference-Serving-vLLM.md) |
+| KV cache | Context × batch size | Quantization, paged attention — [01-05](01-05-Inference-Serving-vLLM.md) |
 | RAG | Retrieval + rerank | Smaller *k*, better chunking — [04-01](../04-RAG/04-01-RAG-Architecture.md) |
 
 **Rule:** Measure p95 **prefill ms per input token** separately from **decode ms per output token**.
@@ -856,7 +856,7 @@ def pack_context(req: PackRequest) -> PackResponse:
 | RAG vs full paste | 10–100× on input $ for large corpora |
 | History compaction | Linear reduction in agent turn cost |
 
-Deep dive: [10-04 Cost & Latency Optimization](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md)
+Deep dive: [10-03 Cost & Latency Optimization](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md)
 
 ---
 
@@ -1050,7 +1050,7 @@ Same 200-page handbook excerpt: (1) paste until overflow, (2) RAG top-8 chunks, 
 ## Production Project
 
 **Title:** Feature-Level Token Governance Dashboard  
-**Done when:** Per-feature daily token/cost charts; alerts at 80% of budget; links traces to prompt versions. Cross-link metrics design to [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md).
+**Done when:** Per-feature daily token/cost charts; alerts at 80% of budget; links traces to prompt versions. Cross-link metrics design to [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md).
 
 ---
 
@@ -1084,7 +1084,7 @@ Build a **map-reduce summarizer** that reads a directory of markdown files, resp
 2. When is “lost in the middle” a product risk vs a model risk?
 3. How would you migrate from paste-everything to retrieve-first without quality regression?
 4. Define SLIs for context health (`overflow_reject_rate`, `tokens_per_success`).
-5. How do token economics change your model routing tier strategy with [01-03](01-03-Inference-Serving-vLLM.md)?
+5. How do token economics change your model routing tier strategy with [01-05](01-05-Inference-Serving-vLLM.md)?
 
 ### Engineering Manager
 

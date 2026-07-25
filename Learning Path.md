@@ -33,7 +33,7 @@
 |--------|-------|---------|
 | 1–2 | Foundations | Hello-LLM + FastAPI |
 | 3–4 | LLM apps | Document helper |
-| 5–6 | RAG + agent | FAQ bot + support agent |
+| 5–6 | Agents + RAG | Support agent + FAQ bot |
 | 7–8 | Quality | Evals + guardrails |
 | 9–10 | Deploy/cost | Docker + ₹/query |
 | 11–12 | Specialize + jobs | Flagship + applications |

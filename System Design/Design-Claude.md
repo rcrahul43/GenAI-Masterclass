@@ -251,7 +251,7 @@ sequenceDiagram
 | Gateway | Stateless regional pools; token-bucket quotas per org/key |
 | Context assembly | Shard by `project_id`; parallel chunk embedding for new uploads |
 | Long-context prefill | Dedicated GPU pool; chunk-attention / sparse patterns; queue long jobs |
-| Decode | Continuous batching (see [01-03](../Modules/01-LLM-Engineering/01-03-Inference-Serving-vLLM.md)); separate pools for thinking mode |
+| Decode | Continuous batching (see [01-05](../Modules/01-LLM-Engineering/01-05-Inference-Serving-vLLM.md)); separate pools for thinking mode |
 | Tool runtime | Per-tenant concurrency caps; MCP connection pooling; sandbox autoscale |
 | Artifacts | CRDT or version-chain storage; CDN for static previews |
 | Safety classifiers | Small-model sidecars; scale independently of main model |

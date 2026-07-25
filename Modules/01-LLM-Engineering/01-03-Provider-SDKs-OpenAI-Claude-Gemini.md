@@ -1,4 +1,4 @@
-# 01-05 — Provider SDKs: OpenAI, Claude, Gemini & DeepSeek
+# 01-03 — Provider SDKs: OpenAI, Claude, Gemini & DeepSeek
 
 
 <!-- TRACK_D_SCOPE -->
@@ -62,7 +62,7 @@ LiteLLM ([01-04](01-04-Model-Routing-LiteLLM.md)) gives you a unified *interface
 
 Production services rarely call SDKs directly from HTTP handlers. The usual shape:
 
-![Modules__01-LLM-Engineering__01-05-Provider-SDKs-OpenAI-Claude-Gemini-01-d307c62c](../../Diagrams/Modules__01-LLM-Engineering__01-05-Provider-SDKs-OpenAI-Claude-Gemini-01-d307c62c.png)
+![Modules__01-LLM-Engineering__01-03-Provider-SDKs-OpenAI-Claude-Gemini-01-d307c62c](../../Diagrams/Modules__01-LLM-Engineering__01-03-Provider-SDKs-OpenAI-Claude-Gemini-01-d307c62c.png)
 
 ```mermaid
 flowchart TB
@@ -1092,9 +1092,9 @@ Normalize provider usage objects in one module—do not scatter parsing across h
 
 ## Architecture Diagram
 
-![Modules__01-LLM-Engineering__01-05-Provider-SDKs-OpenAI-Claude-Gemini-03-7bfcc5f1](../../Diagrams/Modules__01-LLM-Engineering__01-05-Provider-SDKs-OpenAI-Claude-Gemini-03-7bfcc5f1.png)
+![Modules__01-LLM-Engineering__01-03-Provider-SDKs-OpenAI-Claude-Gemini-03-7bfcc5f1](../../Diagrams/Modules__01-LLM-Engineering__01-03-Provider-SDKs-OpenAI-Claude-Gemini-03-7bfcc5f1.png)
 
-![Modules__01-LLM-Engineering__01-05-Provider-SDKs-OpenAI-Claude-Gemini-03-7bfcc5f1](../../Diagrams/Modules__01-LLM-Engineering__01-05-Provider-SDKs-OpenAI-Claude-Gemini-03-7bfcc5f1.png)
+![Modules__01-LLM-Engineering__01-03-Provider-SDKs-OpenAI-Claude-Gemini-03-7bfcc5f1](../../Diagrams/Modules__01-LLM-Engineering__01-03-Provider-SDKs-OpenAI-Claude-Gemini-03-7bfcc5f1.png)
 
 ```mermaid
 flowchart TB
@@ -1125,9 +1125,9 @@ flowchart TB
 
 ## Mermaid Diagram — Sequence (tool loop)
 
-![Modules__01-LLM-Engineering__01-05-Provider-SDKs-OpenAI-Claude-Gemini-04-706d33b6](../../Diagrams/Modules__01-LLM-Engineering__01-05-Provider-SDKs-OpenAI-Claude-Gemini-04-706d33b6.png)
+![Modules__01-LLM-Engineering__01-03-Provider-SDKs-OpenAI-Claude-Gemini-04-706d33b6](../../Diagrams/Modules__01-LLM-Engineering__01-03-Provider-SDKs-OpenAI-Claude-Gemini-04-706d33b6.png)
 
-![Modules__01-LLM-Engineering__01-05-Provider-SDKs-OpenAI-Claude-Gemini-04-706d33b6](../../Diagrams/Modules__01-LLM-Engineering__01-05-Provider-SDKs-OpenAI-Claude-Gemini-04-706d33b6.png)
+![Modules__01-LLM-Engineering__01-03-Provider-SDKs-OpenAI-Claude-Gemini-04-706d33b6](../../Diagrams/Modules__01-LLM-Engineering__01-03-Provider-SDKs-OpenAI-Claude-Gemini-04-706d33b6.png)
 
 ```mermaid
 sequenceDiagram

@@ -13,7 +13,7 @@
 | **Difficulty** | Advanced (agent loops, repository context, developer tooling, sandbox security) |
 | **Prerequisites** | [03-01 Agent Anatomy & Loop](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [03-02 Tools, Memory & Control Flow](../03-Agentic-Fundamentals/03-02-Tools-Memory-Control-Flow.md) · [07-01 MCP](../07-Protocols-MCP-A2A/07-01-MCP-Model-Context-Protocol.md) |
 | **Module** | 12 — Advanced Topics |
-| **Related** | [03-04 LangGraph Production Agents](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) · [07-04 MCP Production Patterns](../07-Protocols-MCP-A2A/07-04-MCP-Production-Patterns.md) · [08-01 Evaluation Lifecycle](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [10-02 Docker/K8s CI/CD](../10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md) · [11-02 Prompt Injection Defense](../11-Security-Safety/11-02-Prompt-Injection-Defense.md) |
+| **Related** | [03-03 LangGraph Production Agents](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) · [07-04 MCP Production Patterns](../07-Protocols-MCP-A2A/07-04-MCP-Production-Patterns.md) · [08-01 Evaluation Lifecycle](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [10-02 Docker/K8s CI/CD](../10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md) · [11-02 Prompt Injection Defense](../11-Security-Safety/11-02-Prompt-Injection-Defense.md) |
 
 ---
 

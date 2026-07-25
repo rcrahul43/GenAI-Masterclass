@@ -11,7 +11,7 @@
 |------|-------|
 | **Estimated Time** | 6–7 hours (read 3h · lab 3h · pattern memo 1h) |
 | **Difficulty** | Intermediate (patterns) · Advanced (contracts + decomposition) |
-| **Prerequisites** | [05-01 Multi-Agent Orchestration](05-01-Multi-Agent-Orchestration.md) · [03-03 Agentic Design Patterns](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md) · [03-04 LangGraph Production Agents](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) |
+| **Prerequisites** | [05-01 Multi-Agent Orchestration](05-01-Multi-Agent-Orchestration.md) · [03-04 Agentic Design Patterns](../03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md) · [03-03 LangGraph Production Agents](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) |
 | **Module** | 05 — Multi-Agent Orchestration |
 | **Related** | [05-03 Frameworks Comparison](05-03-Frameworks-CrewAI-AutoGen-LangGraph.md) · [08-02 Observability](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) · [07-01 MCP](../07-Protocols-MCP-A2A/07-01-MCP-Model-Context-Protocol.md) · [07-02 A2A](../07-Protocols-MCP-A2A/07-02-A2A-Agent-to-Agent.md) · [Architecture Index](../../Architecture Index.md) |
 
@@ -201,7 +201,7 @@ flowchart LR
     RANK --> OUT[Response]
 ```
 
-LangGraph fits DAGs natively: nodes + edges, optional conditional edges for small branches ([03-04](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md)).
+LangGraph fits DAGs natively: nodes + edges, optional conditional edges for small branches ([03-03](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md)).
 
 ---
 
@@ -661,7 +661,7 @@ if __name__ == "__main__":
 |---------|---------------------------|
 | PEC replanning | Version `plan_id`; diff plans in traces |
 | Supervisor context | Summarize worker outputs before re-routing |
-| DAG changes | Version graph; migrate checkpoints ([03-04](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md)) |
+| DAG changes | Version graph; migrate checkpoints ([03-03](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md)) |
 | Hybrid drift | Unit test deterministic spine separately |
 | Triage mistakes | Log confusion matrix; shadow mode new routes |
 
@@ -930,7 +930,7 @@ Next: [05-03 Frameworks — CrewAI, AutoGen, LangGraph](05-03-Frameworks-CrewAI-
 |-------|-----|------------|--------------|----------|--------------------|
 | LangGraph Multi-Agent | https://langchain-ai.github.io/langgraph/concepts/multi_agent/ | Intermediate | 45 min | Handoffs, Send, subgraphs | Multi-agent architectures |
 | MetaGPT Paper | https://arxiv.org/abs/2308.08155 | Advanced | 45 min | Role-based decomposition theory | Method |
-| LangGraph Production Agents | ../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md | Intermediate | 60 min | Checkpointing, HITL | Persistence |
+| LangGraph Production Agents | ../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md | Intermediate | 60 min | Checkpointing, HITL | Persistence |
 | Observability | ../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md | Intermediate | 45 min | Trace per pattern | Span attributes |
 | MCP | ../07-Protocols-MCP-A2A/07-01-MCP-Model-Context-Protocol.md | Intermediate | 40 min | Tool boundaries per executor | Server design |
 | A2A | ../07-Protocols-MCP-A2A/07-02-A2A-Agent-to-Agent.md | Intermediate | 40 min | Cross-org executors | Negotiation |

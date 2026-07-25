@@ -80,17 +80,17 @@ WEEK_PLAN = [
 
 DESIGN_LINKS = {
     "ChatGPT": "01-02, 03-01, 08-01, 11-01",
-    "Claude": "01-05, 03-02, 07-01, 11-02",
-    "Cursor": "03-04, 04-01, 12-03",
-    "GitHub-Copilot": "01-03, 02-02, 10-04",
+    "Claude": "01-03, 03-02, 07-01, 11-02",
+    "Cursor": "03-03, 04-01, 12-03",
+    "GitHub-Copilot": "01-05, 02-02, 10-03",
     "Perplexity": "04-01, 04-03, 12-01",
     "Slack-AI": "04-01, 11-01, 08-03",
     "Notion-AI": "04-01, 02-01, 08-01",
-    "AI-Search-Engine": "04-03, 04-04, 10-03",
-    "AI-Coding-Assistant": "03-01, 03-04, 12-03",
+    "AI-Search-Engine": "04-03, 04-04, 10-04",
+    "AI-Coding-Assistant": "03-01, 03-03, 12-03",
     "AI-Research-Agent": "12-01, 05-02, 08-01",
-    "AI-Customer-Support": "03-03, 04-01, 08-03",
-    "AI-Voice-Assistant": "06-01, 10-04, 08-02",
+    "AI-Customer-Support": "03-04, 04-01, 08-03",
+    "AI-Voice-Assistant": "06-01, 10-03, 08-02",
     "Multi-Agent-Workflow-Engine": "05-01, 07-01, 08-02, 10-02",
 }
 
@@ -98,17 +98,17 @@ PROJECTS = [
     ("P01", "Hello-LLM Explain-It Bot", "Foundations Projects", "Mini", 0, "00-01"),
     ("P01b", "BankCo Decision Support", "Foundations Projects", "Mini", 1, "00-04, 00-06"),
     ("P02", "Token Cost Estimator", "LLM Projects", "Mini", 2, "01-02"),
-    ("P03", "LiteLLM Gateway", "LLM Projects", "Mini", 3, "01-04, 01-05"),
-    ("P04", "Structured Router Agent", "Agent Projects", "Intermediate", 4, "02-02, 03-03"),
+    ("P03", "LiteLLM Gateway", "LLM Projects", "Mini", 3, "01-03, 01-04"),
+    ("P04", "Structured Router Agent", "Agent Projects", "Intermediate", 4, "02-02, 03-04"),
     ("P05", "Inquiry Routing Agent", "Agent Projects", "Intermediate", 5, "03-01, 03-02"),
-    ("P06", "LangGraph Production Agent", "Agent Projects", "Intermediate", 6, "03-04"),
+    ("P06", "LangGraph Production Agent", "Agent Projects", "Intermediate", 6, "03-03"),
     ("P07", "NovaCart RAG Assistant", "RAG Projects", "Production", 8, "04-01, 04-02, 04-03"),
     ("P08", "Multi-Agent Travel Planner", "Multi-Agent Projects", "Production", 9, "05-01, 05-02"),
     ("P09", "Voice Bot", "Multimodal Projects", "Intermediate", 10, "06-01"),
     ("P10", "MCP + Negotiation Sim", "Protocol Projects", "Production", 11, "07-01, 07-02, 07-03"),
     ("P11", "Eval Harness + Ship Gate", "LLMOps Projects", "Production", 12, "08-01, 08-03"),
     ("P12", "LoRA Integration", "Fine-Tune Projects", "Intermediate", 13, "09-01, 09-02, 09-03"),
-    ("P13", "Deployed Agent API", "Infra Projects", "Production", 14, "10-01, 10-02, 10-04"),
+    ("P13", "Deployed Agent API", "Infra Projects", "Production", 14, "10-01, 10-02, 10-03"),
     ("P14", "Capstone Multi-Agent System", "Capstone", "Capstone", 17, "05-01, 04-01, 08-01, 11-01"),
 ]
 
@@ -846,11 +846,11 @@ def build() -> Path:
     mocks = [
         (1, "Senior AI", "IC-AG", "03-01, 03-02", ""),
         (2, "Staff AI", "IC-AR", "04-01, 04-03", ""),
-        (3, "Principal Design", "IC-COST", "05-01, 10-04", "Cursor"),
+        (3, "Principal Design", "IC-COST", "05-01, 10-03", "Cursor"),
         (4, "EM Behavioral", "EM-PEO", "", ""),
         (5, "Staff+Security", "IC-SEC", "11-01, 11-02", ""),
         (6, "EM Execution", "EM-EXE", "", ""),
-        (7, "Full Panel", "IC-COM", "03-04, 08-01", "ChatGPT"),
+        (7, "Full Panel", "IC-COM", "03-03, 08-01", "ChatGPT"),
         (8, "Offer Rehearsal", "EM-ROI", "", ""),
     ]
     for mock in mocks:

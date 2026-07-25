@@ -11,7 +11,7 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2h · lab 2.5h · safety review 1h) |
 | **Difficulty** | Advanced (autonomous loops, safety boundaries) |
-| **Prerequisites** | [08-01 Evaluation](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [03-03 Agentic Design Patterns](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md) · [11-01 OWASP](../11-Security-Safety/11-01-OWASP-LLM-Top-10.md) |
+| **Prerequisites** | [08-01 Evaluation](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [03-04 Agentic Design Patterns](../03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md) · [11-01 OWASP](../11-Security-Safety/11-01-OWASP-LLM-Top-10.md) |
 | **Module** | 12 — Advanced Topics |
 | **Related** | [12-04 DSPy](12-04-DSPy-Programmatic-Prompting.md) · [Reflexion paper](../../Papers/Paper-Database.md#reflexion) · [09-01 PEFT](../09-Fine-Tuning/09-01-PEFT-LoRA-QLoRA.md) · [Architecture Index](../../Architecture Index.md) |
 
@@ -86,7 +86,7 @@ flowchart TB
 
 **Stop when:** tests pass **OR** `max_retries` **OR** budget exceeded.
 
-Cross-ref [03-03 Reflection pattern](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md).
+Cross-ref [03-04 Reflection pattern](../03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md).
 
 ---
 
@@ -408,4 +408,4 @@ Self-improving agents close the loop with **generation, automated tests, and str
 | Eval lifecycle | [08-01](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) | Intermediate | 30 min | Hold-out sets | Gates |
 | DSPy | [12-04](12-04-DSPy-Programmatic-Prompting.md) | Advanced | 40 min | Systematic optimize | Optimizers |
 | OWASP LLM10 | [11-01](../11-Security-Safety/11-01-OWASP-LLM-Top-10.md) | Intermediate | 15 min | Retry cost | Budget |
-| Design patterns | [03-03](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md) | Intermediate | 25 min | Reflection | Pattern |
+| Design patterns | [03-04](../03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md) | Intermediate | 25 min | Reflection | Pattern |

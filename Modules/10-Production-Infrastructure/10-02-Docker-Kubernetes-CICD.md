@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 6–7 hours (read 2.5h · lab 3h · pipeline design 1h) |
 | **Difficulty** | Intermediate (Docker) · Advanced (GPU K8s, model artifacts, eval gates) |
-| **Prerequisites** | [10-01 FastAPI AI Backends](10-01-FastAPI-AI-Backends.md) · [01-03 Inference Serving vLLM](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) · basic Linux CLI |
+| **Prerequisites** | [10-01 FastAPI AI Backends](10-01-FastAPI-AI-Backends.md) · [01-05 Inference Serving vLLM](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) · basic Linux CLI |
 | **Module** | 10 — Production Infrastructure |
-| **Related** | [10-03 Redis/Kafka/Ray](10-03-Redis-Kafka-Ray.md) · [10-04 Cost & Latency](10-04-Cost-Latency-Optimization.md) · [09-03 Serving FT Models](../09-Fine-Tuning/09-03-Serving-Integrating-FineTuned-Models.md) · [08-01 Evaluation](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [Architecture Index](../../Architecture Index.md) |
+| **Related** | [10-04 Redis/Kafka/Ray](10-04-Redis-Kafka-Ray.md) · [10-03 Cost & Latency](10-03-Cost-Latency-Optimization.md) · [09-03 Serving FT Models](../09-Fine-Tuning/09-03-Serving-Integrating-FineTuned-Models.md) · [08-01 Evaluation](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [Architecture Index](../../Architecture Index.md) |
 
 ---
 
@@ -26,7 +26,7 @@ By the end of this chapter you will be able to:
 3. Design **CI/CD pipelines** that run eval gates before promoting model artifacts ([08-01](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md)).
 4. Manage **secrets, config maps, and immutable model revisions** safely.
 5. Implement **rolling updates and rollbacks** for GPU services without silent quality regressions.
-6. Connect container builds to **cost-aware** fleet sizing ([10-04](10-04-Cost-Latency-Optimization.md)).
+6. Connect container builds to **cost-aware** fleet sizing ([10-03](10-03-Cost-Latency-Optimization.md)).
 
 ---
 
@@ -429,13 +429,13 @@ if __name__ == "__main__":
 | Spot GPU nodes | 60–70% with interruption handling |
 | Scale vLLM to min replicas at night | Trade cold start |
 
-[10-04](10-04-Cost-Latency-Optimization.md) for $/token.
+[10-03](10-03-Cost-Latency-Optimization.md) for $/token.
 
 ---
 
 ## Scalability
 
-Multi-cluster by region; model artifact CDN; queue overflow to [10-03](10-03-Redis-Kafka-Ray.md).
+Multi-cluster by region; model artifact CDN; queue overflow to [10-04](10-04-Redis-Kafka-Ray.md).
 
 ---
 
@@ -661,4 +661,4 @@ Docker packages reproducible AI services; Kubernetes schedules them at scale wit
 | vLLM docs | https://docs.vllm.ai/en/latest/ | Intermediate | 30 min | Container deploy | Docker |
 | FastAPI handbook | [10-01](10-01-FastAPI-AI-Backends.md) | Intermediate | 30 min | Health endpoints | readyz |
 | Eval handbook | [08-01](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) | Intermediate | 30 min | CI gates | Golden sets |
-| Cost handbook | [10-04](10-04-Cost-Latency-Optimization.md) | Intermediate | 30 min | GPU fleet sizing | Spot nodes |
+| Cost handbook | [10-03](10-03-Cost-Latency-Optimization.md) | Intermediate | 30 min | GPU fleet sizing | Spot nodes |

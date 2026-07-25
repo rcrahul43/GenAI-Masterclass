@@ -43,13 +43,13 @@ The primary course (Track D) ships hireable GenAI builders. Staff+ roles also re
 |------:|------|------:|-----------------|------------------|
 | **0** | AI Foundations | 3 | 00-01 → 00-02 → 00-03 → 00-04 → 00-05 (+ optional 00-06) | Hello-LLM CLI + FastAPI warmup |
 | **1** | LLM Foundations | 2 | 01-01 → 01-05, 02-01, 02-02 | Multi-provider chat CLI + cost estimator |
-| **2** | Agent Fundamentals | 2 | 03-01 → 03-04 | Customer Support Agent |
+| **2** | Agent Fundamentals | 2 | 03-01 → 03-03 | Customer Support Agent |
 | **3** | RAG | 3 | 04-01 → 04-04 | Internal Company Knowledge Assistant |
 | **4** | Multi-Agent Systems | 3 | 05-01 → 05-03, 07-01 → 07-03 | Travel Planner + Research Assistant |
 | **5** | Voice & Multimodal | 2 | 06-01, 06-02 | Voice Assistant + Document Reader |
 | **6** | LLMOps | 3 | 08-01 → 08-03 | Evaluation Dashboard + Agent Monitoring |
 | **7** | Fine-Tuning | 2 | 09-01 → 09-03 | Domain LoRA / QLoRA model |
-| **8** | Production AI Engineering | 3 | 10-01 → 10-04, 01-03 | Dockerized agent on Kubernetes |
+| **8** | Production AI Engineering | 3 | 10-01 → 10-03, 01-05 | Dockerized agent on Kubernetes |
 | **9** | AI Security | 1 | 11-01, 11-02 | Red-team + OWASP checklist |
 | **10** | System Design for AI | 3 | `System Design/` + 12-05, 12-06 | 6–8 design writeups |
 | **11** | Leadership & EM Prep | 4 | `Leadership/`, `Career/` | STAR bank + mocks + AI roadmap memo |
@@ -189,9 +189,9 @@ Transformer · Attention · Tokenization · Embeddings · Prompt Engineering · 
 |-------|---------|
 | 1 | [01-01 Transformer Architecture](Modules/01-LLM-Engineering/01-01-Transformer-Architecture.md) |
 | 2 | [01-02 Tokenization & Context Windows](Modules/01-LLM-Engineering/01-02-Tokenization-Context-Windows.md) |
-| 3 | [01-03 Inference Serving (vLLM)](Modules/01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) *(skim GPU sections; deep dive in Phase 8)* |
+| 3 | [01-03 Provider SDKs: OpenAI, Claude, Gemini, DeepSeek](Modules/01-LLM-Engineering/01-03-Provider-SDKs-OpenAI-Claude-Gemini.md) |
 | 4 | [01-04 Model Routing / LiteLLM](Modules/01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md) |
-| 5 | [01-05 Provider SDKs: OpenAI, Claude, Gemini, DeepSeek](Modules/01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) |
+| 5 | [01-05 Inference Serving (vLLM)](Modules/01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) *(skim GPU sections; deep dive in Phase 8)* |
 | 6 | [02-01 Production Prompt Engineering](Modules/02-Prompt-Engineering/02-01-Production-Prompt-Engineering.md) |
 | 7 | [02-02 Structured Outputs & Tool Calling](Modules/02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) |
 
@@ -238,8 +238,8 @@ Agent Loop · Reflection · ReAct · Tree of Thoughts · Chain of Thought · Rou
 |-------|---------|
 | 1 | [03-01 Agent Anatomy & Loop](Modules/03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) |
 | 2 | [03-02 Tools, Memory & Control Flow](Modules/03-Agentic-Fundamentals/03-02-Tools-Memory-Control-Flow.md) |
-| 3 | [03-03 Agentic Design Patterns](Modules/03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md) |
-| 4 | [03-04 LangGraph Production Agents](Modules/03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) |
+| 3 | [03-03 LangGraph Production Agents](Modules/03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) |
+| 4 | [03-04 Agentic Design Patterns](Modules/03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md) |
 
 ### Resource map
 
@@ -488,9 +488,9 @@ Docker · **Kubernetes** · Ray · Redis · Kafka · Celery · Postgres · **GPU
 |-------|---------|
 | 1 | [10-01 FastAPI AI Backends](Modules/10-Production-Infrastructure/10-01-FastAPI-AI-Backends.md) |
 | 2 | [10-02 Docker, Kubernetes & CI/CD](Modules/10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md) |
-| 3 | [10-03 Redis, Kafka & Ray](Modules/10-Production-Infrastructure/10-03-Redis-Kafka-Ray.md) |
-| 4 | [10-04 Cost & Latency Optimization](Modules/10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) |
-| 5 | Revisit [01-03 Inference Serving](Modules/01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) for GPU depth |
+| 3 | [10-03 Cost & Latency Optimization](Modules/10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) |
+| 4 | [10-04 Redis, Kafka & Ray](Modules/10-Production-Infrastructure/10-04-Redis-Kafka-Ray.md) |
+| 5 | Revisit [01-05 Inference Serving](Modules/01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) for GPU depth |
 
 ### Resource map
 
@@ -735,7 +735,7 @@ If you complete this roadmap, your portfolio should include:
 | Phase 5 | Module 06 |
 | Phase 6 | Module 08 |
 | Phase 7 | Module 09 |
-| Phase 8 | Module 10 (+ 01-03 depth) |
+| Phase 8 | Module 10 (+ 01-05 depth) |
 | Phase 9 | Module 11 |
 | Phase 10 | System Design + Module 12-05/12-06 |
 | Phase 11 | Leadership + Career |

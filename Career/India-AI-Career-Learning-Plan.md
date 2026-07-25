@@ -72,7 +72,7 @@ Avoid betting your first year only on “prompt engineer” or only on research 
 ```mermaid
 flowchart LR
     M1[Months 1–2<br/>Python + GenAI basics] --> M2[Months 3–4<br/>LLM apps + prompting]
-    M2 --> M3[Months 5–6<br/>RAG + simple agents]
+    M2 --> M3[Months 5–6<br/>Agents + RAG]
     M3 --> M4[Months 7–8<br/>Ship + eval + safety]
     M4 --> M5[Months 9–10<br/>Cost + deploy + India portfolio]
     M5 --> M6[Months 11–12<br/>Specialize + job loop]
@@ -96,24 +96,24 @@ flowchart LR
 |-------|----------|---------|
 | How models roughly work | [01-01](../Modules/01-LLM-Engineering/01-01-Transformer-Architecture.md) **intuition only** (Karpathy talk OK) | 10-bullet personal notes — no paper mastery yet |
 | Tokens & cost | [01-02](../Modules/01-LLM-Engineering/01-02-Tokenization-Context-Windows.md) | Cost estimator CLI |
-| Providers (India-cost aware) | [01-05](../Modules/01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) — prioritize **Gemini + DeepSeek + one major** | Same prompt on 2 providers; cost/quality table |
+| Providers (India-cost aware) | [01-03](../Modules/01-LLM-Engineering/01-03-Provider-SDKs-OpenAI-Claude-Gemini.md) — prioritize **Gemini + DeepSeek + one major** | Same prompt on 2 providers; cost/quality table |
 | Routing lite | Skim [01-04](../Modules/01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md) | Optional LiteLLM hello |
 | Prompting + tools | [02-01](../Modules/02-Prompt-Engineering/02-01-Production-Prompt-Engineering.md), [02-02](../Modules/02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) | App: extract JSON from invoice/email text |
 
 **Exit:** A small FastAPI “document helper” with structured JSON output.
 
-### Months 5–6 — RAG + one bounded agent (India’s bread-and-butter)
+### Months 5–6 — Bounded agent + RAG (India’s bread-and-butter)
 
 | Focus | Handbook | Produce |
 |-------|----------|---------|
-| RAG architecture | [04-01](../Modules/04-RAG/04-01-RAG-Architecture.md) → [04-02](../Modules/04-RAG/04-02-Chunking-Metadata-Embeddings.md) → skim [04-03](../Modules/04-RAG/04-03-Vector-DB-Hybrid-Search-Reranking.md) | **Internal FAQ bot** over a PDF/folder (company policy sample) with citations |
 | Agent loop | [03-01](../Modules/03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md), [03-02](../Modules/03-Agentic-Fundamentals/03-02-Tools-Memory-Control-Flow.md) | Support-style agent: 2–3 tools max, step budget |
-| LangGraph | [03-04](../Modules/03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) — **one tutorial-depth graph** | Same agent with checkpoint or HITL flag |
-| Skip for now | Full multi-agent travel planner, A2A negotiation | — |
+| LangGraph | [03-03](../Modules/03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) — **one tutorial-depth graph** | Same agent with checkpoint or HITL flag |
+| RAG architecture | [04-01](../Modules/04-RAG/04-01-RAG-Architecture.md) → [04-02](../Modules/04-RAG/04-02-Chunking-Metadata-Embeddings.md) → skim [04-03](../Modules/04-RAG/04-03-Vector-DB-Hybrid-Search-Reranking.md) | **Internal FAQ bot** over a PDF/folder (company policy sample) with citations |
+| Skip for now | 03-04 patterns · full multi-agent / A2A | — |
 
 **India twist:** Use a **policy / HR / banking FAQ** dataset and support **English + Hindi queries** (even if answers are English first).
 
-**Exit:** Two GitHub repos: RAG FAQ + tool-using support agent.
+**Exit:** Two GitHub repos: tool-using support agent + RAG FAQ.
 
 ### Months 7–8 — Make it believable for employers
 
@@ -134,8 +134,8 @@ India’s data-center growth rewards people who understand **running models chea
 |-------|----------|---------|
 | FastAPI production habits | [10-01](../Modules/10-Production-Infrastructure/10-01-FastAPI-AI-Backends.md) | Dockerize your RAG API |
 | Docker (+ K8s concepts) | [10-02](../Modules/10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md) — **Docker mandatory, K8s conceptual** | `Dockerfile` + deploy to a free/cheap cloud |
-| Cost / latency | [10-04](../Modules/10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) | Dashboard or sheet: ₹ / 1K queries estimate |
-| Inference awareness | Skim [01-03](../Modules/01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) + try **Ollama** locally | Note: API model vs local model tradeoffs |
+| Cost / latency | [10-03](../Modules/10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) | Dashboard or sheet: ₹ / 1K queries estimate |
+| Inference awareness | Skim [01-05](../Modules/01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) + try **Ollama** locally | Note: API model vs local model tradeoffs |
 | Skip heavy | Ray/Kafka deep ops unless targeting infra jobs | — |
 
 **Exit:** Live or recorded demo link + cost note in README.
@@ -147,8 +147,8 @@ Pick **one** specialization (don’t do all):
 | Path | Extra modules | Portfolio flagship |
 |------|---------------|--------------------|
 | **A. Enterprise RAG** (most India IT hiring) | [04-03](../Modules/04-RAG/04-03-Vector-DB-Hybrid-Search-Reranking.md), skim [04-04](../Modules/04-RAG/04-04-Advanced-RAG-HyDE-GraphRAG.md) | “BharatCorp Policy Assistant” with citations + evals |
-| **B. Agents for ops** | [03-03](../Modules/03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md), skim [05-01](../Modules/05-Multi-Agent/05-01-Multi-Agent-Orchestration.md) | Ticket triage agent with HITL |
-| **C. Infra / inference** (data-center adjacent) | [01-03](../Modules/01-LLM-Engineering/01-03-Inference-Serving-vLLM.md), [10-02](../Modules/10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md), [10-04](../Modules/10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) | vLLM/Ollama serving notes + load test |
+| **B. Agents for ops** | [03-04](../Modules/03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md), skim [05-01](../Modules/05-Multi-Agent/05-01-Multi-Agent-Orchestration.md) | Ticket triage agent with HITL |
+| **C. Infra / inference** (data-center adjacent) | [01-05](../Modules/01-LLM-Engineering/01-05-Inference-Serving-vLLM.md), [10-02](../Modules/10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md), [10-03](../Modules/10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) | vLLM/Ollama serving notes + load test |
 
 **Job loop (parallel, last 8 weeks):**
 

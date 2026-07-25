@@ -2,7 +2,7 @@
 
 > Dense reference for Modules 01, 08–10, 09, 12. Production stack.
 
-**Related:** [01-05 Provider SDKs](../Modules/01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) · [08 Evaluation](../Modules/08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [09 Fine-Tuning](../Modules/09-Fine-Tuning/09-01-PEFT-LoRA-QLoRA.md) · [10 Infrastructure](../Modules/10-Production-Infrastructure/10-01-FastAPI-AI-Backends.md) · [12-04 DSPy](../Modules/12-Advanced-Topics/12-04-DSPy-Programmatic-Prompting.md) · [Cheatsheet Index](Cheatsheet-Index.md)
+**Related:** [01-03 Provider SDKs](../Modules/01-LLM-Engineering/01-03-Provider-SDKs-OpenAI-Claude-Gemini.md) · [08 Evaluation](../Modules/08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [09 Fine-Tuning](../Modules/09-Fine-Tuning/09-01-PEFT-LoRA-QLoRA.md) · [10 Infrastructure](../Modules/10-Production-Infrastructure/10-01-FastAPI-AI-Backends.md) · [12-04 DSPy](../Modules/12-Advanced-Topics/12-04-DSPy-Programmatic-Prompting.md) · [Cheatsheet Index](Cheatsheet-Index.md)
 
 ---
 
@@ -54,7 +54,7 @@
 | **Token counting** | `tiktoken` (OpenAI) or provider usage fields |
 | **Secrets** | Env vars; never in prompts |
 
-Module: [01-05](../Modules/01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md)
+Module: [01-03](../Modules/01-LLM-Engineering/01-03-Provider-SDKs-OpenAI-Claude-Gemini.md)
 
 ---
 
@@ -104,7 +104,7 @@ Module: [01-04](../Modules/01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md)
 | Data residency requirements | Need latest frontier model day-1 |
 | Fine-tuned model serving | No GPU ops team |
 
-Module: [01-03](../Modules/01-LLM-Engineering/01-03-Inference-Serving-vLLM.md)
+Module: [01-05](../Modules/01-LLM-Engineering/01-05-Inference-Serving-vLLM.md)
 
 **Official:** https://docs.vllm.ai/en/latest/
 
@@ -172,7 +172,7 @@ Module: [10-02](../Modules/10-Production-Infrastructure/10-02-Docker-Kubernetes-
 | **Kafka** | Event log: requests, feedback, audit | High-throughput async pipeline |
 | **Ray** | Distributed inference, batch embed, RL/fine-tune | GPU cluster orchestration |
 
-Module: [10-03](../Modules/10-Production-Infrastructure/10-03-Redis-Kafka-Ray.md)
+Module: [10-04](../Modules/10-Production-Infrastructure/10-04-Redis-Kafka-Ray.md)
 
 **Official:** https://redis.io/docs/ · https://kafka.apache.org/documentation/ · https://docs.ray.io/
 
@@ -343,7 +343,7 @@ Module: [12-04](../Modules/12-Advanced-Topics/12-04-DSPy-Programmatic-Prompting.
 | RAG top-k reduction | Latency ↓ |
 | Streaming UX | Perceived latency ↓ |
 
-Module: [10-04](../Modules/10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md)
+Module: [10-03](../Modules/10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md)
 
 ---
 

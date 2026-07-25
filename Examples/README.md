@@ -8,7 +8,7 @@ Production-shaped code samples referenced by modules. Prefer copying into your p
 | Retention / decision-support rules engine | [00-06](../Modules/00-Foundations/00-06-BankCo-Decision-Support-Warmup.md) | 00 |
 | LiteLLM gateway | [01-04](../Modules/01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md) | 01 |
 | Structured tool router | [02-02](../Modules/02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) | 02 |
-| LangGraph agent service | [03-04](../Modules/03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) | 03 |
+| LangGraph agent service | [03-03](../Modules/03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) | 03 |
 | RAG service | [04-01](../Modules/04-RAG/04-01-RAG-Architecture.md) | 04 |
 
 ## Conventions

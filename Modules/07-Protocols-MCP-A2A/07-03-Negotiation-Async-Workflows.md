@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 6–7 hours (read 2h · lab 4h · failure injection 1h) |
 | **Difficulty** | Advanced (distributed coordination) |
-| **Prerequisites** | [07-02](07-02-A2A-Agent-to-Agent.md) · [03-04](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) · [05-01](../05-Multi-Agent/05-01-Multi-Agent-Orchestration.md) |
+| **Prerequisites** | [07-02](07-02-A2A-Agent-to-Agent.md) · [03-03](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) · [05-01](../05-Multi-Agent/05-01-Multi-Agent-Orchestration.md) |
 | **Module** | 07 — Protocols (MCP / A2A) |
-| **Related** | [07-01](07-01-MCP-Model-Context-Protocol.md) · [08-02](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) · [08-01](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [10-03](../10-Production-Infrastructure/10-03-Redis-Kafka-Ray.md) |
+| **Related** | [07-01](07-01-MCP-Model-Context-Protocol.md) · [08-02](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) · [08-01](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [10-04](../10-Production-Infrastructure/10-04-Redis-Kafka-Ray.md) |
 
 ---
 
@@ -85,7 +85,7 @@ flowchart TB
     H --> WG
 ```
 
-Cross-link: [A2A tasks](07-02-A2A-Agent-to-Agent.md) · [LangGraph persistence](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md)
+Cross-link: [A2A tasks](07-02-A2A-Agent-to-Agent.md) · [LangGraph persistence](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md)
 
 ---
 
@@ -148,7 +148,7 @@ Internal free tools with fixed SLA—negotiation overhead wastes latency.
 | **Saga** | Compensating transactions on failure |
 | **Outbox** | DB + queue atomic handoff |
 
-Cross-link: [10-03 Redis, Kafka & Ray](../10-Production-Infrastructure/10-03-Redis-Kafka-Ray.md)
+Cross-link: [10-04 Redis, Kafka & Ray](../10-Production-Infrastructure/10-04-Redis-Kafka-Ray.md)
 
 ---
 

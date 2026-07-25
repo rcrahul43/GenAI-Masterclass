@@ -397,7 +397,7 @@ See [Hiring AI Engineers](Hiring-AI-Engineers.md)
 - **A:** LiteLLM routing: small model for classification, large for generation; prompt compression; cache embeddings
 - **R:** Cost -38%, eval -0.5pp (acceptable)
 
-Reference: [10-04 Cost Optimization](../Modules/10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md)
+Reference: [10-03 Cost Optimization](../Modules/10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md)
 
 ---
 

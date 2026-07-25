@@ -1,4 +1,4 @@
-# 10-03 — Redis, Kafka & Ray: Async Infrastructure for AI Platforms
+# 10-04 — Redis, Kafka & Ray: Async Infrastructure for AI Platforms
 
 
 <!-- TRACK_D_SCOPE -->
@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2h · lab 2.5h · architecture sketch 1h) |
 | **Difficulty** | Intermediate (Redis/Kafka basics) · Advanced (Ray Serve + backpressure) |
-| **Prerequisites** | [10-01 FastAPI AI Backends](10-01-FastAPI-AI-Backends.md) · [01-03 Inference Serving vLLM](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) · message queue familiarity |
+| **Prerequisites** | [10-01 FastAPI AI Backends](10-01-FastAPI-AI-Backends.md) · [01-05 Inference Serving vLLM](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) · message queue familiarity |
 | **Module** | 10 — Production Infrastructure |
-| **Related** | [10-02 Docker/K8s/CI/CD](10-02-Docker-Kubernetes-CICD.md) · [10-04 Cost & Latency](10-04-Cost-Latency-Optimization.md) · [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [09-01 PEFT LoRA](../09-Fine-Tuning/09-01-PEFT-LoRA-QLoRA.md) · [Architecture Index](../../Architecture Index.md) |
+| **Related** | [10-02 Docker/K8s/CI/CD](10-02-Docker-Kubernetes-CICD.md) · [10-03 Cost & Latency](10-03-Cost-Latency-Optimization.md) · [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [09-01 PEFT LoRA](../09-Fine-Tuning/09-01-PEFT-LoRA-QLoRA.md) · [Architecture Index](../../Architecture Index.md) |
 
 ---
 
@@ -62,7 +62,7 @@ Staff engineers map each workload to the right bus — not "Kafka for everything
 
 ## Architecture Overview
 
-![Modules__10-Production-Infrastructure__10-03-Redis-Kafka-Ray-01-fc216d50](../../Diagrams/Modules__10-Production-Infrastructure__10-03-Redis-Kafka-Ray-01-fc216d50.png)
+![Modules__10-Production-Infrastructure__10-04-Redis-Kafka-Ray-01-fc216d50](../../Diagrams/Modules__10-Production-Infrastructure__10-04-Redis-Kafka-Ray-01-fc216d50.png)
 
 ```mermaid
 flowchart TB
@@ -382,7 +382,7 @@ Deploy Ray on K8s via KubeRay operator — see [10-02](10-02-Docker-Kubernetes-C
 
 ## Cost
 
-Redis/Kafka managed services vs self-host — see [10-04](10-04-Cost-Latency-Optimization.md). Ray cluster costs track GPU/CPU worker hours.
+Redis/Kafka managed services vs self-host — see [10-03](10-03-Cost-Latency-Optimization.md). Ray cluster costs track GPU/CPU worker hours.
 
 ---
 
@@ -442,7 +442,7 @@ Metrics: `kafka_consumer_lag`, `redis_hit_rate`, `ray_task_duration`, `gpu_queue
 
 ## Architecture Diagram
 
-![Modules__10-Production-Infrastructure__10-03-Redis-Kafka-Ray-02-945337f4](../../Diagrams/Modules__10-Production-Infrastructure__10-03-Redis-Kafka-Ray-02-945337f4.png)
+![Modules__10-Production-Infrastructure__10-04-Redis-Kafka-Ray-02-945337f4](../../Diagrams/Modules__10-Production-Infrastructure__10-04-Redis-Kafka-Ray-02-945337f4.png)
 
 ```mermaid
 flowchart LR
@@ -458,7 +458,7 @@ flowchart LR
 
 ## Mermaid Diagram — Sequence
 
-![Modules__10-Production-Infrastructure__10-03-Redis-Kafka-Ray-03-9261b4a5](../../Diagrams/Modules__10-Production-Infrastructure__10-03-Redis-Kafka-Ray-03-9261b4a5.png)
+![Modules__10-Production-Infrastructure__10-04-Redis-Kafka-Ray-03-9261b4a5](../../Diagrams/Modules__10-Production-Infrastructure__10-04-Redis-Kafka-Ray-03-9261b4a5.png)
 
 ```mermaid
 sequenceDiagram
@@ -541,7 +541,7 @@ Parallel 20-case eval against staging API.
 
 ## Stretch Project
 
-Ray Serve deployment wrapping vLLM — compare ops to raw K8s vLLM ([01-03](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md)).
+Ray Serve deployment wrapping vLLM — compare ops to raw K8s vLLM ([01-05](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md)).
 
 ---
 
@@ -606,4 +606,4 @@ Redis, Kafka, and Ray solve different layers of AI platform infrastructure: ephe
 | Ray Documentation | https://docs.ray.io/en/latest/ | Intermediate | 60 min | Ray Serve & Train | Getting started |
 | FastAPI handbook | [10-01](10-01-FastAPI-AI-Backends.md) | Intermediate | 30 min | Producers | Lifespan |
 | RAG handbook | [04-01](../04-RAG/04-01-RAG-Architecture.md) | Intermediate | 30 min | Ingest context | Offline indexing |
-| Cost handbook | [10-04](10-04-Cost-Latency-Optimization.md) | Intermediate | 30 min | Queue economics | GPU saturation |
+| Cost handbook | [10-03](10-03-Cost-Latency-Optimization.md) | Intermediate | 30 min | Queue economics | GPU saturation |
