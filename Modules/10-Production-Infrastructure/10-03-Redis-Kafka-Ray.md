@@ -1,5 +1,12 @@
 # 10-03 — Redis, Kafka & Ray: Async Infrastructure for AI Platforms
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **ADVANCED** · Depth: **Year 2+**  
+> Skip in year 1.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2h · lab 2.5h · architecture sketch 1h) |

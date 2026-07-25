@@ -1,5 +1,12 @@
 # 01-04 — Model Routing with LiteLLM
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Skim**  
+> Optional LiteLLM hello; multi-provider comparison matters more.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 6–8 hours (read 2.5h · lab 3h · proxy deploy 2h) |

@@ -1,5 +1,12 @@
 # 03-04 — LangGraph Production Agents: State, Memory, HITL & Deployment
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Light**  
+> One simple graph + HITL or checkpoint — not full production platform.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 6–7 hours (read 3h · lab 3h · deploy drill 1h) |

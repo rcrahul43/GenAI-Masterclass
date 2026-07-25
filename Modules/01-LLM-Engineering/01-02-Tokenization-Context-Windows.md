@@ -1,5 +1,12 @@
 # 01-02 — Tokenization, Context Windows & Attention Economics
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Full**  
+> Build a token/cost estimator.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · lab 2h · cost model exercise 1h) |

@@ -1,5 +1,12 @@
 # 06-01 — Voice Pipelines: ASR → LLM → TTS
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **ADVANCED** · Depth: **Year 2+**  
+> Skip in year 1.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2h · lab 3h · latency budget memo 1h) |

@@ -1,5 +1,12 @@
 # 11-01 — OWASP LLM Top 10: Threat Model for Production AI
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Skim**  
+> OWASP LLM Top 10 checklist in README.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · threat model lab 2h · checklist review 1h) |

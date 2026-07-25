@@ -1,5 +1,12 @@
 # 12-01 — Agentic Research Systems: Plan, Tools, Guardrails, Memory, Evals
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **ADVANCED** · Depth: **Year 2+**  
+> Skip in year 1.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 6–8 hours (read 2.5h · lab 3.5h · eval workshop 1.5h) |

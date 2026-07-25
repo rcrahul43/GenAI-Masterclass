@@ -1,5 +1,12 @@
 # 10-02 — Docker, Kubernetes & CI/CD for AI Services
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Docker only**  
+> Dockerfile + run locally; K8s conceptual later.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 6–7 hours (read 2.5h · lab 3h · pipeline design 1h) |

@@ -10,14 +10,15 @@
 
 | # | Title | File |
 |---|-------|------|
-| 0.0 | **Master Study Roadmap (Phases 0–11)** | [Master Study Roadmap.md](Master%20Study%20Roadmap.md) |
+| 0.0 | **COURSE.md — Primary course (Track D)** | [COURSE.md](COURSE.md) |
+| 0.0b | Master Study Roadmap (Advanced A–C) | [Master Study Roadmap.md](Master%20Study%20Roadmap.md) |
 | 0.1 | README — Handbook Overview | [README.md](README.md) |
 | 0.2 | Dashboard | [Dashboard.md](Dashboard.md) |
-| 0.3 | Study Plan | [Study Plan.md](Study%20Plan.md) |
+| 0.3 | Study Plan (48-week Track D) | [Study Plan.md](Study%20Plan.md) |
 | 0.4 | Weekly Planner | [Weekly Planner.md](Weekly%20Planner.md) |
 | 0.5 | Progress Tracker (learner) | [Progress Tracker.md](Progress%20Tracker.md) |
-| 0.6 | Learning Path (role tracks A–D) | [Learning Path.md](Learning%20Path.md) |
-| 0.6b | **Track D — India AI Career Plan (beginner)** | [Career/India-AI-Career-Learning-Plan.md](Career/India-AI-Career-Learning-Plan.md) |
+| 0.6 | Learning Path (tracks A–D) | [Learning Path.md](Learning%20Path.md) |
+| 0.6b | Track D — India AI Career Plan | [Career/India-AI-Career-Learning-Plan.md](Career/India-AI-Career-Learning-Plan.md) |
 | 0.7 | Interview Tracker | [Interview Tracker.md](Interview%20Tracker.md) |
 | 0.8 | Revision Planner | [Revision Planner.md](Revision%20Planner.md) |
 | 0.9 | Architecture Index | [Architecture Index.md](Architecture%20Index.md) |

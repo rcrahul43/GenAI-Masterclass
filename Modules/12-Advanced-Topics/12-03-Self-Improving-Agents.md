@@ -1,5 +1,12 @@
 # 12-03 — Self-Improving Agents: Generate, Test, Refine in Sandboxes
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **ADVANCED** · Depth: **Year 2+**  
+> Skip in year 1.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2h · lab 2.5h · safety review 1h) |

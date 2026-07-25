@@ -1,5 +1,12 @@
 # 12-02 — Text-to-SQL Agents: Schema Retrieval, Safety, Spider-Style Evals
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **ADVANCED** · Depth: **Year 2+**  
+> Skip in year 1.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 6–7 hours (read 2h · lab 3h · eval lab 1.5h) |

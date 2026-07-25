@@ -1,5 +1,12 @@
 # 01-01 — Transformer Architecture for AI Engineers
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Intuition**  
+> Diagrams + Karpathy talk; no need to master the paper yet.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · lab 2h · attention walkthrough 1h) |

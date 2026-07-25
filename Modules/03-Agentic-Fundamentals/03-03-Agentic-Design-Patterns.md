@@ -1,5 +1,12 @@
 # 03-03 — Agentic Design Patterns: Routing, Reflection, ReAct & More
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **ADVANCED** · Depth: **Year 2+ / specialize**  
+> Only if Block 6 path B (agents).  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · lab 2.5h · design memo 1h) |

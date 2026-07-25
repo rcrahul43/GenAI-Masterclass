@@ -2,7 +2,7 @@
 
 > Your personal completion checklist. Separate from authoring [`Progress.md`](Progress.md).
 
-**Related:** [Master Study Roadmap](Master%20Study%20Roadmap.md) · [Dashboard](Dashboard.md) · [TOC](TABLE_OF_CONTENTS.md) · [Study Plan](Study%20Plan.md)
+**Related:** [COURSE.md](COURSE.md) · [Study Plan](Study%20Plan.md) · [Dashboard](Dashboard.md) · [TOC](TABLE_OF_CONTENTS.md) · Advanced: [Master Study Roadmap](Master%20Study%20Roadmap.md)
 
 ---
 
@@ -13,32 +13,43 @@ Markdown checkboxes below are an optional backup. Sync notes: [`Tracker/SYNC-WOR
 
 ---
 
-## How to Score Yourself
+## How to Score Yourself (Track D)
 
 | Status | Meaning |
 |--------|---------|
 | ⬜ | Not started |
 | 🔄 | In progress |
-| ✅ | Read + lab done + judgment memo written |
-| ⭐ | Interview-ready (can teach / defend tradeoffs) |
+| ✅ | Track D scope done + lab shipped + Git commit |
+| ⭐ | Can demo + explain to a hiring manager |
 
-Only mark ✅ when lab + memo exist. Only mark ⭐ after a mock question on the topic scores ≥4/5.
+Only mark ✅ when the week’s **ship** item exists.
 
 ---
 
 ## Core Navigation
 
-- [ ] **Master Study Roadmap** (Phases 0–11) reviewed
-- [ ] README
-- [ ] Dashboard orientation
-- [ ] Study Plan customized to your hours
-- [ ] Learning Path selected (IC / EM / Hybrid)
+- [ ] **[COURSE.md](COURSE.md)** reviewed (primary course)
+- [ ] README + Dashboard orientation
+- [ ] Study Plan (Track D 48 weeks) opened
+- [ ] Track **D** confirmed
+- [ ] (Later) Advanced Master Study Roadmap — year 2+
 
 ---
 
-## Phase checklist (high level)
+## Track D — Block checklist (primary)
 
-- [ ] Phase 0 — AI Foundations (GenAI ideas → Python → APIs → Math → Rules/Agents)
+- [ ] **Block 1** Foundations (Weeks 1–8) — Hello-LLM + FastAPI
+- [ ] **Block 2** LLM apps (Weeks 9–16) — Document helper
+- [ ] **Block 3** RAG + agent (Weeks 17–24) — FAQ bot + support agent
+- [ ] **Block 4** Quality + safety (Weeks 25–32) — Golden set + guardrails
+- [ ] **Block 5** Deploy + cost (Weeks 33–40) — Docker + ₹/query
+- [ ] **Block 6** Specialize + jobs (Weeks 41–48) — Flagship + applications
+
+---
+
+## Advanced phase checklist (Tracks A–C / year 2+)
+
+- [ ] Phase 0 — AI Foundations
 - [ ] Phase 1 — LLM Foundations (+ DeepSeek)
 - [ ] Phase 2 — Agent Fundamentals (LangGraph)
 - [ ] Phase 3 — RAG
@@ -53,49 +64,49 @@ Only mark ✅ when lab + memo exist. Only mark ⭐ after a mock question on the 
 
 ---
 
-## Module 00 — Foundations
+## Module 00 — Foundations (Track D order)
 
-- [ ] 00-01 GenAI From Scratch: Core Ideas  ← **start here**
-- [ ] 00-05 Python for AI Engineering
-- [ ] 00-06 APIs for AI Engineering
-- [ ] 00-04 Mathematics for AI Engineering
-- [ ] 00-02 From Rules to Agents
-- [ ] 00-03 BankCo Decision-Support Warmup
+- [ ] 00-01 GenAI From Scratch: Core Ideas  ← **start here** (Full)
+- [ ] 00-05 Python for AI Engineering (Full, slow)
+- [ ] 00-06 APIs for AI Engineering (Full)
+- [ ] 00-04 Mathematics for AI Engineering (Light)
+- [ ] 00-02 From Rules to Agents (Skim)
+- [ ] 00-03 BankCo Decision-Support Warmup (Optional)
 
 ## Module 01 — LLM Engineering
 
-- [ ] 01-01 Transformer Architecture
-- [ ] 01-02 Tokenization & Context Windows
-- [ ] 01-03 Inference Serving (vLLM / Ollama)
-- [ ] 01-04 Model Routing (LiteLLM)
-- [ ] 01-05 Provider SDKs (OpenAI, Claude, Gemini, DeepSeek)
+- [ ] 01-01 Transformer Architecture (Intuition)
+- [ ] 01-02 Tokenization & Context Windows (Full)
+- [ ] 01-03 Inference Serving (vLLM / Ollama) (Skim + Ollama)
+- [ ] 01-04 Model Routing (LiteLLM) (Skim)
+- [ ] 01-05 Provider SDKs (OpenAI, Claude, Gemini, DeepSeek) (Full)
 
 ## Module 02 — Prompt Engineering
 
-- [ ] 02-01 Production Prompt Engineering
-- [ ] 02-02 Structured Outputs & Tool Calling
+- [ ] 02-01 Production Prompt Engineering (Full)
+- [ ] 02-02 Structured Outputs & Tool Calling (Full)
 
 ## Module 03 — Agentic Fundamentals
 
-- [ ] 03-01 Agent Anatomy & Loop
-- [ ] 03-02 Tools, Memory & Control Flow
-- [ ] 03-03 Agentic Design Patterns
-- [ ] 03-04 LangGraph Production Agents
+- [ ] 03-01 Agent Anatomy & Loop (Full)
+- [ ] 03-02 Tools, Memory & Control Flow (Full)
+- [ ] 03-03 Agentic Design Patterns *(Advanced / Block 6B)*
+- [ ] 03-04 LangGraph Production Agents (Light)
 
 ## Module 04 — RAG
 
-- [ ] 04-01 RAG Architecture
-- [ ] 04-02 Chunking, Metadata & Embeddings
-- [ ] 04-03 Vector DB, Hybrid Search & Reranking
-- [ ] 04-04 Advanced RAG
+- [ ] 04-01 RAG Architecture (Full)
+- [ ] 04-02 Chunking, Metadata & Embeddings (Full)
+- [ ] 04-03 Vector DB, Hybrid Search & Reranking (Skim)
+- [ ] 04-04 Advanced RAG *(Advanced / Block 6A)*
 
-## Module 05 — Multi-Agent
+## Module 05 — Multi-Agent *(mostly Advanced year 2+)*
 
 - [ ] 05-01 Multi-Agent Orchestration
 - [ ] 05-02 Planner–Executor–Critic
 - [ ] 05-03 Frameworks Comparison
 
-## Module 06 — Conversational & Multimodal
+## Module 06 — Conversational & Multimodal *(Advanced year 2+)*
 
 - [ ] 06-01 Voice ASR/TTS Pipelines
 - [ ] 06-02 Multimodal Agents

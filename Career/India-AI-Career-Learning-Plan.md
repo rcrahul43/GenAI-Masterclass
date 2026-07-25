@@ -2,9 +2,10 @@
 
 > **Persona this plan is for:** Adult learner in India with **basic programming** and **little or no AI background**, aiming to stay employable for the next ~10 years as India expands data centers and enterprise AI adoption.
 >
-> **Handbook track name:** **Track D** (see [Learning Path](../Learning%20Path.md)).
+> **Handbook track name:** **Track D** (primary course).  
+> **Course design hub:** **[COURSE.md](../COURSE.md)** · **Week-by-week:** [Study Plan](../Study%20Plan.md)
 >
-> **Related:** [00-01 GenAI From Scratch](../Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) · [Dashboard](../Dashboard.md) · [Study Plan](../Study%20Plan.md) · [Master Study Roadmap](../Master%20Study%20Roadmap.md)
+> **Related:** [00-01 GenAI From Scratch](../Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) · [Dashboard](../Dashboard.md) · [Learning Path](../Learning%20Path.md) · Advanced: [Master Study Roadmap](../Master%20Study%20Roadmap.md)
 
 ---
 

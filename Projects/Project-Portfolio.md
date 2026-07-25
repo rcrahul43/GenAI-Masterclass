@@ -1,16 +1,31 @@
 # Project Portfolio
 
 > Expanded curriculum projects with resume bullets, GitHub milestones, and review checklists.
-> Sequencing follows the **[Master Study Roadmap](../Master%20Study%20Roadmap.md)** project ladder.
-> Track completion in [Progress Tracker](../Progress%20Tracker.md) · [Study Plan](../Study%20Plan.md)
+>
+> **Primary (Track D):** ship the ladder in **[COURSE.md](../COURSE.md)** / [Study Plan](../Study%20Plan.md).  
+> **Advanced:** fuller ladder below + [Master Study Roadmap](../Master%20Study%20Roadmap.md).
 
-**Related:** [Learning Path](../Learning%20Path.md) · [Architecture Index](../Architecture%20Index.md) · [08-01 Evaluation](../Modules/08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [Principal Interview Guide](../Career/Principal-Staff-Interview-Guide.md)
+**Related:** [Learning Path](../Learning%20Path.md) · [Architecture Index](../Architecture%20Index.md) · [08-01 Evaluation](../Modules/08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md)
 
 ---
 
-## Roadmap project ladder (canonical)
+## Track D must-ship (year 1)
 
-Build **one every 2–3 weeks after Phase 2**. Prefer production milestones (M0–M6) below.
+| # | Block | Project |
+|---|------:|---------|
+| 1 | 1 | Hello-LLM CLI |
+| 2 | 1 | FastAPI JSON warmup |
+| 3 | 2 | Document helper (structured extract) |
+| 4 | 3 | Policy FAQ bot (RAG + citations) |
+| 5 | 3 | Support agent (≤3 tools) |
+| 6 | 4–5 | Evals + Docker + cost note on the above |
+| 7 | 6 | One flagship (deeper RAG **or** agents **or** infra) |
+
+---
+
+## Advanced roadmap project ladder (Tracks A–C)
+
+Build **one every 2–3 weeks after agents/RAG**. Prefer production milestones (M0–M6) below.
 
 ### Beginner
 

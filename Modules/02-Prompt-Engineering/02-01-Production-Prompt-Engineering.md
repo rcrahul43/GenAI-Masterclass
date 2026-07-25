@@ -1,5 +1,12 @@
 # 02-01 — Production Prompt Engineering
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Full**  
+> Version prompts; treat them as contracts.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · lab 2.5h · eval setup 1h) |

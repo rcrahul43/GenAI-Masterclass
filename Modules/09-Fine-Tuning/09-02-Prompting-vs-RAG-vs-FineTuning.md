@@ -1,5 +1,12 @@
 # 09-02 — Prompting vs RAG vs Fine-Tuning: The Decision Framework
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Light**  
+> Decision only: prompt vs RAG vs FT — no training.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 4–5 hours (read 2h · decision worksheet 1.5h · stakeholder memo 1h) |

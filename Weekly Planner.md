@@ -1,27 +1,28 @@
 # Weekly Planner
 
-> Printable / Notion-database-friendly weekly operating system aligned to the **[Master Study Roadmap](Master%20Study%20Roadmap.md)**.
+> Week template for the **primary course (Track D)**.  
+> North star: [COURSE.md](COURSE.md) · Execution: [Study Plan](Study%20Plan.md)
 
-**Related:** [Study Plan](Study%20Plan.md) · [Dashboard](Dashboard.md) · [Progress Tracker](Progress%20Tracker.md) · [Revision Planner](Revision%20Planner.md)
+**Related:** [Dashboard](Dashboard.md) · [Progress Tracker](Progress%20Tracker.md) · [India plan](Career/India-AI-Career-Learning-Plan.md)
 
 ---
 
 ## How to Use
 
-1. Copy the **Week Template** below into a new Notion page or markdown note each Sunday.
-2. Fill **Phase**, **Theme**, **Primary modules**, **Project slice**, **Interview focus**, and **Resource map items** from the Master Roadmap.
-3. Check boxes daily. Do not carry more than **2** unfinished deep-work items into next week.
-4. Friday: run the Weekly Review from [Study Plan](Study%20Plan.md).
+1. Copy the **Week Template** each Sunday.  
+2. Fill Block #, Week #, module, and ship item from [Study Plan](Study%20Plan.md).  
+3. Max **2** unfinished deep-work items into next week.  
+4. Sunday: 15-min review from Study Plan.
 
 ---
 
 ## Week Template
 
 ```markdown
-# Week __ — Phase __ — Theme: _______________
+# Block __ — Week __ — Theme: _______________
 
 Dates: ____ → ____
-Track: [ ] IC Staff/Principal  [ ] EM  [ ] Hybrid
+Track: D (primary)
 Hours planned: __ / Hours actual: __
 
 ## Outcomes (max 3)
@@ -29,111 +30,90 @@ Hours planned: __ / Hours actual: __
 - [ ] Outcome 2
 - [ ] Outcome 3
 
-## Primary Modules
-- [ ] Module file 1
-- [ ] Module file 2
-
-## Resource Map (from Master Study Roadmap)
-- [ ] Docs / book chapter:
-- [ ] Paper:
-- [ ] YouTube / GitHub:
+## Module (Track D scope only)
+- [ ] Module file:
+- Depth: [ ] Full  [ ] Light  [ ] Skim  [ ] Intuition
 
 ## Project Slice
 - Repo: ________
-- Definition of done this week: ________
-
-## Interview Focus
-- Questions practiced: __
-- Mock scheduled: [ ] Yes [ ] No — date: ____
+- Done when: ________
 
 ## Daily Log
-| Day | Focus (roadmap schedule) | Done? |
-|-----|--------------------------|-------|
-| Mon | Theory 1.5h | [ ] |
-| Tue | Documentation 1.5h | [ ] |
-| Wed | Coding 2h | [ ] |
-| Thu | Build project 2h | [ ] |
-| Fri | Research papers 1h | [ ] |
-| Sat | Hands-on 4h | [ ] |
-| Sun | Review + notes + interview 3h | [ ] |
+| Day | Focus | Done? |
+|-----|-------|-------|
+| Mon | Concept 40m | [ ] |
+| Tue | Docs/video 40m | [ ] |
+| Wed | Lab 60–90m | [ ] |
+| Thu | Project 60–90m | [ ] |
+| Sat | Build 3h | [ ] |
+| Sun | Notes + 5 Qs | [ ] |
 
-## Risks & Mitigations
-- Risk:
-- Mitigation:
-
-## Friday Review
-- Learned:
-- Failed:
-- Next week #1 priority:
+## Friday / Sunday Review
+- Shipped:
+- Stuck:
+- Next week #1:
 ```
 
 ---
 
-## Pre-Filled Phase Starters
+## Pre-filled Block starters (Track D)
 
-### Week 1 — Phase 0: GenAI From Scratch
-
-| Field | Value |
-|-------|-------|
-| Modules | [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) |
-| Resources | Karpathy Intro to LLMs · OpenAI text guide · Claude overview |
-| Project | Hello-LLM CLI (roles + token usage; mock OK without a key) |
-| Interview | “AI vs ML vs GenAI vs LLM” + what a token is |
-| Exit criteria | Explain prompt→tokens→reply; run lab A–C |
-
-### Week 2 — Phase 0: Python + APIs (+ Math)
+### Week 1 — Block 1: GenAI From Scratch
 
 | Field | Value |
 |-------|-------|
-| Modules | [00-05](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md), [00-06](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md), then [00-04](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) |
-| Resources | RealPython asyncio · Fluent Python (selective) · FastAPI · Pydantic · 3Blue1Brown (math portion) |
-| Project | Async FastAPI warmup + WebSocket stream stub + cosine util |
-| Interview | “Why asyncio for LLM I/O?” · embeddings whiteboard |
-| Exit criteria | Typed FastAPI service packaged with `pyproject.toml`; cosine lab works |
+| Module | [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) |
+| Depth | Full |
+| Ship | Hello-LLM CLI or mock; Labs A–C |
+| Exit | Explain AI/ML/GenAI/LLM + tokens |
 
-### Week 3 — Phase 0: Rules → Agents (+ optional BankCo)
-
-| Field | Value |
-|-------|-------|
-| Modules | [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md), optional [00-03](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) |
-| Resources | ReAct paper (skim) · OpenAI prompt guide · 00-02 architecture diagrams |
-| Project | When-not-to-agent memo; optional retention rules + HITL lab |
-| Interview | “When would you *not* use an agent?” |
-| Exit criteria | Can place a task on rules / classifier / one-shot LLM / agent spectrum |
-
-### Week 4–5 — Phase 1: LLM Foundations
+### Week 2–3 — Block 1: Python
 
 | Field | Value |
 |-------|-------|
-| Modules | 01-01 → 01-05, 02-01, 02-02 |
-| Resources | Attention paper · OpenAI Cookbook · Claude docs · Gemini docs · **DeepSeek API** · Karpathy |
-| Project | Multi-provider chat CLI + cost/latency matrix |
-| Interview | Transformer whiteboard + provider tradeoffs |
+| Module | [00-05](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md) |
+| Depth | Full (slow) |
+| Ship | Scripts + venv + requirements.txt |
 
-### Week 6–7 — Phase 2: Agent Fundamentals
-
-| Field | Value |
-|-------|-------|
-| Modules | 03-01 → 03-04 |
-| Resources | ReAct · CoT · LangGraph docs · LangGraph examples |
-| Project | **Customer Support Agent** (LangGraph + HITL) |
-| Interview | Agent loop critique · pattern selection |
-
-### Week 8–10 — Phase 3: RAG
+### Week 4–5 — Block 1: APIs
 
 | Field | Value |
 |-------|-------|
-| Modules | 04-01 → 04-04 |
-| Resources | RAG paper · HyDE · Qdrant/Weaviate/Pinecone · LlamaIndex |
-| Project | **Internal Company Knowledge Assistant** |
-| Interview | Chunking · hybrid · citation faithfulness |
+| Module | [00-06](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) |
+| Depth | Full |
+| Ship | FastAPI POST + Pydantic |
 
-### Later phases
+### Week 6–8 — Block 1: Math light + rules skim + integrate
 
-Use the Phase → Week table in [Study Plan](Study%20Plan.md) and the full resource maps in [Master Study Roadmap](Master%20Study%20Roadmap.md) for Phases 4–11.
+| Field | Value |
+|-------|-------|
+| Modules | 00-04 light · 00-02 skim · integration |
+| Ship | Cosine lab · when-not-to-agent memo · warmup API README |
+
+### Weeks 9–16 — Block 2
+
+See Study Plan Block 2 (LLM apps → document helper).
+
+### Weeks 17–24 — Block 3
+
+See Study Plan Block 3 (RAG FAQ + support agent).
+
+### Weeks 25–40 — Blocks 4–5
+
+Evals/safety → Docker/cost/inference awareness.
+
+### Weeks 41–48 — Block 6
+
+One specialization + job applications.
+
+---
+
+## Advanced learners
+
+If you already ship LLM systems, use phase starters in the git history of Master Study Roadmap / Track A — not this beginner template.
 
 ---
 
 ## Next Step
 
-Start **Week 1 / Phase 0** above, then keep one Notion page per week using the template.
+Start **Week 1** above → [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md).

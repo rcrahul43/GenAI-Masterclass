@@ -1,5 +1,12 @@
 # 04-02 — Chunking, Metadata & Embeddings
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Full**  
+> Chunking + metadata for your policy corpus.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2h · lab 3h · tuning worksheet 1h) |
