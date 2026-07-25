@@ -54,10 +54,10 @@ flowchart TB
 
 | Block | Months | Theme | You ship | Core modules |
 |------:|--------|-------|----------|--------------|
-| **1** | 1–2 | GenAI ideas + Python + APIs | Hello-LLM + FastAPI warmup | 00-01, 00-05, 00-06, light 00-04, skim 00-02 |
+| **1** | 1–2 | GenAI ideas + Python + APIs | Hello-LLM + FastAPI warmup | 00-01 → 00-02 → 00-03 → 00-04 → 00-05 |
 | **2** | 3–4 | LLM apps + prompting + tools | Document helper (JSON extract) | 01-02, 01-05, 02-01, 02-02; intuition 01-01; skim 01-04 |
 | **3** | 5–6 | RAG + bounded agent | Policy FAQ bot + support agent | 04-01, 04-02, skim 04-03, 03-01, 03-02, light 03-04 |
-| **4** | 7–8 | Evals + guardrails | Golden set + safety basics | 08-01, skim 08-02, 08-03, skim 11-01; optional 00-03 |
+| **4** | 7–8 | Evals + guardrails | Golden set + safety basics | 08-01, skim 08-02, 08-03, skim 11-01; optional 00-06 |
 | **5** | 9–10 | Deploy + cost + inference awareness | Dockerized API + ₹/query note | 10-01, Docker in 10-02, 10-04, skim 01-03 + Ollama |
 | **6** | 11–12 | Specialize + hire | Flagship demo + applications | One path: deeper RAG **or** agents **or** infra |
 
@@ -73,10 +73,12 @@ Week-by-week execution: **[Study Plan](Study%20Plan.md)**.
 | Code | Depth | Notes |
 |------|-------|-------|
 | 00-01 | **Full** | Start here — GenAI from scratch |
-| 00-05, 00-06 | **Full** | Go slow if Python is basic |
-| 00-04 | **Light** | Cosine + embeddings intuition only |
-| 00-02 | **Skim** | “When not to agent” |
-| 00-03 | **Optional** | BFSI / IT-services interview boost |
+| 00-02, 00-03 | **Full** | Go slow if Python is basic |
+| 00-04 | **Skim** | “When not to agent” |
+| 00-05 | **Light** | Cosine + embeddings intuition only (bridge toward RAG) |
+| 00-06 | **Optional** | BFSI / IT-services interview boost |
+
+> Foundation IDs **are** the study order (no more “read 00-05 before 00-02”).
 | 01-01 | **Intuition** | Karpathy talk OK; no paper mastery |
 | 01-02, 01-05 | **Full** | Tokens, cost, Gemini/DeepSeek priority |
 | 01-03, 01-04 | **Skim** | Local Ollama + routing awareness |
@@ -151,5 +153,5 @@ Multi-agent (05-*), MCP/A2A (07-*), voice/multimodal (06-*), LoRA training (09-0
 ## Next step
 
 1. Open [Dashboard](Dashboard.md) and mark **Track D**.  
-2. Start **[00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)**.  
+2. Start **[00-01 GenAI From Scratch](Modules/00-Foundations/00-01-GenAI-From-Scratch.md)**.  
 3. Follow weeks in [Study Plan](Study%20Plan.md) (Block 1).

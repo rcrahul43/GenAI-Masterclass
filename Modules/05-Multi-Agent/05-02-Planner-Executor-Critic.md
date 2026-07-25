@@ -226,7 +226,7 @@ LangGraph fits DAGs natively: nodes + edges, optional conditional edges for smal
 | Itinerary narrative | LLM draft |
 | Final approval | Critic + HITL if over budget |
 
-Aligns with [00-03](../00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) (worked example; previewed in [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md)): policy in code, language in models.
+Aligns with [00-06](../00-Foundations/00-06-BankCo-Decision-Support-Warmup.md) (worked example; previewed in [00-01](../00-Foundations/00-01-GenAI-From-Scratch.md)): policy in code, language in models.
 
 ---
 

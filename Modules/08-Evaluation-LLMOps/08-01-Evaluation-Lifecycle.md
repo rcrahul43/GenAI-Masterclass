@@ -11,7 +11,7 @@
 |------|-------|
 | **Estimated Time** | 6–7 hours (read 2.5h · lab 4h · eval plan memo 1h) |
 | **Difficulty** | Intermediate (metrics) · Advanced (production gates) |
-| **Prerequisites** | [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) · [02-01](../02-Prompt-Engineering/02-01-Production-Prompt-Engineering.md) · [04-01](../04-RAG/04-01-RAG-Architecture.md) |
+| **Prerequisites** | [00-01](../00-Foundations/00-01-GenAI-From-Scratch.md) · [02-01](../02-Prompt-Engineering/02-01-Production-Prompt-Engineering.md) · [04-01](../04-RAG/04-01-RAG-Architecture.md) |
 | **Module** | 08 — Evaluation & LLMOps |
 | **Related** | [08-02](08-02-Observability-LangSmith-OTel.md) · [08-03](08-03-Guardrails-Ship-Criteria.md) · [06-02](../06-Conversational-Multimodal/06-02-Multimodal-Agents.md) · [12-04](../12-Advanced-Topics/12-04-DSPy-Programmatic-Prompting.md) |
 

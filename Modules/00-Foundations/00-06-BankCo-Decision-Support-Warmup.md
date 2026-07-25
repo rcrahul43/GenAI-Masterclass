@@ -1,4 +1,4 @@
-# 00-03 — BankCo Warm-Up: Decision-Support Retention Assistant
+# 00-06 — BankCo Warm-Up: Decision-Support Retention Assistant
 
 
 <!-- TRACK_D_SCOPE -->
@@ -11,7 +11,7 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · lab 2.5h · policy memo 1h) |
 | **Difficulty** | Intermediate (rules + API) · Advanced (production governance) |
-| **Prerequisites** | [00-01 GenAI From Scratch](00-01-AI-Engineering-Mindset.md) · [00-02 From Rules to Agents](00-02-From-Rules-to-Agents.md) · [00-05](00-05-Python-for-AI-Engineering.md)/[00-06](00-06-APIs-for-AI-Engineering.md) or equivalent · Python 3.11+ · basic FastAPI/Pydantic |
+| **Prerequisites** | [00-01 GenAI From Scratch](00-01-GenAI-From-Scratch.md) · [00-04 From Rules to Agents](00-04-From-Rules-to-Agents.md) · [00-02](00-02-Python-for-AI-Engineering.md)/[00-03](00-03-APIs-for-AI-Engineering.md) or equivalent · Python 3.11+ · basic FastAPI/Pydantic |
 | **Module** | 00 — Foundations |
 | **Related** | [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [08-03 Guardrails Ship Criteria](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) · [Architecture Index](../../Architecture Index.md) |
 
@@ -41,7 +41,7 @@ Most “AI retention” pitches fail because they:
 - auto-send emails that violate offer authority and brand compliance,
 - and ignore that RMs—not models—carry the client relationship.
 
-This warm-up is the **smallest credible production slice** of BankCo’s internal retention assistant. Trust zones are **previewed** in [00-01](00-01-AI-Engineering-Mindset.md); when rules beat agents is taught in [00-02](00-02-From-Rules-to-Agents.md); the full policy-first design is implemented **here**. It foreshadows [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) (agent loop with tools) and [08-03](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) (ship criteria for regulated assistive AI).
+This warm-up is the **smallest credible production slice** of BankCo’s internal retention assistant. Trust zones are **previewed** in [00-01](00-01-GenAI-From-Scratch.md); when rules beat agents is taught in [00-04](00-04-From-Rules-to-Agents.md); the full policy-first design is implemented **here**. It foreshadows [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) (agent loop with tools) and [08-03](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) (ship criteria for regulated assistive AI).
 
 **Core thesis:** Decision-support agents **recommend**; humans **commit**. If your system can email a customer without an RM click, you built the wrong product class.
 
@@ -76,7 +76,7 @@ BankCo’s warm-up assistant is a **batch + API hybrid**:
 4. **Human gate:** RM reviews prioritized queue; edits draft; sends via existing CRM—outside this service’s trust boundary.
 5. **Observability:** Retention Recommendations Log + audit events + RM notification fan-out.
 
-![Modules__00-Foundations__00-03-BankCo-Decision-Support-Warmup-01-b0f33656](../../Diagrams/Modules__00-Foundations__00-03-BankCo-Decision-Support-Warmup-01-b0f33656.png)
+![Modules__00-Foundations__00-06-BankCo-Decision-Support-Warmup-01-b0f33656](../../Diagrams/Modules__00-Foundations__00-06-BankCo-Decision-Support-Warmup-01-b0f33656.png)
 
 ```mermaid
 flowchart TB
@@ -121,7 +121,7 @@ flowchart TB
     RM --> CRM
 ```
 
-**Trust zones** (previewed in [00-01](00-01-AI-Engineering-Mindset.md); applied here):
+**Trust zones** (previewed in [00-01](00-01-GenAI-From-Scratch.md); applied here):
 
 | Zone | Components | Must never |
 |------|------------|------------|
@@ -544,7 +544,7 @@ Ship criteria include: **irreversible actions require human approval**, **policy
 
 ### End-to-End Flow
 
-![Modules__00-Foundations__00-03-BankCo-Decision-Support-Warmup-02-cc2237e0](../../Diagrams/Modules__00-Foundations__00-03-BankCo-Decision-Support-Warmup-02-cc2237e0.png)
+![Modules__00-Foundations__00-06-BankCo-Decision-Support-Warmup-02-cc2237e0](../../Diagrams/Modules__00-Foundations__00-06-BankCo-Decision-Support-Warmup-02-cc2237e0.png)
 
 ```mermaid
 flowchart LR
@@ -571,7 +571,7 @@ flowchart LR
 
 ### State Diagram — Recommendation Lifecycle
 
-![Modules__00-Foundations__00-03-BankCo-Decision-Support-Warmup-03-383f4423](../../Diagrams/Modules__00-Foundations__00-03-BankCo-Decision-Support-Warmup-03-383f4423.png)
+![Modules__00-Foundations__00-06-BankCo-Decision-Support-Warmup-03-383f4423](../../Diagrams/Modules__00-Foundations__00-06-BankCo-Decision-Support-Warmup-03-383f4423.png)
 
 ```mermaid
 stateDiagram-v2
@@ -589,7 +589,7 @@ stateDiagram-v2
 
 ### Sequence Diagram — Daily Batch
 
-![Modules__00-Foundations__00-03-BankCo-Decision-Support-Warmup-04-d2f7cc13](../../Diagrams/Modules__00-Foundations__00-03-BankCo-Decision-Support-Warmup-04-d2f7cc13.png)
+![Modules__00-Foundations__00-06-BankCo-Decision-Support-Warmup-04-d2f7cc13](../../Diagrams/Modules__00-Foundations__00-06-BankCo-Decision-Support-Warmup-04-d2f7cc13.png)
 
 ```mermaid
 sequenceDiagram
@@ -1372,7 +1372,7 @@ rm_decision, quarantine_reason
 
 ## Architecture Diagram
 
-![Modules__00-Foundations__00-03-BankCo-Decision-Support-Warmup-05-620fa7e5](../../Diagrams/Modules__00-Foundations__00-03-BankCo-Decision-Support-Warmup-05-620fa7e5.png)
+![Modules__00-Foundations__00-06-BankCo-Decision-Support-Warmup-05-620fa7e5](../../Diagrams/Modules__00-Foundations__00-06-BankCo-Decision-Support-Warmup-05-620fa7e5.png)
 
 ```mermaid
 flowchart TB

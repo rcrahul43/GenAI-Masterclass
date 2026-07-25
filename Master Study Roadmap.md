@@ -33,7 +33,7 @@ The primary course (Track D) ships hireable GenAI builders. Staff+ roles also re
 **Sprint (experienced LLM engineers only):** skim 00-01; skip other Phase 0 labs; compress Phases 1–4 into 6 weeks  
 **Absolute beginners:** do **not** skim or skip 00-01 — it is the on-ramp before math, frameworks, or BankCo drills
 
-> **Depth note:** Phase 0 `00-01` is beginner-friendly. From `00-02` onward (and Phases 1–11), chapters keep Staff / Principal / EM interview depth. Follow the progressive order; do not jump to BankCo or LangGraph on day one.
+> **Depth note:** Phase 0 `00-01` is beginner-friendly. From `00-04` onward (and Phases 1–11), chapters keep Staff / Principal / EM interview depth. Follow the progressive order; do not jump to BankCo or LangGraph on day one.
 
 ---
 
@@ -41,7 +41,7 @@ The primary course (Track D) ships hireable GenAI builders. Staff+ roles also re
 
 | Phase | Name | Weeks | Primary modules | Flagship project |
 |------:|------|------:|-----------------|------------------|
-| **0** | AI Foundations | 3 | 00-01 → 00-05 → 00-06 → 00-04 → 00-02 (+ optional 00-03) | Hello-LLM CLI + FastAPI warmup |
+| **0** | AI Foundations | 3 | 00-01 → 00-02 → 00-03 → 00-04 → 00-05 (+ optional 00-06) | Hello-LLM CLI + FastAPI warmup |
 | **1** | LLM Foundations | 2 | 01-01 → 01-05, 02-01, 02-02 | Multi-provider chat CLI + cost estimator |
 | **2** | Agent Fundamentals | 2 | 03-01 → 03-04 | Customer Support Agent |
 | **3** | RAG | 3 | 04-01 → 04-04 | Internal Company Knowledge Assistant |
@@ -136,12 +136,12 @@ REST · GraphQL · WebSockets · gRPC · FastAPI
 
 | Order | Chapter | Role |
 |------:|---------|------|
-| 1 | [00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) | **Start here** — ideas + tiny first call |
-| 2 | [00-05 Python for AI Engineering](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md) | Craft for AI services |
-| 3 | [00-06 APIs for AI Engineering](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) | FastAPI / schemas / HTTP |
-| 4 | [00-04 Mathematics for AI Engineering](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) | Vectors & similarity for RAG later |
-| 5 | [00-02 From Rules to Agents](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) | *After* you can call a model — evolution + when not to agent |
-| 6 | [00-03 BankCo Decision-Support Warmup](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) | *Optional in Phase 0* or early Phase 2 — policy-first design drill |
+| 1 | [00-01 GenAI From Scratch](Modules/00-Foundations/00-01-GenAI-From-Scratch.md) | **Start here** — ideas + tiny first call |
+| 2 | [00-02 Python for AI Engineering](Modules/00-Foundations/00-02-Python-for-AI-Engineering.md) | Craft for AI services |
+| 3 | [00-03 APIs for AI Engineering](Modules/00-Foundations/00-03-APIs-for-AI-Engineering.md) | FastAPI / schemas / HTTP |
+| 4 | [00-04 From Rules to Agents](Modules/00-Foundations/00-04-From-Rules-to-Agents.md) | *After* you can call a model — evolution + when not to agent |
+| 5 | [00-05 Mathematics for AI Engineering](Modules/00-Foundations/00-05-Mathematics-for-AI-Engineering.md) | Vectors & similarity for RAG later |
+| 6 | [00-06 BankCo Decision-Support Warmup](Modules/00-Foundations/00-06-BankCo-Decision-Support-Warmup.md) | *Optional in Phase 0* or early Phase 2 — policy-first design drill |
 
 ### Resource map
 
@@ -751,5 +751,5 @@ If you complete this roadmap, your portfolio should include:
 **Advanced (Tracks A–C):**
 
 1. Pin [Dashboard](Dashboard.md)  
-2. Start Phase 0 → [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) then follow phase tables above  
+2. Start Phase 0 → [00-01](Modules/00-Foundations/00-01-GenAI-From-Scratch.md) then follow phase tables above  
 3. Track hours in [Progress Tracker](Progress%20Tracker.md) and the Excel tracker

@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 6–7 hours (read 3h · lab 3h · failure injection 1h) |
 | **Difficulty** | Intermediate (tools/memory) · Advanced (control flow + resilience) |
-| **Prerequisites** | [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · [03-01](03-01-Agent-Anatomy-and-Loop.md) · Python · FastAPI |
+| **Prerequisites** | [00-01](../00-Foundations/00-01-GenAI-From-Scratch.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · [03-01](03-01-Agent-Anatomy-and-Loop.md) · Python · FastAPI |
 | **Module** | 03 — Agentic Fundamentals |
-| **Related** | [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · [03-01](03-01-Agent-Anatomy-and-Loop.md) · [03-03](03-03-Agentic-Design-Patterns.md) · [03-04](03-04-LangGraph-Production-Agents.md) · [Architecture Index](../../Architecture Index.md) |
+| **Related** | [00-01](../00-Foundations/00-01-GenAI-From-Scratch.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · [03-01](03-01-Agent-Anatomy-and-Loop.md) · [03-03](03-03-Agentic-Design-Patterns.md) · [03-04](03-04-LangGraph-Production-Agents.md) · [Architecture Index](../../Architecture Index.md) |
 
 ---
 

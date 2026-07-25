@@ -1,4 +1,4 @@
-# 00-05 — Python for AI Engineering
+# 00-02 — Python for AI Engineering
 
 
 <!-- TRACK_D_SCOPE -->
@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 7–8 hours (read 2h · labs 4h · packaging review 1–2h) |
 | **Difficulty** | Intermediate (Python fluency) · Advanced (production concurrency and typing) |
-| **Prerequisites** | [00-01 GenAI From Scratch](00-01-AI-Engineering-Mindset.md) · basic Python · browser/curl-level HTTP is enough ([00-06](00-06-APIs-for-AI-Engineering.md) covers FastAPI; [00-04](00-04-Mathematics-for-AI-Engineering.md) can follow) |
+| **Prerequisites** | [00-01 GenAI From Scratch](00-01-GenAI-From-Scratch.md) · basic Python · browser/curl-level HTTP is enough ([00-03](00-03-APIs-for-AI-Engineering.md) covers FastAPI; [00-05](00-05-Mathematics-for-AI-Engineering.md) can follow) |
 | **Module** | 00 — Foundations |
-| **Related** | [00-06](00-06-APIs-for-AI-Engineering.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · [03-02](../03-Agentic-Fundamentals/03-02-Tools-Memory-Control-Flow.md) · [08-02](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) |
+| **Related** | [00-03](00-03-APIs-for-AI-Engineering.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · [03-02](../03-Agentic-Fundamentals/03-02-Tools-Memory-Control-Flow.md) · [08-02](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) |
 
 ---
 

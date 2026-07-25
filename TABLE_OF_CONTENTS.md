@@ -31,16 +31,16 @@
 
 ## 1. Module 00 — Foundations
 
-> **Study order (not filename order):** [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) → [00-05](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md) → [00-06](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) → [00-04](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) → [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) → optional [00-03](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md).
+> **Study order = file numbers:** [00-01](Modules/00-Foundations/00-01-GenAI-From-Scratch.md) → [00-02](Modules/00-Foundations/00-02-Python-for-AI-Engineering.md) → [00-03](Modules/00-Foundations/00-03-APIs-for-AI-Engineering.md) → [00-04](Modules/00-Foundations/00-04-From-Rules-to-Agents.md) → [00-05](Modules/00-Foundations/00-05-Mathematics-for-AI-Engineering.md) → optional [00-06](Modules/00-Foundations/00-06-BankCo-Decision-Support-Warmup.md).
 
 | # | Title | File | Status |
 |---|-------|------|--------|
-| 1.1 | GenAI From Scratch: Core Ideas | [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) | ✅ done |
-| 1.2 | From Rules → ML → Generative AI → Agents | [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) | ✅ done |
-| 1.3 | BankCo Decision-Support Warmup (Agent Mental Model) | [00-03](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) | ✅ done |
-| 1.4 | Mathematics for AI Engineering | [00-04](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) | ✅ done |
-| 1.5 | Python for AI Engineering | [00-05](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md) | ✅ done |
-| 1.6 | APIs for AI Engineering | [00-06](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) | ✅ done |
+| 1.1 | GenAI From Scratch: Core Ideas | [00-01](Modules/00-Foundations/00-01-GenAI-From-Scratch.md) | ✅ done |
+| 1.2 | Python for AI Engineering | [00-02](Modules/00-Foundations/00-02-Python-for-AI-Engineering.md) | ✅ done |
+| 1.3 | APIs for AI Engineering | [00-03](Modules/00-Foundations/00-03-APIs-for-AI-Engineering.md) | ✅ done |
+| 1.4 | From Rules → ML → Generative AI → Agents | [00-04](Modules/00-Foundations/00-04-From-Rules-to-Agents.md) | ✅ done |
+| 1.5 | Mathematics for AI Engineering | [00-05](Modules/00-Foundations/00-05-Mathematics-for-AI-Engineering.md) | ✅ done |
+| 1.6 | BankCo Decision-Support Warmup (Agent Mental Model) | [00-06](Modules/00-Foundations/00-06-BankCo-Decision-Support-Warmup.md) | ✅ done |
 
 ---
 

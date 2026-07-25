@@ -75,5 +75,5 @@ Skip to Master Study Roadmap sprint guidance. **Not for absolute beginners.**
 ## Next step
 
 1. Confirm track on [Dashboard](Dashboard.md).  
-2. **Track D:** [COURSE.md](COURSE.md) → Week 1 in [Study Plan](Study%20Plan.md) → [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md).  
+2. **Track D:** [COURSE.md](COURSE.md) → Week 1 in [Study Plan](Study%20Plan.md) → [00-01](Modules/00-Foundations/00-01-GenAI-From-Scratch.md).  
 3. **A/B/C:** [Master Study Roadmap](Master%20Study%20Roadmap.md).

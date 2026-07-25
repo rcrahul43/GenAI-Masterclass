@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2h · one-pager lab 2h · launch review 1h) |
 | **Difficulty** | Advanced (product judgment, metrics, eval design, roadmap sequencing) |
-| **Prerequisites** | [00-01 GenAI From Scratch](../00-Foundations/00-01-AI-Engineering-Mindset.md) · [08-01 Evaluation Lifecycle](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [09-02 Prompting vs RAG vs Fine-Tuning](../09-Fine-Tuning/09-02-Prompting-vs-RAG-vs-FineTuning.md) |
+| **Prerequisites** | [00-01 GenAI From Scratch](../00-Foundations/00-01-GenAI-From-Scratch.md) · [08-01 Evaluation Lifecycle](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [09-02 Prompting vs RAG vs Fine-Tuning](../09-Fine-Tuning/09-02-Prompting-vs-RAG-vs-FineTuning.md) |
 | **Module** | 12 — Advanced Topics |
-| **Related** | [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) · [04-01 RAG Architecture](../04-RAG/04-01-RAG-Architecture.md) · [08-03 Guardrails](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) · [09-02](../09-Fine-Tuning/09-02-Prompting-vs-RAG-vs-FineTuning.md) · [AI Governance](../../Leadership/AI-Governance-Strategy-Metrics.md) |
+| **Related** | [00-01](../00-Foundations/00-01-GenAI-From-Scratch.md) · [04-01 RAG Architecture](../04-RAG/04-01-RAG-Architecture.md) · [08-03 Guardrails](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) · [09-02](../09-Fine-Tuning/09-02-Prompting-vs-RAG-vs-FineTuning.md) · [AI Governance](../../Leadership/AI-Governance-Strategy-Metrics.md) |
 
 ---
 
@@ -46,7 +46,7 @@ They fail because:
 - latency broke the workflow,
 - or teams built an agent when a search box would have worked.
 
-The foundations chapter [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) introduces quality, latency, cost, and risk as beginner habits. This chapter (with [08-03](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md)) turns those dimensions into roadmap and launch decisions.
+The foundations chapter [00-01](../00-Foundations/00-01-GenAI-From-Scratch.md) introduces quality, latency, cost, and risk as beginner habits. This chapter (with [08-03](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md)) turns those dimensions into roadmap and launch decisions.
 
 Staff/Principal question:
 

@@ -1,6 +1,6 @@
 # 00-01 — GenAI From Scratch: Core Ideas
 
-> **Filename note:** This file is still named `00-01-AI-Engineering-Mindset.md` for link stability. The chapter is the **beginner on-ramp**, not a Principal/EM judgment drill.
+> **Study order:** Chapter numbers match Track D Block 1 sequence.
 
 
 <!-- TRACK_D_SCOPE -->
@@ -15,7 +15,7 @@
 | **Difficulty** | Beginner |
 | **Prerequisites** | Curiosity. Optional: you have used ChatGPT / Claude / Gemini as a user. No ML background required. |
 | **Module** | 00 — Foundations |
-| **Related** | [COURSE.md](../../COURSE.md) · [00-05](00-05-Python-for-AI-Engineering.md) · [00-06](00-06-APIs-for-AI-Engineering.md) · [00-04](00-04-Mathematics-for-AI-Engineering.md) · [00-02](00-02-From-Rules-to-Agents.md) · [00-03](00-03-BankCo-Decision-Support-Warmup.md) · [01-01](../01-LLM-Engineering/01-01-Transformer-Architecture.md) · [Study Plan](../../Study%20Plan.md) |
+| **Related** | [COURSE.md](../../COURSE.md) · [00-02](00-02-Python-for-AI-Engineering.md) · [00-03](00-03-APIs-for-AI-Engineering.md) · [00-05](00-05-Mathematics-for-AI-Engineering.md) · [00-04](00-04-From-Rules-to-Agents.md) · [00-06](00-06-BankCo-Decision-Support-Warmup.md) · [01-01](../01-LLM-Engineering/01-01-Transformer-Architecture.md) · [Study Plan](../../Study%20Plan.md) |
 
 ---
 
@@ -43,7 +43,7 @@ This chapter is the **opening scene**:
 - What you can build *first*
 - What this handbook will teach you *next*
 
-Production judgment (cost, safety, audit trails, multi-agent systems) comes later — after the vocabulary sticks. You will meet those ideas again in [00-02](00-02-From-Rules-to-Agents.md), [00-03](00-03-BankCo-Decision-Support-Warmup.md), and Phase 2+.
+Production judgment (cost, safety, audit trails, multi-agent systems) comes later — after the vocabulary sticks. You will meet those ideas again in [00-04](00-04-From-Rules-to-Agents.md), [00-06](00-06-BankCo-Decision-Support-Warmup.md), and Phase 2+.
 
 ---
 
@@ -51,9 +51,9 @@ Production judgment (cost, safety, audit trails, multi-agent systems) comes late
 
 ```mermaid
 flowchart LR
-    A[You are here<br/>00-01 Ideas] --> B[Python + APIs<br/>00-05 · 00-06]
-    B --> M[Math intuition<br/>00-04]
-    M --> R[Rules → Agents<br/>00-02 · 00-03]
+    A[You are here<br/>00-01 Ideas] --> B[Python + APIs<br/>00-02 · 00-03]
+    B --> M[Math intuition<br/>00-05]
+    M --> R[Rules → Agents<br/>00-04 · 00-06]
     R --> C[How LLMs work<br/>Phase 1]
     C --> D[Prompts + tools<br/>Phase 1–2]
     D --> E[RAG + Agents<br/>Phase 2–3]
@@ -197,7 +197,7 @@ You do **not** need a full agent for every task. Many great products are one wel
 **Starter rule of thumb:**  
 Use **code for decisions that must be right**. Use **LLMs for language and judgment over text**. Combine them often (rules decide; LLM drafts the email).
 
-That hybrid idea returns in [00-02](00-02-From-Rules-to-Agents.md) and the BankCo warmup [00-03](00-03-BankCo-Decision-Support-Warmup.md) — after you can call a model confidently.
+That hybrid idea returns in [00-04](00-04-From-Rules-to-Agents.md) and the BankCo warmup [00-06](00-06-BankCo-Decision-Support-Warmup.md) — after you can call a model confidently.
 
 ---
 
@@ -336,10 +336,10 @@ Ask a question that needs a private fact the model cannot know (e.g. “What is 
 | Order | Chapter / phase | You will learn |
 |------:|-----------------|----------------|
 | 1 | **00-01 (this page)** | Vocabulary + first call |
-| 2 | [00-05 Python](00-05-Python-for-AI-Engineering.md) | Typing, async, clean scripts |
-| 3 | [00-06 APIs](00-06-APIs-for-AI-Engineering.md) | FastAPI, schemas, HTTP for AI services |
-| 4 | [00-04 Math](00-04-Mathematics-for-AI-Engineering.md) | Vectors & similarity (needed for RAG later) |
-| 5 | [00-02](00-02-From-Rules-to-Agents.md) · optional [00-03](00-03-BankCo-Decision-Support-Warmup.md) | When rules beat agents; first decision-support design |
+| 2 | [00-02 Python](00-02-Python-for-AI-Engineering.md) | Typing, async, clean scripts |
+| 3 | [00-03 APIs](00-03-APIs-for-AI-Engineering.md) | FastAPI, schemas, HTTP for AI services |
+| 4 | [00-05 Math](00-05-Mathematics-for-AI-Engineering.md) | Vectors & similarity (needed for RAG later) |
+| 5 | [00-04](00-04-From-Rules-to-Agents.md) · optional [00-06](00-06-BankCo-Decision-Support-Warmup.md) | When rules beat agents; first decision-support design |
 | 6 | Phase 1 — LLM Engineering | Transformers, tokens, providers, prompting |
 | 7 | Phases 2–11 | Agents, RAG, multi-agent, LLMOps, security, leadership |
 
@@ -349,7 +349,7 @@ Full week-by-week plan: [Master Study Roadmap](../../Master%20Study%20Roadmap.md
 
 ## Preview: trust zones (learn the picture, not the enterprise build)
 
-Later chapters separate systems into three zones. Memorize the idea now; implement it in [00-03](00-03-BankCo-Decision-Support-Warmup.md).
+Later chapters separate systems into three zones. Memorize the idea now; implement it in [00-06](00-06-BankCo-Decision-Support-Warmup.md).
 
 ```mermaid
 flowchart LR

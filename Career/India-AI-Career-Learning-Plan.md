@@ -5,7 +5,7 @@
 > **Handbook track name:** **Track D** (primary course).  
 > **Course design hub:** **[COURSE.md](../COURSE.md)** · **Week-by-week:** [Study Plan](../Study%20Plan.md)
 >
-> **Related:** [00-01 GenAI From Scratch](../Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) · [Dashboard](../Dashboard.md) · [Learning Path](../Learning%20Path.md) · Advanced: [Master Study Roadmap](../Master%20Study%20Roadmap.md)
+> **Related:** [00-01 GenAI From Scratch](../Modules/00-Foundations/00-01-GenAI-From-Scratch.md) · [Dashboard](../Dashboard.md) · [Learning Path](../Learning%20Path.md) · Advanced: [Master Study Roadmap](../Master%20Study%20Roadmap.md)
 
 ---
 
@@ -15,7 +15,7 @@
 |------|-------------------|
 | **00-01 GenAI From Scratch** | Yes — start here |
 | **Python / APIs foundations** | Yes, but go **slowly** if Python is still basic |
-| **00-02, 00-03, Phases 1–11** | Written at **working engineer / interview** depth — usable if you follow Track D (skim theory, always ship a small project) |
+| **00-04, 00-06, Phases 1–11** | Written at **working engineer / interview** depth — usable if you follow Track D (skim theory, always ship a small project) |
 | **Staff / Principal / EM tracks (A–C)** | **Not your year-1 goal** — revisit in year 2–3 |
 
 So: the handbook *contains* a beginner on-ramp, but it was originally a Staff+ masterclass. **Track D is the filter** that turns it into a realistic path for you.
@@ -82,11 +82,11 @@ flowchart LR
 
 | Week focus | Handbook | You must produce |
 |------------|----------|------------------|
-| GenAI vocabulary | **[00-01](../Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)** | Hello-LLM CLI (or mock) + notes in your words |
-| Python daily | [00-05](../Modules/00-Foundations/00-05-Python-for-AI-Engineering.md) (go slow; use Real Python) | Scripts with functions, types, `venv`, `requirements.txt` |
-| HTTP + FastAPI | [00-06](../Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) | One POST endpoint that returns JSON |
-| Light math | [00-04](../Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) — **cosine + embeddings intuition only** | Tiny notebook: similarity between 5 sentences |
-| Rules vs AI | Skim [00-02](../Modules/00-Foundations/00-02-From-Rules-to-Agents.md) “when not to agent” | Half-page memo: 3 tasks → rules / LLM / later-agent |
+| GenAI vocabulary | **[00-01](../Modules/00-Foundations/00-01-GenAI-From-Scratch.md)** | Hello-LLM CLI (or mock) + notes in your words |
+| Python daily | [00-02](../Modules/00-Foundations/00-02-Python-for-AI-Engineering.md) (go slow; use Real Python) | Scripts with functions, types, `venv`, `requirements.txt` |
+| HTTP + FastAPI | [00-03](../Modules/00-Foundations/00-03-APIs-for-AI-Engineering.md) | One POST endpoint that returns JSON |
+| Rules vs AI | Skim [00-04](../Modules/00-Foundations/00-04-From-Rules-to-Agents.md) “when not to agent” | Half-page memo: 3 tasks → rules / LLM / later-agent |
+| Light math | [00-05](../Modules/00-Foundations/00-05-Mathematics-for-AI-Engineering.md) — **cosine + embeddings intuition only** | Tiny notebook: similarity between 5 sentences |
 
 **Exit:** You can explain token/prompt/hallucination and call an API without copy-pasting blindly.
 
@@ -122,7 +122,7 @@ flowchart LR
 | Evals | [08-01](../Modules/08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) (golden set of 30+ Qs) | CSV of questions + pass/fail script |
 | Observability | Skim [08-02](../Modules/08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) | Log prompt, model, tokens, latency per request |
 | Guardrails | [08-03](../Modules/08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) + [11-01](../Modules/11-Security-Safety/11-01-OWASP-LLM-Top-10.md) skim | Block PII patterns; refuse medical/legal overclaim |
-| Optional BankCo | [00-03](../Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) | Great for BFSI interviews — do if targeting banks/IT services |
+| Optional BankCo | [00-06](../Modules/00-Foundations/00-06-BankCo-Decision-Support-Warmup.md) | Great for BFSI interviews — do if targeting banks/IT services |
 
 **Exit:** README with “how I measure quality” — this separates you from course-certificate noise.
 
@@ -217,5 +217,5 @@ Friday off or light revision. Miss a weekday → protect Saturday build time.
 ## Next action (today)
 
 1. Mark track **D** on [Dashboard](../Dashboard.md).  
-2. Open **[00-01 GenAI From Scratch](../Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)** and finish Labs A–C.  
+2. Open **[00-01 GenAI From Scratch](../Modules/00-Foundations/00-01-GenAI-From-Scratch.md)** and finish Labs A–C.  
 3. Create a GitHub repo `genai-learning` and commit the Hello-LLM script.

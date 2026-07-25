@@ -37,14 +37,14 @@
 | Foundations | Anthropic Claude overview | Intro | 20 min | https://docs.anthropic.com/en/docs/welcome | Second-provider vocabulary early | claude, api, phase-0 | 00-01, 01-05 |
 | Foundations | Gemini API quickstart | Intro | 20 min | https://ai.google.dev/gemini-api/docs/quickstart | Multi-provider habit from day one | gemini, api, phase-0 | 00-01, 01-05 |
 | Foundations | DeepSeek API docs | Intro | 15 min | https://api-docs.deepseek.com/ | Cost-efficient OpenAI-compatible option | deepseek, api, phase-0 | 00-01, 01-05 |
-| Foundations | Real Python | Intro | Ongoing | https://realpython.com/ | asyncio, typing, packaging tutorials | python, phase-0 | 00-05 |
-| Foundations | FastAPI documentation | Intro | Ongoing | https://fastapi.tiangolo.com/ | Async Python API framework | fastapi, python, phase-0 | 00-06, 10-01 |
-| Foundations | Pydantic v2 docs | Intro | 45 min | https://docs.pydantic.dev/latest/ | Data validation and settings | pydantic, validation, phase-0 | 00-05, 02-02 |
-| Foundations | Python asyncio docs | Intermediate | 60 min | https://docs.python.org/3/library/asyncio.html | Concurrent LLM/tool I/O | asyncio, python, phase-0 | 00-05 |
-| Foundations | 3Blue1Brown — Essence of Linear Algebra | Intro | 4–6 h | https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab | Visual linear algebra for embeddings/attention *(after first LLM call)* | math, youtube, phase-0 | 00-04 |
-| Foundations | StatQuest YouTube | Intro | 3–4 h | https://www.youtube.com/@joshstarmer | Probability & stats intuition for evals | stats, youtube, phase-0 | 00-04, 08-01 |
-| Foundations | Mathematics for Machine Learning (book site) | Intermediate | Ongoing | https://mml-book.github.io/ | Free textbook — linear algebra, probability, optimization | math, book, phase-0 | 00-04 |
-| Foundations | gRPC Python docs | Intermediate | 60 min | https://grpc.io/docs/languages/python/ | Typed RPC for internal agent services | grpc, apis, phase-0 | 00-06 |
+| Foundations | Real Python | Intro | Ongoing | https://realpython.com/ | asyncio, typing, packaging tutorials | python, phase-0 | 00-02 |
+| Foundations | FastAPI documentation | Intro | Ongoing | https://fastapi.tiangolo.com/ | Async Python API framework | fastapi, python, phase-0 | 00-03, 10-01 |
+| Foundations | Pydantic v2 docs | Intro | 45 min | https://docs.pydantic.dev/latest/ | Data validation and settings | pydantic, validation, phase-0 | 00-02, 02-02 |
+| Foundations | Python asyncio docs | Intermediate | 60 min | https://docs.python.org/3/library/asyncio.html | Concurrent LLM/tool I/O | asyncio, python, phase-0 | 00-02 |
+| Foundations | 3Blue1Brown — Essence of Linear Algebra | Intro | 4–6 h | https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab | Visual linear algebra for embeddings/attention *(after first LLM call)* | math, youtube, phase-0 | 00-05 |
+| Foundations | StatQuest YouTube | Intro | 3–4 h | https://www.youtube.com/@joshstarmer | Probability & stats intuition for evals | stats, youtube, phase-0 | 00-05, 08-01 |
+| Foundations | Mathematics for Machine Learning (book site) | Intermediate | Ongoing | https://mml-book.github.io/ | Free textbook — linear algebra, probability, optimization | math, book, phase-0 | 00-05 |
+| Foundations | gRPC Python docs | Intermediate | 60 min | https://grpc.io/docs/languages/python/ | Typed RPC for internal agent services | grpc, apis, phase-0 | 00-03 |
 
 ---
 

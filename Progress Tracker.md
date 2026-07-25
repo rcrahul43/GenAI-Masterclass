@@ -67,11 +67,11 @@ Only mark ✅ when the week’s **ship** item exists.
 ## Module 00 — Foundations (Track D order)
 
 - [ ] 00-01 GenAI From Scratch: Core Ideas  ← **start here** (Full)
-- [ ] 00-05 Python for AI Engineering (Full, slow)
-- [ ] 00-06 APIs for AI Engineering (Full)
-- [ ] 00-04 Mathematics for AI Engineering (Light)
-- [ ] 00-02 From Rules to Agents (Skim)
-- [ ] 00-03 BankCo Decision-Support Warmup (Optional)
+- [ ] 00-02 Python for AI Engineering (Full, slow)
+- [ ] 00-03 APIs for AI Engineering (Full)
+- [ ] 00-04 From Rules to Agents (Skim)
+- [ ] 00-05 Mathematics for AI Engineering (Light)
+- [ ] 00-06 BankCo Decision-Support Warmup (Optional)
 
 ## Module 01 — LLM Engineering
 

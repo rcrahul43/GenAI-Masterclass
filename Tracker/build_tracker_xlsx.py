@@ -56,10 +56,10 @@ SECTION_META = {
 }
 
 # Tracker "Week #" is a compact sprint index for the Excel sheet (not the ~30-week Study Plan calendar).
-# Progressive foundations order: 00-01 → 00-05 → 00-06 → 00-04 → 00-02 → 00-03.
+# Progressive foundations order (= file numbers): 00-01 → 00-02 → 00-03 → 00-04 → 00-05 → 00-06.
 WEEK_PLAN = [
-    (0, "Foundations — GenAI + craft", "00-01|00-05|00-06|00-04", "Hello-LLM CLI + FastAPI warmup", "GenAI vocabulary", 12),
-    (1, "Foundations — Rules / BankCo", "00-02|00-03", "When-not-to-agent memo · BankCo rules", "Rules vs agent", 12),
+    (0, "Foundations — GenAI + craft", "00-01|00-02|00-03", "Hello-LLM CLI + FastAPI warmup", "GenAI vocabulary", 12),
+    (1, "Foundations — rules + math + BankCo", "00-04|00-05|00-06", "When-not-to-agent · cosine · BankCo", "Rules vs agent", 12),
     (2, "LLM Engineering I", "01-01|01-02", "Token cost estimator", "Transformer whiteboard", 12),
     (3, "LLM Engineering II", "01-03|01-04|01-05", "LiteLLM FastAPI router", "Inference tradeoffs", 12),
     (4, "Prompts & Tools", "02-01|02-02", "Structured router agent", "Tool-calling design", 12),
@@ -96,7 +96,7 @@ DESIGN_LINKS = {
 
 PROJECTS = [
     ("P01", "Hello-LLM Explain-It Bot", "Foundations Projects", "Mini", 0, "00-01"),
-    ("P01b", "BankCo Decision Support", "Foundations Projects", "Mini", 1, "00-02, 00-03"),
+    ("P01b", "BankCo Decision Support", "Foundations Projects", "Mini", 1, "00-04, 00-06"),
     ("P02", "Token Cost Estimator", "LLM Projects", "Mini", 2, "01-02"),
     ("P03", "LiteLLM Gateway", "LLM Projects", "Mini", 3, "01-04, 01-05"),
     ("P04", "Structured Router Agent", "Agent Projects", "Intermediate", 4, "02-02, 03-03"),

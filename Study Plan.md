@@ -39,14 +39,14 @@ Weekend: Sat 3h build · Sun 1–2h revision + 5 questions aloud.
 
 | Week | Focus | Modules | Ship |
 |-----:|-------|---------|------|
-| 1 | GenAI vocabulary | **[00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)** | Hello-LLM (or mock); Labs A–C |
-| 2 | Python basics for AI | [00-05](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md) (slow) | `venv`, functions, types, one script |
-| 3 | Python continued | 00-05 | Async hello; package a tiny module |
-| 4 | HTTP + FastAPI | [00-06](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) | POST JSON endpoint |
-| 5 | FastAPI + Pydantic | 00-06 | Validation + error responses |
-| 6 | Embeddings intuition | [00-04](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) **light** | Cosine similarity on 5 sentences |
-| 7 | Rules vs LLM vs agent | [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) **skim** | Half-page “when not to agent” memo |
-| 8 | Block 1 integration | Review 00-01→00-06 | Warmup API + README |
+| 1 | GenAI vocabulary | **[00-01](Modules/00-Foundations/00-01-GenAI-From-Scratch.md)** | Hello-LLM (or mock); Labs A–C |
+| 2 | Python basics for AI | [00-02](Modules/00-Foundations/00-02-Python-for-AI-Engineering.md) (slow) | `venv`, functions, types, one script |
+| 3 | Python continued | 00-02 | Async hello; package a tiny module |
+| 4 | HTTP + FastAPI | [00-03](Modules/00-Foundations/00-03-APIs-for-AI-Engineering.md) | POST JSON endpoint |
+| 5 | FastAPI + Pydantic | 00-03 | Validation + error responses |
+| 6 | Rules vs LLM vs agent | [00-04](Modules/00-Foundations/00-04-From-Rules-to-Agents.md) **skim** | Half-page “when not to agent” memo |
+| 7 | Embeddings intuition | [00-05](Modules/00-Foundations/00-05-Mathematics-for-AI-Engineering.md) **light** | Cosine similarity on 5 sentences |
+| 8 | Block 1 integration | Review 00-01→00-03 | Warmup API + README |
 
 **Exit Block 1:** Explain tokens/hallucination; call an LLM API; ship a typed FastAPI endpoint.
 
@@ -90,7 +90,7 @@ Weekend: Sat 3h build · Sun 1–2h revision + 5 questions aloud.
 | 28 | Observability | [08-02](Modules/08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) **skim** | Log model, tokens, latency |
 | 29–30 | Guardrails | [08-03](Modules/08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) | Refuse unsafe / overclaim paths |
 | 31 | OWASP awareness | [11-01](Modules/11-Security-Safety/11-01-OWASP-LLM-Top-10.md) **skim** | Checklist in README |
-| 32 | Optional BFSI drill | [00-03](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) optional | Policy-in-code retention slice **or** rest week |
+| 32 | Optional BFSI drill | [00-06](Modules/00-Foundations/00-06-BankCo-Decision-Support-Warmup.md) optional | Policy-in-code retention slice **or** rest week |
 
 **Exit Block 4:** README section “How I measure quality.”
 
@@ -156,5 +156,5 @@ Those live in [Master Study Roadmap](Master%20Study%20Roadmap.md) for year 2+.
 ## Next step
 
 1. Open **[COURSE.md](COURSE.md)**.  
-2. Week 1 → **[00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)**.  
+2. Week 1 → **[00-01 GenAI From Scratch](Modules/00-Foundations/00-01-GenAI-From-Scratch.md)**.  
 3. Log progress on [Dashboard](Dashboard.md) / [Progress Tracker](Progress%20Tracker.md).

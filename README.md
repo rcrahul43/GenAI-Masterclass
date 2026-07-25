@@ -11,7 +11,7 @@ Staff / Principal / EM material remains available as an **advanced extension** a
 1. **Course home:** [`COURSE.md`](COURSE.md) — how the whole path fits together  
 2. **Week-by-week:** [`Study Plan.md`](Study%20Plan.md) (48 weeks / 6 blocks)  
 3. **Session home:** [`Dashboard.md`](Dashboard.md)  
-4. **Day 1 lesson:** [`Modules/00-Foundations/00-01-AI-Engineering-Mindset.md`](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)  
+4. **Day 1 lesson:** [`Modules/00-Foundations/00-01-GenAI-From-Scratch.md`](Modules/00-Foundations/00-01-GenAI-From-Scratch.md)  
 5. **India detail:** [`Career/India-AI-Career-Learning-Plan.md`](Career/India-AI-Career-Learning-Plan.md)  
 6. Progress: [`Tracker/GenAI-Masterclass-Tracker.xlsx`](Tracker/GenAI-Masterclass-Tracker.xlsx)
 
