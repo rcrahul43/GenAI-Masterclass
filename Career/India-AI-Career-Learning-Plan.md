@@ -85,8 +85,8 @@ flowchart LR
 | GenAI vocabulary | **[00-01](../Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)** | Hello-LLM CLI (or mock) + notes in your words |
 | Python daily | [00-05](../Modules/00-Foundations/00-05-Python-for-AI-Engineering.md) (go slow; use Real Python) | Scripts with functions, types, `venv`, `requirements.txt` |
 | HTTP + FastAPI | [00-06](../Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) | One POST endpoint that returns JSON |
-| Light math | [00-04](../Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) — **cosine + embeddings intuition only** | Tiny notebook: similarity between 5 sentences |
 | Rules vs AI | Skim [00-02](../Modules/00-Foundations/00-02-From-Rules-to-Agents.md) “when not to agent” | Half-page memo: 3 tasks → rules / LLM / later-agent |
+| Light math | [00-04](../Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) — **cosine + embeddings intuition only** | Tiny notebook: similarity between 5 sentences |
 
 **Exit:** You can explain token/prompt/hallucination and call an API without copy-pasting blindly.
 

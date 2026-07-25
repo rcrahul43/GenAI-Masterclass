@@ -83,12 +83,12 @@ Hours planned: __ / Hours actual: __
 | Depth | Full |
 | Ship | FastAPI POST + Pydantic |
 
-### Week 6–8 — Block 1: Math light + rules skim + integrate
+### Week 6–8 — Block 1: Rules skim + math light + integrate
 
 | Field | Value |
 |-------|-------|
-| Modules | 00-04 light · 00-02 skim · integration |
-| Ship | Cosine lab · when-not-to-agent memo · warmup API README |
+| Modules | 00-02 skim · 00-04 light · integration |
+| Ship | When-not-to-agent memo · cosine lab · warmup API README |
 
 ### Weeks 9–16 — Block 2
 

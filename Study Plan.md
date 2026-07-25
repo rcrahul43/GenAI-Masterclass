@@ -44,8 +44,8 @@ Weekend: Sat 3h build · Sun 1–2h revision + 5 questions aloud.
 | 3 | Python continued | 00-05 | Async hello; package a tiny module |
 | 4 | HTTP + FastAPI | [00-06](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) | POST JSON endpoint |
 | 5 | FastAPI + Pydantic | 00-06 | Validation + error responses |
-| 6 | Embeddings intuition | [00-04](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) **light** | Cosine similarity on 5 sentences |
-| 7 | Rules vs LLM vs agent | [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) **skim** | Half-page “when not to agent” memo |
+| 6 | Rules vs LLM vs agent | [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) **skim** | Half-page “when not to agent” memo |
+| 7 | Embeddings intuition | [00-04](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) **light** | Cosine similarity on 5 sentences |
 | 8 | Block 1 integration | Review 00-01→00-06 | Warmup API + README |
 
 **Exit Block 1:** Explain tokens/hallucination; call an LLM API; ship a typed FastAPI endpoint.
