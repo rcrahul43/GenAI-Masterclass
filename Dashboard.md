@@ -31,11 +31,11 @@ Favorite / pin this page. Use it as your study home.
 
 ## Block 1 — start here
 
-1. **[00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)** ← Week 1  
-2. [00-05 Python](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md) — Weeks 2–3 (go slow)  
-3. [00-06 APIs](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) — Weeks 4–5  
-4. [00-04 Math](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) — Week 6 **light**  
-5. [00-02 Rules→Agents](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) — Week 7 **skim**
+1. **[00-01 GenAI From Scratch](Modules/00-Foundations/00-01-GenAI-From-Scratch.md)** ← Week 1  
+2. [00-02 Python](Modules/00-Foundations/00-02-Python-for-AI-Engineering.md) — Weeks 2–3 (go slow)  
+3. [00-03 APIs](Modules/00-Foundations/00-03-APIs-for-AI-Engineering.md) — Weeks 4–5  
+4. [00-04 Rules→Agents](Modules/00-Foundations/00-04-From-Rules-to-Agents.md) — Week 6 **skim**  
+5. [00-05 Math](Modules/00-Foundations/00-05-Mathematics-for-AI-Engineering.md) — Week 7 **light**
 
 > Do not open LangGraph, multi-agent, or BankCo on day one.
 

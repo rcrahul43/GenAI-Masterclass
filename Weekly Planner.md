@@ -62,7 +62,7 @@ Hours planned: __ / Hours actual: __
 
 | Field | Value |
 |-------|-------|
-| Module | [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) |
+| Module | [00-01](Modules/00-Foundations/00-01-GenAI-From-Scratch.md) |
 | Depth | Full |
 | Ship | Hello-LLM CLI or mock; Labs A–C |
 | Exit | Explain AI/ML/GenAI/LLM + tokens |
@@ -71,7 +71,7 @@ Hours planned: __ / Hours actual: __
 
 | Field | Value |
 |-------|-------|
-| Module | [00-05](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md) |
+| Module | [00-02](Modules/00-Foundations/00-02-Python-for-AI-Engineering.md) |
 | Depth | Full (slow) |
 | Ship | Scripts + venv + requirements.txt |
 
@@ -79,16 +79,16 @@ Hours planned: __ / Hours actual: __
 
 | Field | Value |
 |-------|-------|
-| Module | [00-06](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) |
+| Module | [00-03](Modules/00-Foundations/00-03-APIs-for-AI-Engineering.md) |
 | Depth | Full |
 | Ship | FastAPI POST + Pydantic |
 
-### Week 6–8 — Block 1: Math light + rules skim + integrate
+### Week 6–8 — Block 1: Rules skim + math light + integrate
 
 | Field | Value |
 |-------|-------|
-| Modules | 00-04 light · 00-02 skim · integration |
-| Ship | Cosine lab · when-not-to-agent memo · warmup API README |
+| Modules | 00-04 skim · 00-05 light · integration |
+| Ship | When-not-to-agent memo · cosine lab · warmup API README |
 
 ### Weeks 9–16 — Block 2
 
@@ -116,4 +116,4 @@ If you already ship LLM systems, use phase starters in the git history of Master
 
 ## Next Step
 
-Start **Week 1** above → [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md).
+Start **Week 1** above → [00-01](Modules/00-Foundations/00-01-GenAI-From-Scratch.md).

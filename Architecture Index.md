@@ -11,14 +11,14 @@
 | Pattern | Primary chapter | Use when | Avoid when |
 |---------|-----------------|----------|------------|
 | GenAI product kit (prompt · model · tools · memory · RAG · evals) | 00-01 | Framing any GenAI feature from scratch | Jumping to frameworks before a raw API call |
-| Trust zones (deterministic / probabilistic / human) | 00-03 (preview 00-01) | Regulated or high-blast-radius assistants | Pure creative drafting with easy undo |
-| Deterministic spine + LLM edge | 00-03, 00-02 | Eligibility, pricing, permissions + language drafts | Letting the LLM invent policy or discounts |
-| Decision-support (recommend, human commits) | 00-03 | RM / ops assistive tools | Autonomous customer outreach |
+| Trust zones (deterministic / probabilistic / human) | 00-06 (preview 00-01) | Regulated or high-blast-radius assistants | Pure creative drafting with easy undo |
+| Deterministic spine + LLM edge | 00-06, 00-04 | Eligibility, pricing, permissions + language drafts | Letting the LLM invent policy or discounts |
+| Decision-support (recommend, human commits) | 00-06 | RM / ops assistive tools | Autonomous customer outreach |
 | Single-shot LLM call | 02-01 | Classification, rewrite, extract | Needs tools / multi-step truth |
-| Router | 03-03 | Intent → specialist path | Too many overlapping intents without taxonomy |
+| Router | 03-04 | Intent → specialist path | Too many overlapping intents without taxonomy |
 | ReAct / Tool loop | 03-01 | Dynamic tool choice | Deterministic workflow exists |
-| Reflection / Critic | 03-03, 05-02 | Quality-sensitive outputs | Tight latency SLO |
-| Plan-and-Execute | 03-03, 12-01 | Long research / multi-step | Simple FAQ |
+| Reflection / Critic | 03-04, 05-02 | Quality-sensitive outputs | Tight latency SLO |
+| Plan-and-Execute | 03-04, 12-01 | Long research / multi-step | Simple FAQ |
 | RAG (naive) | 04-01 | Static knowledge grounding | Knowledge changes every second without refresh |
 | Hybrid + Rerank | 04-03 | Precision-critical enterprise search | Tiny corpus (<50 docs) maybe overkill |
 | HyDE | 04-04 | Short / vague queries | Already highly specific queries |
@@ -28,7 +28,7 @@
 | MCP tool servers | 07-01 | Shared tool ecosystem | One-off script |
 | MCP production gateway | 07-04 | Enterprise auth, audit, multi-tenant tools | Prototype with 1 in-process tool |
 | A2A negotiation | 07-02 | Cross-agent consensus | Single owner workflow |
-| Human-in-the-loop | 03-04, 08-03 | Irreversible / high-risk actions | Fully reversible low-risk UX |
+| Human-in-the-loop | 03-03, 08-03 | Irreversible / high-risk actions | Fully reversible low-risk UX |
 | LLM-as-judge | 08-01 | Subjective quality | Need deterministic compliance only |
 | LoRA domain adapt | 09-01 | Stable style/format/domain language | Facts change often (use RAG) |
 | Coding agent loop | 12-05 | Repo edit → test → repair | Pure chat Q&A with no tools |

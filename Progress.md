@@ -20,7 +20,7 @@
 |---------|------:|--------|
 | Core navigation (+ Master Study Roadmap) | 12 | ✅ |
 | Module 00 Foundations | 6 | ✅ (+ math, Python, APIs) |
-| Module 01 LLM Engineering | 5 | ✅ (+ DeepSeek in 01-05) |
+| Module 01 LLM Engineering | 5 | ✅ (+ DeepSeek in 01-03) |
 | Module 02 Prompt Engineering | 2 | ✅ |
 | Module 03 Agentic Fundamentals | 4 | ✅ |
 | Module 04 RAG | 4 | ✅ |
@@ -51,15 +51,16 @@ The handbook had drifted toward a compressed 16-week module sprint. It is now an
 
 ## From-scratch revision (2026-07-25)
 
-- **[00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)** rewritten as **GenAI From Scratch** (plain vocabulary, simple diagrams, Hello-LLM / mock labs).
-- Phase 0 order is now **00-01 → 00-05 → 00-06 → 00-04 → 00-02** (+ optional **00-03**).
+- **[00-01](Modules/00-Foundations/00-01-GenAI-From-Scratch.md)** rewritten as **GenAI From Scratch** (plain vocabulary, simple diagrams, Hello-LLM / mock labs).
+- Phase 0 order is now **00-01 → 00-02 → 00-03 → 00-05 → 00-04** (+ optional **00-06**).
 - Full-course consistency pass: Roadmap Day-1 CTA, Study Plan / Weekly Planner weeks, TOC study order, Resource Database Phase 0, Architecture Index trust-zone patterns, Career Q mapping, broken `08-02` Related links, tracker WEEK_PLAN + STAR module links, Intensive/Sprint beginner gates.
 - **Not rewritten:** Modules `01`–`12`, System Design, and Leadership keep Staff+/interview depth — sequencing and pointers were corrected so beginners do not land there first.
 - Added **[Track D — India AI Career Learning Plan](Career/India-AI-Career-Learning-Plan.md)** for learners with basic programming and no AI background (India jobs / data-center era).
 - **Course redesign:** **[COURSE.md](COURSE.md)** is now the default north star (Track D, 12 months / 6 blocks). Study Plan is a 48-week Track D calendar. Master Study Roadmap demoted to Advanced (A–C). Track D scope boxes injected across `Modules/`.
+- **Foundations renumbered** so IDs match study order: `00-01` GenAI → `00-02` Python → `00-03` APIs → `00-04` Rules→Agents → `00-05` Math → `00-06` BankCo.
 
 ## Quality Notes
 
 - Modules follow the production handbook template (objectives → implementation → ops → interviews → resources).
 - Prefer **Master Study Roadmap** for sequencing; modules for depth.
-- Start studying from [`Dashboard.md`](Dashboard.md) → **[00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)**.
+- Start studying from [`Dashboard.md`](Dashboard.md) → **[00-01](Modules/00-Foundations/00-01-GenAI-From-Scratch.md)**.

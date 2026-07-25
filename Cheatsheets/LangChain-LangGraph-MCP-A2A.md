@@ -2,7 +2,7 @@
 
 > Dense reference for Modules 03, 05, 07. Agent orchestration decisions.
 
-**Related:** [03-01 Agent Anatomy](../Modules/03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [03-04 LangGraph](../Modules/03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) · [05-03 Frameworks](../Modules/05-Multi-Agent/05-03-Frameworks-CrewAI-AutoGen-LangGraph.md) · [07-01 MCP](../Modules/07-Protocols-MCP-A2A/07-01-MCP-Model-Context-Protocol.md) · [07-02 A2A](../Modules/07-Protocols-MCP-A2A/07-02-A2A-Agent-to-Agent.md) · [Cheatsheet Index](Cheatsheet-Index.md)
+**Related:** [03-01 Agent Anatomy](../Modules/03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [03-03 LangGraph](../Modules/03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) · [05-03 Frameworks](../Modules/05-Multi-Agent/05-03-Frameworks-CrewAI-AutoGen-LangGraph.md) · [07-01 MCP](../Modules/07-Protocols-MCP-A2A/07-01-MCP-Model-Context-Protocol.md) · [07-02 A2A](../Modules/07-Protocols-MCP-A2A/07-02-A2A-Agent-to-Agent.md) · [Cheatsheet Index](Cheatsheet-Index.md)
 
 ---
 
@@ -51,7 +51,7 @@ Module: [03-01](../Modules/03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.
 | **Supervisor** | Manager delegates workers | Multi-agent | 1–2 tools enough |
 | **Human-in-the-loop** | Pause for approval | T3 risk | T1 internal |
 
-Module: [03-03](../Modules/03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md)
+Module: [03-04](../Modules/03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md)
 
 ---
 
@@ -124,7 +124,7 @@ Conditional edge: if tool_calls → tools else → END
 | **Subgraphs** | Modular multi-agent |
 | **Time travel** | Debug prior states |
 
-Module: [03-04](../Modules/03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md)
+Module: [03-03](../Modules/03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md)
 
 ### WHEN / WHEN NOT — LangGraph
 

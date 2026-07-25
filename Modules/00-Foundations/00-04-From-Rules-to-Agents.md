@@ -1,4 +1,4 @@
-# 00-02 — From Rules to Agents: The Evolution of Intelligent Systems
+# 00-04 — From Rules to Agents: The Evolution of Intelligent Systems
 
 
 <!-- TRACK_D_SCOPE -->
@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 6–8 hours (read 3h · labs 3h · architecture memo 2h) |
 | **Difficulty** | Intermediate (conceptual) · Advanced (implementation labs) |
-| **Prerequisites** | [00-01 — GenAI From Scratch](00-01-AI-Engineering-Mindset.md) completed; one successful (or mocked) LLM API call; comfortable Python; basic HTTP/API literacy |
+| **Prerequisites** | [00-01 — GenAI From Scratch](00-01-GenAI-From-Scratch.md) completed; one successful (or mocked) LLM API call; comfortable Python; basic HTTP/API literacy |
 | **Module** | 00 — Foundations |
-| **Related** | [00-01](00-01-AI-Engineering-Mindset.md) · [00-03](00-03-BankCo-Decision-Support-Warmup.md) · [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [03-03](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md) · [Architecture Index](../../Architecture Index.md) |
+| **Related** | [00-01](00-01-GenAI-From-Scratch.md) · [00-06](00-06-BankCo-Decision-Support-Warmup.md) · [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [03-04](../03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md) · [Architecture Index](../../Architecture Index.md) |
 
 ---
 
@@ -74,7 +74,7 @@ That sentence is worth more than any framework installation.
 
 Production intelligent systems are **layered**, not replaced:
 
-![Modules__00-Foundations__00-02-From-Rules-to-Agents-01-ef0c405e](../../Diagrams/Modules__00-Foundations__00-02-From-Rules-to-Agents-01-ef0c405e.png)
+![Modules__00-Foundations__00-04-From-Rules-to-Agents-01-ef0c405e](../../Diagrams/Modules__00-Foundations__00-04-From-Rules-to-Agents-01-ef0c405e.png)
 
 ```mermaid
 flowchart TB
@@ -118,7 +118,7 @@ flowchart TB
 
 **Mental model:** Rules are **compiled policy**. Classical ML is **learned policy from features**. LLMs are **soft programs over language**. Agents are **operating systems** that schedule those soft programs and connect them to the world through syscalls (tools).
 
-Deep dives: [03-01 — Agent Anatomy and Loop](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [03-03 — Agentic Design Patterns](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md)
+Deep dives: [03-01 — Agent Anatomy and Loop](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [03-04 — Agentic Design Patterns](../03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md)
 
 ---
 
@@ -268,7 +268,7 @@ Instead of writing every law, you **show the system thousands of precedents** an
 
 #### Architecture
 
-![Modules__00-Foundations__00-02-From-Rules-to-Agents-03-01e3e027](../../Diagrams/Modules__00-Foundations__00-02-From-Rules-to-Agents-03-01e3e027.png)
+![Modules__00-Foundations__00-04-From-Rules-to-Agents-03-01e3e027](../../Diagrams/Modules__00-Foundations__00-04-From-Rules-to-Agents-03-01e3e027.png)
 
 ```mermaid
 flowchart LR
@@ -393,7 +393,7 @@ An LLM is a **completion engine** that has read a large slice of human writing. 
 
 #### Architecture
 
-![Modules__00-Foundations__00-02-From-Rules-to-Agents-04-7635f29a](../../Diagrams/Modules__00-Foundations__00-02-From-Rules-to-Agents-04-7635f29a.png)
+![Modules__00-Foundations__00-04-From-Rules-to-Agents-04-7635f29a](../../Diagrams/Modules__00-Foundations__00-04-From-Rules-to-Agents-04-7635f29a.png)
 
 ```mermaid
 flowchart TB
@@ -532,7 +532,7 @@ Asking an LLM alone to run your support org is like hiring a eloquent consultant
 | **State** | Re-asks same questions; loops | Memory, checkpoints |
 | **Contract** | Output shape drift | Prompt + schema + validators |
 
-![Modules__00-Foundations__00-02-From-Rules-to-Agents-05-77b77c90](../../Diagrams/Modules__00-Foundations__00-02-From-Rules-to-Agents-05-77b77c90.png)
+![Modules__00-Foundations__00-04-From-Rules-to-Agents-05-77b77c90](../../Diagrams/Modules__00-Foundations__00-04-From-Rules-to-Agents-05-77b77c90.png)
 
 ```mermaid
 flowchart LR
@@ -664,7 +664,7 @@ Prompts are the **job description**. Tools are **hands**. Memory is **notes**. T
 
 #### Architecture
 
-Cross-reference [00-01](00-01-AI-Engineering-Mindset.md) for the beginner kit (prompt / tools / memory / LLM) and [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) for loop internals.
+Cross-reference [00-01](00-01-GenAI-From-Scratch.md) for the beginner kit (prompt / tools / memory / LLM) and [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) for loop internals.
 
 #### Implementation
 
@@ -776,7 +776,7 @@ Official reference: [OpenAI Prompt Engineering Guide](https://developers.openai.
 
 #### Architecture
 
-![Modules__00-Foundations__00-02-From-Rules-to-Agents-06-30281f8c](../../Diagrams/Modules__00-Foundations__00-02-From-Rules-to-Agents-06-30281f8c.png)
+![Modules__00-Foundations__00-04-From-Rules-to-Agents-06-30281f8c](../../Diagrams/Modules__00-Foundations__00-04-From-Rules-to-Agents-06-30281f8c.png)
 
 ```mermaid
 flowchart TD
@@ -899,7 +899,7 @@ Like a developer in a REPL: read error, change code, run again—except the REPL
 | **Observe** | What happened? |
 | **Stop** | Goal met / budget exhausted / need human |
 
-![Modules__00-Foundations__00-02-From-Rules-to-Agents-07-5bbc42cb](../../Diagrams/Modules__00-Foundations__00-02-From-Rules-to-Agents-07-5bbc42cb.png)
+![Modules__00-Foundations__00-04-From-Rules-to-Agents-07-5bbc42cb](../../Diagrams/Modules__00-Foundations__00-04-From-Rules-to-Agents-07-5bbc42cb.png)
 
 ```mermaid
 stateDiagram-v2
@@ -913,7 +913,7 @@ stateDiagram-v2
 
 #### Architecture
 
-![Modules__00-Foundations__00-02-From-Rules-to-Agents-08-1dfcaaa1](../../Diagrams/Modules__00-Foundations__00-02-From-Rules-to-Agents-08-1dfcaaa1.png)
+![Modules__00-Foundations__00-04-From-Rules-to-Agents-08-1dfcaaa1](../../Diagrams/Modules__00-Foundations__00-04-From-Rules-to-Agents-08-1dfcaaa1.png)
 
 ```mermaid
 sequenceDiagram
@@ -1010,7 +1010,7 @@ Air traffic control for queries—not every plane lands on the same runway.
 
 #### Mental Model
 
-![Modules__00-Foundations__00-02-From-Rules-to-Agents-09-b198b7fb](../../Diagrams/Modules__00-Foundations__00-02-From-Rules-to-Agents-09-b198b7fb.png)
+![Modules__00-Foundations__00-04-From-Rules-to-Agents-09-b198b7fb](../../Diagrams/Modules__00-Foundations__00-04-From-Rules-to-Agents-09-b198b7fb.png)
 
 ```mermaid
 flowchart TD
@@ -1102,7 +1102,7 @@ Router is perfect horizontal scale-out candidate—stateless.
 - Support tier-0 FAQ vs tier-2 agent
 - Code assistants: autocomplete vs agent mode
 
-More patterns: [03-03](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md)
+More patterns: [03-04](../03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md)
 
 ---
 
@@ -1118,7 +1118,7 @@ Draft → redline → revise. The agent is both author and editor (or hires a cr
 
 #### Mental Model
 
-![Modules__00-Foundations__00-02-From-Rules-to-Agents-10-1edb5795](../../Diagrams/Modules__00-Foundations__00-02-From-Rules-to-Agents-10-1edb5795.png)
+![Modules__00-Foundations__00-04-From-Rules-to-Agents-10-1edb5795](../../Diagrams/Modules__00-Foundations__00-04-From-Rules-to-Agents-10-1edb5795.png)
 
 ```mermaid
 flowchart LR
@@ -1221,7 +1221,7 @@ Parallelize critics; cache validated templates.
 - Medical note drafts with policy checklist critic
 - JSON plan validated against Pydantic before tool exec
 
-Extended catalog: [03-03](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md)
+Extended catalog: [03-04](../03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md)
 
 ---
 
@@ -1232,7 +1232,7 @@ Extended catalog: [03-03](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patter
 The following FastAPI application implements the **same business capability**—handling a support ticket about a delayed order—across four paradigms. Compare determinism, cost, and capability.
 
 ```python
-"""00-02 Evolution API — Rules → ML → LLM → Agent
+"""00-04 Evolution API — Rules → ML → LLM → Agent
 
 Run:
   pip install fastapi uvicorn pydantic openai
@@ -1604,7 +1604,7 @@ This table is the executive summary of the chapter.
 | **Stop conditions** | `max_steps`, timeouts, duplicate detection |
 | **Human gates** | Irreversible tools require approval tokens |
 
-Bridge to BankCo warmup: [00-03](00-03-BankCo-Decision-Support-Warmup.md)
+Bridge to BankCo warmup: [00-06](00-06-BankCo-Decision-Support-Warmup.md)
 
 ---
 
@@ -1688,7 +1688,7 @@ tool_name, tool_args_hash, tool_status, tool_latency_ms,
 tokens_in, tokens_out, cost_usd, final_action, user_feedback
 ```
 
-![Modules__00-Foundations__00-02-From-Rules-to-Agents-11-d9d2cd3c](../../Diagrams/Modules__00-Foundations__00-02-From-Rules-to-Agents-11-d9d2cd3c.png)
+![Modules__00-Foundations__00-04-From-Rules-to-Agents-11-d9d2cd3c](../../Diagrams/Modules__00-Foundations__00-04-From-Rules-to-Agents-11-d9d2cd3c.png)
 
 ```mermaid
 flowchart LR
@@ -1749,7 +1749,7 @@ If you cannot replay **Think → Act → Observe** for a bad outcome, you cannot
 
 ### Combined production architecture (hybrid)
 
-![Modules__00-Foundations__00-02-From-Rules-to-Agents-12-a97757f9](../../Diagrams/Modules__00-Foundations__00-02-From-Rules-to-Agents-12-a97757f9.png)
+![Modules__00-Foundations__00-04-From-Rules-to-Agents-12-a97757f9](../../Diagrams/Modules__00-Foundations__00-04-From-Rules-to-Agents-12-a97757f9.png)
 
 ```mermaid
 flowchart TB
@@ -1789,7 +1789,7 @@ flowchart TB
 
 ## Mermaid Diagram — Evolution Timeline
 
-![Modules__00-Foundations__00-02-From-Rules-to-Agents-13-14eb9cbb](../../Diagrams/Modules__00-Foundations__00-02-From-Rules-to-Agents-13-14eb9cbb.png)
+![Modules__00-Foundations__00-04-From-Rules-to-Agents-13-14eb9cbb](../../Diagrams/Modules__00-Foundations__00-04-From-Rules-to-Agents-13-14eb9cbb.png)
 
 ```mermaid
 timeline
@@ -1810,7 +1810,7 @@ timeline
 
 ## Mermaid Diagram — Agent Loop Sequence
 
-![Modules__00-Foundations__00-02-From-Rules-to-Agents-14-51b17113](../../Diagrams/Modules__00-Foundations__00-02-From-Rules-to-Agents-14-51b17113.png)
+![Modules__00-Foundations__00-04-From-Rules-to-Agents-14-51b17113](../../Diagrams/Modules__00-Foundations__00-04-From-Rules-to-Agents-14-51b17113.png)
 
 ```mermaid
 sequenceDiagram
@@ -1996,7 +1996,7 @@ Intelligent systems did not leap from chatbots to agents—they **accumulated ca
 
 Your job as an AI engineer is not to pick the newest box on the diagram. It is to **place each step on the evolution curve deliberately**, instrument the seams, and know—under interview lights—which primitive wins when.
 
-Next: apply hybrid thinking to a concrete domain in [00-03 — BankCo Decision Support Warmup](00-03-BankCo-Decision-Support-Warmup.md), then deepen the loop in [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) and patterns in [03-03](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md).
+Next: apply hybrid thinking to a concrete domain in [00-06 — BankCo Decision Support Warmup](00-06-BankCo-Decision-Support-Warmup.md), then deepen the loop in [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) and patterns in [03-04](../03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md).
 
 ---
 

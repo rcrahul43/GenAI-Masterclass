@@ -13,7 +13,7 @@
 | **Difficulty** | Intermediate (protocol) · Advanced (production hardening) |
 | **Prerequisites** | [03-02](../03-Agentic-Fundamentals/03-02-Tools-Memory-Control-Flow.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) |
 | **Module** | 07 — Protocols (MCP / A2A) |
-| **Related** | [07-02](07-02-A2A-Agent-to-Agent.md) · [07-03](07-03-Negotiation-Async-Workflows.md) · [03-04](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) · [08-03](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) · [11-02](../11-Security-Safety/11-02-Prompt-Injection-Defense.md) |
+| **Related** | [07-02](07-02-A2A-Agent-to-Agent.md) · [07-03](07-03-Negotiation-Async-Workflows.md) · [03-03](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) · [08-03](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) · [11-02](../11-Security-Safety/11-02-Prompt-Injection-Defense.md) |
 
 ---
 

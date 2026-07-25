@@ -13,7 +13,7 @@
 | **Difficulty** | Intermediate (policy) · Advanced (defense in depth) |
 | **Prerequisites** | [08-01](08-01-Evaluation-Lifecycle.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · [11-01](../11-Security-Safety/11-01-OWASP-LLM-Top-10.md) |
 | **Module** | 08 — Evaluation & LLMOps |
-| **Related** | [08-02](08-02-Observability-LangSmith-OTel.md) · [07-01](../07-Protocols-MCP-A2A/07-01-MCP-Model-Context-Protocol.md) · [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) · [11-02](../11-Security-Safety/11-02-Prompt-Injection-Defense.md) |
+| **Related** | [08-02](08-02-Observability-LangSmith-OTel.md) · [07-01](../07-Protocols-MCP-A2A/07-01-MCP-Model-Context-Protocol.md) · [00-01](../00-Foundations/00-01-GenAI-From-Scratch.md) · [11-02](../11-Security-Safety/11-02-Prompt-Injection-Defense.md) |
 
 ---
 
@@ -506,7 +506,7 @@ Fill ship criteria table for your capstone project.
 
 ## Stretch Project
 
-Adaptive gates: stricter policies for `risk=high` users ([00-03](../00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) risk/offer tiers · [12-06](../12-Advanced-Topics/12-06-AI-Product-Thinking.md) launch gates).
+Adaptive gates: stricter policies for `risk=high` users ([00-06](../00-Foundations/00-06-BankCo-Decision-Support-Warmup.md) risk/offer tiers · [12-06](../12-Advanced-Topics/12-06-AI-Product-Thinking.md) launch gates).
 
 ---
 

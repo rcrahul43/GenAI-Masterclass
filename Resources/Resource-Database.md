@@ -33,18 +33,18 @@
 | Category | Topic | Difficulty | Time | Official URL | Description | Tags | Related Topics |
 |----------|-------|------------|------|--------------|-------------|------|----------------|
 | Foundations | Karpathy — Intro to Large Language Models | Intro | 60 min | https://www.youtube.com/watch?v=zjkBMFhNj_g | Beginner LLM intuition before frameworks | genai, youtube, phase-0 | 00-01 |
-| Foundations | OpenAI — Text / chat guide | Intro | 30 min | https://platform.openai.com/docs/guides/text | Messages, models, tokens for first API call | genai, api, phase-0 | 00-01, 01-05 |
-| Foundations | Anthropic Claude overview | Intro | 20 min | https://docs.anthropic.com/en/docs/welcome | Second-provider vocabulary early | claude, api, phase-0 | 00-01, 01-05 |
-| Foundations | Gemini API quickstart | Intro | 20 min | https://ai.google.dev/gemini-api/docs/quickstart | Multi-provider habit from day one | gemini, api, phase-0 | 00-01, 01-05 |
-| Foundations | DeepSeek API docs | Intro | 15 min | https://api-docs.deepseek.com/ | Cost-efficient OpenAI-compatible option | deepseek, api, phase-0 | 00-01, 01-05 |
-| Foundations | Real Python | Intro | Ongoing | https://realpython.com/ | asyncio, typing, packaging tutorials | python, phase-0 | 00-05 |
-| Foundations | FastAPI documentation | Intro | Ongoing | https://fastapi.tiangolo.com/ | Async Python API framework | fastapi, python, phase-0 | 00-06, 10-01 |
-| Foundations | Pydantic v2 docs | Intro | 45 min | https://docs.pydantic.dev/latest/ | Data validation and settings | pydantic, validation, phase-0 | 00-05, 02-02 |
-| Foundations | Python asyncio docs | Intermediate | 60 min | https://docs.python.org/3/library/asyncio.html | Concurrent LLM/tool I/O | asyncio, python, phase-0 | 00-05 |
-| Foundations | 3Blue1Brown — Essence of Linear Algebra | Intro | 4–6 h | https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab | Visual linear algebra for embeddings/attention *(after first LLM call)* | math, youtube, phase-0 | 00-04 |
-| Foundations | StatQuest YouTube | Intro | 3–4 h | https://www.youtube.com/@joshstarmer | Probability & stats intuition for evals | stats, youtube, phase-0 | 00-04, 08-01 |
-| Foundations | Mathematics for Machine Learning (book site) | Intermediate | Ongoing | https://mml-book.github.io/ | Free textbook — linear algebra, probability, optimization | math, book, phase-0 | 00-04 |
-| Foundations | gRPC Python docs | Intermediate | 60 min | https://grpc.io/docs/languages/python/ | Typed RPC for internal agent services | grpc, apis, phase-0 | 00-06 |
+| Foundations | OpenAI — Text / chat guide | Intro | 30 min | https://platform.openai.com/docs/guides/text | Messages, models, tokens for first API call | genai, api, phase-0 | 00-01, 01-03 |
+| Foundations | Anthropic Claude overview | Intro | 20 min | https://docs.anthropic.com/en/docs/welcome | Second-provider vocabulary early | claude, api, phase-0 | 00-01, 01-03 |
+| Foundations | Gemini API quickstart | Intro | 20 min | https://ai.google.dev/gemini-api/docs/quickstart | Multi-provider habit from day one | gemini, api, phase-0 | 00-01, 01-03 |
+| Foundations | DeepSeek API docs | Intro | 15 min | https://api-docs.deepseek.com/ | Cost-efficient OpenAI-compatible option | deepseek, api, phase-0 | 00-01, 01-03 |
+| Foundations | Real Python | Intro | Ongoing | https://realpython.com/ | asyncio, typing, packaging tutorials | python, phase-0 | 00-02 |
+| Foundations | FastAPI documentation | Intro | Ongoing | https://fastapi.tiangolo.com/ | Async Python API framework | fastapi, python, phase-0 | 00-03, 10-01 |
+| Foundations | Pydantic v2 docs | Intro | 45 min | https://docs.pydantic.dev/latest/ | Data validation and settings | pydantic, validation, phase-0 | 00-02, 02-02 |
+| Foundations | Python asyncio docs | Intermediate | 60 min | https://docs.python.org/3/library/asyncio.html | Concurrent LLM/tool I/O | asyncio, python, phase-0 | 00-02 |
+| Foundations | 3Blue1Brown — Essence of Linear Algebra | Intro | 4–6 h | https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab | Visual linear algebra for embeddings/attention *(after first LLM call)* | math, youtube, phase-0 | 00-05 |
+| Foundations | StatQuest YouTube | Intro | 3–4 h | https://www.youtube.com/@joshstarmer | Probability & stats intuition for evals | stats, youtube, phase-0 | 00-05, 08-01 |
+| Foundations | Mathematics for Machine Learning (book site) | Intermediate | Ongoing | https://mml-book.github.io/ | Free textbook — linear algebra, probability, optimization | math, book, phase-0 | 00-05 |
+| Foundations | gRPC Python docs | Intermediate | 60 min | https://grpc.io/docs/languages/python/ | Typed RPC for internal agent services | grpc, apis, phase-0 | 00-03 |
 
 ---
 
@@ -53,19 +53,19 @@
 | Category | Topic | Difficulty | Time | Official URL | Description | Tags | Related Topics |
 |----------|-------|------------|------|--------------|-------------|------|----------------|
 | LLM Engineering | Transformer architecture paper | Intermediate | 90 min | https://arxiv.org/abs/1706.03762 | Original Transformer — attention, encoder/decoder | transformers, attention | 01-01, Paper DB |
-| LLM Engineering | HuggingFace Transformers docs | Intermediate | Ongoing | https://huggingface.co/docs/transformers | Model APIs, tokenizers, pipelines | huggingface, inference | 01-01, 01-03 |
-| LLM Engineering | OpenAI Platform docs | Intro | Ongoing | https://platform.openai.com/docs | Chat, embeddings, fine-tuning, tools | openai, api | 01-05 |
-| LLM Engineering | Anthropic Claude docs | Intro | Ongoing | https://docs.anthropic.com/ | Messages API, tool use, vision | claude, api | 01-05 |
-| LLM Engineering | Google Gemini API docs | Intro | Ongoing | https://ai.google.dev/gemini-api/docs | Gemini models, multimodal, function calling | gemini, api, phase-1 | 01-05, 06-02 |
-| LLM Engineering | DeepSeek API docs | Intro | 45 min | https://api-docs.deepseek.com/ | OpenAI-compatible API; cost-tier / coding models | deepseek, api, phase-1 | 01-05 |
-| LLM Engineering | OpenAI Cookbook | Intermediate | Ongoing | https://cookbook.openai.com/ | Official recipes for prompts, tools, evals | openai, cookbook, phase-1 | 01-05, 02-01 |
+| LLM Engineering | HuggingFace Transformers docs | Intermediate | Ongoing | https://huggingface.co/docs/transformers | Model APIs, tokenizers, pipelines | huggingface, inference | 01-01, 01-05 |
+| LLM Engineering | OpenAI Platform docs | Intro | Ongoing | https://platform.openai.com/docs | Chat, embeddings, fine-tuning, tools | openai, api | 01-03 |
+| LLM Engineering | Anthropic Claude docs | Intro | Ongoing | https://docs.anthropic.com/ | Messages API, tool use, vision | claude, api | 01-03 |
+| LLM Engineering | Google Gemini API docs | Intro | Ongoing | https://ai.google.dev/gemini-api/docs | Gemini models, multimodal, function calling | gemini, api, phase-1 | 01-03, 06-02 |
+| LLM Engineering | DeepSeek API docs | Intro | 45 min | https://api-docs.deepseek.com/ | OpenAI-compatible API; cost-tier / coding models | deepseek, api, phase-1 | 01-03 |
+| LLM Engineering | OpenAI Cookbook | Intermediate | Ongoing | https://cookbook.openai.com/ | Official recipes for prompts, tools, evals | openai, cookbook, phase-1 | 01-03, 02-01 |
 | LLM Engineering | Andrej Karpathy YouTube | Intermediate | Ongoing | https://www.youtube.com/@AndrejKarpathy | GPT from scratch / neural nets intuition | youtube, transformers, phase-1 | 01-01 |
 | LLM Engineering | Sebastian Raschka YouTube | Intermediate | Ongoing | https://www.youtube.com/@SebastianRaschka | LLM / ML engineering explainers | youtube, llm, phase-1 | 01-01 |
 | LLM Engineering | tiktoken (OpenAI tokenizer) | Intro | 30 min | https://github.com/openai/tiktoken | BPE token counting for OpenAI models | tokenization | 01-02 |
-| LLM Engineering | vLLM documentation | Advanced | Ongoing | https://docs.vllm.ai/en/latest/ | High-throughput LLM serving, PagedAttention | vllm, gpu, inference | 01-03 |
-| LLM Engineering | Ollama documentation | Intro | 45 min | https://github.com/ollama/ollama/blob/main/docs/README.md | Local model runner for dev/prototype | ollama, local | 01-03 |
+| LLM Engineering | vLLM documentation | Advanced | Ongoing | https://docs.vllm.ai/en/latest/ | High-throughput LLM serving, PagedAttention | vllm, gpu, inference | 01-05 |
+| LLM Engineering | Ollama documentation | Intro | 45 min | https://github.com/ollama/ollama/blob/main/docs/README.md | Local model runner for dev/prototype | ollama, local | 01-05 |
 | LLM Engineering | LiteLLM documentation | Intermediate | Ongoing | https://docs.litellm.ai/docs/ | Unified router/proxy for 100+ LLM providers | litellm, routing | 01-04 |
-| LLM Engineering | FlashAttention paper | Advanced | 60 min | https://arxiv.org/abs/2205.14135 | IO-aware exact attention — faster training/inference | attention, gpu | 01-01, 01-03 |
+| LLM Engineering | FlashAttention paper | Advanced | 60 min | https://arxiv.org/abs/2205.14135 | IO-aware exact attention — faster training/inference | attention, gpu | 01-01, 01-05 |
 | LLM Engineering | Lost in the Middle paper | Intermediate | 45 min | https://arxiv.org/abs/2307.03172 | Long-context placement effects for RAG | context, rag | 01-02, 04-01 |
 
 ---
@@ -79,7 +79,7 @@
 | Prompt Engineering | OpenAI structured outputs | Intermediate | 45 min | https://platform.openai.com/docs/guides/structured-outputs | JSON schema constrained generation | structured-output, json | 02-02 |
 | Prompt Engineering | OpenAI function calling | Intermediate | 45 min | https://platform.openai.com/docs/guides/function-calling | Tool calling API reference | tools, functions | 02-02, 03-02 |
 | Prompt Engineering | Promptfoo documentation | Intermediate | Ongoing | https://www.promptfoo.dev/docs/intro/ | Prompt eval, red team, CI integration | eval, prompts, ci | 02-01, 11-02 |
-| Prompt Engineering | Chain-of-Thought paper | Intermediate | 45 min | https://arxiv.org/abs/2201.11903 | Elicit multi-step reasoning via prompts | cot, reasoning | 02-01, 03-03 |
+| Prompt Engineering | Chain-of-Thought paper | Intermediate | 45 min | https://arxiv.org/abs/2201.11903 | Elicit multi-step reasoning via prompts | cot, reasoning | 02-01, 03-04 |
 | Prompt Engineering | DSPy framework | Advanced | Ongoing | https://dspy.ai/ | Programmatic prompts, signatures, optimizers | dspy, optimize | 12-04 |
 
 ---
@@ -90,7 +90,7 @@
 |----------|-------|------------|------|--------------|-------------|------|----------------|
 | Agents | ReAct paper | Intermediate | 60 min | https://arxiv.org/abs/2210.03629 | Reasoning + acting interleaved loop | react, agents | 03-01, Paper DB |
 | Agents | LangChain Python docs | Intermediate | Ongoing | https://python.langchain.com/docs/ | Chains, tools, retrievers, agents | langchain | 03-01, Cheatsheet C |
-| Agents | LangGraph documentation | Advanced | Ongoing | https://langchain-ai.github.io/langgraph/ | Stateful agent graphs, checkpointing | langgraph, state | 03-04, 05-03 |
+| Agents | LangGraph documentation | Advanced | Ongoing | https://langchain-ai.github.io/langgraph/ | Stateful agent graphs, checkpointing | langgraph, state | 03-03, 05-03 |
 | Agents | LangGraph multi-agent concepts | Advanced | 45 min | https://langchain-ai.github.io/langgraph/concepts/multi_agent/ | Supervisor, subgraph patterns | multi-agent, langgraph | 05-01 |
 | Agents | LlamaIndex documentation | Intermediate | Ongoing | https://docs.llamaindex.ai/ | Data agents, query engines, RAG | llamaindex, rag | 04-01, 03-01 |
 | Agents | Toolformer paper | Advanced | 60 min | https://arxiv.org/abs/2302.04761 | Self-supervised tool use learning | tools, research | 03-02 |
@@ -177,9 +177,9 @@
 | Infrastructure | Kubernetes documentation | Advanced | Ongoing | https://kubernetes.io/docs/home/ | Orchestration, probes, HPA | kubernetes, k8s | 10-02 |
 | Infrastructure | GitHub Actions docs | Intermediate | Ongoing | https://docs.github.com/en/actions | CI/CD pipelines | cicd, github | 10-02 |
 | Infrastructure | Argo CD documentation | Advanced | 60 min | https://argo-cd.readthedocs.io/ | GitOps continuous delivery | gitops, argo | 10-02 |
-| Infrastructure | Redis documentation | Intermediate | Ongoing | https://redis.io/docs/ | Cache, rate limits, pub/sub | redis, cache | 10-03, 10-04 |
-| Infrastructure | Apache Kafka documentation | Advanced | Ongoing | https://kafka.apache.org/documentation/ | Event streaming, ingest | kafka, streaming | 10-03 |
-| Infrastructure | Ray documentation | Advanced | Ongoing | https://docs.ray.io/ | Distributed Python, Ray Serve | ray, distributed | 10-03 |
+| Infrastructure | Redis documentation | Intermediate | Ongoing | https://redis.io/docs/ | Cache, rate limits, pub/sub | redis, cache | 10-04, 10-03 |
+| Infrastructure | Apache Kafka documentation | Advanced | Ongoing | https://kafka.apache.org/documentation/ | Event streaming, ingest | kafka, streaming | 10-04 |
+| Infrastructure | Ray documentation | Advanced | Ongoing | https://docs.ray.io/ | Distributed Python, Ray Serve | ray, distributed | 10-04 |
 | Infrastructure | Prometheus docs | Intermediate | 45 min | https://prometheus.io/docs/introduction/overview/ | Metrics and alerting | prometheus, metrics | 08-02, 10-01 |
 | Infrastructure | Grafana docs | Intermediate | 45 min | https://grafana.com/docs/grafana/latest/ | Dashboards and visualization | grafana, dashboards | 08-02 |
 
@@ -225,11 +225,11 @@
 
 | Category | Topic | Difficulty | Time | Official URL | Description | Tags | Related Topics |
 |----------|-------|------------|------|--------------|-------------|------|----------------|
-| Cloud | AWS Bedrock docs | Intermediate | Ongoing | https://docs.aws.amazon.com/bedrock/ | Managed foundation models on AWS | aws, bedrock | 01-05 |
-| Cloud | Azure OpenAI docs | Intermediate | Ongoing | https://learn.microsoft.com/en-us/azure/ai-services/openai/ | OpenAI models on Azure | azure, openai | 01-05 |
-| Cloud | Google Vertex AI docs | Intermediate | Ongoing | https://cloud.google.com/vertex-ai/docs | GCP ML and Gemini hosting | gcp, vertex | 01-05 |
-| Cloud | Modal docs (GPU serverless) | Intermediate | 45 min | https://modal.com/docs | Serverless GPU workloads | modal, gpu | 10-03 |
-| Cloud | Anyscale / Ray on cloud | Advanced | 45 min | https://docs.anyscale.com/ | Managed Ray platform | anyscale, ray | 10-03 |
+| Cloud | AWS Bedrock docs | Intermediate | Ongoing | https://docs.aws.amazon.com/bedrock/ | Managed foundation models on AWS | aws, bedrock | 01-03 |
+| Cloud | Azure OpenAI docs | Intermediate | Ongoing | https://learn.microsoft.com/en-us/azure/ai-services/openai/ | OpenAI models on Azure | azure, openai | 01-03 |
+| Cloud | Google Vertex AI docs | Intermediate | Ongoing | https://cloud.google.com/vertex-ai/docs | GCP ML and Gemini hosting | gcp, vertex | 01-03 |
+| Cloud | Modal docs (GPU serverless) | Intermediate | 45 min | https://modal.com/docs | Serverless GPU workloads | modal, gpu | 10-04 |
+| Cloud | Anyscale / Ray on cloud | Advanced | 45 min | https://docs.anyscale.com/ | Managed Ray platform | anyscale, ray | 10-04 |
 
 ---
 
@@ -262,8 +262,8 @@
 | Category | Topic | Difficulty | Time | Official URL | Description | Tags | Related Topics |
 |----------|-------|------------|------|--------------|-------------|------|----------------|
 | Books | Hands-On Large Language Models | Intermediate | Ongoing | https://www.oreilly.com/library/view/hands-on-large-language/9781098150952/ | LLM intuition & applied patterns | book, phase-1 | Roadmap |
-| Books | Designing Machine Learning Systems | Advanced | Ongoing | https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/ | ML/LLM ops judgment | book, phase-6 | 08-01, 10-04 |
-| Books | Designing Data-Intensive Applications | Advanced | Ongoing | https://dataintensive.net/ | Queues, storage, distributed systems | book, phase-8 | 10-03 |
+| Books | Designing Machine Learning Systems | Advanced | Ongoing | https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/ | ML/LLM ops judgment | book, phase-6 | 08-01, 10-03 |
+| Books | Designing Data-Intensive Applications | Advanced | Ongoing | https://dataintensive.net/ | Queues, storage, distributed systems | book, phase-8 | 10-04 |
 | Books | Building LLM Powered Applications | Intermediate | Ongoing | https://www.packtpub.com/ | Applied LLM app building | book, phase-2 | 03-*, 04-* |
 
 ---
@@ -272,8 +272,8 @@
 
 | Category | Topic | Difficulty | Time | Official URL | Description | Tags | Related Topics |
 |----------|-------|------------|------|--------------|-------------|------|----------------|
-| GitHub | LangGraph examples | Intermediate | Ongoing | https://github.com/langchain-ai/langgraph | Official graphs, HITL, multi-agent | langgraph, github, phase-2 | 03-04, 05-03 |
-| GitHub | OpenAI Cookbook repo | Intermediate | Ongoing | https://github.com/openai/openai-cookbook | Runnable notebooks & recipes | openai, github, phase-1 | 01-05 |
+| GitHub | LangGraph examples | Intermediate | Ongoing | https://github.com/langchain-ai/langgraph | Official graphs, HITL, multi-agent | langgraph, github, phase-2 | 03-03, 05-03 |
+| GitHub | OpenAI Cookbook repo | Intermediate | Ongoing | https://github.com/openai/openai-cookbook | Runnable notebooks & recipes | openai, github, phase-1 | 01-03 |
 | GitHub | Microsoft AutoGen | Intermediate | Ongoing | https://github.com/microsoft/autogen | Multi-agent framework | autogen, github, phase-4 | 05-03 |
 | GitHub | CrewAI | Intermediate | Ongoing | https://github.com/crewAIInc/crewAI | Role-based crews | crewai, github, phase-4 | 05-03 |
 | GitHub | LlamaIndex | Intermediate | Ongoing | https://github.com/run-llama/llama_index | Data agents & RAG examples | llamaindex, github, phase-3 | 04-01 |
@@ -342,7 +342,7 @@
 
 1. ReAct + Chain of Thought papers
 2. LangGraph documentation + examples repo
-3. Handbook 03-04 lab
+3. Handbook 03-03 lab
 
 ### Phase 3 — RAG
 

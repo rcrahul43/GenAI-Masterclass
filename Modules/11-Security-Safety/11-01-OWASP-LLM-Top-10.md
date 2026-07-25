@@ -13,7 +13,7 @@
 | **Difficulty** | Intermediate (security literacy) · Advanced (architecture threat modeling) |
 | **Prerequisites** | [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [10-01 FastAPI AI Backends](../10-Production-Infrastructure/10-01-FastAPI-AI-Backends.md) · [04-01 RAG Architecture](../04-RAG/04-01-RAG-Architecture.md) |
 | **Module** | 11 — Security & Safety |
-| **Related** | [11-02 Prompt Injection Defense](11-02-Prompt-Injection-Defense.md) · [08-03 Guardrails](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) · [10-04 Cost & Latency](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) · [Architecture Index](../../Architecture Index.md) |
+| **Related** | [11-02 Prompt Injection Defense](11-02-Prompt-Injection-Defense.md) · [08-03 Guardrails](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) · [10-03 Cost & Latency](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) · [Architecture Index](../../Architecture Index.md) |
 
 **Official reference:** [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 
@@ -175,7 +175,7 @@ def flag_injection(text: str) -> bool:
 | **WHEN NOT** | Read-only FAQ with no side effects |
 | **Controls** | Least privilege tools; HITL for writes; step budgets; separate read/write agents |
 | **Example** | Agent auto-issues $500 refunds without approval |
-| **NovaCart** | Refund tool capped at $50; supervisor approval above ([03-04](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md)) |
+| **NovaCart** | Refund tool capped at $50; supervisor approval above ([03-03](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md)) |
 
 ![Modules__11-Security-Safety__11-01-OWASP-LLM-Top-10-02-4a55e823](../../Diagrams/Modules__11-Security-Safety__11-01-OWASP-LLM-Top-10-02-4a55e823.png)
 
@@ -246,7 +246,7 @@ sequenceDiagram
 | **Problem** | DoS via token burn, agent loops, expensive tool chains |
 | **WHEN** | Public APIs; agent loops; unauthenticated demos |
 | **WHEN NOT** | Internal batch with fixed budgets |
-| **Controls** | Rate limits; max_tokens; step/time budgets; cost alerts ([10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md)) |
+| **Controls** | Rate limits; max_tokens; step/time budgets; cost alerts ([10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md)) |
 | **Example** | Attacker triggers 50-step agent loop on GPT-4 |
 | **NovaCart** | Gateway RPM + agent max_iterations=8 |
 
@@ -544,5 +544,5 @@ The OWASP LLM Top 10 frames production AI security as **ten recurring failure mo
 | OWASP LLM Top 10 | https://owasp.org/www-project-top-10-for-large-language-model-applications/ | Intermediate | 90 min | Canonical list | Each risk entry |
 | Prompt Injection Defense | [11-02](11-02-Prompt-Injection-Defense.md) | Advanced | 45 min | Deepest LLM01 | Dual-LLM |
 | Guardrails & Ship | [08-03](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) | Intermediate | 30 min | Release gates | Criteria |
-| Cost / DoS | [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) | Intermediate | 30 min | LLM10 | Budget alerts |
+| Cost / DoS | [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) | Intermediate | 30 min | LLM10 | Budget alerts |
 | NIST AI RMF | https://www.nist.gov/itl/ai-risk-management-framework | Advanced | 60 min | Enterprise mapping | Govern / Map |

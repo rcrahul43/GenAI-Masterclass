@@ -1,4 +1,4 @@
-# 01-03 — Inference Serving with vLLM, Ollama & Quantization
+# 01-05 — Inference Serving with vLLM, Ollama & Quantization
 
 
 <!-- TRACK_D_SCOPE -->
@@ -13,7 +13,7 @@
 | **Difficulty** | Intermediate (concepts) · Advanced (production sizing & SLOs) |
 | **Prerequisites** | [01-02 Tokenization & Context Windows](01-02-Tokenization-Context-Windows.md); basic GPU/HTTP literacy; Python async familiarity |
 | **Module** | 01 — LLM Engineering |
-| **Related** | [01-02](01-02-Tokenization-Context-Windows.md) · [01-04](01-04-Model-Routing-LiteLLM.md) · [10-02 Docker/K8s/CI/CD](../10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md) · [10-04 Cost & Latency](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) · [Architecture Index](../../Architecture Index.md) · [Study Plan](../../Study Plan.md) |
+| **Related** | [01-02](01-02-Tokenization-Context-Windows.md) · [01-04](01-04-Model-Routing-LiteLLM.md) · [10-02 Docker/K8s/CI/CD](../10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md) · [10-03 Cost & Latency](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) · [Architecture Index](../../Architecture Index.md) · [Study Plan](../../Study Plan.md) |
 
 ---
 
@@ -49,7 +49,7 @@ A Principal engineer who cannot reason about batching and KV-cache will:
 - pick quantization that silently degrades tool-calling accuracy,
 - and fail system design interviews that start with “Design ChatGPT inference.”
 
-This chapter connects token economics from [01-02](01-02-Tokenization-Context-Windows.md) to routing and fallbacks in [01-04](01-04-Model-Routing-LiteLLM.md), and to fleet operations in [10-02](../10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md) and unit economics in [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md).
+This chapter connects token economics from [01-02](01-02-Tokenization-Context-Windows.md) to routing and fallbacks in [01-04](01-04-Model-Routing-LiteLLM.md), and to fleet operations in [10-02](../10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md) and unit economics in [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md).
 
 ---
 
@@ -69,7 +69,7 @@ This chapter connects token economics from [01-02](01-02-Tokenization-Context-Wi
 
 Production inference is rarely “run `transformers.generate()` in a Flask app.” It is a **serving stack**:
 
-![Modules__01-LLM-Engineering__01-03-Inference-Serving-vLLM-01-f1730e54](../../Diagrams/Modules__01-LLM-Engineering__01-03-Inference-Serving-vLLM-01-f1730e54.png)
+![Modules__01-LLM-Engineering__01-05-Inference-Serving-vLLM-01-f1730e54](../../Diagrams/Modules__01-LLM-Engineering__01-05-Inference-Serving-vLLM-01-f1730e54.png)
 
 ```mermaid
 flowchart TB
@@ -326,7 +326,7 @@ Compiled CUDA kernels + graph optimizations for NVIDIA GPUs. Often wins raw benc
 
 ### 9) Self-Host vs Managed API
 
-![Modules__01-LLM-Engineering__01-03-Inference-Serving-vLLM-02-2904d16c](../../Diagrams/Modules__01-LLM-Engineering__01-03-Inference-Serving-vLLM-02-2904d16c.png)
+![Modules__01-LLM-Engineering__01-05-Inference-Serving-vLLM-02-2904d16c](../../Diagrams/Modules__01-LLM-Engineering__01-05-Inference-Serving-vLLM-02-2904d16c.png)
 
 ```mermaid
 flowchart TD
@@ -354,7 +354,7 @@ flowchart TD
 | Model churn | Weekly frontier swaps | Fixed open-weight revision for quarters |
 | Latency | Good enough p95 | Custom colo + batching tuning |
 
-Deep cost math: [10-04 Cost & Latency Optimization](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md).
+Deep cost math: [10-03 Cost & Latency Optimization](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md).
 
 ---
 
@@ -751,7 +751,7 @@ Point the **same Python client** at Ollama in dev and vLLM in staging — only e
 | Cap `max_tokens` | Decode is linear in output length |
 | Spot GPU instances | ↓ $/hr; ↑ interruption risk — need checkpoint/drain |
 
-Unit economics worksheet: [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md).
+Unit economics worksheet: [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md).
 
 ---
 
@@ -762,7 +762,7 @@ Unit economics worksheet: [10-04](../10-Production-Infrastructure/10-04-Cost-Lat
 | Gateway | Horizontal pods behind load balancer — stateless |
 | vLLM | One replica per GPU pool; scale replicas for QPS |
 | Large models | Tensor parallel within node; multi-node pipeline parallel (advanced) |
-| Queueing | Kafka/Redis queue when GPU saturated — [10-03](../10-Production-Infrastructure/10-03-Redis-Kafka-Ray.md) |
+| Queueing | Kafka/Redis queue when GPU saturated — [10-04](../10-Production-Infrastructure/10-04-Redis-Kafka-Ray.md) |
 
 **Anti-pattern:** One giant vLLM process on a shared GPU with batch jobs and online chat — batch prefill starves interactive TTFT.
 
@@ -837,7 +837,7 @@ Export vLLM Prometheus metrics (`vllm:num_requests_running`, KV cache usage) and
 
 ## Architecture Diagram — Deployment
 
-![Modules__01-LLM-Engineering__01-03-Inference-Serving-vLLM-03-b86a2658](../../Diagrams/Modules__01-LLM-Engineering__01-03-Inference-Serving-vLLM-03-b86a2658.png)
+![Modules__01-LLM-Engineering__01-05-Inference-Serving-vLLM-03-b86a2658](../../Diagrams/Modules__01-LLM-Engineering__01-05-Inference-Serving-vLLM-03-b86a2658.png)
 
 ```mermaid
 flowchart TB
@@ -883,7 +883,7 @@ Deploy patterns (K8s HPA, node pools, CI): [10-02 Docker, Kubernetes & CI/CD](..
 
 ## Mermaid Diagram — Request Sequence
 
-![Modules__01-LLM-Engineering__01-03-Inference-Serving-vLLM-04-c2e42685](../../Diagrams/Modules__01-LLM-Engineering__01-03-Inference-Serving-vLLM-04-c2e42685.png)
+![Modules__01-LLM-Engineering__01-05-Inference-Serving-vLLM-04-c2e42685](../../Diagrams/Modules__01-LLM-Engineering__01-05-Inference-Serving-vLLM-04-c2e42685.png)
 
 ```mermaid
 sequenceDiagram
@@ -970,7 +970,7 @@ Run identical Python client against Ollama and vLLM; diff latency only — outpu
 ## Production Project
 
 **Title:** GPU Inference Tier on Kubernetes  
-**Done when:** Two vLLM replicas behind gateway; Prometheus dashboards for running requests and KV usage; deploy pipeline documented per [10-02](../10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md); cost estimate per 1M tokens in README linking [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md).
+**Done when:** Two vLLM replicas behind gateway; Prometheus dashboards for running requests and KV usage; deploy pipeline documented per [10-02](../10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md); cost estimate per 1M tokens in README linking [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md).
 
 ---
 
@@ -1027,7 +1027,7 @@ Draw continuous batching timeline: three requests joining and leaving decode ste
 - **vLLM** for GPU fleet velocity; **TensorRT-LLM** when compiled perf is worth ops; **Ollama** for local dev.
 - **Quantization** always ships with eval gates — GPTQ/AWQ on GPU, GGUF on Ollama.
 - **Gateway** owns auth/SLOs; **engine** owns throughput.
-- **Self-host** when volume + compliance + control exceed ops cost; else API or hybrid ([01-04](01-04-Model-Routing-LiteLLM.md), [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md)).
+- **Self-host** when volume + compliance + control exceed ops cost; else API or hybrid ([01-04](01-04-Model-Routing-LiteLLM.md), [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md)).
 
 ---
 
@@ -1051,7 +1051,7 @@ Inference serving is where **token economics meet systems engineering**. vLLM’
 | Token/context economics (handbook) | [01-02](01-02-Tokenization-Context-Windows.md) | Intermediate | 30 min | Connect context size to KV RAM | Attention economics |
 | Model routing (handbook) | [01-04](01-04-Model-Routing-LiteLLM.md) | Intermediate | 30 min | Hybrid API/self-host | Fallback chains |
 | K8s deploy (handbook) | [10-02](../10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md) | Intermediate | 45 min | Ship GPU workloads | GPU node pools |
-| Cost/latency (handbook) | [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) | Intermediate | 45 min | $/token math | Breakeven models |
+| Cost/latency (handbook) | [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) | Intermediate | 45 min | $/token math | Breakeven models |
 
 ---
 

@@ -13,7 +13,7 @@
 | **Difficulty** | Intermediate (framework) · Advanced (hybrid architectures & unit economics) |
 | **Prerequisites** | [02-01 Production Prompt Engineering](../02-Prompt-Engineering/02-01-Production-Prompt-Engineering.md) · [04-01 RAG Architecture](../04-RAG/04-01-RAG-Architecture.md) · [09-01 PEFT LoRA QLoRA](09-01-PEFT-LoRA-QLoRA.md) |
 | **Module** | 09 — Fine-Tuning |
-| **Related** | [09-03 Serving FT Models](09-03-Serving-Integrating-FineTuned-Models.md) · [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [08-01 Evaluation Lifecycle](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [10-04 Cost & Latency](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) · [12-04 DSPy](../12-Advanced-Topics/12-04-DSPy-Programmatic-Prompting.md) · [Architecture Index](../../Architecture Index.md) |
+| **Related** | [09-03 Serving FT Models](09-03-Serving-Integrating-FineTuned-Models.md) · [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [08-01 Evaluation Lifecycle](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [10-03 Cost & Latency](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) · [12-04 DSPy](../12-Advanced-Topics/12-04-DSPy-Programmatic-Prompting.md) · [Architecture Index](../../Architecture Index.md) |
 
 ---
 
@@ -39,7 +39,7 @@ The most expensive mistake in GenAI product engineering is solving the **wrong l
 - Fine-tuning fixes **stable style, format, and domain priors** baked into weights.
 - Tools/APIs fix **live transactional state** (order status, balances).
 
-Teams that fine-tune when they needed RAG ship **stale policies** embedded in weights. Teams that RAG when they needed tone fine-tuning get **correct but robotic** answers. Teams that prompt-engineer 200-shot examples into every request hit **latency and cost walls** ([10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md)).
+Teams that fine-tune when they needed RAG ship **stale policies** embedded in weights. Teams that RAG when they needed tone fine-tuning get **correct but robotic** answers. Teams that prompt-engineer 200-shot examples into every request hit **latency and cost walls** ([10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md)).
 
 Principal interviews often start with: *"NovaCart wants an internal support copilot — what do you build first?"* This chapter is the answer key.
 
@@ -94,11 +94,11 @@ Instructions, few-shot examples, and structured output schemas in the **context 
 
 - Rapid iteration; A/B system prompts in hours.
 - Task fits in context (small docs, stable rubric).
-- Quality gap closed with [DSPy optimization](12-04-DSPy-Programmatic-Prompting.md) cheaper than FT.
+- Quality gap closed with [DSPy optimization](../12-Advanced-Topics/12-04-DSPy-Programmatic-Prompting.md) cheaper than FT.
 
 #### When prompting fails
 
-- Long few-shot sets every request → cost/latency ([10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md)).
+- Long few-shot sets every request → cost/latency ([10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md)).
 - Fragile JSON/tool formats despite schema hints.
 - Consistent brand voice across 50+ phrasing variants.
 
@@ -300,7 +300,7 @@ Primary approach: **{approach.value}**
 - Groundedness eval on RAG path
 - Tool call success rate on transactional path
 
-## Cost note (10-04)
+## Cost note (10-03)
 Measure $/successful answer, not $/token alone.
 """
 
@@ -350,7 +350,7 @@ print(architecture_memo(novacart, "NovaCart Support Copilot"))
 | RAG for tone only | Extra retrieve on every turn |
 | 200-shot prompting | Linear context cost per request |
 
-Worksheet: [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md).
+Worksheet: [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md).
 
 ---
 
@@ -516,7 +516,7 @@ Generate architecture memo for executives using Python template.
 
 ## Stretch Project
 
-Implement **automatic layer probe**: run prompt/RAG/FT candidates on same golden set; pick cheapest passing approach ([12-04 DSPy](12-04-DSPy-Programmatic-Prompting.md) for prompt arm).
+Implement **automatic layer probe**: run prompt/RAG/FT candidates on same golden set; pick cheapest passing approach ([12-04 DSPy](../12-Advanced-Topics/12-04-DSPy-Programmatic-Prompting.md) for prompt arm).
 
 ---
 
@@ -563,7 +563,7 @@ Draw decision tree for "internal HR policy bot."
 - **Prompt first, eval always** — then RAG for knowledge, tools for live data, LoRA for stable behavior.
 - Never embed **volatile policy** in weights.
 - Hybrids are normal; boundaries matter.
-- Cross-links: [09-01](09-01-PEFT-LoRA-QLoRA.md) · [04-01](../04-RAG/04-01-RAG-Architecture.md) · [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md).
+- Cross-links: [09-01](09-01-PEFT-LoRA-QLoRA.md) · [04-01](../04-RAG/04-01-RAG-Architecture.md) · [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md).
 
 ---
 
@@ -584,4 +584,4 @@ Choosing prompting, RAG, fine-tuning, or tools is an **architecture decision**, 
 | DSPy | https://dspy.ai/ | Intermediate | 30 min | Prompt optimization alternative | Programs vs prompts |
 | RAG handbook | [04-01](../04-RAG/04-01-RAG-Architecture.md) | Intermediate | 45 min | Production RAG | Abstain + citations |
 | LoRA handbook | [09-01](09-01-PEFT-LoRA-QLoRA.md) | Intermediate | 45 min | Efficient FT | QLoRA lab |
-| Cost handbook | [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) | Intermediate | 30 min | $/answer economics | Breakeven |
+| Cost handbook | [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) | Intermediate | 30 min | $/answer economics | Breakeven |

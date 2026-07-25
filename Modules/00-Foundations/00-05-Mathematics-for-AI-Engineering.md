@@ -1,4 +1,4 @@
-# 00-04 — Mathematics for AI Engineering
+# 00-05 — Mathematics for AI Engineering
 
 
 <!-- TRACK_D_SCOPE -->
@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 6–7 hours (read 2h · labs 3h · eval memo 1–2h) |
 | **Difficulty** | Intermediate (math literacy) · Advanced (production judgment) |
-| **Prerequisites** | [00-01 GenAI From Scratch](00-01-AI-Engineering-Mindset.md) · preferably [00-05](00-05-Python-for-AI-Engineering.md) started · Python comfort · basic data structures |
+| **Prerequisites** | [00-01 GenAI From Scratch](00-01-GenAI-From-Scratch.md) · preferably [00-02](00-02-Python-for-AI-Engineering.md) started · Python comfort · basic data structures |
 | **Module** | 00 — Foundations |
-| **Related** | [00-05](00-05-Python-for-AI-Engineering.md) · [00-06](00-06-APIs-for-AI-Engineering.md) · [04-01](../04-RAG/04-01-RAG-Architecture.md) · [04-02](../04-RAG/04-02-Chunking-Metadata-Embeddings.md) · [04-03](../04-RAG/04-03-Vector-DB-Hybrid-Search-Reranking.md) · [08-01](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [Master Study Roadmap](../../Master%20Study%20Roadmap.md) |
+| **Related** | [00-02](00-02-Python-for-AI-Engineering.md) · [00-03](00-03-APIs-for-AI-Engineering.md) · [04-01](../04-RAG/04-01-RAG-Architecture.md) · [04-02](../04-RAG/04-02-Chunking-Metadata-Embeddings.md) · [04-03](../04-RAG/04-03-Vector-DB-Hybrid-Search-Reranking.md) · [08-01](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [Master Study Roadmap](../../Master%20Study%20Roadmap.md) |
 
 ---
 

@@ -45,7 +45,7 @@
 
 **Disadvantages:** Quadratic attention cost in sequence length; no native recurrence for streaming without tricks.
 
-**Production Impact:** Every production LLM is a Transformer variant; informs context window economics ([01-02](../Modules/01-LLM-Engineering/01-02-Tokenization-Context-Windows.md)) and KV-cache serving ([01-03](../Modules/01-LLM-Engineering/01-03-Inference-Serving-vLLM.md)).
+**Production Impact:** Every production LLM is a Transformer variant; informs context window economics ([01-02](../Modules/01-LLM-Engineering/01-02-Tokenization-Context-Windows.md)) and KV-cache serving ([01-05](../Modules/01-LLM-Engineering/01-05-Inference-Serving-vLLM.md)).
 
 **Interview Importance:** **Critical** — expect encoder vs decoder, self-attention intuition, complexity, KV cache at Staff+.
 
@@ -151,7 +151,7 @@
 | **Authors** | Wei et al. (Google) |
 | **Year** | 2022 |
 | **URL** | https://arxiv.org/abs/2201.11903 |
-| **Module links** | [02-01](../Modules/02-Prompt-Engineering/02-01-Production-Prompt-Engineering.md) · [03-03 Patterns](../Modules/03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md) |
+| **Module links** | [02-01](../Modules/02-Prompt-Engineering/02-01-Production-Prompt-Engineering.md) · [03-04 Patterns](../Modules/03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md) |
 
 **Problem:** Standard prompting fails on multi-step reasoning (math, commonsense).
 
@@ -211,7 +211,7 @@
 | **Authors** | Shinn et al. |
 | **Year** | 2023 |
 | **URL** | https://arxiv.org/abs/2303.11366 |
-| **Module links** | [12-03](../Modules/12-Advanced-Topics/12-03-Self-Improving-Agents.md) · [03-03 Reflection](../Modules/03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md) |
+| **Module links** | [12-03](../Modules/12-Advanced-Topics/12-03-Self-Improving-Agents.md) · [03-04 Reflection](../Modules/03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md) |
 
 **Problem:** Agents repeat mistakes across episodes without learning from failure.
 
@@ -315,7 +315,7 @@
 
 **Disadvantages:** Model-specific mitigation evolving; not a fix by itself.
 
-**Production Impact:** Rerank + reorder chunks; lost-in-middle aware prompting ([04-03](../Modules/04-RAG/04-03-Vector-DB-Hybrid-Search-Reranking.md)); context budgeting ([10-04](../Modules/10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md)).
+**Production Impact:** Rerank + reorder chunks; lost-in-middle aware prompting ([04-03](../Modules/04-RAG/04-03-Vector-DB-Hybrid-Search-Reranking.md)); context budgeting ([10-03](../Modules/10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md)).
 
 **Interview Importance:** **High** — explain U-curve; mitigations in RAG system design.
 

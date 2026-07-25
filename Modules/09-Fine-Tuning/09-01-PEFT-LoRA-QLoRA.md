@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 6–7 hours (read 2.5h · lab 3h · hyperparameter memo 1h) |
 | **Difficulty** | Intermediate (concepts) · Advanced (QLoRA on consumer GPUs & eval gates) |
-| **Prerequisites** | [01-01 Transformer Architecture](../01-LLM-Engineering/01-01-Transformer-Architecture.md) · [01-03 Inference Serving vLLM](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) · PyTorch basics |
+| **Prerequisites** | [01-01 Transformer Architecture](../01-LLM-Engineering/01-01-Transformer-Architecture.md) · [01-05 Inference Serving vLLM](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) · PyTorch basics |
 | **Module** | 09 — Fine-Tuning |
-| **Related** | [09-02 Prompting vs RAG vs FT](09-02-Prompting-vs-RAG-vs-FineTuning.md) · [09-03 Serving FT Models](09-03-Serving-Integrating-FineTuned-Models.md) · [04-01 RAG Architecture](../04-RAG/04-01-RAG-Architecture.md) · [08-01 Evaluation Lifecycle](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [10-04 Cost & Latency](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) · [Architecture Index](../../Architecture Index.md) |
+| **Related** | [09-02 Prompting vs RAG vs FT](09-02-Prompting-vs-RAG-vs-FineTuning.md) · [09-03 Serving FT Models](09-03-Serving-Integrating-FineTuned-Models.md) · [04-01 RAG Architecture](../04-RAG/04-01-RAG-Architecture.md) · [08-01 Evaluation Lifecycle](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [10-03 Cost & Latency](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) · [Architecture Index](../../Architecture Index.md) |
 
 ---
 
@@ -99,7 +99,7 @@ flowchart TB
     end
 ```
 
-Cross-links: decision framework [09-02](09-02-Prompting-vs-RAG-vs-FineTuning.md); deployment [09-03](09-03-Serving-Integrating-FineTuned-Models.md); inference stack [01-03](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md).
+Cross-links: decision framework [09-02](09-02-Prompting-vs-RAG-vs-FineTuning.md); deployment [09-03](09-03-Serving-Integrating-FineTuned-Models.md); inference stack [01-05](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md).
 
 ---
 
@@ -504,7 +504,7 @@ AutoTokenizer.from_pretrained(base_id).save_pretrained(merged_dir)
 print(f"Merged model saved to {merged_dir}")
 ```
 
-Deploy merged weights via [01-03 vLLM](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) or adapter hot-swap per [09-03](09-03-Serving-Integrating-FineTuned-Models.md).
+Deploy merged weights via [01-05 vLLM](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) or adapter hot-swap per [09-03](09-03-Serving-Integrating-FineTuned-Models.md).
 
 ---
 
@@ -554,7 +554,7 @@ Prompt injection at inference: [11-02](../11-Security-Safety/11-02-Prompt-Inject
 | Spot instances | 60–70% cheaper train runs; checkpoint often |
 | Adapter-only artifacts | Pennies storage vs full model |
 
-Breakeven vs prompting/RAG: [09-02](09-02-Prompting-vs-RAG-vs-FineTuning.md) · unit economics [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md).
+Breakeven vs prompting/RAG: [09-02](09-02-Prompting-vs-RAG-vs-FineTuning.md) · unit economics [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md).
 
 ---
 
@@ -564,7 +564,7 @@ Breakeven vs prompting/RAG: [09-02](09-02-Prompting-vs-RAG-vs-FineTuning.md) · 
 |---------|----------------|
 | Many tenants | One base + N adapters; route by tenant_id |
 | Large datasets | Streaming dataset; multi-GPU DDP with QLoRA |
-| Train fleet | Ray Train ([10-03](../10-Production-Infrastructure/10-03-Redis-Kafka-Ray.md)) for hyperparam sweeps |
+| Train fleet | Ray Train ([10-04](../10-Production-Infrastructure/10-04-Redis-Kafka-Ray.md)) for hyperparam sweeps |
 
 ---
 

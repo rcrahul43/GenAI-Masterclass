@@ -22,8 +22,8 @@
 | Week | Cheatsheet | Pair with module |
 |------|------------|------------------|
 | 1 | #1 Prompt/Transformers | [01-01](../Modules/01-LLM-Engineering/01-01-Transformer-Architecture.md), [02-01](../Modules/02-Prompt-Engineering/02-01-Production-Prompt-Engineering.md) |
-| 2 | #1 (review) + #4 SDKs | [01-05](../Modules/01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) |
-| 3 | #3 LangGraph/MCP | [03-04](../Modules/03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) |
+| 2 | #1 (review) + #4 SDKs | [01-03](../Modules/01-LLM-Engineering/01-03-Provider-SDKs-OpenAI-Claude-Gemini.md) |
+| 3 | #3 LangGraph/MCP | [03-03](../Modules/03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) |
 | 4 | #2 RAG | [04-01](../Modules/04-RAG/04-01-RAG-Architecture.md) → [04-03](../Modules/04-RAG/04-03-Vector-DB-Hybrid-Search-Reranking.md) |
 | 5 | #3 Multi-agent | [05-01](../Modules/05-Multi-Agent/05-01-Multi-Agent-Orchestration.md) |
 | 6 | #4 Eval/LLMOps | [08-01](../Modules/08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) |

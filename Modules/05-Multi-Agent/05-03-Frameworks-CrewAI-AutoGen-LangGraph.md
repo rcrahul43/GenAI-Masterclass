@@ -11,7 +11,7 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · lab 2h · migration exercise 1.5h) |
 | **Difficulty** | Intermediate (comparison) · Advanced (production selection + migration) |
-| **Prerequisites** | [05-01 Multi-Agent Orchestration](05-01-Multi-Agent-Orchestration.md) · [05-02 Planner–Executor–Critic](05-02-Planner-Executor-Critic.md) · [03-04 LangGraph Production Agents](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) |
+| **Prerequisites** | [05-01 Multi-Agent Orchestration](05-01-Multi-Agent-Orchestration.md) · [05-02 Planner–Executor–Critic](05-02-Planner-Executor-Critic.md) · [03-03 LangGraph Production Agents](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) |
 | **Module** | 05 — Multi-Agent Orchestration |
 | **Related** | [08-02 Observability](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) · [07-01 MCP](../07-Protocols-MCP-A2A/07-01-MCP-Model-Context-Protocol.md) · [07-02 A2A](../07-Protocols-MCP-A2A/07-02-A2A-Agent-to-Agent.md) · [Architecture Index](../../Architecture Index.md) |
 
@@ -53,7 +53,7 @@ Staff/Principal engineers treat frameworks as **orchestration runtimes**, not pr
 | **Time to production** | LangGraph + explicit graphs often faster |
 | **Enterprise RBAC** | CrewAI Enterprise console |
 | **Research / experimentation** | AutoGen Core event model |
-| **Long-running workflows** | LangGraph checkpoints + HITL ([03-04](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md)) |
+| **Long-running workflows** | LangGraph checkpoints + HITL ([03-03](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md)) |
 | **Observability** | All need [08-02](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md); LangSmith integrates tightly with LangGraph |
 
 ---
@@ -99,7 +99,7 @@ flowchart TB
 | Capability | Production value |
 |------------|------------------|
 | **Explicit graph** | Reviewable topology in code |
-| **Checkpoints** | Durable threads, resume, time-travel ([03-04](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md)) |
+| **Checkpoints** | Durable threads, resume, time-travel ([03-03](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md)) |
 | **`Command(goto=...)` handoffs** | Recommended supervisor pattern (tool-based routing) |
 | **`Send` API** | Parallel fan-out |
 | **Interrupts** | Human approval gates |
@@ -252,7 +252,7 @@ flowchart TD
 
 #### Choose **LangGraph** when
 
-- Production SLOs, checkpoint resume, interrupts ([03-04](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md)).
+- Production SLOs, checkpoint resume, interrupts ([03-03](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md)).
 - Architects require **visible topology** and migration-safe state schemas.
 - You already standardize on LangSmith ([08-02](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md)).
 
@@ -753,7 +753,7 @@ Draw supervisor pattern in LangGraph vs CrewAI hierarchical process — highligh
 ## Revision Notes
 
 - Frameworks implement **patterns**, not replace architecture thinking.  
-- **LangGraph** default for production graphs + HITL + checkpoints ([03-04](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md)).  
+- **LangGraph** default for production graphs + HITL + checkpoints ([03-03](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md)).  
 - **CrewAI** for role-centric enterprise automations.  
 - **AutoGen** for event-driven / distributed / research.  
 - Plan **migration** when prototype framework ≠ production requirements.  
@@ -777,7 +777,7 @@ Module wrap-up: [05-01 Orchestration](05-01-Multi-Agent-Orchestration.md) · [05
 | CrewAI Docs | https://docs.crewai.com/ | Intro–Intermediate | 45 min | Crews, flows, enterprise | Agents; tasks; processes |
 | AutoGen Stable Docs | https://microsoft.github.io/autogen/stable//index.html | Intermediate | 45 min | AgentChat vs Core | Extensions; MCP |
 | MetaGPT Paper | https://arxiv.org/abs/2308.08155 | Advanced | 45 min | Role-based multi-agent research | Methodology |
-| LangGraph Production | ../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md | Advanced | 60 min | Checkpoints, interrupts | HITL |
+| LangGraph Production | ../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md | Advanced | 60 min | Checkpoints, interrupts | HITL |
 | Observability | ../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md | Intermediate | 45 min | Cross-framework traces | OTel schema |
 | MCP | ../07-Protocols-MCP-A2A/07-01-MCP-Model-Context-Protocol.md | Intermediate | 40 min | Shared tools | Tool servers |
 | A2A | ../07-Protocols-MCP-A2A/07-02-A2A-Agent-to-Agent.md | Intermediate | 40 min | External agents | Protocol overview |

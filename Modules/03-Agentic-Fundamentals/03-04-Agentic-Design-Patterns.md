@@ -1,4 +1,4 @@
-# 03-03 — Agentic Design Patterns: Routing, Reflection, ReAct & More
+# 03-04 — Agentic Design Patterns: Routing, Reflection, ReAct & More
 
 
 <!-- TRACK_D_SCOPE -->
@@ -13,7 +13,7 @@
 | **Difficulty** | Intermediate (patterns) · Advanced (production routing design) |
 | **Prerequisites** | [03-01 Agent Anatomy & Loop](03-01-Agent-Anatomy-and-Loop.md) · [03-02 Tools, Memory & Control Flow](03-02-Tools-Memory-Control-Flow.md) |
 | **Module** | 03 — Agentic Fundamentals |
-| **Related** | [03-01](03-01-Agent-Anatomy-and-Loop.md) · [03-02](03-02-Tools-Memory-Control-Flow.md) · [03-04 LangGraph Production](03-04-LangGraph-Production-Agents.md) · [05-01 Multi-Agent Orchestration](../05-Multi-Agent/05-01-Multi-Agent-Orchestration.md) · [08-02 Observability](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) · [Architecture Index](../../Architecture Index.md) · [Study Plan](../../Study Plan.md) |
+| **Related** | [03-01](03-01-Agent-Anatomy-and-Loop.md) · [03-02](03-02-Tools-Memory-Control-Flow.md) · [03-03 LangGraph Production](03-03-LangGraph-Production-Agents.md) · [05-01 Multi-Agent Orchestration](../05-Multi-Agent/05-01-Multi-Agent-Orchestration.md) · [08-02 Observability](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) · [Architecture Index](../../Architecture Index.md) · [Study Plan](../../Study Plan.md) |
 
 ---
 
@@ -67,7 +67,7 @@ This chapter turns pattern names into **production decisions**.
 
 A production support routing stack typically layers patterns:
 
-![Modules__03-Agentic-Fundamentals__03-03-Agentic-Design-Patterns-01-555e3ff2](../../Diagrams/Modules__03-Agentic-Fundamentals__03-03-Agentic-Design-Patterns-01-555e3ff2.png)
+![Modules__03-Agentic-Fundamentals__03-04-Agentic-Design-Patterns-01-555e3ff2](../../Diagrams/Modules__03-Agentic-Fundamentals__03-04-Agentic-Design-Patterns-01-555e3ff2.png)
 
 ```mermaid
 flowchart TB
@@ -286,7 +286,7 @@ Code review before merge—not every line needs a reviewer on every save.
 
 #### Cost-aware pattern
 
-![Modules__03-Agentic-Fundamentals__03-03-Agentic-Design-Patterns-02-c389dab6](../../Diagrams/Modules__03-Agentic-Fundamentals__03-03-Agentic-Design-Patterns-02-c389dab6.png)
+![Modules__03-Agentic-Fundamentals__03-04-Agentic-Design-Patterns-02-c389dab6](../../Diagrams/Modules__03-Agentic-Fundamentals__03-04-Agentic-Design-Patterns-02-c389dab6.png)
 
 ```mermaid
 flowchart LR
@@ -304,7 +304,7 @@ flowchart LR
 
 #### Definition
 
-**HITL** pauses agent execution before irreversible or high-risk actions until a human approves, edits, or rejects. In graph terms: **interrupt → review → resume** (see [03-04](03-04-LangGraph-Production-Agents.md)).
+**HITL** pauses agent execution before irreversible or high-risk actions until a human approves, edits, or rejects. In graph terms: **interrupt → review → resume** (see [03-03](03-03-LangGraph-Production-Agents.md)).
 
 LangGraph reference: [Human-in-the-loop](https://langchain-ai.github.io/langgraph/concepts/human_in_the_loop/)
 
@@ -365,7 +365,7 @@ flowchart TD
 
 ### Customer Inquiry Routing Agent (Production-Shaped)
 
-This implementation composes **routing**, **ReAct specialists**, **tool-use**, optional **reflection**, and **HITL** for refunds. It uses LangGraph-style structure without requiring you to have completed [03-04](03-04-LangGraph-Production-Agents.md) first.
+This implementation composes **routing**, **ReAct specialists**, **tool-use**, optional **reflection**, and **HITL** for refunds. It uses LangGraph-style structure without requiring you to have completed [03-03](03-03-LangGraph-Production-Agents.md) first.
 
 ```python
 """Customer inquiry routing agent — pattern composition lab.
@@ -671,7 +671,7 @@ def hitl_gate_node(state: AgentState) -> dict[str, Any]:
     if not state.get("hitl_required"):
         return {}
     audit("hitl_required", {"draft": state.get("draft_response"), "queue": REFUND_QUEUE[-1:]})
-    # Production: graph interrupt — see 03-04
+    # Production: graph interrupt — see 03-03
     approved = True  # demo assumes human approved in backoffice
     if not approved:
         return {"draft_response": "Your request was not approved.", "hitl_required": True}
@@ -743,7 +743,7 @@ if __name__ == "__main__":
 1. **Router runs first** — specialists never see each other's tools.
 2. **Billing path** gets write-capable tools; FAQ path stays tool-free.
 3. **Reflection skipped** when `hitl_required` — ops reviews anyway ([08-02](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) traces both paths).
-4. **HITL** sits after draft, before customer send — matches [03-04 interrupt model](03-04-LangGraph-Production-Agents.md).
+4. **HITL** sits after draft, before customer send — matches [03-03 interrupt model](03-03-LangGraph-Production-Agents.md).
 
 ---
 
@@ -923,7 +923,7 @@ LangSmith project setup: [LangSmith docs](https://docs.langchain.com/langsmith/h
 
 ## Architecture Diagram — Customer Inquiry Routing
 
-![Modules__03-Agentic-Fundamentals__03-03-Agentic-Design-Patterns-04-098b4c0e](../../Diagrams/Modules__03-Agentic-Fundamentals__03-03-Agentic-Design-Patterns-04-098b4c0e.png)
+![Modules__03-Agentic-Fundamentals__03-04-Agentic-Design-Patterns-04-098b4c0e](../../Diagrams/Modules__03-Agentic-Fundamentals__03-04-Agentic-Design-Patterns-04-098b4c0e.png)
 
 ```mermaid
 flowchart TB
@@ -1035,7 +1035,7 @@ Force `propose_refund` without approval path; verify tool cannot hit payment API
 ## Production Project
 
 **Title:** Support Routing Graph  
-**Done when:** LangGraph compiled graph ([03-04](03-04-LangGraph-Production-Agents.md)), checkpointed threads, LangSmith traces, RM approval UI.
+**Done when:** LangGraph compiled graph ([03-03](03-03-LangGraph-Production-Agents.md)), checkpointed threads, LangSmith traces, RM approval UI.
 
 ---
 

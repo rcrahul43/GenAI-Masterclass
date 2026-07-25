@@ -4,7 +4,7 @@
 |------|-------|
 | **Estimated Time** | 3–4 hours (design 2h · critique 1h · memo 1h) |
 | **Difficulty** | Staff / Principal |
-| **Prerequisites** | [01-03](../Modules/01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) · [01-02](../Modules/01-LLM-Engineering/01-02-Tokenization-Context-Windows.md) · [04-01](../Modules/04-RAG/04-01-RAG-Architecture.md) · [10-04](../Modules/10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) |
+| **Prerequisites** | [01-05](../Modules/01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) · [01-02](../Modules/01-LLM-Engineering/01-02-Tokenization-Context-Windows.md) · [04-01](../Modules/04-RAG/04-01-RAG-Architecture.md) · [10-03](../Modules/10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) |
 | **Related** | [Design Cursor](Design-Cursor.md) · [Design AI Coding](Design-AI-Coding-Assistant.md) · [Architecture Index](../Architecture Index.md) |
 
 ---
@@ -265,7 +265,7 @@ sequenceDiagram
 | Response parse + render | < 10ms |
 | **Total E2E** | **< 300ms** |
 
-**Techniques:** speculative execution on partial debounce; FIM-specialized smaller models; quantization (INT8/FP8); edge routing; prefix KV reuse; early exit on high-confidence short completions ([01-03](../Modules/01-LLM-Engineering/01-03-Inference-Serving-vLLM.md)).
+**Techniques:** speculative execution on partial debounce; FIM-specialized smaller models; quantization (INT8/FP8); edge routing; prefix KV reuse; early exit on high-confidence short completions ([01-05](../Modules/01-LLM-Engineering/01-05-Inference-Serving-vLLM.md)).
 
 ---
 

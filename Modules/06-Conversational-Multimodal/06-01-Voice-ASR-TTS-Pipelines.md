@@ -13,7 +13,7 @@
 | **Difficulty** | Intermediate (pipeline wiring) · Advanced (latency + cost SLOs) |
 | **Prerequisites** | [02-01](../02-Prompt-Engineering/02-01-Production-Prompt-Engineering.md) · [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · basic audio I/O |
 | **Module** | 06 — Conversational & Multimodal |
-| **Related** | [06-02](06-02-Multimodal-Agents.md) · [03-04](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) · [08-02](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) · [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) · [Design-AI-Voice](../../System Design/Design-AI-Voice-Assistant.md) |
+| **Related** | [06-02](06-02-Multimodal-Agents.md) · [03-03](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) · [08-02](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) · [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) · [Design-AI-Voice](../../System Design/Design-AI-Voice-Assistant.md) |
 
 ---
 
@@ -250,7 +250,7 @@ cost = (audio_minutes × ASR_rate)
 
 **Levers:** VAD trim silence, shorter replies, cache common TTS phrases (“Your balance is…”), small LLM for routing.
 
-Cross-link: [10-04 Cost & Latency Optimization](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md)
+Cross-link: [10-03 Cost & Latency Optimization](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md)
 
 ---
 

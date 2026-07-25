@@ -37,7 +37,7 @@ Leading AI teams is not leading a traditional backend team with a model bolted o
 
 **Convert probabilistic capability into reliable product behavior through org design, eval discipline, and stakeholder education.**
 
-Cross-reference: [03-03 Agentic Design Patterns](../Modules/03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md) for technical patterns your team will implement; your job is ensuring those patterns are chosen for product reasons, not hype.
+Cross-reference: [03-04 Agentic Design Patterns](../Modules/03-Agentic-Fundamentals/03-04-Agentic-Design-Patterns.md) for technical patterns your team will implement; your job is ensuring those patterns are chosen for product reasons, not hype.
 
 ---
 

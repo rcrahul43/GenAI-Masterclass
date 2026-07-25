@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · lab 2.5h · trace review 1h) |
 | **Difficulty** | Intermediate (concepts) · Advanced (production loop design) |
-| **Prerequisites** | [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · Python · basic FastAPI |
+| **Prerequisites** | [00-01](../00-Foundations/00-01-GenAI-From-Scratch.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · Python · basic FastAPI |
 | **Module** | 03 — Agentic Fundamentals |
-| **Related** | [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · [03-02](03-02-Tools-Memory-Control-Flow.md) · [03-03](03-03-Agentic-Design-Patterns.md) · [03-04](03-04-LangGraph-Production-Agents.md) · [Architecture Index](../../Architecture Index.md) |
+| **Related** | [00-01](../00-Foundations/00-01-GenAI-From-Scratch.md) · [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · [03-02](03-02-Tools-Memory-Control-Flow.md) · [03-04](03-04-Agentic-Design-Patterns.md) · [03-03](03-03-LangGraph-Production-Agents.md) · [Architecture Index](../../Architecture Index.md) |
 
 ---
 
@@ -85,7 +85,7 @@ flowchart TB
     GUARD -.-> ROUTE
 ```
 
-**Equation (from [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md)):**
+**Equation (from [00-01](../00-Foundations/00-01-GenAI-From-Scratch.md)):**
 
 \[
 \text{Agent} = (\text{Prompt} + \text{Tools} + \text{Memory}) \times \text{LLM}
@@ -196,7 +196,7 @@ Action: finish["Paris, ~35 m"]
 | Observation | `tool` role message with result JSON/text |
 | Finish | Assistant message with no tool calls |
 
-Deep patterns: [03-03 Agentic Design Patterns](03-03-Agentic-Design-Patterns.md)
+Deep patterns: [03-04 Agentic Design Patterns](03-04-Agentic-Design-Patterns.md)
 
 ---
 
@@ -526,7 +526,7 @@ def get_thread_state(thread_id: str) -> dict[str, Any]:
 4. **Termination** — `route_after_think` stops on final answer; `MAX_STEPS` forces exit.
 5. **Persistence** — `SqliteSaver` checkpoint enables resume/HITL ([LangGraph persistence](https://langchain-ai.github.io/langgraph/concepts/persistence/)).
 
-Production hardening lives in [03-04 LangGraph Production Agents](03-04-LangGraph-Production-Agents.md).
+Production hardening lives in [03-03 LangGraph Production Agents](03-03-LangGraph-Production-Agents.md).
 
 ---
 
@@ -592,7 +592,7 @@ See also [11-01 OWASP LLM Top 10](../11-Security-Safety/11-01-OWASP-LLM-Top-10.m
 | Failure | Symptom | Mitigation |
 |---------|---------|------------|
 | Infinite loop | Same tool repeated | Duplicate-action detector; max_steps |
-| Premature stop | Wrong "done" | Structured output schema; critic node ([03-03](03-03-Agentic-Design-Patterns.md)) |
+| Premature stop | Wrong "done" | Structured output schema; critic node ([03-04](03-04-Agentic-Design-Patterns.md)) |
 | Silent tool error | Model ignores failure | Surface errors in Observation; fail after N errors |
 | Context overflow | Truncated history | Rolling summary memory ([03-02](03-02-Tools-Memory-Control-Flow.md)) |
 | No termination | Runs until timeout | Explicit finalize node + wall-clock timeout |
@@ -832,7 +832,7 @@ Agent anatomy is **structured non-determinism**: the LLM proposes moves; tools a
 | LangGraph Persistence | https://langchain-ai.github.io/langgraph/concepts/persistence/ | Intermediate | 30 min | Checkpointing threads | Checkpointers; thread_id |
 | LangChain Tools | https://python.langchain.com/docs/concepts/tools/ | Intro | 20 min | Tool contracts for Act phase | Tool definition; binding |
 | ReAct Paper | https://arxiv.org/abs/2210.03629 | Intermediate | 45 min | Original Think-Act-Observe | Figures; prompting templates |
-| GenAI From Scratch | [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) | Intro | 30 min | Agent equation + when not to agent | Agent equation; product kit |
+| GenAI From Scratch | [00-01](../00-Foundations/00-01-GenAI-From-Scratch.md) | Intro | 30 min | Agent equation + when not to agent | Agent equation; product kit |
 | Structured Outputs & Tool Calling | [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) | Intermediate | 40 min | Schema contracts for Think phase | Tool schemas; JSON mode |
 
 ---

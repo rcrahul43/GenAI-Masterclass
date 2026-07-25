@@ -1,4 +1,4 @@
-# 03-04 — LangGraph Production Agents: State, Memory, HITL & Deployment
+# 03-03 — LangGraph Production Agents: State, Memory, HITL & Deployment
 
 
 <!-- TRACK_D_SCOPE -->
@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 6–7 hours (read 3h · lab 3h · deploy drill 1h) |
 | **Difficulty** | Intermediate (LangGraph API) · Advanced (production deployment) |
-| **Prerequisites** | [03-01 Agent Anatomy & Loop](03-01-Agent-Anatomy-and-Loop.md) · [03-02 Tools, Memory & Control Flow](03-02-Tools-Memory-Control-Flow.md) · [03-03 Agentic Design Patterns](03-03-Agentic-Design-Patterns.md) |
+| **Prerequisites** | [03-01 Agent Anatomy & Loop](03-01-Agent-Anatomy-and-Loop.md) · [03-02 Tools, Memory & Control Flow](03-02-Tools-Memory-Control-Flow.md) |
 | **Module** | 03 — Agentic Fundamentals |
-| **Related** | [03-01](03-01-Agent-Anatomy-and-Loop.md) · [03-02](03-02-Tools-Memory-Control-Flow.md) · [03-03](03-03-Agentic-Design-Patterns.md) · [05-01 Multi-Agent Orchestration](../05-Multi-Agent/05-01-Multi-Agent-Orchestration.md) · [08-02 Observability](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) · [Architecture Index](../../Architecture Index.md) · [Study Plan](../../Study Plan.md) |
+| **Related** | [03-01](03-01-Agent-Anatomy-and-Loop.md) · [03-02](03-02-Tools-Memory-Control-Flow.md) · [03-04 Agentic Design Patterns](03-04-Agentic-Design-Patterns.md) *(after this chapter / Block 6)* · [05-01 Multi-Agent Orchestration](../05-Multi-Agent/05-01-Multi-Agent-Orchestration.md) · [08-02 Observability](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) · [Architecture Index](../../Architecture Index.md) · [Study Plan](../../Study Plan.md) |
 
 ---
 
@@ -41,7 +41,7 @@ Notebooks call `graph.invoke()` once. Production runs graphs **thousands of time
 - streaming UI,
 - and on-call engineers reading traces at 2 a.m.
 
-LangGraph is not “yet another agent wrapper.” It is a **state machine runtime** for agents: persistence, interrupts, and streaming are first-class. That is why it appears in the Architecture Index alongside routing and HITL patterns ([03-03](03-03-Agentic-Design-Patterns.md)).
+LangGraph is not “yet another agent wrapper.” It is a **state machine runtime** for agents: persistence, interrupts, and streaming are first-class. That is why it appears in the Architecture Index alongside routing and HITL patterns ([03-04](03-04-Agentic-Design-Patterns.md)).
 
 If you skip this chapter, you will re-implement checkpointing badly and discover HITL race conditions in staging.
 
@@ -63,9 +63,9 @@ Official overview: [LangGraph high-level concepts](https://langchain-ai.github.i
 
 ## Architecture Overview
 
-![Modules__03-Agentic-Fundamentals__03-04-LangGraph-Production-Agents-01-bf1b9f18](../../Diagrams/Modules__03-Agentic-Fundamentals__03-04-LangGraph-Production-Agents-01-bf1b9f18.png)
+![Modules__03-Agentic-Fundamentals__03-03-LangGraph-Production-Agents-01-bf1b9f18](../../Diagrams/Modules__03-Agentic-Fundamentals__03-03-LangGraph-Production-Agents-01-bf1b9f18.png)
 
-![Modules__03-Agentic-Fundamentals__03-04-LangGraph-Production-Agents-01-bf1b9f18](../../Diagrams/Modules__03-Agentic-Fundamentals__03-04-LangGraph-Production-Agents-01-bf1b9f18.png)
+![Modules__03-Agentic-Fundamentals__03-03-LangGraph-Production-Agents-01-bf1b9f18](../../Diagrams/Modules__03-Agentic-Fundamentals__03-03-LangGraph-Production-Agents-01-bf1b9f18.png)
 
 ```mermaid
 flowchart TB
@@ -116,7 +116,7 @@ A **StateGraph** defines:
 
 #### When to use
 
-- Multi-step agents with branching ([03-03 routing](03-03-Agentic-Design-Patterns.md)).
+- Multi-step agents with branching ([03-04 routing](03-04-Agentic-Design-Patterns.md)).
 - Need persistence, HITL, or resume after failure.
 - Tool loops with explicit max-iteration guards ([03-01](03-01-Agent-Anatomy-and-Loop.md)).
 
@@ -231,7 +231,7 @@ Patterns:
 #### When to use
 
 - Irreversible tools (payments, deletes, external sends).
-- Regulatory dual-control ([03-03 HITL](03-03-Agentic-Design-Patterns.md)).
+- Regulatory dual-control ([03-04 HITL](03-04-Agentic-Design-Patterns.md)).
 
 #### When NOT to use
 
@@ -287,7 +287,7 @@ Docs: [Multi-agent](https://langchain-ai.github.io/langgraph/concepts/multi_agen
 
 #### When NOT to use
 
-- One generalist would work with routing ([03-03](03-03-Agentic-Design-Patterns.md)).
+- One generalist would work with routing ([03-04](03-04-Agentic-Design-Patterns.md)).
 - Coordination overhead exceeds quality gain (measure on eval set).
 
 This chapter stays **single-graph production depth**; orchestration scale lives in [05-01](../05-Multi-Agent/05-01-Multi-Agent-Orchestration.md).
@@ -869,9 +869,9 @@ LangSmith home: [https://docs.langchain.com/langsmith/home](https://docs.langcha
 
 ## Deployment
 
-![Modules__03-Agentic-Fundamentals__03-04-LangGraph-Production-Agents-02-a967c929](../../Diagrams/Modules__03-Agentic-Fundamentals__03-04-LangGraph-Production-Agents-02-a967c929.png)
+![Modules__03-Agentic-Fundamentals__03-03-LangGraph-Production-Agents-02-a967c929](../../Diagrams/Modules__03-Agentic-Fundamentals__03-03-LangGraph-Production-Agents-02-a967c929.png)
 
-![Modules__03-Agentic-Fundamentals__03-04-LangGraph-Production-Agents-02-a967c929](../../Diagrams/Modules__03-Agentic-Fundamentals__03-04-LangGraph-Production-Agents-02-a967c929.png)
+![Modules__03-Agentic-Fundamentals__03-03-LangGraph-Production-Agents-02-a967c929](../../Diagrams/Modules__03-Agentic-Fundamentals__03-03-LangGraph-Production-Agents-02-a967c929.png)
 
 ```mermaid
 flowchart LR
@@ -930,7 +930,7 @@ CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8080", "--worker
 |--------|---------|
 | Cross-thread read | Authorize `thread_id` per customer |
 | Resume forgery | Signed resume tokens; audit `action` + approver |
-| Tool injection via messages | Tool allowlist per route ([03-03](03-03-Agentic-Design-Patterns.md)) |
+| Tool injection via messages | Tool allowlist per route ([03-04](03-04-Agentic-Design-Patterns.md)) |
 | Stream leakage | Never stream `debug` to clients |
 
 ---
@@ -965,7 +965,7 @@ Use LangSmith dashboards to find expensive nodes before adding specialists ([05-
 
 - Scale FastAPI pods horizontally; **shared Postgres** checkpointer.
 - Partition threads by `tenant_id` for large B2B customers.
-- Push long-running plan-and-execute jobs to queue workers; keep API graph for interactive slice ([03-03](03-03-Agentic-Design-Patterns.md)).
+- Push long-running plan-and-execute jobs to queue workers; keep API graph for interactive slice ([03-04](03-04-Agentic-Design-Patterns.md)).
 
 ---
 
@@ -1037,9 +1037,9 @@ LangGraph time-travel: reload checkpoint, replay from node (staging).
 
 ## Architecture Diagram — HITL State Machine
 
-![Modules__03-Agentic-Fundamentals__03-04-LangGraph-Production-Agents-03-1e84739a](../../Diagrams/Modules__03-Agentic-Fundamentals__03-04-LangGraph-Production-Agents-03-1e84739a.png)
+![Modules__03-Agentic-Fundamentals__03-03-LangGraph-Production-Agents-03-1e84739a](../../Diagrams/Modules__03-Agentic-Fundamentals__03-03-LangGraph-Production-Agents-03-1e84739a.png)
 
-![Modules__03-Agentic-Fundamentals__03-04-LangGraph-Production-Agents-03-1e84739a](../../Diagrams/Modules__03-Agentic-Fundamentals__03-04-LangGraph-Production-Agents-03-1e84739a.png)
+![Modules__03-Agentic-Fundamentals__03-03-LangGraph-Production-Agents-03-1e84739a](../../Diagrams/Modules__03-Agentic-Fundamentals__03-03-LangGraph-Production-Agents-03-1e84739a.png)
 
 ```mermaid
 stateDiagram-v2
@@ -1057,9 +1057,9 @@ stateDiagram-v2
 
 ## Mermaid Diagram — Sequence (Stream + Resume)
 
-![Modules__03-Agentic-Fundamentals__03-04-LangGraph-Production-Agents-04-0aa361d2](../../Diagrams/Modules__03-Agentic-Fundamentals__03-04-LangGraph-Production-Agents-04-0aa361d2.png)
+![Modules__03-Agentic-Fundamentals__03-03-LangGraph-Production-Agents-04-0aa361d2](../../Diagrams/Modules__03-Agentic-Fundamentals__03-03-LangGraph-Production-Agents-04-0aa361d2.png)
 
-![Modules__03-Agentic-Fundamentals__03-04-LangGraph-Production-Agents-04-0aa361d2](../../Diagrams/Modules__03-Agentic-Fundamentals__03-04-LangGraph-Production-Agents-04-0aa361d2.png)
+![Modules__03-Agentic-Fundamentals__03-03-LangGraph-Production-Agents-04-0aa361d2](../../Diagrams/Modules__03-Agentic-Fundamentals__03-03-LangGraph-Production-Agents-04-0aa361d2.png)
 
 ```mermaid
 sequenceDiagram
@@ -1206,7 +1206,7 @@ Draw checkpoint timeline for message → tool → interrupt → resume.
 
 ## Summary
 
-LangGraph production agents are **stateful, interruptible, streamable services**—not scripts. Master **StateGraph**, **MessagesState**, **checkpointing**, and **HITL resume** before multi-agent complexity ([05-01](../05-Multi-Agent/05-01-Multi-Agent-Orchestration.md)). Wrap compiled graphs in **FastAPI** with auth, timeouts, and observability; let Postgres hold threads while humans approve the irreversible steps ([03-03](03-03-Agentic-Design-Patterns.md)).
+LangGraph production agents are **stateful, interruptible, streamable services**—not scripts. Master **StateGraph**, **MessagesState**, **checkpointing**, and **HITL resume** before multi-agent complexity ([05-01](../05-Multi-Agent/05-01-Multi-Agent-Orchestration.md)). Wrap compiled graphs in **FastAPI** with auth, timeouts, and observability; let Postgres hold threads while humans approve the irreversible steps ([03-04](03-04-Agentic-Design-Patterns.md)).
 
 ---
 
@@ -1219,7 +1219,7 @@ LangGraph production agents are **stateful, interruptible, streamable services**
 | Streaming | https://langchain-ai.github.io/langgraph/concepts/streaming/ | Intermediate | 30 min | UX + debugging | stream_mode options |
 | Multi-Agent | https://langchain-ai.github.io/langgraph/concepts/multi_agent/ | Advanced | 40 min | When to split graphs | Supervisor; handoffs |
 | LangSmith | https://docs.langchain.com/langsmith/home | Intro | 25 min | Trace production graphs | Projects; evaluations |
-| Design Patterns (handbook) | [03-03](03-03-Agentic-Design-Patterns.md) | Intermediate | 50 min | Routing + HITL composition | Pattern catalog |
+| Design Patterns (handbook) | [03-04](03-04-Agentic-Design-Patterns.md) | Intermediate | 50 min | Routing + HITL composition | Pattern catalog |
 | Observability (handbook) | [08-02](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) | Intermediate | 45 min | OTel + LangSmith wiring | Traces; feedback |
 
 ---

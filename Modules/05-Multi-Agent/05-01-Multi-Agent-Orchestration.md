@@ -11,7 +11,7 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · lab 2.5h · tradeoff memo 1h) |
 | **Difficulty** | Intermediate (concepts) · Advanced (production orchestration) |
-| **Prerequisites** | [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [03-02 Tools & Memory](../03-Agentic-Fundamentals/03-02-Tools-Memory-Control-Flow.md) · [03-04 LangGraph Production Agents](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) |
+| **Prerequisites** | [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [03-02 Tools & Memory](../03-Agentic-Fundamentals/03-02-Tools-Memory-Control-Flow.md) · [03-03 LangGraph Production Agents](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) |
 | **Module** | 05 — Multi-Agent Orchestration |
 | **Related** | [05-02 Planner–Executor–Critic](05-02-Planner-Executor-Critic.md) · [05-03 Frameworks Comparison](05-03-Frameworks-CrewAI-AutoGen-LangGraph.md) · [08-02 Observability](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) · [07-01 MCP](../07-Protocols-MCP-A2A/07-01-MCP-Model-Context-Protocol.md) · [07-02 A2A](../07-Protocols-MCP-A2A/07-02-A2A-Agent-to-Agent.md) · [Architecture Index](../../Architecture Index.md) |
 
@@ -103,7 +103,7 @@ flowchart TB
 
 **Mental model:** Treat each agent as a **microservice with an LLM brain**. Same lessons apply: contracts, timeouts, idempotency, observability, failure isolation.
 
-Deep dive on single-agent foundations: [03-04 LangGraph Production Agents](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md).
+Deep dive on single-agent foundations: [03-03 LangGraph Production Agents](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md).
 
 ---
 
@@ -252,7 +252,7 @@ flowchart TD
 | Log **state diffs**, not full state every hop | Cost + PII control |
 | Per-agent success/failure counters | SLO per specialist |
 | Attribute spend by `agent_role` | FinOps for AI |
-| Link to checkpoints | Replay / debug ([03-04](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md)) |
+| Link to checkpoints | Replay / debug ([03-03](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md)) |
 
 Full stack: [08-02 Observability — LangSmith & OpenTelemetry](../08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md).
 

@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · lab 2h · attention walkthrough 1h) |
 | **Difficulty** | Intermediate (concepts) · Advanced (production tradeoffs) |
-| **Prerequisites** | Basic Python; matrix multiplication intuition; [00-01 GenAI From Scratch](../00-Foundations/00-01-AI-Engineering-Mindset.md) |
+| **Prerequisites** | Basic Python; matrix multiplication intuition; [00-01 GenAI From Scratch](../00-Foundations/00-01-GenAI-From-Scratch.md) |
 | **Module** | 01 — LLM Engineering |
-| **Related** | [01-02](01-02-Tokenization-Context-Windows.md) · [01-03](01-03-Inference-Serving-vLLM.md) · [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) · [Architecture Index](../../Architecture Index.md) |
+| **Related** | [01-02](01-02-Tokenization-Context-Windows.md) · [01-05](01-05-Inference-Serving-vLLM.md) · [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) · [Architecture Index](../../Architecture Index.md) |
 
 ---
 
@@ -55,7 +55,7 @@ If you skip this chapter and jump straight to prompting:
 
 | Business outcome | How transformer literacy changes decisions |
 |------------------|---------------------------------------------|
-| **Lower COGS** | Right-size model; cap context; use KV-cache-aware serving ([10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md)) |
+| **Lower COGS** | Right-size model; cap context; use KV-cache-aware serving ([10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md)) |
 | **Better latency SLOs** | Separate prefill vs decode; stream tokens; batch smartly |
 | **Fewer “model is broken” escalations** | Distinguish attention limits from RAG gaps from prompt issues |
 | **Credible architecture reviews** | Defend GPT-4-class vs open-weight vs embedding model choices |
@@ -382,14 +382,14 @@ Rough per-layer KV memory (bytes, both K and V):
 |--------|---------------------------|-------------------------|
 | Long chats | Latency accelerates as context grows | Cap history; summarize; sliding window |
 | Cost | You pay for prompt tokens once in prefill—but **long context still hurts decode** | Trim tool outputs; compress memory |
-| Batching | Variable-length contexts fragment batches | Continuous batching (vLLM) ([01-03](01-03-Inference-Serving-vLLM.md)) |
+| Batching | Variable-length contexts fragment batches | Continuous batching (vLLM) ([01-05](01-05-Inference-Serving-vLLM.md)) |
 | Multi-tenant | GPU RAM exhaustion | Max context quotas per tenant |
 
 #### When NOT to rely on “infinite cache”
 
 KV cache is **GPU RAM**. At 128K context × many concurrent sessions, you OOM before you finish the moral argument about context windows.
 
-See [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) for cost/latency playbooks.
+See [10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md) for cost/latency playbooks.
 
 ---
 
@@ -446,7 +446,7 @@ Demonstrates:
   - softmax attention weights
 
 NOT for production: no fused kernels, no KV cache, no GQA.
-For serving patterns see 01-03 and HuggingFace Transformers.
+For serving patterns see 01-05 and HuggingFace Transformers.
 """
 
 from __future__ import annotations
@@ -660,7 +660,7 @@ if __name__ == "__main__":
 | Model extraction | Larger models leak more capability via logits; rate-limit and watermark |
 | Side channels | Shared GPU batching can leak timing; isolate tenants for sensitive workloads |
 
-Architecture alone doesn’t secure systems—see [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) trust-zone preview and [00-03](../00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) for a worked example.
+Architecture alone doesn’t secure systems—see [00-01](../00-Foundations/00-01-GenAI-From-Scratch.md) trust-zone preview and [00-06](../00-Foundations/00-06-BankCo-Decision-Support-Warmup.md) for a worked example.
 
 ---
 
@@ -672,7 +672,7 @@ Architecture alone doesn’t secure systems—see [00-01](../00-Foundations/00-0
 | Fewer output tokens | Linear decode savings |
 | Smaller `d_model` / fewer layers | Direct throughput win |
 | GQA/MQA checkpoints | Less KV memory → more batch concurrency |
-| Speculative decoding | Draft model proposes tokens; target verifies ([01-03](01-03-Inference-Serving-vLLM.md)) |
+| Speculative decoding | Draft model proposes tokens; target verifies ([01-05](01-05-Inference-Serving-vLLM.md)) |
 
 **Profile prefill and decode separately.** Optimizing the wrong phase wastes engineering weeks.
 

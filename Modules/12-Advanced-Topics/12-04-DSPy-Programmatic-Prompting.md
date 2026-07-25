@@ -165,7 +165,7 @@ Often: **DSPy + RAG first**; LoRA if inference must drop long demos.
 
 ### 6) Production Serving
 
-Serialize compiled program (`dspy.save` / JSON state); load in FastAPI worker; pin LM to [01-03 vLLM](../01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) or API.
+Serialize compiled program (`dspy.save` / JSON state); load in FastAPI worker; pin LM to [01-05 vLLM](../01-LLM-Engineering/01-05-Inference-Serving-vLLM.md) or API.
 
 ---
 
@@ -305,7 +305,7 @@ Wire real retriever from [04-01](../04-RAG/04-01-RAG-Architecture.md). Promote v
 
 | Concern | Practice |
 |---------|----------|
-| Compile cost | Run offline in Ray job ([10-03](../10-Production-Infrastructure/10-03-Redis-Kafka-Ray.md)) |
+| Compile cost | Run offline in Ray job ([10-04](../10-Production-Infrastructure/10-04-Redis-Kafka-Ray.md)) |
 | LM pin | Same model at compile and serve |
 | Artifact versioning | Hash JSON in registry |
 | Recompile trigger | Model upgrade, eval drift |
@@ -320,7 +320,7 @@ Optimized demos must not include **secrets** from train logs. Red-team after com
 
 ## Performance
 
-ChainOfThought adds tokens — use Predict for latency-sensitive routes ([10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md)).
+ChainOfThought adds tokens — use Predict for latency-sensitive routes ([10-03](../10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md)).
 
 ---
 
@@ -389,7 +389,7 @@ Log `program_version`, `lm_model`, `metric_score_offline`, trace IDs.
 
 ```mermaid
 flowchart TB
-    subgraph CompileJob["Ray Compile Job 10-03"]
+    subgraph CompileJob["Ray Compile Job 10-04"]
       DS[Train JSONL]
       OP[BootstrapFewShot]
       ART[(dspy artifact S3)]

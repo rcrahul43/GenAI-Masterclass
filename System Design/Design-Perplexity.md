@@ -284,7 +284,7 @@ Invalidate answer cache on `recency_critical` queries detected by freshness clas
 | **Total to first token** | **< 2s p95** |
 | Research mode | 30s–5min; progressive source reveal |
 
-**Techniques:** speculative retrieval on query keystroke (extension); early source cards before synthesis; smaller generator for Quick mode; limit chunks per source ([10-04](../Modules/10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md)).
+**Techniques:** speculative retrieval on query keystroke (extension); early source cards before synthesis; smaller generator for Quick mode; limit chunks per source ([10-03](../Modules/10-Production-Infrastructure/10-03-Cost-Latency-Optimization.md)).
 
 ---
 

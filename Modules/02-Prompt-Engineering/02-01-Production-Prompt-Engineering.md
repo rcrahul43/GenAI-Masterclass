@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · lab 2.5h · eval setup 1h) |
 | **Difficulty** | Intermediate (techniques) · Advanced (eval-driven iteration) |
-| **Prerequisites** | [00-01 GenAI From Scratch](../00-Foundations/00-01-AI-Engineering-Mindset.md) · [01-05 Provider SDKs](../01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) |
+| **Prerequisites** | [00-01 GenAI From Scratch](../00-Foundations/00-01-GenAI-From-Scratch.md) · [01-03 Provider SDKs](../01-LLM-Engineering/01-03-Provider-SDKs-OpenAI-Claude-Gemini.md) |
 | **Module** | 02 — Prompt Engineering |
-| **Related** | [02-02 Structured Outputs & Tool Calling](02-02-Structured-Outputs-Tool-Calling.md) · [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [01-05 Provider SDKs](../01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) · [Architecture Index](../../Architecture Index.md) · [Study Plan](../../Study Plan.md) |
+| **Related** | [02-02 Structured Outputs & Tool Calling](02-02-Structured-Outputs-Tool-Calling.md) · [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [01-03 Provider SDKs](../01-LLM-Engineering/01-03-Provider-SDKs-OpenAI-Claude-Gemini.md) · [Architecture Index](../../Architecture Index.md) · [Study Plan](../../Study Plan.md) |
 
 ---
 
@@ -111,7 +111,7 @@ flowchart TB
 | **Developer** | Implementation instructions invisible to end user | Trusted (your engineering) | Tool schemas, JSON format, routing rules, feature flags |
 | **User** | Task request + end-user content | **Untrusted** | Customer message, pasted docs, uploaded text |
 
-OpenAI's Chat/Responses APIs support `system`, `developer`, and `user` roles. Anthropic uses `system` + `user`/`assistant`. Gemini uses `systemInstruction` + `contents`. See [01-05 Provider SDKs](../01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) for SDK mapping.
+OpenAI's Chat/Responses APIs support `system`, `developer`, and `user` roles. Anthropic uses `system` + `user`/`assistant`. Gemini uses `systemInstruction` + `contents`. See [01-03 Provider SDKs](../01-LLM-Engineering/01-03-Provider-SDKs-OpenAI-Claude-Gemini.md) for SDK mapping.
 
 #### Intuition
 
@@ -634,7 +634,7 @@ Do not include chain-of-thought unless STAGE config enables it.
 | Prompt drift | CI fails if `system.txt` changes without version bump |
 | Context limits | Cap few-shots; summarize long user payloads |
 | Multilingual | Separate few-shot sets per locale; don't assume English |
-| Provider differences | Abstract `build_messages()` per SDK ([01-05](../01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md)) |
+| Provider differences | Abstract `build_messages()` per SDK ([01-03](../01-LLM-Engineering/01-03-Provider-SDKs-OpenAI-Claude-Gemini.md)) |
 
 ---
 

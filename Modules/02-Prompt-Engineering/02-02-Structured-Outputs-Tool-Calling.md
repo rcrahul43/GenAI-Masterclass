@@ -11,9 +11,9 @@
 |------|-------|
 | **Estimated Time** | 6–7 hours (read 3h · lab 3h · provider comparison 1h) |
 | **Difficulty** | Intermediate (schemas) · Advanced (multi-provider tool loops) |
-| **Prerequisites** | [02-01 Production Prompt Engineering](02-01-Production-Prompt-Engineering.md) · [01-05 Provider SDKs](../01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) |
+| **Prerequisites** | [02-01 Production Prompt Engineering](02-01-Production-Prompt-Engineering.md) · [01-03 Provider SDKs](../01-LLM-Engineering/01-03-Provider-SDKs-OpenAI-Claude-Gemini.md) |
 | **Module** | 02 — Prompt Engineering |
-| **Related** | [02-01 Production Prompt Engineering](02-01-Production-Prompt-Engineering.md) · [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [01-05 Provider SDKs](../01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) · [Architecture Index](../../Architecture Index.md) · [Study Plan](../../Study Plan.md) |
+| **Related** | [02-01 Production Prompt Engineering](02-01-Production-Prompt-Engineering.md) · [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [01-03 Provider SDKs](../01-LLM-Engineering/01-03-Provider-SDKs-OpenAI-Claude-Gemini.md) · [Architecture Index](../../Architecture Index.md) · [Study Plan](../../Study Plan.md) |
 
 ---
 
@@ -294,7 +294,7 @@ Teach the model in developer prompt: "On `ACCOUNT_NOT_FOUND`, ask user to verify
 
 ### 6) OpenAI vs Anthropic vs Gemini (Practical Differences)
 
-Use [01-05 Provider SDKs](../01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) for installation and auth. Below is **integration-level** comparison for tool loops.
+Use [01-03 Provider SDKs](../01-LLM-Engineering/01-03-Provider-SDKs-OpenAI-Claude-Gemini.md) for installation and auth. Below is **integration-level** comparison for tool loops.
 
 | Dimension | OpenAI | Anthropic (Claude) | Google Gemini |
 |-----------|--------|-------------------|---------------|
@@ -641,7 +641,7 @@ def get_audit(trace_id: str) -> list[dict[str, Any]]:
 #### Provider adapter sketch (Anthropic)
 
 ```python
-# Anthropic tool loop — conceptual; see 01-05 for full SDK setup
+# Anthropic tool loop — conceptual; see 01-03 for full SDK setup
 # Docs: https://platform.claude.com/docs/en/docs/build-with-claude/tool-use
 
 def anthropic_tool_spec() -> list[dict]:
@@ -691,7 +691,7 @@ def gemini_tool_spec() -> list[dict]:
 | Schema drift | Pydantic generates schema; CI diff |
 | Tool sprawl | ≤10 tools per agent; compose sub-agents later |
 | Long tool outputs | Summarize before re-prompting |
-| Mixed providers | Internal `ToolSpec`; adapter per vendor ([01-05](../01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md)) |
+| Mixed providers | Internal `ToolSpec`; adapter per vendor ([01-03](../01-LLM-Engineering/01-03-Provider-SDKs-OpenAI-Claude-Gemini.md)) |
 | Strict mode limits | Some JSON Schema features unsupported—check provider docs |
 
 ---
@@ -930,7 +930,7 @@ Implement Anthropic or Gemini adapter for `get_account_balance`; run promptfoo a
 
 ## Stretch Project
 
-Port tool loop to [03-04 LangGraph](../03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) with checkpointing and HITL on write tools.
+Port tool loop to [03-03 LangGraph](../03-Agentic-Fundamentals/03-03-LangGraph-Production-Agents.md) with checkpointing and HITL on write tools.
 
 ---
 
