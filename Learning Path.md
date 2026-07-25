@@ -2,13 +2,25 @@
 
 > Role-specific sequencing on top of the **[Master Study Roadmap](Master%20Study%20Roadmap.md)** (Phases 0–11).
 
-**Related:** [Dashboard](Dashboard.md) · [Study Plan](Study%20Plan.md) · [TOC](TABLE_OF_CONTENTS.md) · [Career Guides](Career/)
+**Related:** [Dashboard](Dashboard.md) · [Study Plan](Study%20Plan.md) · [TOC](TABLE_OF_CONTENTS.md) · [Career Guides](Career/) · **[Track D — India AI Career Plan](Career/India-AI-Career-Learning-Plan.md)**
+
+---
+
+## Which track am I?
+
+| Your situation | Track |
+|----------------|-------|
+| Basic programming, little/no AI, want India GenAI jobs | **D** ← start here |
+| Already a strong engineer aiming Staff/Principal AI | **A** |
+| EM / manager path | **B** |
+| Tech lead moving toward EM | **C** |
 
 ---
 
 ## North star
 
-All tracks follow **Phases 0 → 11**. Difference is **depth** and **extra leadership hours**, not a different topic list.
+Tracks **A–C** follow **Phases 0 → 11** at Staff+/EM depth.  
+**Track D** uses the same handbook modules but a **slower, job-first filter** (skip Principal/EM overload in year 1).
 
 ```mermaid
 flowchart LR
@@ -120,6 +132,39 @@ Follow Track A phase order; every week add **2 hours** from `Leadership/` and `C
 
 ---
 
+## Track D — India AI Career (basic programming, no AI background)
+
+### Persona
+
+You are learning GenAI from scratch with **basic programming**. Goal: stay relevant ~10 years as India expands **data centers** and **enterprise AI** — not to pass Principal interviews in month 3.
+
+**Full month-by-month plan:** **[Career/India-AI-Career-Learning-Plan.md](Career/India-AI-Career-Learning-Plan.md)**
+
+### Sequence (summary)
+
+| Months | Focus | Handbook (must) | Skip / skim |
+|--------|-------|-----------------|-------------|
+| 1–2 | Python + GenAI ideas + first API | 00-01, 00-05, 00-06, light 00-04, skim 00-02 | BankCo deep dive optional |
+| 3–4 | LLM apps, cost, prompting, tools | 01-02, 01-05, 02-01, 02-02; intuition 01-01 | vLLM internals, all papers |
+| 5–6 | RAG + bounded agent | 04-01→04-03 skim, 03-01, 03-02, light 03-04 | Full multi-agent / A2A |
+| 7–8 | Evals, logs, safety | 08-01, skim 08-02, 08-03, skim 11-01 | Research eval literature |
+| 9–10 | Docker, cost, inference awareness | 10-01, Docker from 10-02, 10-04, skim 01-03 + Ollama | Kafka/Ray deep ops |
+| 11–12 | Specialize + job loop | One of: deeper RAG **or** agents **or** infra | Phase 11 EM; 6–8 designs |
+
+### Year-1 target roles (India)
+
+- GenAI / LLM Application Engineer  
+- RAG / AI Solutions Engineer (IT services & captives)  
+- Junior AI Platform / inference-curious engineer (if you pick infra path)
+
+### Success metrics
+
+- 2–3 GitHub demos (RAG FAQ, tool agent, Dockerized API) with cost + eval notes  
+- Comfortable explaining tokens, RAG, and when *not* to use an agent  
+- Applying with a live or recorded demo — not certificate collecting  
+
+---
+
 ## Fast-Track (Experienced LLM Engineers — 12–16 Weeks)
 
 Only if you already ship LLM features:
@@ -138,4 +183,6 @@ Still complete the Master Roadmap resource maps for papers and docs you have not
 
 ## Next Step
 
-Select Track A/B/C → mark it on [Dashboard](Dashboard.md) → open **[00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)** → then Phase 0 in [Master Study Roadmap](Master%20Study%20Roadmap.md).
+1. Select Track **A / B / C / D** on [Dashboard](Dashboard.md).  
+2. If **Track D**: open **[India AI Career Learning Plan](Career/India-AI-Career-Learning-Plan.md)**.  
+3. Everyone starts content at **[00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)**.

@@ -21,9 +21,10 @@ Sheet ↔ doc ↔ resource workflow: [`Tracker/SYNC-WORKFLOW.md`](Tracker/SYNC-W
 
 | Role | Outcome |
 |------|---------|
-| **Senior → Staff AI Engineer** | Design, build, evaluate, and operate agentic systems |
-| **Staff → Principal Engineer** | Lead architecture reviews and org-wide AI tradeoffs |
-| **Tech Lead → Engineering Manager** | Hire, govern risk, run AI roadmaps, pass EM interviews |
+| **Beginner → GenAI engineer (basic programming)** | Follow **[Track D](Career/India-AI-Career-Learning-Plan.md)** — India-aware 12-month job path |
+| **Senior → Staff AI Engineer** | Design, build, evaluate, and operate agentic systems (Track A) |
+| **Staff → Principal Engineer** | Lead architecture reviews and org-wide AI tradeoffs (Track A) |
+| **Tech Lead → Engineering Manager** | Hire, govern risk, run AI roadmaps, pass EM interviews (Track B/C) |
 
 ---
 
