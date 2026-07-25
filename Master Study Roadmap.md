@@ -43,13 +43,13 @@ The primary course (Track D) ships hireable GenAI builders. Staff+ roles also re
 |------:|------|------:|-----------------|------------------|
 | **0** | AI Foundations | 3 | 00-01 → 00-02 → 00-03 → 00-04 → 00-05 (+ optional 00-06) | Hello-LLM CLI + FastAPI warmup |
 | **1** | LLM Foundations | 2 | 01-01 → 01-05, 02-01, 02-02 | Multi-provider chat CLI + cost estimator |
-| **2** | Agent Fundamentals | 2 | 03-01 → 03-03 | Customer Support Agent |
+| **2** | Agent Fundamentals | 2 | 03-01 → 03-04 | Customer Support Agent |
 | **3** | RAG | 3 | 04-01 → 04-04 | Internal Company Knowledge Assistant |
-| **4** | Multi-Agent Systems | 3 | 05-01 → 05-03, 07-01 → 07-03 | Travel Planner + Research Assistant |
+| **4** | Multi-Agent Systems | 3 | 05-01 → 05-03, 07-01 → 07-04 | Travel Planner + Research Assistant |
 | **5** | Voice & Multimodal | 2 | 06-01, 06-02 | Voice Assistant + Document Reader |
 | **6** | LLMOps | 3 | 08-01 → 08-03 | Evaluation Dashboard + Agent Monitoring |
 | **7** | Fine-Tuning | 2 | 09-01 → 09-03 | Domain LoRA / QLoRA model |
-| **8** | Production AI Engineering | 3 | 10-01 → 10-03, 01-05 | Dockerized agent on Kubernetes |
+| **8** | Production AI Engineering | 3 | 10-01 → 10-04, 01-05 | Dockerized agent on Kubernetes |
 | **9** | AI Security | 1 | 11-01, 11-02 | Red-team + OWASP checklist |
 | **10** | System Design for AI | 3 | `System Design/` + 12-05, 12-06 | 6–8 design writeups |
 | **11** | Leadership & EM Prep | 4 | `Leadership/`, `Career/` | STAR bank + mocks + AI roadmap memo |
@@ -327,9 +327,9 @@ Planner–Executor · Supervisor · DAG · **MCP (depth)** · A2A · Shared Memo
 | 2 | [05-02 Planner–Executor–Critic](Modules/05-Multi-Agent/05-02-Planner-Executor-Critic.md) |
 | 3 | [05-03 Frameworks: CrewAI, AutoGen, LangGraph](Modules/05-Multi-Agent/05-03-Frameworks-CrewAI-AutoGen-LangGraph.md) |
 | 4 | [07-01 MCP](Modules/07-Protocols-MCP-A2A/07-01-MCP-Model-Context-Protocol.md) |
-| 5 | [07-04 MCP Production Patterns](Modules/07-Protocols-MCP-A2A/07-04-MCP-Production-Patterns.md) |
-| 6 | [07-02 A2A](Modules/07-Protocols-MCP-A2A/07-02-A2A-Agent-to-Agent.md) |
-| 7 | [07-03 Negotiation & Async Workflows](Modules/07-Protocols-MCP-A2A/07-03-Negotiation-Async-Workflows.md) |
+| 5 | [07-02 A2A](Modules/07-Protocols-MCP-A2A/07-02-A2A-Agent-to-Agent.md) |
+| 6 | [07-03 Negotiation & Async Workflows](Modules/07-Protocols-MCP-A2A/07-03-Negotiation-Async-Workflows.md) |
+| 7 | [07-04 MCP Production Patterns](Modules/07-Protocols-MCP-A2A/07-04-MCP-Production-Patterns.md) |
 
 ### Resource map
 
