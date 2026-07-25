@@ -4,7 +4,7 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · lab 2.5h · eval setup 1h) |
 | **Difficulty** | Intermediate (techniques) · Advanced (eval-driven iteration) |
-| **Prerequisites** | [00-01 AI Engineering Mindset](../00-Foundations/00-01-AI-Engineering-Mindset.md) · [01-05 Provider SDKs](../01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) |
+| **Prerequisites** | [00-01 GenAI From Scratch](../00-Foundations/00-01-AI-Engineering-Mindset.md) · [01-05 Provider SDKs](../01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) |
 | **Module** | 02 — Prompt Engineering |
 | **Related** | [02-02 Structured Outputs & Tool Calling](02-02-Structured-Outputs-Tool-Calling.md) · [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [01-05 Provider SDKs](../01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) · [Architecture Index](../../Architecture Index.md) · [Study Plan](../../Study Plan.md) |
 

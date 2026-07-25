@@ -2,7 +2,7 @@
 
 > Complete behavioral interview handbook: STAR methodology, ice breakers, philosophical methods, 24+ question patterns with sample outlines, and a story bank template.
 
-**Related:** [EM Interview Guide](../Career/EM-Interview-Guide.md) · [Principal/Staff Interview Guide](../Career/Principal-Staff-Interview-Guide.md) · [Leading AI Teams](Leading-AI-Teams.md) · [Hiring AI Engineers](Hiring-AI-Engineers.md) · [00-01 AI Engineering Mindset](../Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)
+**Related:** [EM Interview Guide](../Career/EM-Interview-Guide.md) · [Principal/Staff Interview Guide](../Career/Principal-Staff-Interview-Guide.md) · [Leading AI Teams](Leading-AI-Teams.md) · [Hiring AI Engineers](Hiring-AI-Engineers.md) · [00-01 GenAI From Scratch](../Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)
 
 ---
 

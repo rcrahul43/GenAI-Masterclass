@@ -37,7 +37,7 @@ You design and ship AI systems. Interviews test architecture, failure modes, cos
 
 | Phase | Weeks | Must-complete | Depth rule |
 |-------|-------|---------------|------------|
-| 0 Foundations | 1–2 | 00-04, 00-05, 00-06 | Implement every lab |
+| 0 Foundations | 1–3 | **00-01 first**, then 00-05, 00-06, 00-04 (+ 00-02/00-03 after first call) | Implement every lab |
 | 1 LLM | 3–4 | 01-*, 02-* | All four providers (incl. DeepSeek) |
 | 2 Agents | 5–6 | 03-* | **LangGraph** fluency required |
 | 3 RAG | 7–9 | 04-* | Hybrid + rerank mandatory |
@@ -70,7 +70,7 @@ You lead teams building AI products. Interviews test judgment, hiring, execution
 
 | Phase | Focus | Depth adjustment |
 |-------|-------|------------------|
-| 0 | Mindset + API literacy (skim math proofs) | Do FastAPI lab; skim linear algebra proofs |
+| 0 | GenAI from scratch + API literacy (skim math proofs) | Do 00-01 labs + FastAPI; skim linear algebra proofs |
 | 1–2 | LLM + agents judgment | Skim vLLM internals; run support agent demo |
 | 3–4 | RAG + multi-agent product sense | Critique designs; lighter framework API minutiae |
 | 5–6 | Multimodal UX + **eval/ship criteria** | Own metric trees and launch gates |
@@ -108,7 +108,7 @@ Follow Track A phase order; every week add **2 hours** from `Leadership/` and `C
 
 | Phase / module | Required before |
 |----------------|-----------------|
-| Phase 1 LLM | Phase 0 Python + APIs (or equivalent experience) |
+| Phase 1 LLM | Phase 0: 00-01 GenAI ideas + Python + APIs (or equivalent experience) |
 | Phase 2 Agents | Phase 1 structured outputs + tool calling |
 | Phase 3 RAG | Tokens + embeddings intuition (00-04, 01-02) |
 | Phase 4 Multi-Agent / MCP | Phase 2 agents + Phase 3 RAG basics |
@@ -138,4 +138,4 @@ Still complete the Master Roadmap resource maps for papers and docs you have not
 
 ## Next Step
 
-Select Track A/B/C → mark it on [Dashboard](Dashboard.md) → open **Phase 0** in [Master Study Roadmap](Master%20Study%20Roadmap.md) → Week 1 in [Weekly Planner](Weekly%20Planner.md).
+Select Track A/B/C → mark it on [Dashboard](Dashboard.md) → open **[00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)** → then Phase 0 in [Master Study Roadmap](Master%20Study%20Roadmap.md).

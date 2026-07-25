@@ -4,7 +4,7 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · lab 2.5h · policy memo 1h) |
 | **Difficulty** | Intermediate (rules + API) · Advanced (production governance) |
-| **Prerequisites** | [00-01 AI Engineering Mindset](00-01-AI-Engineering-Mindset.md) · [00-02 From Rules to Agents](00-02-From-Rules-to-Agents.md) · Python 3.11+ · basic FastAPI/Pydantic |
+| **Prerequisites** | [00-01 GenAI From Scratch](00-01-AI-Engineering-Mindset.md) · [00-02 From Rules to Agents](00-02-From-Rules-to-Agents.md) · [00-05](00-05-Python-for-AI-Engineering.md)/[00-06](00-06-APIs-for-AI-Engineering.md) or equivalent · Python 3.11+ · basic FastAPI/Pydantic |
 | **Module** | 00 — Foundations |
 | **Related** | [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [08-03 Guardrails Ship Criteria](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) · [Architecture Index](../../Architecture Index.md) |
 
@@ -34,7 +34,7 @@ Most “AI retention” pitches fail because they:
 - auto-send emails that violate offer authority and brand compliance,
 - and ignore that RMs—not models—carry the client relationship.
 
-This warm-up is the **smallest credible production slice** of BankCo’s internal retention assistant. It encodes lessons from [00-01](00-01-AI-Engineering-Mindset.md) (policy-first mindset) and [00-02](00-02-From-Rules-to-Agents.md) (when rules beat agents). It foreshadows [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) (agent loop with tools) and [08-03](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) (ship criteria for regulated assistive AI).
+This warm-up is the **smallest credible production slice** of BankCo’s internal retention assistant. It builds on [00-01](00-01-AI-Engineering-Mindset.md) (trust zones + when GenAI helps) and [00-02](00-02-From-Rules-to-Agents.md) (when rules beat agents). It foreshadows [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) (agent loop with tools) and [08-03](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) (ship criteria for regulated assistive AI).
 
 **Core thesis:** Decision-support agents **recommend**; humans **commit**. If your system can email a customer without an RM click, you built the wrong product class.
 
@@ -114,7 +114,7 @@ flowchart TB
     RM --> CRM
 ```
 
-**Trust zones** (from [00-01](00-01-AI-Engineering-Mindset.md)):
+**Trust zones** (previewed in [00-01](00-01-AI-Engineering-Mindset.md); applied here):
 
 | Zone | Components | Must never |
 |------|------------|------------|

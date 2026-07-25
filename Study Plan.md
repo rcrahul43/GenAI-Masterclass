@@ -25,7 +25,7 @@ Do **not** follow the old compressed module-week table as the primary path. Stud
 
 | Phase | Weeks | Theme | Flagship |
 |------:|------:|-------|----------|
-| **0** | 2 | Math · Python · APIs | Warmup FastAPI + embeddings util |
+| **0** | 2–3 | GenAI ideas · Python · APIs · Math | Hello-LLM CLI + FastAPI warmup |
 | **1** | 2 | LLM Foundations + multi-provider | Chat CLI + cost estimator |
 | **2** | 2 | Agent Fundamentals + LangGraph | Customer Support Agent |
 | **3** | 3 | RAG | Internal Knowledge Assistant |
@@ -66,8 +66,9 @@ Suggested weekday split from the Master Roadmap: Mon theory · Tue docs/papers �
 
 | Week | Phase | Modules / materials | Project slice | Interview focus |
 |-----:|------:|---------------------|---------------|-----------------|
-| 1 | 0 | 00-04 Math | Cosine / NN lab | Embeddings whiteboard |
+| 1 | 0 | **00-01 GenAI From Scratch** | Hello-LLM CLI (or mock) | AI vs ML vs GenAI vs LLM |
 | 2 | 0 | 00-05 Python, 00-06 APIs | FastAPI + Pydantic warmup | Async + typing |
+| 2b | 0 | 00-04 Math *(same week or +3 days)* | Cosine / NN lab | Embeddings whiteboard |
 | 3 | 1 | 01-01, 01-02 | Token cost CLI | Attention / KV cache |
 | 4 | 1 | 01-04, 01-05, 02-01, 02-02 | Multi-provider + tools (incl. DeepSeek) | Provider tradeoffs |
 | 5 | 2 | 03-01, 03-02 | Support agent v0 | Agent loop |
@@ -109,10 +110,11 @@ Suggested weekday split from the Master Roadmap: Mon theory · Tue docs/papers �
 
 ### Month 1 — Foundations → Single Agent
 
-**Goal:** Math/Python/API fluency + multi-provider LLM + bounded support agent.
+**Goal:** GenAI vocabulary + first model call + Python/API fluency + multi-provider LLM + bounded support agent.
 
 | Deliverable | Done when |
 |-------------|-----------|
+| Hello-LLM CLI | Chat call with roles + token usage (mock OK at first) |
 | Warmup API | Async FastAPI + Pydantic + cosine util |
 | Multi-provider CLI | OpenAI + Claude + Gemini + DeepSeek with cost report |
 | Support Agent | LangGraph + step budget + audit log |
@@ -236,5 +238,5 @@ Track in [Interview Tracker.md](Interview%20Tracker.md).
 ## Next Step
 
 1. Open **[Master Study Roadmap](Master%20Study%20Roadmap.md)** and bookmark Phase 0.  
-2. Start **Week 1**: [00-04 Mathematics for AI Engineering](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md).  
-3. Log progress on [Dashboard](Dashboard.md).
+2. Start **Week 1**: [00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md).  
+3. Then Python/APIs → math → Phase 1. Log progress on [Dashboard](Dashboard.md).

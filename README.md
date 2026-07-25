@@ -6,11 +6,12 @@ Production-grade, interview-ready knowledge base for Generative AI and Agentic A
 
 ## Quick start
 
-1. Open the north star: [`Master Study Roadmap.md`](Master%20Study%20Roadmap.md) (Phases 0–11).
-2. Pin [`Dashboard.md`](Dashboard.md) — session home.
-3. Track progress in [`Tracker/GenAI-Masterclass-Tracker.xlsx`](Tracker/GenAI-Masterclass-Tracker.xlsx).
-4. Execute week-by-week via [`Study Plan.md`](Study%20Plan.md).
-5. Open modules from **Modules → Open Doc** in the sheet (or browse `Modules/`).
+1. **Start from scratch:** [`Modules/00-Foundations/00-01-AI-Engineering-Mindset.md`](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) (GenAI vocabulary + first tiny LLM call).
+2. Open the north star: [`Master Study Roadmap.md`](Master%20Study%20Roadmap.md) (Phases 0–11).
+3. Pin [`Dashboard.md`](Dashboard.md) — session home.
+4. Track progress in [`Tracker/GenAI-Masterclass-Tracker.xlsx`](Tracker/GenAI-Masterclass-Tracker.xlsx).
+5. Execute week-by-week via [`Study Plan.md`](Study%20Plan.md).
+6. Open modules from **Modules → Open Doc** in the sheet (or browse `Modules/`).
 
 Sheet ↔ doc ↔ resource workflow: [`Tracker/SYNC-WORKFLOW.md`](Tracker/SYNC-WORKFLOW.md)
 
@@ -30,7 +31,7 @@ Sheet ↔ doc ↔ resource workflow: [`Tracker/SYNC-WORKFLOW.md`](Tracker/SYNC-W
 
 | Phase | Focus | Why it is mandatory for Staff+ |
 |------:|-------|--------------------------------|
-| 0 | Math · Python · APIs | Production agents are engineered services |
+| 0 | GenAI ideas · Python · APIs · Math | Learn from scratch, then engineer services |
 | 1 | LLM Foundations (+ DeepSeek) | Multi-provider fluency |
 | 2 | Agents + **LangGraph** | Stateful production agents |
 | 3 | RAG | Grounded enterprise knowledge |

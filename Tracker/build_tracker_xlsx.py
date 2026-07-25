@@ -56,7 +56,7 @@ SECTION_META = {
 }
 
 WEEK_PLAN = [
-    (0, "Foundations", "00-01|00-02|00-03", "BankCo decision agent", "AI judgment", 12),
+    (0, "Foundations", "00-01|00-05|00-06|00-04", "Hello-LLM CLI + FastAPI warmup", "GenAI vocabulary", 12),
     (1, "LLM Engineering I", "01-01|01-02", "Token cost estimator", "Transformer whiteboard", 12),
     (2, "LLM Engineering II", "01-03|01-04|01-05", "LiteLLM FastAPI router", "Inference tradeoffs", 12),
     (3, "Prompts & Tools", "02-01|02-02", "Structured router agent", "Tool-calling design", 12),
@@ -92,7 +92,8 @@ DESIGN_LINKS = {
 }
 
 PROJECTS = [
-    ("P01", "BankCo Decision Support", "Foundations Projects", "Mini", 0, "00-01, 00-03"),
+    ("P01", "Hello-LLM Explain-It Bot", "Foundations Projects", "Mini", 0, "00-01"),
+    ("P01b", "BankCo Decision Support", "Foundations Projects", "Mini", 0, "00-02, 00-03"),
     ("P02", "Token Cost Estimator", "LLM Projects", "Mini", 1, "01-02"),
     ("P03", "LiteLLM Gateway", "LLM Projects", "Mini", 2, "01-04, 01-05"),
     ("P04", "Structured Router Agent", "Agent Projects", "Intermediate", 3, "02-02, 03-03"),

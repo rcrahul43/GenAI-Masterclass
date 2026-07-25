@@ -10,7 +10,7 @@
 | **Remaining files** | 0 (core roadmap + modules) |
 | **Completion** | **Roadmap realignment complete** |
 | **Approx. word count** | ~220,000+ |
-| **Last updated** | 2026-07-20 |
+| **Last updated** | 2026-07-25 |
 
 ---
 
@@ -49,8 +49,14 @@ The handbook had drifted toward a compressed 16-week module sprint. It is now an
 3. Study Plan / Learning Path / Weekly Planner / Project Portfolio follow the phase ladder
 4. Resource Database expanded with books, YouTube, GitHub, and phase tags
 
+## From-scratch revision (2026-07-25)
+
+- **[00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)** rewritten as **GenAI From Scratch** (plain vocabulary, simple diagrams, Hello-LLM / mock labs).
+- Phase 0 order is now **00-01 → 00-05 → 00-06 → 00-04**, with **00-02 / 00-03 after** the first model call.
+- Dashboard, Study Plan, Weekly Planner, Learning Path, and README updated to match.
+
 ## Quality Notes
 
 - Modules follow the production handbook template (objectives → implementation → ops → interviews → resources).
 - Prefer **Master Study Roadmap** for sequencing; modules for depth.
-- Start studying from [`Dashboard.md`](Dashboard.md) → Phase 0.
+- Start studying from [`Dashboard.md`](Dashboard.md) → **[00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)**.

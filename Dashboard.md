@@ -30,12 +30,13 @@ Favorite / pin this page. Use it as your study home.
 
 ---
 
-## Phase 0 — start here
+## Phase 0 — start here (from scratch)
 
-1. [00-04 Mathematics for AI Engineering](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md)  
+1. **[00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)** ← begin here  
 2. [00-05 Python for AI Engineering](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md)  
 3. [00-06 APIs for AI Engineering](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md)  
-4. Skim [00-01 Mindset](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)
+4. [00-04 Mathematics for AI Engineering](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md)  
+5. After your first LLM call: [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) · optional [00-03](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md)
 
 Then Phase 1 → [01-01 Transformer](Modules/01-LLM-Engineering/01-01-Transformer-Architecture.md).
 

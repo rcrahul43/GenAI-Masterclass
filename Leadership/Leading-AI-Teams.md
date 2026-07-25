@@ -2,7 +2,7 @@
 
 > Premium handbook for Engineering Managers, Directors, and Staff+ ICs who lead AI product and platform teams without becoming demo-driven organizations.
 
-**Related:** [Hiring AI Engineers](Hiring-AI-Engineers.md) · [AI Governance & Metrics](AI-Governance-Strategy-Metrics.md) · [Behavioral STAR](Behavioral-STAR-Principal-EM.md) · [EM Interview Guide](../Career/EM-Interview-Guide.md) · [00-01 AI Engineering Mindset](../Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) · [08 Evaluation Lifecycle](../Modules/08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md)
+**Related:** [Hiring AI Engineers](Hiring-AI-Engineers.md) · [AI Governance & Metrics](AI-Governance-Strategy-Metrics.md) · [Behavioral STAR](Behavioral-STAR-Principal-EM.md) · [EM Interview Guide](../Career/EM-Interview-Guide.md) · [00-01 GenAI From Scratch](../Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) · [08 Evaluation Lifecycle](../Modules/08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md)
 
 ---
 

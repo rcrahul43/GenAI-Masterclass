@@ -825,7 +825,7 @@ Agent anatomy is **structured non-determinism**: the LLM proposes moves; tools a
 | LangGraph Persistence | https://langchain-ai.github.io/langgraph/concepts/persistence/ | Intermediate | 30 min | Checkpointing threads | Checkpointers; thread_id |
 | LangChain Tools | https://python.langchain.com/docs/concepts/tools/ | Intro | 20 min | Tool contracts for Act phase | Tool definition; binding |
 | ReAct Paper | https://arxiv.org/abs/2210.03629 | Intermediate | 45 min | Original Think-Act-Observe | Figures; prompting templates |
-| AI Engineering Mindset | [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) | Intro | 30 min | Agent equation + when not to agent | Agent equation; decision framework |
+| GenAI From Scratch | [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) | Intro | 30 min | Agent equation + when not to agent | Agent equation; product kit |
 | Structured Outputs & Tool Calling | [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) | Intermediate | 40 min | Schema contracts for Think phase | Tool schemas; JSON mode |
 
 ---

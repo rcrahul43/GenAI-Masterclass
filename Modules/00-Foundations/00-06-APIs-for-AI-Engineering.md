@@ -4,7 +4,7 @@
 |------|-------|
 | **Estimated Time** | 7–8 hours (read 2h · FastAPI lab 3h · protocol review 2h) |
 | **Difficulty** | Intermediate (API design) · Advanced (streaming, auth, service boundaries) |
-| **Prerequisites** | [00-01](00-01-AI-Engineering-Mindset.md) · [00-05](00-05-Python-for-AI-Engineering.md) · basic HTTP literacy |
+| **Prerequisites** | [00-01 GenAI From Scratch](00-01-AI-Engineering-Mindset.md) · [00-05](00-05-Python-for-AI-Engineering.md) · basic HTTP literacy |
 | **Module** | 00 — Foundations |
 | **Related** | [02-02](../02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) · [03-02](../03-Agentic-Fundamentals/03-02-Tools-Memory-Control-Flow.md) · [07-01](../07-Protocols-MCP-A2A/07-01-MCP-Model-Context-Protocol.md) · [08-02](../08-Evaluation-LLMOps/08-02-Observability-Tracing-Cost.md) |
 

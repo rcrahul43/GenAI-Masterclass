@@ -31,7 +31,7 @@
 
 | # | Title | File | Status |
 |---|-------|------|--------|
-| 1.1 | AI Engineering Mindset for Principal / Staff / EM | [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) | ✅ done |
+| 1.1 | GenAI From Scratch: Core Ideas | [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) | ✅ done |
 | 1.2 | From Rules → ML → Generative AI → Agents | [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) | ✅ done |
 | 1.3 | BankCo Decision-Support Warmup (Agent Mental Model) | [00-03](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) | ✅ done |
 | 1.4 | Mathematics for AI Engineering | [00-04](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) | ✅ done |
