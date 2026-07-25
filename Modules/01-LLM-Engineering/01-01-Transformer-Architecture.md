@@ -4,7 +4,7 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · lab 2h · attention walkthrough 1h) |
 | **Difficulty** | Intermediate (concepts) · Advanced (production tradeoffs) |
-| **Prerequisites** | Basic Python; matrix multiplication intuition; [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) mindset |
+| **Prerequisites** | Basic Python; matrix multiplication intuition; [00-01 GenAI From Scratch](../00-Foundations/00-01-AI-Engineering-Mindset.md) |
 | **Module** | 01 — LLM Engineering |
 | **Related** | [01-02](01-02-Tokenization-Context-Windows.md) · [01-03](01-03-Inference-Serving-vLLM.md) · [10-04](../10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) · [Architecture Index](../../Architecture Index.md) |
 
@@ -653,7 +653,7 @@ if __name__ == "__main__":
 | Model extraction | Larger models leak more capability via logits; rate-limit and watermark |
 | Side channels | Shared GPU batching can leak timing; isolate tenants for sensitive workloads |
 
-Architecture alone doesn’t secure systems—see [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) trust zones.
+Architecture alone doesn’t secure systems—see [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) trust-zone preview and [00-03](../00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) for a worked example.
 
 ---
 

@@ -1,12 +1,14 @@
-# 00-01 — AI Engineering Mindset for Principal, Staff & Engineering Managers
+# 00-01 — GenAI From Scratch: Core Ideas
+
+> **Filename note:** This file is still named `00-01-AI-Engineering-Mindset.md` for link stability. The chapter is the **beginner on-ramp**, not a Principal/EM judgment drill.
 
 | Meta | Value |
 |------|-------|
-| **Estimated Time** | 4–5 hours (read 2h · lab 2h · judgment memo 1h) |
-| **Difficulty** | Intermediate (conceptual) · Advanced (judgment drills) |
-| **Prerequisites** | Comfortable writing Python; basic HTTP/API literacy; no ML PhD required |
+| **Estimated Time** | 3–4 hours (read 1.5h · tiny labs 1.5h · notes 30–45 min) |
+| **Difficulty** | Beginner |
+| **Prerequisites** | Curiosity. Optional: you have used ChatGPT / Claude / Gemini as a user. No ML background required. |
 | **Module** | 00 — Foundations |
-| **Related** | [00-02](00-02-From-Rules-to-Agents.md) · [00-03](00-03-BankCo-Decision-Support-Warmup.md) · [00-04](00-04-Mathematics-for-AI-Engineering.md) · [00-05](00-05-Python-for-AI-Engineering.md) · [00-06](00-06-APIs-for-AI-Engineering.md) · [Architecture Index](../../Architecture Index.md) · [Leading AI Teams](../../Leadership/Leading-AI-Teams.md) · [Study Plan](../../Study Plan.md) |
+| **Related** | [00-05](00-05-Python-for-AI-Engineering.md) · [00-06](00-06-APIs-for-AI-Engineering.md) · [00-04](00-04-Mathematics-for-AI-Engineering.md) · [00-02](00-02-From-Rules-to-Agents.md) · [00-03](00-03-BankCo-Decision-Support-Warmup.md) · [01-01](../01-LLM-Engineering/01-01-Transformer-Architecture.md) · [01-05](../01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) · [Study Plan](../../Study%20Plan.md) · [Master Study Roadmap](../../Master%20Study%20Roadmap.md) |
 
 ---
 
@@ -14,721 +16,389 @@
 
 By the end of this chapter you will be able to:
 
-1. Distinguish **demo GenAI**, **LLM features**, and **production agentic systems**.
-2. Apply the equation **Agent = (Prompt + Tools + Memory) × LLM** as a design checklist.
-3. Decide **agentic vs deterministic** with an explicit decision framework.
-4. Frame AI work in terms of **cost, latency, reliability, safety, and evaluability**.
-5. Speak at Staff/Principal/EM interview altitude about AI judgment—not tools.
+1. Explain **AI → Machine Learning → Generative AI → LLM** in plain language.
+2. Describe what happens when you type a prompt and get a reply (tokens in → tokens out).
+3. Name the building blocks of GenAI products: **prompt, model, tools, memory, retrieval (RAG), evals**.
+4. Tell the difference between a **chat demo**, an **LLM feature**, and an **agent**.
+5. Run a **tiny first program** that calls an LLM API (or a mock if you have no key yet).
+6. Know **what to learn next** on this handbook’s progressive path.
 
 ---
 
-## Why This Topic Matters
+## Why Start Here
 
-Most teams can call an LLM API in an afternoon. Very few can operate a system that:
+Many GenAI tutorials jump straight into frameworks, bank case studies, or production architecture diagrams. That feels like landing in the middle of a movie.
 
-- behaves acceptably under distribution shift,
-- fails closed on unsafe actions,
-- stays within a token budget at 10× traffic,
-- can be debugged from traces six weeks later,
-- and can be defended in an architecture review.
+This chapter is the **opening scene**:
 
-**Principal/Staff engineers** are paid for the last five bullets. **Engineering Managers** are paid to staff, prioritize, and govern systems that require those bullets.
+- What GenAI *is*
+- What an LLM *does*
+- What you can build *first*
+- What this handbook will teach you *next*
 
-If you skip mindset and jump to frameworks, you will:
-
-- over-agent simple workflows,
-- under-invest in evals,
-- confuse “clever prompt” with “reliable product,”
-- and fail Staff/Principal interviews that probe tradeoffs.
+Production judgment (cost, safety, audit trails, multi-agent systems) comes later — after the vocabulary sticks. You will meet those ideas again in [00-02](00-02-From-Rules-to-Agents.md), [00-03](00-03-BankCo-Decision-Support-Warmup.md), and Phase 2+.
 
 ---
 
-## Business Impact
-
-| Business outcome | How mindset changes decisions |
-|------------------|-------------------------------|
-| **Faster time-to-value** | Start with thinnest reliable slice; avoid multi-agent until single-agent fails |
-| **Lower COGS** | Route easy tasks to small/cheap models; cache; constrain tools |
-| **Fewer incidents** | Design for non-determinism, tool failure, prompt injection |
-| **Higher trust** | Citations, abstain logic, human-in-the-loop on irreversible actions |
-| **Hireable talent signal** | Candidates who talk failure modes beat candidates who recite framework names |
-
----
-
-## Architecture Overview
-
-Production GenAI is not “a model.” It is a **sociotechnical system**:
-
-![Modules__00-Foundations__00-01-AI-Engineering-Mindset-01-f13d1682](../../Diagrams/Modules__00-Foundations__00-01-AI-Engineering-Mindset-01-f13d1682.png)
+## The Progressive Map (keep this in mind)
 
 ```mermaid
-flowchart TB
-    subgraph Product
-      U[User / Upstream System]
-      UX[UX + Policy Surface]
-    end
-    subgraph AI_Runtime["AI Runtime"]
-      G[API Gateway / Auth]
-      R[Router / Policy Engine]
-      A[Agent Orchestrator]
-      T[Tool Layer]
-      M[Memory / State]
-      K[Retrieval / RAG]
-      L[Model Providers]
-    end
-    subgraph Control_Plane["Control Plane"]
-      E[Eval Harness]
-      O[Observability]
-      S[Safety Guardrails]
-      C[Cost Controls]
-      H[Human Review]
-    end
-    U --> UX --> G --> R --> A
-    A --> T
-    A --> M
-    A --> K
-    A --> L
-    A --> S
-    A --> O
-    E --> A
-    C --> R
-    H --> A
+flowchart LR
+    A[You are here<br/>00-01 Ideas] --> B[Python + APIs<br/>00-05 · 00-06]
+    B --> M[Math intuition<br/>00-04]
+    M --> R[Rules → Agents<br/>00-02 · 00-03]
+    R --> C[How LLMs work<br/>Phase 1]
+    C --> D[Prompts + tools<br/>Phase 1–2]
+    D --> E[RAG + Agents<br/>Phase 2–3]
+    E --> F[Production systems<br/>Phase 4+]
 ```
 
-**Mental model:** Treat the LLM as a **probabilistic CPU**. Tools are syscalls. Memory is RAM + disk. RAG is networked filesystem. Evals are unit/integration tests. Guardrails are SELinux. Observability is APM.
+**Rule for this chapter:** If a diagram or term feels abstract, skip the detail and keep the one-sentence meaning. Depth comes in later modules.
 
 ---
 
 ## Core Concepts
 
-### 1) Three Levels of GenAI Work
+### 1) AI, ML, GenAI, LLM — the nested dolls
 
-#### Definition
+| Term | Plain meaning | Everyday example |
+|------|---------------|------------------|
+| **AI** | Software that does tasks that used to need human-like judgment | Spam filter, face unlock, chess engine |
+| **Machine Learning (ML)** | AI that learns patterns from data instead of only hand-written rules | “This email looks like spam” from millions of labeled emails |
+| **Generative AI (GenAI)** | ML that *creates* new content (text, images, code, audio) | Write an email draft; generate an image |
+| **Large Language Model (LLM)** | A GenAI model trained to predict the next piece of text | ChatGPT, Claude, Gemini, DeepSeek |
 
-| Level | Definition |
-|-------|------------|
-| **L1 Demo** | Notebook or UI that shows a happy path |
-| **L2 Feature** | LLM call embedded in a product path with basic logging |
-| **L3 System** | Orchestration + tools + memory + retrieval + evals + safety + cost + on-call |
+```mermaid
+flowchart TB
+    AI[Artificial Intelligence]
+    ML[Machine Learning]
+    GEN[Generative AI]
+    LLM[Large Language Models]
+    AI --> ML --> GEN --> LLM
+```
 
-#### Intuition
-
-L1 impresses stakeholders. L2 ships. L3 survives contact with customers and auditors.
-
-#### When to use each
-
-- L1: discovery spikes (≤1 week), never customer-critical.
-- L2: low-risk assistive features (drafting, summarization) with easy human override.
-- L3: anything that routes money, PII, medical/legal advice, or irreversible actions.
-
-#### Interview discussion
-
-> “We don’t need an agent platform for a rewrite button. We do need L3 for an agent that refunds customers.”
+**Interview-ready one-liner:**  
+> “An LLM is a generative model specialized for language. GenAI is broader (images, audio, video). ML is broader still. AI is the umbrella.”
 
 ---
 
-### 2) The Agent Equation
+### 2) What an LLM actually does
 
-#### Definition
+An LLM does **not** “look up answers in a database” by default. It predicts **likely next tokens** given the text so far — like an extremely well-trained autocomplete.
+
+| Word | Meaning |
+|------|---------|
+| **Token** | A chunk of text the model reads/writes (often ~¾ of a word, sometimes a whole word or punctuation) |
+| **Prompt / input** | The text (and sometimes images) you send the model |
+| **Completion / output** | The tokens the model generates in reply |
+| **Context window** | How much text the model can consider at once (input + output budget) |
+| **Temperature** | How “adventurous” sampling is (low ≈ safer/more repetitive; high ≈ more varied) |
+
+```mermaid
+flowchart LR
+    U[Your prompt] --> T[Split into tokens]
+    T --> M[LLM predicts next tokens]
+    M --> O[Reply text]
+```
+
+**Intuition:** You give the model a situation and instructions. It continues in a way that *sounds* right based on training. That is powerful — and also why it can invent plausible falsehoods (**hallucinations**).
+
+---
+
+### 3) The chat you already know
+
+Products like ChatGPT wrap an LLM in a **conversation UI**:
+
+1. System message (optional): “You are a helpful tutor…”
+2. User message: your question
+3. Assistant message: the model’s reply
+4. Next turn includes prior messages so it feels like memory
+
+```mermaid
+sequenceDiagram
+    participant You
+    participant App as Chat app
+    participant LLM as Language model
+
+    You->>App: "Explain tokens simply"
+    App->>LLM: system + history + your message
+    LLM-->>App: generated reply tokens
+    App-->>You: readable answer
+```
+
+Under the hood it is still: **text in → model → text out**. The app adds history, formatting, safety filters, and billing.
+
+---
+
+### 4) From demo → feature → system (without the enterprise maze)
+
+You will see three levels throughout this handbook:
+
+| Level | What it is | Example |
+|-------|------------|---------|
+| **L1 Demo** | Notebook or chat that works on a happy path | “Summarize this paragraph” in a Colab |
+| **L2 Feature** | LLM call inside a real product path | “Draft reply” button in a support tool |
+| **L3 System** | Feature + tools + memory + retrieval + evals + safety + cost controls | Support agent that looks up orders, abstains when unsure, logs everything |
+
+**For now:** Build L1 until the ideas feel boring. Then L2. Only then chase L3.
+
+---
+
+### 5) The pieces of a GenAI product (simple kit)
+
+When people say “we built an AI product,” they usually assembled some of these:
+
+| Piece | Job | Beginner analogy |
+|-------|-----|------------------|
+| **Prompt** | Instructions + task | A recipe card for the model |
+| **Model (LLM)** | Language / reasoning engine | The cook |
+| **Tools** | Let the model call APIs, search, calc, etc. | Kitchen appliances |
+| **Memory** | Keep state across steps or sessions | Scratchpad / customer file |
+| **RAG (retrieval)** | Fetch relevant docs before answering | Looking up the employee handbook before answering HR questions |
+| **Evals** | Tests that check quality over time | Unit tests + taste tests |
+
+A compact way to remember agents (you will use this equation for months):
 
 \[
 \text{Agent} = (\text{Prompt} + \text{Tools} + \text{Memory}) \times \text{LLM}
 \]
 
-The multiplication sign means: **without a capable model, the sum collapses; without the parentheses, the model cannot act reliably.**
-
-#### Mental Model
-
-| Component | Job | Failure if missing |
-|-----------|-----|--------------------|
-| **Prompt** | Goals, constraints, output contract | Drift, verbosity, unsafe tone |
-| **Tools** | Act on the world / fetch truth | Hallucinated actions & facts |
-| **Memory** | Continuity across steps/sessions | Loops, amnesia, repeated spend |
-| **LLM** | Reason / plan / select | Brittle rules or dumb automation |
-
-#### Why it exists
-
-LLMs alone are text transformers. Products need **grounding** (tools/RAG), **state** (memory), and **contracts** (prompts/schemas).
-
-#### When NOT to use a full agent
-
-- Pure classification with a stable taxonomy → fine-tuned classifier or structured LLM call.
-- Deterministic workflow with known steps → orchestration engine / rules / BPMN.
-- Single document rewrite → one-shot prompt.
-
----
-
-### 3) Agentic vs Deterministic Decision Framework
-
-![Modules__00-Foundations__00-01-AI-Engineering-Mindset-02-6e5ec46d](../../Diagrams/Modules__00-Foundations__00-01-AI-Engineering-Mindset-02-6e5ec46d.png)
+**Read it as:** The model is the multiplier. Without tools/memory/clear prompts, you mostly have a chatbot. Without a capable model, the rest cannot reason well.
 
 ```mermaid
-flowchart TD
-    S[New capability request] --> Q1{Is the procedure fully known and stable?}
-    Q1 -->|Yes| DET[Deterministic workflow / rules / code]
-    Q1 -->|No| Q2{Does success require judgment over messy language or tools?}
-    Q2 -->|No| DET
-    Q2 -->|Yes| Q3{Can errors be cheaply reversed or reviewed?}
-    Q3 -->|No| HITL[Agent + Human-in-the-loop + strict tools]
-    Q3 -->|Yes| Q4{Is latency SLO tight and traffic high?}
-    Q4 -->|Yes| HYB[Hybrid: deterministic spine + LLM edges]
-    Q4 -->|No| AG[Agentic system with evals]
+flowchart TB
+    P[Prompt] --> A[Agent]
+    T[Tools] --> A
+    M[Memory] --> A
+    A --> L[LLM]
+    L --> Out[Actions + answers]
 ```
 
-#### Production rule of thumb (2-of-N style judgment)
-
-Use an **agent** when at least **2 of these 3** are true:
-
-1. Inputs are unstructured / ambiguous.
-2. Tool choice or plan must vary by instance.
-3. The business accepts probabilistic quality **with** measurement.
-
-If 0–1 are true, prefer deterministic systems.
+You do **not** need a full agent for every task. Many great products are one well-designed prompt + one API call.
 
 ---
 
-### 4) The Four Engineering Currencies
+### 6) When GenAI helps — and when it does not
 
-Every Principal-level AI decision spends one currency to buy another:
+| Prefer GenAI when… | Prefer normal code / rules when… |
+|--------------------|----------------------------------|
+| Language is messy or open-ended | Steps are known and stable |
+| You need drafts, summaries, extraction | Exact math, billing, eligibility |
+| Judgment over ambiguous text | Must be identical every time |
+| Humans can review risky outputs | Mistakes are expensive and hard to reverse |
 
-| Currency | Unit examples | Typical trade |
-|----------|---------------|---------------|
-| **Quality** | task success, groundedness | ↑ quality often ↑ cost/latency |
-| **Latency** | p50/p95 TTFT, E2E | Agents and critics hurt latency |
-| **Cost** | $/1K tokens, tool $/call, GPU-hr | Larger models & long contexts explode cost |
-| **Risk** | safety incidents, data leakage | Autonomy ↑ risk unless controls ↑ |
+**Starter rule of thumb:**  
+Use **code for decisions that must be right**. Use **LLMs for language and judgment over text**. Combine them often (rules decide; LLM drafts the email).
 
-**Staff interview move:** Always name which currency you optimize and which you spend.
-
----
-
-### 5) Non-Determinism Is a First-Class Requirement
-
-#### Definition
-
-Same input can yield different outputs across runs (sampling, model updates, tool flakiness).
-
-#### How to engineer for it
-
-| Technique | Purpose |
-|-----------|---------|
-| Structured outputs / schemas | Reduce shape variance |
-| Temperature / seed policies | Control creativity where needed |
-| Idempotent tools | Safe retries |
-| Checkpointing | Resume without duplicating side effects |
-| Golden evals | Detect silent model regressions |
-| Version pins | Know what changed |
-
-#### When NOT to “fix” non-determinism with temperature=0 alone
-
-Temperature 0 reduces variance but does **not** eliminate provider-side changes, retrieval shifts, or tool nondeterminism.
+That hybrid idea returns in [00-02](00-02-From-Rules-to-Agents.md) and the BankCo warmup [00-03](00-03-BankCo-Decision-Support-Warmup.md) — after you can call a model confidently.
 
 ---
 
-### 6) EM vs Principal Lenses (Same System, Different Questions)
+### 7) Four things every GenAI builder watches
 
-| Lens | Principal / Staff asks | EM asks |
-|------|------------------------|---------|
-| Architecture | What are trust boundaries? | Who owns on-call and SLOs? |
-| Quality | What eval gates ship? | What is the customer promise? |
-| Cost | What’s $/successful task? | What’s margin impact at scale? |
-| People | What skills are missing? | Who do we hire / train this quarter? |
-| Risk | What’s blast radius? | What’s governance / audit story? |
+Even as a beginner, notice these four “currencies”:
+
+| Currency | Question you ask |
+|----------|------------------|
+| **Quality** | Did it solve the user’s task? |
+| **Latency** | Was it fast enough? |
+| **Cost** | What did tokens / tools cost? |
+| **Risk** | Could it leak data, mislead, or take a bad action? |
+
+You do not need dashboards yet. Just practice naming which currency you care about in each lab.
 
 ---
 
-## Implementation
+## Implementation — Your first LLM call
 
-### Production-shaped skeleton: decision service (not a chatbot)
+Goal: feel the request/response loop. No FastAPI, no banks, no agents.
 
-This FastAPI service encodes the mindset: **policy first**, model second, audit always.
+### Option A — Real API (OpenAI-compatible)
+
+1. Create an API key from a provider (OpenAI, or another OpenAI-compatible endpoint).
+2. Install the SDK:
+
+```bash
+pip install openai
+export OPENAI_API_KEY="your_key_here"
+```
+
+3. Run:
 
 ```python
-"""Bank-style decision-support API skeleton.
-
-Run:
-  uvicorn app:app --reload
-
-Env:
-  OPENAI_API_KEY=...
-"""
-
-from __future__ import annotations
+"""hello_llm.py — smallest useful GenAI program."""
 
 import os
-import uuid
-from datetime import datetime, timezone
-from enum import Enum
-from typing import Any
+from openai import OpenAI
 
-from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, Field, field_validator
+client = OpenAI()  # reads OPENAI_API_KEY from the environment
 
-# Optional: swap to real provider later
-try:
-    from openai import OpenAI
-except ImportError:  # pragma: no cover
-    OpenAI = None  # type: ignore
+response = client.chat.completions.create(
+    model="gpt-4.1-mini",  # or another small/cheap chat model you have access to
+    messages=[
+        {
+            "role": "system",
+            "content": "You explain technical ideas to beginners in 3 short bullets.",
+        },
+        {
+            "role": "user",
+            "content": "What is a token in an LLM?",
+        },
+    ],
+    temperature=0.2,
+)
 
+print(response.choices[0].message.content)
+print("---")
+print("prompt tokens:", response.usage.prompt_tokens)
+print("completion tokens:", response.usage.completion_tokens)
+```
 
-class RiskLevel(str, Enum):
-    LOW = "low"
-    MEDIUM = "medium"
-    HIGH = "high"
-    SEVERE = "severe"
+**What to notice**
 
+- `messages` = the chat format from Concept 3.
+- `temperature=0.2` = more focused replies.
+- `usage` = you are already measuring **cost inputs** (tokens).
 
-class OfferType(str, Enum):
-    NONE = "none"
-    FEE_WAIVER = "fee_waiver"
-    POINTS_BONUS = "points_bonus"
-    RETENTION_APR = "retention_apr"
-    HUMAN_OUTREACH = "human_outreach"
+### Option B — No API key yet (offline mock)
 
+```python
+"""hello_llm_mock.py — practice the shape of a call without a key."""
 
-class CustomerSignals(BaseModel):
-    customer_id: str
-    days_to_renewal: int = Field(ge=0, le=365)
-    complaint_count_90d: int = Field(ge=0)
-    nps: int | None = Field(default=None, ge=0, le=10)
-    spend_drop_pct: float = Field(ge=0, le=100)
-    severe_flags: list[str] = Field(default_factory=list)
-
-    @field_validator("customer_id")
-    @classmethod
-    def non_empty(cls, v: str) -> str:
-        if not v.strip():
-            raise ValueError("customer_id required")
-        return v.strip()
-
-
-class Recommendation(BaseModel):
-    recommendation_id: str
-    customer_id: str
-    risk_level: RiskLevel
-    offer: OfferType
-    rationale: list[str]
-    email_draft: str | None
-    requires_human_approval: bool
-    model_used: str | None
-    created_at: datetime
-
-
-class AuditEvent(BaseModel):
-    event_id: str
-    recommendation_id: str
-    actor: str
-    action: str
-    payload: dict[str, Any]
-    ts: datetime
-
-
-app = FastAPI(title="Decision Support API", version="1.0.0")
-AUDIT_LOG: list[AuditEvent] = []
-
-
-def apply_risk_policy(signals: CustomerSignals) -> tuple[RiskLevel, list[str]]:
-    """Deterministic spine: Severe Signal rule + 2-of-N rule."""
-    reasons: list[str] = []
-
-    # Severe Signal rule — short-circuit
-    if signals.severe_flags:
-        reasons.append(f"severe_flags={signals.severe_flags}")
-        return RiskLevel.SEVERE, reasons
-
-    votes = 0
-    if signals.complaint_count_90d >= 2:
-        votes += 1
-        reasons.append("complaint_count_90d>=2")
-    if signals.nps is not None and signals.nps <= 6:
-        votes += 1
-        reasons.append("nps<=6")
-    if signals.spend_drop_pct >= 30:
-        votes += 1
-        reasons.append("spend_drop_pct>=30")
-    if 30 <= signals.days_to_renewal <= 90:
-        votes += 1
-        reasons.append("in_renewal_window_30_90")
-
-    # 2-of-N rule
-    if votes >= 3:
-        return RiskLevel.HIGH, reasons
-    if votes == 2:
-        return RiskLevel.MEDIUM, reasons
-    return RiskLevel.LOW, reasons
-
-
-def select_offer(risk: RiskLevel) -> OfferType:
-    """Offer Policy — compliance-friendly mapping (deterministic)."""
-    return {
-        RiskLevel.LOW: OfferType.NONE,
-        RiskLevel.MEDIUM: OfferType.POINTS_BONUS,
-        RiskLevel.HIGH: OfferType.RETENTION_APR,
-        RiskLevel.SEVERE: OfferType.HUMAN_OUTREACH,
-    }[risk]
-
-
-def draft_email_with_llm(customer_id: str, offer: OfferType, reasons: list[str]) -> str | None:
-    """LLM only on the edge: drafting. Never decides eligibility."""
-    if offer in (OfferType.NONE, OfferType.HUMAN_OUTREACH):
-        return None
-    if OpenAI is None or not os.getenv("OPENAI_API_KEY"):
-        return (
-            f"Hello — regarding account {customer_id}, we can offer {offer.value}. "
-            f"Drivers: {', '.join(reasons)}. (offline draft)"
-        )
-
-    client = OpenAI()
-    prompt = (
-        "Write a short, compliant retention email draft. No promises beyond the offer. "
-        f"Offer={offer.value}. Reasons={reasons}. Customer={customer_id}."
-    )
-    resp = client.responses.create(model="gpt-4.1-mini", input=prompt)
-    return resp.output_text
-
-
-def audit(recommendation_id: str, actor: str, action: str, payload: dict[str, Any]) -> None:
-    AUDIT_LOG.append(
-        AuditEvent(
-            event_id=str(uuid.uuid4()),
-            recommendation_id=recommendation_id,
-            actor=actor,
-            action=action,
-            payload=payload,
-            ts=datetime.now(timezone.utc),
-        )
+def fake_chat(messages: list[dict[str, str]]) -> str:
+    user = next(m["content"] for m in messages if m["role"] == "user")
+    return (
+        "Mock reply (no API key):\n"
+        f"- You asked: {user!r}\n"
+        "- In a real call, an LLM would continue this conversation with tokens.\n"
+        "- Next step: set OPENAI_API_KEY and run hello_llm.py."
     )
 
 
-@app.post("/v1/retention/recommend", response_model=Recommendation)
-def recommend(signals: CustomerSignals) -> Recommendation:
-    risk, reasons = apply_risk_policy(signals)
-    offer = select_offer(risk)
-    rec_id = str(uuid.uuid4())
-
-    email = draft_email_with_llm(signals.customer_id, offer, reasons)
-    requires_hitl = risk in (RiskLevel.HIGH, RiskLevel.SEVERE) or offer == OfferType.HUMAN_OUTREACH
-
-    rec = Recommendation(
-        recommendation_id=rec_id,
-        customer_id=signals.customer_id,
-        risk_level=risk,
-        offer=offer,
-        rationale=reasons,
-        email_draft=email,
-        requires_human_approval=requires_hitl,
-        model_used="gpt-4.1-mini" if email and os.getenv("OPENAI_API_KEY") else None,
-        created_at=datetime.now(timezone.utc),
-    )
-    audit(rec_id, actor="system", action="recommend", payload=rec.model_dump(mode="json"))
-    return rec
-
-
-@app.post("/v1/retention/{recommendation_id}/approve")
-def approve(recommendation_id: str, approver: str = "rm_user") -> dict[str, str]:
-    if not any(a.recommendation_id == recommendation_id for a in AUDIT_LOG):
-        raise HTTPException(status_code=404, detail="unknown recommendation_id")
-    audit(recommendation_id, actor=approver, action="approve", payload={})
-    return {"status": "approved", "recommendation_id": recommendation_id}
+messages = [
+    {"role": "system", "content": "Be concise."},
+    {"role": "user", "content": "What is Generative AI?"},
+]
+print(fake_chat(messages))
 ```
 
-#### Why this implementation embodies the mindset
-
-1. **Deterministic spine** decides risk/offer (auditable, testable).
-2. **LLM edge** only drafts language.
-3. **HITL** for high blast-radius paths.
-4. **Audit log** is not optional telemetry—it is the product.
-
----
-
-## Production Considerations
-
-| Concern | Practice |
-|---------|----------|
-| Model swaps | Never let model change change eligibility rules |
-| Prompt drift | Version prompts; store hash in audit |
-| Provider outage | Draft fallback template; queue retries |
-| Compliance | Separate “decision” from “wording” |
-| Ownership | Name a DRI for policy tables vs model prompts |
-
----
-
-## Security
-
-| Threat | Control |
-|--------|---------|
-| Prompt injection via customer notes | Do not let free text alter offer policy; sanitize into features |
-| Data leakage in drafts | Redact PAN/SSN before LLM; minimize PII in prompts |
-| Privilege abuse | Approvals require authn/authz; no auto-send from LLM |
-| Tool overreach | No payment/refund tools without dual control |
-
-Deep dive later: [11-01 OWASP LLM Top 10](../11-Security-Safety/11-01-OWASP-LLM-Top-10.md)
-
----
-
-## Performance
-
-| Path | Target mindset |
-|------|----------------|
-| Policy evaluation | Microseconds–milliseconds (local code) |
-| LLM draft | Hundreds of ms–seconds (async OK) |
-| RM notification | Eventual; never block eligibility |
-
-**Rule:** Keep money/compliance paths off the LLM critical path when possible.
-
----
-
-## Cost
-
-| Lever | Effect |
-|-------|--------|
-| Deterministic eligibility | $0 model cost on decision |
-| Small model for draft | 5–20× cheaper than frontier |
-| Cache drafts by (offer, reason_hash) | Cuts repeat spend |
-| Don’t multi-agent a policy table | Avoids token explosions |
-
----
-
-## Scalability
-
-Scale **policy + audit + queues** first. Scale **LLM concurrency** second. Multi-agent orchestration is a last resort for this class of problem.
-
----
-
-## Failure Modes
-
-| Failure | Symptom | Mitigation |
-|---------|---------|------------|
-| Policy encoded in prompt | Inconsistent offers | Move policy to code/tables |
-| Autopilot send | Wrong customer emailed | HITL + allowlist |
-| Silent model change | Tone/compliance drift | Pin versions + eval suite |
-| Tooling for everything | Latency/cost blowups | Start tool-poor |
-| No abstain | Confident nonsense | Explicit “insufficient signal” |
-
----
-
-## Observability
-
-Minimum telemetry for any AI feature:
-
-```text
-trace_id, customer_id, policy_version, prompt_version, model,
-risk_level, offer, latency_ms, token_in, token_out, cost_usd,
-hitl_required, hitl_decision, tool_errors
-```
-
-If you cannot answer “why this offer yesterday?”, you are not production-ready.
-
----
-
-## Debugging
-
-| Question | Where to look |
-|----------|---------------|
-| Wrong offer? | Policy unit tests + input signals |
-| Bad email tone? | Prompt version + sample gallery |
-| Spike in cost? | Token fields + cache hit rate |
-| RM ignored recommendations? | Product analytics, not model quality alone |
-
----
-
-## Common Mistakes
-
-1. Starting with multi-agent frameworks for a rules problem.
-2. Letting the LLM invent discounts.
-3. Measuring only “demo wow,” never task success.
-4. No ownership of prompts/policies as code.
-5. Treating temperature as a safety control.
-
----
-
-## Tradeoffs
-
-| Choice | Upside | Downside |
-|--------|--------|----------|
-| Deterministic spine + LLM edge | Auditability, lower risk | Less “smart” flexibility |
-| Fully agentic eligibility | Flexible | Compliance nightmare |
-| HITL always | Safe | Slow, costly ops |
-| Full autonomy | Fast | Incident-prone |
-
----
-
-## Architecture Diagram
-
-![Modules__00-Foundations__00-01-AI-Engineering-Mindset-03-7e6e53d8](../../Diagrams/Modules__00-Foundations__00-01-AI-Engineering-Mindset-03-7e6e53d8.png)
-
-```mermaid
-flowchart LR
-    subgraph Deterministic["Deterministic Trust Zone"]
-      SIG[Signals] --> POL[Risk Policy]
-      POL --> OFF[Offer Policy]
-      OFF --> AUD[Audit Log]
-    end
-    subgraph Probabilistic["Probabilistic Zone"]
-      OFF -->|offer + reasons| LLM[Draft LLM]
-      LLM --> DRAFT[Email Draft]
-    end
-    subgraph Human["Human Trust Zone"]
-      DRAFT --> RM[Relationship Manager]
-      AUD --> RM
-      RM -->|approve/edit/reject| OUT[Customer Outreach]
-    end
-```
-
----
-
-## Mermaid Diagram — Sequence
-
-![Modules__00-Foundations__00-01-AI-Engineering-Mindset-04-7d0f5bbb](../../Diagrams/Modules__00-Foundations__00-01-AI-Engineering-Mindset-04-7d0f5bbb.png)
-
-```mermaid
-sequenceDiagram
-    participant CRM as CRM / Batch Job
-    participant API as Decision API
-    participant POL as Policy Engine
-    participant LLM as Draft Model
-    participant RM as Relationship Manager
-
-    CRM->>API: CustomerSignals
-    API->>POL: evaluate risk + offer
-    POL-->>API: risk, offer, reasons
-    alt offer needs wording
-      API->>LLM: draft email
-      LLM-->>API: email_draft
-    end
-    API-->>CRM: Recommendation + HITL flag
-    API->>RM: Notify (email/queue)
-    RM->>API: approve / edit
-    Note over RM: Only humans send to customer
-```
-
----
-
-## Production Examples
-
-| Company pattern | Mindset move |
-|-----------------|--------------|
-| Banks / fintech retention | Rules for eligibility; LLM for messaging |
-| Support triage | Classifier/router first; agent only for complex tools |
-| Internal knowledge bots | RAG + abstain; not unrestricted browsing |
-| IDE coding agents | Tight tool contracts + user accept for applies |
-
----
-
-## Real Companies Using It (Public Patterns)
-
-| Org | Public pattern | Lesson |
-|-----|----------------|--------|
-| **Klarna** | Large-scale support automation with strong measurement | Autonomy only with ops metrics |
-| **Duolingo** | LLM features with product experimentation | Treat quality as product KPI |
-| **Notion / Slack** | Workspace AI with permission boundaries | ACL is architecture |
-| **LangChain customers (e.g. Uber, Klarna cited in LangGraph docs)** | Stateful agents in production | Orchestration + persistence matters |
-
-> Use company names as **pattern references**, not as claims you personally operated their stacks.
+Same *shape*, fake *engine*. Export a real key when you are ready.
 
 ---
 
 ## Hands-on Labs
 
-### Lab A — Policy unit tests (45 min)
+### Lab A — Prompt swap (20 min)
 
-Write pytest coverage for Severe Signal + 2-of-N. Mutate signals; assert offers never come from the LLM.
+Change only the **system** message three times (tutor / pirate / strict editor). Keep the user question fixed. Write one sentence on how output style changed.
 
-### Lab B — Kill the model (30 min)
+### Lab B — Token awareness (20 min)
 
-Unset `OPENAI_API_KEY`. System must still return eligible offers; only drafts degrade.
+Ask for a 1-sentence answer, then a 2-paragraph answer. Compare `completion_tokens`. Quality is not “more tokens.”
 
-### Lab C — Audit reconstruction (30 min)
+### Lab C — Failure watching (20 min)
 
-Given only `AUDIT_LOG`, reconstruct why a customer got `retention_apr`.
-
----
-
-## Coding Assignments
-
-1. Add `policy_version` and `prompt_version` fields; persist them.
-2. Add a `/v1/retention/batch` endpoint with concurrency limits.
-3. Emit OpenTelemetry spans around policy vs LLM sections.
+Ask a question that needs a private fact the model cannot know (e.g. “What is *my* employee ID?”). Note whether it invents an answer. That instinct — **catching hallucination** — is core GenAI engineering.
 
 ---
 
 ## Mini Project
 
-**Title:** Retention Decision API v0  
-**Done when:** deterministic tests pass; sample RM email generated; README explains WHEN LLM is called.
+**Title:** Personal Explain-It Bot (CLI)  
+**Done when:**
+
+1. You can send a topic from the command line.
+2. The bot replies in ≤5 bullets for beginners.
+3. You print token usage each run.
+4. README says which model you used and why (cheap vs quality).
 
 ---
 
-## Production Project
+## Common Beginner Mistakes
 
-**Title:** HITL Retention Console  
-**Done when:** Streamlit/React UI lists recommendations, requires approval, writes audit, redacts PII in prompts.
-
----
-
-## Stretch Project
-
-Compare three designs on the same dataset:
-
-1. Pure rules  
-2. Rules + LLM draft  
-3. Fully agentic eligibility  
-
-Report quality, cost, latency, and incident hypotheticals.
+1. Jumping to LangChain / LangGraph / multi-agent before a raw API call feels natural.
+2. Treating the model as a database of truth.
+3. Writing huge prompts before defining the task in one sentence.
+4. Measuring success by “it sounded smart” instead of “it completed the task.”
+5. Skipping Python/API fluency — production GenAI *is* software engineering with probabilistic components.
 
 ---
 
-## Interview Questions
+## How This Handbook Sequences Learning
 
-### Senior Engineer
+| Order | Chapter / phase | You will learn |
+|------:|-----------------|----------------|
+| 1 | **00-01 (this page)** | Vocabulary + first call |
+| 2 | [00-05 Python](00-05-Python-for-AI-Engineering.md) | Typing, async, clean scripts |
+| 3 | [00-06 APIs](00-06-APIs-for-AI-Engineering.md) | FastAPI, schemas, HTTP for AI services |
+| 4 | [00-04 Math](00-04-Mathematics-for-AI-Engineering.md) | Vectors & similarity (needed for RAG later) |
+| 5 | [00-02](00-02-From-Rules-to-Agents.md) · optional [00-03](00-03-BankCo-Decision-Support-Warmup.md) | When rules beat agents; first decision-support design |
+| 6 | Phase 1 — LLM Engineering | Transformers, tokens, providers, prompting |
+| 7 | Phases 2–11 | Agents, RAG, multi-agent, LLMOps, security, leadership |
 
-1. What is the difference between an LLM feature and an agentic system?
-2. How would you keep a model from inventing discounts?
-3. What do you log for an AI recommendation?
+Full week-by-week plan: [Master Study Roadmap](../../Master%20Study%20Roadmap.md) · [Study Plan](../../Study%20Plan.md).
 
-### Staff Engineer
+---
 
-1. Walk through agentic vs deterministic for insurance claims.
-2. How do you design for provider model swaps?
-3. Where does RAG fit if eligibility is deterministic?
+## Preview: trust zones (learn the picture, not the enterprise build)
 
-### Principal Engineer
+Later chapters separate systems into three zones. Memorize the idea now; implement it in [00-03](00-03-BankCo-Decision-Support-Warmup.md).
 
-1. Propose an org-wide AI architecture standard for “decision support.”
-2. How do you quantify $/successful retained customer for this system?
-3. What becomes a platform capability vs app-specific code?
+```mermaid
+flowchart LR
+    D[Deterministic zone<br/>rules / code] --> P[Probabilistic zone<br/>LLM drafts / judgment]
+    P --> H[Human zone<br/>approve risky actions]
+```
 
-### Engineering Manager
+| Zone | Examples | Why |
+|------|----------|-----|
+| Deterministic | Prices, eligibility, permissions | Must be auditable and stable |
+| Probabilistic | Email wording, summarize a ticket | Language flexibility |
+| Human | Send email, issue refund | Irreversible or high blast radius |
 
-1. How do you staff week 1 vs month 6 for this product?
-2. What KPIs do you put on the team scorecard?
-3. How do you handle a compliance stakeholder who wants zero LLM usage?
+---
 
-### Whiteboard
+## Check Your Understanding
 
-Draw the trust zones (deterministic / probabilistic / human) for a refund agent.
+Answer in your own words (2–4 sentences each):
 
-### Follow-ups
+1. How is GenAI different from classical ML classification?
+2. What is a token, and why should builders care?
+3. When would you *not* use an LLM?
+4. What does `Agent = (Prompt + Tools + Memory) × LLM` mean in one sentence?
+5. What will you study immediately after this chapter?
 
-- What if severe flags are noisy?
-- What if RMs approve everything blindly?
-- What if marketing wants personalized offers beyond policy?
+---
+
+## Interview Questions (gentle start)
+
+### Beginner / career switcher
+
+1. Explain LLM vs GenAI to a non-engineer.
+2. What is a hallucination? Give an example.
+3. What happens between pressing Enter in ChatGPT and seeing a reply?
+
+### Senior (preview — revisit after Phase 1)
+
+1. Demo vs feature vs production system — where does your last project sit?
+2. Which of quality / latency / cost / risk would you optimize first for an internal FAQ bot?
 
 ---
 
 ## Revision Notes
 
-- Agent ≠ chatbot. Agent = prompt + tools + memory × model.
-- Put **policy in code**; put **language in models**.
-- Optimize explicitly across quality / latency / cost / risk.
-- HITL for irreversible actions.
-- If you can’t audit it, you can’t ship it regulated.
+- GenAI **creates**; classical ML often **labels / predicts a class**.
+- LLMs predict **tokens**, not guaranteed facts.
+- Start with **one prompt + one model call**.
+- Agents add **tools + memory + a loop** — only when needed.
+- Put **hard rules in code**; put **language in models**.
+- Next: Python craft → APIs → math intuition → rules vs agents → how LLMs work inside.
 
 ---
 
 ## Summary
 
-The AI engineering mindset is **systems thinking under uncertainty**. Principal/Staff/EM excellence is not “knowing LangGraph.” It is knowing **when not to use it**, how to bound blast radius, and how to measure reality.
+You now have the minimum map to learn GenAI without drowning: nested definitions, the prompt→token→reply loop, the product kit (prompt / model / tools / memory / RAG / evals), and a tiny working (or mocked) API call. Everything else in this handbook is depth on these same pieces.
 
 ---
 
@@ -736,16 +406,18 @@ The AI engineering mindset is **systems thinking under uncertainty**. Principal/
 
 | Title | URL | Difficulty | Reading Time | Why Read | Important Sections |
 |-------|-----|------------|--------------|----------|--------------------|
-| LangGraph Overview | https://langchain-ai.github.io/langgraph/concepts/high_level/ | Intro | 20 min | See production agent runtime concerns (persistence, HITL) | Core benefits; ecosystem; persistence |
-| MCP Intro | https://modelcontextprotocol.io/docs/getting-started/intro | Intro | 15 min | Standard tool connectivity mindset | What MCP enables; why it matters |
-| OpenAI Prompt Engineering Guide | https://developers.openai.com/api/docs/guides/prompt-engineering | Intro | 45 min | Prompt as contract, not poetry | Tactics; message roles; iteration |
-| Anthropic / Claude Docs Overview | https://platform.claude.com/docs/en/docs/build-with-claude/overview | Intro | 30 min | Alternate provider constraints | Build with Claude overview |
-| Attention Is All You Need | https://arxiv.org/abs/1706.03762 | Advanced | 60–90 min | Shared vocabulary for later chapters | Architecture diagram; attention |
-| ReAct: Synergizing Reasoning and Acting | https://arxiv.org/abs/2210.03629 | Intermediate | 45 min | Grounds the agent loop chapter | Think-Act-Observe examples |
-| OWASP Top 10 for LLM Applications | https://owasp.org/www-project-top-10-for-large-language-model-applications/ | Intermediate | 60 min | Safety mindset early | LLM01 Prompt Injection; data leakage |
+| OpenAI — Text generation / chat concepts | https://platform.openai.com/docs/guides/text | Intro | 20–30 min | Solidify messages, models, tokens | Messages; models; token basics |
+| Anthropic — Claude overview | https://docs.anthropic.com/en/docs/welcome | Intro | 20 min | Second provider vocabulary | Messages API mental model |
+| Google — Gemini API quickstart | https://ai.google.dev/gemini-api/docs/quickstart | Intro | 20 min | Multi-provider habit early | First request |
+| DeepSeek API docs | https://api-docs.deepseek.com/ | Intro | 15 min | Cost-efficient OpenAI-compatible option | First chat call |
+| OpenAI Prompt Engineering Guide | https://developers.openai.com/api/docs/guides/prompt-engineering | Intro | 45 min | Prompts as clear instructions | Tactics; iteration |
+| Chip Huyen — *AI Engineering* (book) | https://www.oreilly.com/library/view/ai-engineering/9781098166298/ | Intermediate | ongoing | Bridge from ideas to production later | Early chapters on AI eng vs ML eng |
+| Karpathy — Intro to LLMs (talk) | https://www.youtube.com/watch?v=zjkBMFhNj_g | Intro | 60 min | Intuition without heavy math | Whole talk once |
+
+> Papers like *Attention Is All You Need* and *ReAct* are excellent — but they belong in **Phase 1–2**, not day one. Do not start there.
 
 ---
 
-## Resume Bullet (after lab)
+## Resume Bullet (after labs)
 
-- Designed a **policy-first retention decision API** separating deterministic eligibility from LLM drafting, with HITL approvals and full auditability for compliance-aligned outreach.
+- Built a beginner GenAI CLI that calls a chat model with explicit system/user roles, tracks token usage, and documents model choice tradeoffs for cost vs clarity.

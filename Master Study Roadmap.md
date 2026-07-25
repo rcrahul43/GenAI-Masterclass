@@ -26,9 +26,12 @@ The original course is strong on **project-driven agentic AI**. Staff+ roles als
 | AI coding agents (Codex, Claude Code, Cursor) | You build *and* use agentic coding systems |
 | AI product thinking | Scope, metrics, trust, and roadmap tradeoffs |
 
-**Total duration (balanced, 12–15 h/week):** ~30 weeks across Phases 0–11  
+**Total duration (balanced, 12–15 h/week):** ~30–32 weeks across Phases 0–11  
 **Intensive (18–20 h/week):** ~20–22 weeks  
-**Sprint (experienced LLM engineers):** skip Phase 0 labs; compress Phases 1–4 into 6 weeks
+**Sprint (experienced LLM engineers only):** skim 00-01; skip other Phase 0 labs; compress Phases 1–4 into 6 weeks  
+**Absolute beginners:** do **not** skim or skip 00-01 — it is the on-ramp before math, frameworks, or BankCo drills
+
+> **Depth note:** Phase 0 `00-01` is beginner-friendly. From `00-02` onward (and Phases 1–11), chapters keep Staff / Principal / EM interview depth. Follow the progressive order; do not jump to BankCo or LangGraph on day one.
 
 ---
 
@@ -36,7 +39,7 @@ The original course is strong on **project-driven agentic AI**. Staff+ roles als
 
 | Phase | Name | Weeks | Primary modules | Flagship project |
 |------:|------|------:|-----------------|------------------|
-| **0** | AI Foundations | 2 | 00-04, 00-05, 00-06 (+ skim 00-01) | Python + FastAPI warmup service |
+| **0** | AI Foundations | 3 | 00-01 → 00-05 → 00-06 → 00-04 → 00-02 (+ optional 00-03) | Hello-LLM CLI + FastAPI warmup |
 | **1** | LLM Foundations | 2 | 01-01 → 01-05, 02-01, 02-02 | Multi-provider chat CLI + cost estimator |
 | **2** | Agent Fundamentals | 2 | 03-01 → 03-04 | Customer Support Agent |
 | **3** | RAG | 3 | 04-01 → 04-04 | Internal Company Knowledge Assistant |
@@ -84,21 +87,19 @@ Daily micro-loop inside each study block: **Concept → Build → Production jud
 
 ---
 
-# Phase 0 — AI Foundations (2 weeks)
+# Phase 0 — AI Foundations (3 weeks)
 
-**Goal:** Build the mathematical intuition, Python craft, and API fluency required before LLM APIs feel magical instead of engineered.
+**Goal:** Learn GenAI from scratch — vocabulary and a first model call — then gain the Python, API, and math fluency so later LLM modules feel engineered, not magical.
 
-### Study — Mathematics
+### Study — GenAI ideas first
 
-| Topic | Why it matters for AI eng |
-|-------|---------------------------|
-| Linear Algebra | Embeddings as vectors; attention as matrix ops |
-| Probability | Sampling, uncertainty, calibration |
-| Statistics | Eval significance, A/B, drift |
-| Optimization | Loss landscapes; fine-tuning intuition |
-| Cosine similarity | Retrieval ranking default |
-| Embeddings intuition | Semantic space for RAG |
-| Vector search | ANN, HNSW mental model |
+| Topic | Why it matters |
+|-------|----------------|
+| AI vs ML vs GenAI vs LLM | Shared language before frameworks |
+| Tokens, prompts, completions | Every API bill and latency budget starts here |
+| Demo vs feature vs system | Stop overbuilding week 1 |
+| Agent equation (light) | Mental model for Phases 2–4 |
+| Quality / latency / cost / risk | Habit of naming tradeoffs early |
 
 ### Study — Python
 
@@ -117,37 +118,57 @@ Daily micro-loop inside each study block: **Concept → Build → Production jud
 
 REST · GraphQL · WebSockets · gRPC · FastAPI
 
-### Modules
+### Study — Mathematics (after first LLM call)
 
-| Order | Chapter |
-|-------|---------|
-| 1 | [00-04 Mathematics for AI Engineering](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) |
-| 2 | [00-05 Python for AI Engineering](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md) |
-| 3 | [00-06 APIs for AI Engineering](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) |
-| 4 | Skim [00-01 AI Engineering Mindset](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) |
+| Topic | Why it matters for AI eng |
+|-------|---------------------------|
+| Linear Algebra | Embeddings as vectors; attention as matrix ops |
+| Probability | Sampling, uncertainty, calibration |
+| Statistics | Eval significance, A/B, drift |
+| Optimization | Loss landscapes; fine-tuning intuition |
+| Cosine similarity | Retrieval ranking default |
+| Embeddings intuition | Semantic space for RAG |
+| Vector search | ANN, HNSW mental model |
+
+### Modules (progressive order)
+
+| Order | Chapter | Role |
+|------:|---------|------|
+| 1 | [00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) | **Start here** — ideas + tiny first call |
+| 2 | [00-05 Python for AI Engineering](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md) | Craft for AI services |
+| 3 | [00-06 APIs for AI Engineering](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) | FastAPI / schemas / HTTP |
+| 4 | [00-04 Mathematics for AI Engineering](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) | Vectors & similarity for RAG later |
+| 5 | [00-02 From Rules to Agents](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) | *After* you can call a model — evolution + when not to agent |
+| 6 | [00-03 BankCo Decision-Support Warmup](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) | *Optional in Phase 0* or early Phase 2 — policy-first design drill |
 
 ### Resource map
 
 | Type | Resource | URL / note | Time |
 |------|----------|------------|------|
+| **YouTube** | Karpathy — Intro to Large Language Models | https://www.youtube.com/watch?v=zjkBMFhNj_g | 1 h |
+| **Docs** | OpenAI text / chat guide | https://platform.openai.com/docs/guides/text | 30 min |
+| **Docs** | Anthropic Claude overview | https://docs.anthropic.com/en/docs/welcome | 20 min |
+| **Docs** | FastAPI | https://fastapi.tiangolo.com/ | 2 h |
+| **Docs** | Pydantic v2 | https://docs.pydantic.dev/latest/ | 1.5 h |
 | **YouTube** | 3Blue1Brown — Essence of Linear Algebra | https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab | 4–6 h |
 | **YouTube** | StatQuest (probability + ML stats playlist) | https://www.youtube.com/@joshstarmer | 3–4 h |
 | **Book** | *Mathematics for Machine Learning* (Deisenroth et al.) | https://mml-book.github.io/ | skim Ch. 2–6 |
 | **Book** | *Hands-On Machine Learning* (Géron) — early chapters | O’Reilly | embeddings / ML intuition |
 | **Book** | *Fluent Python* (Ramalho) — asyncio, generators, typing | O’Reilly | selective chapters |
 | **Docs** | Real Python (asyncio, typing, packaging) | https://realpython.com/ | ongoing |
-| **Docs** | FastAPI | https://fastapi.tiangolo.com/ | 2 h |
-| **Docs** | Pydantic v2 | https://docs.pydantic.dev/latest/ | 1.5 h |
 | **Docs** | gRPC Python | https://grpc.io/docs/languages/python/ | 1 h |
 
-### Project
+### Projects
 
-**Warmup API:** FastAPI service with typed request/response (Pydantic), async endpoints, WebSocket echo, and a cosine-similarity utility over toy embeddings.
+1. **Hello-LLM CLI** (from 00-01): system + user messages, print token usage, mock fallback without a key.
+2. **Warmup API:** FastAPI service with typed request/response (Pydantic), async endpoints, WebSocket echo, and a cosine-similarity utility over toy embeddings.
 
 ### Exit criteria
 
-- [ ] Explain embeddings + cosine similarity on a whiteboard
+- [ ] Explain AI → ML → GenAI → LLM and what a token is, without jargon overload
+- [ ] Run a chat completion (real or mock) and read `usage` tokens
 - [ ] Write async FastAPI + Pydantic validation without looking up basics
+- [ ] Explain embeddings + cosine similarity on a whiteboard
 - [ ] Package a small Python module with `pyproject.toml`
 
 ---
@@ -724,5 +745,6 @@ If you complete this roadmap, your portfolio should include:
 ## Next step
 
 1. Pin [Dashboard](Dashboard.md)  
-2. Start **Phase 0 Day 1** → [00-04 Mathematics for AI Engineering](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md)  
-3. Track hours and artifacts in [Progress Tracker](Progress%20Tracker.md) and the Excel tracker
+2. Start **Phase 0 Day 1** → [00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)  
+3. Then Python/APIs → Math → [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) (optional [00-03](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md)) → Phase 1  
+4. Track hours and artifacts in [Progress Tracker](Progress%20Tracker.md) and the Excel tracker

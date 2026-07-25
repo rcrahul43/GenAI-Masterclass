@@ -10,6 +10,10 @@
 
 | Pattern | Primary chapter | Use when | Avoid when |
 |---------|-----------------|----------|------------|
+| GenAI product kit (prompt · model · tools · memory · RAG · evals) | 00-01 | Framing any GenAI feature from scratch | Jumping to frameworks before a raw API call |
+| Trust zones (deterministic / probabilistic / human) | 00-03 (preview 00-01) | Regulated or high-blast-radius assistants | Pure creative drafting with easy undo |
+| Deterministic spine + LLM edge | 00-03, 00-02 | Eligibility, pricing, permissions + language drafts | Letting the LLM invent policy or discounts |
+| Decision-support (recommend, human commits) | 00-03 | RM / ops assistive tools | Autonomous customer outreach |
 | Single-shot LLM call | 02-01 | Classification, rewrite, extract | Needs tools / multi-step truth |
 | Router | 03-03 | Intent → specialist path | Too many overlapping intents without taxonomy |
 | ReAct / Tool loop | 03-01 | Dynamic tool choice | Deterministic workflow exists |

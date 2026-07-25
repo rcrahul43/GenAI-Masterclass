@@ -4,7 +4,7 @@
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · lab 2.5h · architecture memo 1h) |
 | **Difficulty** | Intermediate (architecture) · Advanced (abstain + citation contracts) |
-| **Prerequisites** | [00-01 AI Engineering Mindset](../00-Foundations/00-01-AI-Engineering-Mindset.md) · basic FastAPI · embeddings intuition |
+| **Prerequisites** | [00-01 GenAI From Scratch](../00-Foundations/00-01-AI-Engineering-Mindset.md) · basic FastAPI · embeddings intuition |
 | **Module** | 04 — RAG Knowledge Agents |
 | **Related** | [04-02 Chunking & Embeddings](04-02-Chunking-Metadata-Embeddings.md) · [04-03 Vector DB & Reranking](04-03-Vector-DB-Hybrid-Search-Reranking.md) · [04-04 Advanced RAG](04-04-Advanced-RAG-HyDE-GraphRAG.md) · [03-01 Agent Anatomy](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [08-01 Evaluation Lifecycle](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) · [11-02 Prompt Injection Defense](../11-Security-Safety/11-02-Prompt-Injection-Defense.md) · [Architecture Index](../../Architecture Index.md) |
 

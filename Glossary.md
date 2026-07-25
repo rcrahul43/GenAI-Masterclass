@@ -9,14 +9,18 @@
 | Term | Definition | See also |
 |------|------------|----------|
 | **Agent** | System that loops Think→Act→Observe using an LLM with tools and memory toward a goal | 03-01 |
-| **Agentic system** | Production system combining agents, orchestration, evals, safety, and ops | 00-01 |
+| **Agentic system** | Production system combining agents, orchestration, evals, safety, and ops | 00-02, 03-01 |
 | **A2A** | Agent-to-Agent protocol for cross-agent discovery and messaging | 07-02 |
 | **Abstain** | Explicitly refuse to answer when evidence is insufficient | 04-01 |
 | **Checkpointing** | Persisting agent state so runs can resume after failure/interrupt | 03-04 |
 | **Circuit breaker** | Stop calling a failing tool/model temporarily to protect the system | 05-01 |
 | **Context window** | Max tokens a model can attend to in one call | 01-02 |
 | **Critic / Reflection** | Secondary pass that reviews/improves an artifact | 03-03, 05-02 |
-| **Deterministic spine** | Non-LLM policy/code path that must stay auditable | 00-01, 00-03 |
+| **Deterministic spine** | Non-LLM policy/code path that must stay auditable | 00-03, 00-02 |
+| **Generative AI (GenAI)** | ML that creates new content (text, images, code, audio) | 00-01 |
+| **Hallucination** | Plausible but false model output not grounded in provided facts | 00-01 |
+| **LLM** | Large language model — GenAI specialized for next-token language prediction | 00-01 |
+| **Token** | Chunk of text the model reads/writes; billing and context use tokens | 00-01, 01-02 |
 | **Embedding** | Dense vector representation of text (or other modality) | 04-02 |
 | **Eval (offline)** | Scoring on curated datasets before/without live traffic | 08-01 |
 | **Eval (online)** | Scoring/monitoring on production traffic samples | 08-01 |

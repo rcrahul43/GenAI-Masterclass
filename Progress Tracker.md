@@ -38,7 +38,7 @@ Only mark ✅ when lab + memo exist. Only mark ⭐ after a mock question on the 
 
 ## Phase checklist (high level)
 
-- [ ] Phase 0 — AI Foundations (math, Python, APIs)
+- [ ] Phase 0 — AI Foundations (GenAI ideas → Python → APIs → Math → Rules/Agents)
 - [ ] Phase 1 — LLM Foundations (+ DeepSeek)
 - [ ] Phase 2 — Agent Fundamentals (LangGraph)
 - [ ] Phase 3 — RAG
@@ -55,12 +55,12 @@ Only mark ✅ when lab + memo exist. Only mark ⭐ after a mock question on the 
 
 ## Module 00 — Foundations
 
-- [ ] 00-01 AI Engineering Mindset
-- [ ] 00-02 From Rules to Agents
-- [ ] 00-03 BankCo Decision-Support Warmup
-- [ ] 00-04 Mathematics for AI Engineering
+- [ ] 00-01 GenAI From Scratch: Core Ideas  ← **start here**
 - [ ] 00-05 Python for AI Engineering
 - [ ] 00-06 APIs for AI Engineering
+- [ ] 00-04 Mathematics for AI Engineering
+- [ ] 00-02 From Rules to Agents
+- [ ] 00-03 BankCo Decision-Support Warmup
 
 ## Module 01 — LLM Engineering
 

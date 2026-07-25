@@ -71,27 +71,37 @@ Hours planned: __ / Hours actual: __
 
 ## Pre-Filled Phase Starters
 
-### Week 1 — Phase 0: Mathematics for AI Engineering
+### Week 1 — Phase 0: GenAI From Scratch
 
 | Field | Value |
 |-------|-------|
-| Modules | [00-04](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) |
-| Resources | 3Blue1Brown Linear Algebra · StatQuest · *Mathematics for Machine Learning* |
-| Project | Cosine similarity + toy vector search lab |
-| Interview | “Explain embeddings and cosine similarity” |
-| Exit criteria | Whiteboard embeddings; NN search code works |
+| Modules | [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) |
+| Resources | Karpathy Intro to LLMs · OpenAI text guide · Claude overview |
+| Project | Hello-LLM CLI (roles + token usage; mock OK without a key) |
+| Interview | “AI vs ML vs GenAI vs LLM” + what a token is |
+| Exit criteria | Explain prompt→tokens→reply; run lab A–C |
 
-### Week 2 — Phase 0: Python + APIs
+### Week 2 — Phase 0: Python + APIs (+ Math)
 
 | Field | Value |
 |-------|-------|
-| Modules | [00-05](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md), [00-06](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) |
-| Resources | RealPython asyncio · Fluent Python (selective) · FastAPI · Pydantic |
-| Project | Async FastAPI warmup + WebSocket stream stub |
-| Interview | “Why asyncio for LLM I/O?” |
-| Exit criteria | Typed FastAPI service packaged with `pyproject.toml` |
+| Modules | [00-05](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md), [00-06](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md), then [00-04](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) |
+| Resources | RealPython asyncio · Fluent Python (selective) · FastAPI · Pydantic · 3Blue1Brown (math portion) |
+| Project | Async FastAPI warmup + WebSocket stream stub + cosine util |
+| Interview | “Why asyncio for LLM I/O?” · embeddings whiteboard |
+| Exit criteria | Typed FastAPI service packaged with `pyproject.toml`; cosine lab works |
 
-### Week 3–4 — Phase 1: LLM Foundations
+### Week 3 — Phase 0: Rules → Agents (+ optional BankCo)
+
+| Field | Value |
+|-------|-------|
+| Modules | [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md), optional [00-03](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) |
+| Resources | ReAct paper (skim) · OpenAI prompt guide · 00-02 architecture diagrams |
+| Project | When-not-to-agent memo; optional retention rules + HITL lab |
+| Interview | “When would you *not* use an agent?” |
+| Exit criteria | Can place a task on rules / classifier / one-shot LLM / agent spectrum |
+
+### Week 4–5 — Phase 1: LLM Foundations
 
 | Field | Value |
 |-------|-------|
@@ -100,7 +110,7 @@ Hours planned: __ / Hours actual: __
 | Project | Multi-provider chat CLI + cost/latency matrix |
 | Interview | Transformer whiteboard + provider tradeoffs |
 
-### Week 5–6 — Phase 2: Agent Fundamentals
+### Week 6–7 — Phase 2: Agent Fundamentals
 
 | Field | Value |
 |-------|-------|
@@ -109,7 +119,7 @@ Hours planned: __ / Hours actual: __
 | Project | **Customer Support Agent** (LangGraph + HITL) |
 | Interview | Agent loop critique · pattern selection |
 
-### Week 7–9 — Phase 3: RAG
+### Week 8–10 — Phase 3: RAG
 
 | Field | Value |
 |-------|-------|

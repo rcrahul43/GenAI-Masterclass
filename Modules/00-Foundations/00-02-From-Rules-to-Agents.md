@@ -4,7 +4,7 @@
 |------|-------|
 | **Estimated Time** | 6–8 hours (read 3h · labs 3h · architecture memo 2h) |
 | **Difficulty** | Intermediate (conceptual) · Advanced (implementation labs) |
-| **Prerequisites** | [00-01 — AI Engineering Mindset](00-01-AI-Engineering-Mindset.md); comfortable Python; basic HTTP/API literacy |
+| **Prerequisites** | [00-01 — GenAI From Scratch](00-01-AI-Engineering-Mindset.md) completed; one successful (or mocked) LLM API call; comfortable Python; basic HTTP/API literacy |
 | **Module** | 00 — Foundations |
 | **Related** | [00-01](00-01-AI-Engineering-Mindset.md) · [00-03](00-03-BankCo-Decision-Support-Warmup.md) · [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) · [03-03](../03-Agentic-Fundamentals/03-03-Agentic-Design-Patterns.md) · [Architecture Index](../../Architecture Index.md) |
 
@@ -657,7 +657,7 @@ Prompts are the **job description**. Tools are **hands**. Memory is **notes**. T
 
 #### Architecture
 
-Cross-reference [00-01](00-01-AI-Engineering-Mindset.md) for the full sociotechnical diagram and [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) for loop internals.
+Cross-reference [00-01](00-01-AI-Engineering-Mindset.md) for the beginner kit (prompt / tools / memory / LLM) and [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) for loop internals.
 
 #### Implementation
 

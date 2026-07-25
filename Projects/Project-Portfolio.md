@@ -114,27 +114,29 @@ Use before `v1.0.0` tag or PR to `main`:
 
 ## Module 00 — Foundations
 
-### Mini: Retention Decision API v0
+### Mini: Personal Explain-It Bot (CLI)
 
 | Item | Detail |
 |------|--------|
 | **Module** | [00-01](../Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) |
-| **Scope** | FastAPI endpoint: CSV row → LLM JSON risk score |
-| **Resume bullets** | • Built FastAPI retention scoring API processing 1k-row batches with structured JSON outputs and Pydantic validation • Reduced manual review queue by 35% via confidence-threshold routing to HITL |
-| **Milestones** | M0: CSV loader · M1: `/score` endpoint · M2: golden row tests |
+| **Scope** | CLI: topic → ≤5 beginner bullets via chat API; print token usage; mock fallback without a key |
+| **Resume bullets** | • Built a beginner GenAI CLI with explicit system/user roles, token accounting, and documented model cost-vs-clarity tradeoffs |
+| **Milestones** | M0: mock reply · M1: real API call · M2: CLI args + README |
 
-### Production: HITL Retention Console
+### Mini / Production: Retention Decision API + HITL Console
 
 | Item | Detail |
 |------|--------|
-| **Scope** | Web UI queue + approve/reject + audit log |
-| **Resume bullets** | • Shipped HITL console for BankCo retention decisions with full audit trail and SLA dashboards • Integrated OpenTelemetry tracing across LLM and human approval steps |
-| **Milestones** | M3: OTel · M4: RBAC · M5: deploy |
+| **Module** | [00-03](../Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) *(after 00-01 → 00-05/00-06 → 00-02)* |
+| **Scope** | FastAPI: signals → deterministic risk/offer → optional LLM draft → HITL approve |
+| **Resume bullets** | • Built FastAPI retention decision API with policy-in-code eligibility, LLM drafting on the edge, and HITL audit trail |
+| **Milestones** | M0: policy unit tests · M1: `/recommend` · M2: approval + audit · M3: console UI |
 
 ### Stretch: Paradigm Comparison CLI
 
 | Item | Detail |
 |------|--------|
+| **Module** | [00-02](../Modules/00-Foundations/00-02-From-Rules-to-Agents.md) / [00-03](../Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) |
 | **Resume bullets** | • Benchmarked rules vs ML vs LLM routing on identical dataset with cost/latency/accuracy report |
 
 ---
