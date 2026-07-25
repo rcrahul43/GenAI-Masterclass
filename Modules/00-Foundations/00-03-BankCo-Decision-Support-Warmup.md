@@ -1,5 +1,12 @@
 # 00-03 — BankCo Warm-Up: Decision-Support Retention Assistant
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **OPTIONAL** · Depth: **Optional (Y1)**  
+> Do if targeting BFSI/IT-services interviews; else after Block 3.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · lab 2.5h · policy memo 1h) |

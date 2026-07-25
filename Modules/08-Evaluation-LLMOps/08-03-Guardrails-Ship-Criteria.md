@@ -1,5 +1,12 @@
 # 08-03 — Guardrails & Ship Criteria
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Full**  
+> Define ship criteria for your FAQ/agent.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2h · lab 3h · ship checklist 1h) |

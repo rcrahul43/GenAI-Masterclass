@@ -1,5 +1,12 @@
 # 02-02 — Structured Outputs & Tool Calling
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Full**  
+> Ship structured JSON + one tool call.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 6–7 hours (read 3h · lab 3h · provider comparison 1h) |

@@ -55,6 +55,8 @@ The handbook had drifted toward a compressed 16-week module sprint. It is now an
 - Phase 0 order is now **00-01 → 00-05 → 00-06 → 00-04 → 00-02** (+ optional **00-03**).
 - Full-course consistency pass: Roadmap Day-1 CTA, Study Plan / Weekly Planner weeks, TOC study order, Resource Database Phase 0, Architecture Index trust-zone patterns, Career Q mapping, broken `08-02` Related links, tracker WEEK_PLAN + STAR module links, Intensive/Sprint beginner gates.
 - **Not rewritten:** Modules `01`–`12`, System Design, and Leadership keep Staff+/interview depth — sequencing and pointers were corrected so beginners do not land there first.
+- Added **[Track D — India AI Career Learning Plan](Career/India-AI-Career-Learning-Plan.md)** for learners with basic programming and no AI background (India jobs / data-center era).
+- **Course redesign:** **[COURSE.md](COURSE.md)** is now the default north star (Track D, 12 months / 6 blocks). Study Plan is a 48-week Track D calendar. Master Study Roadmap demoted to Advanced (A–C). Track D scope boxes injected across `Modules/`.
 
 ## Quality Notes
 

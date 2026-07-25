@@ -1,5 +1,12 @@
 # 04-03 — Vector DBs, Hybrid Search & Reranking
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Skim**  
+> Know hybrid/rerank exist; deepen in Block 6 path A.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2h · lab 3h · precision tuning 1h) |

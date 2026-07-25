@@ -1,5 +1,12 @@
 # 01-05 — Provider SDKs: OpenAI, Claude, Gemini & DeepSeek
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Full**  
+> Prioritize Gemini + DeepSeek (+ one major). Cost table required.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 7–9 hours (read 3.5h · lab 3.5h · comparison matrix 2h) |

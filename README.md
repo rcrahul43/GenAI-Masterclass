@@ -1,48 +1,42 @@
-# GenAI Masterclass — Principal / Staff AI Engineer & Engineering Manager Handbook
+# GenAI Masterclass — Course for Beginners → India AI Jobs
 
-Production-grade, interview-ready knowledge base for Generative AI and Agentic AI — sequenced as a **Staff+ Master Study Roadmap** with phase-level resource maps.
+**Default path:** learn Generative AI from scratch with basic programming, ship portfolio projects, and target India GenAI roles as the country expands AI adoption and data centers.
+
+Staff / Principal / EM material remains available as an **advanced extension** after year 1.
 
 ---
 
-## Quick start
+## Quick start (your path)
 
-1. **Start from scratch:** [`Modules/00-Foundations/00-01-AI-Engineering-Mindset.md`](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) (GenAI vocabulary + first tiny LLM call).
-2. Open the north star: [`Master Study Roadmap.md`](Master%20Study%20Roadmap.md) (Phases 0–11).
-3. Pin [`Dashboard.md`](Dashboard.md) — session home.
-4. Track progress in [`Tracker/GenAI-Masterclass-Tracker.xlsx`](Tracker/GenAI-Masterclass-Tracker.xlsx).
-5. Execute week-by-week via [`Study Plan.md`](Study%20Plan.md).
-6. Open modules from **Modules → Open Doc** in the sheet (or browse `Modules/`).
-
-Sheet ↔ doc ↔ resource workflow: [`Tracker/SYNC-WORKFLOW.md`](Tracker/SYNC-WORKFLOW.md)
+1. **Course home:** [`COURSE.md`](COURSE.md) — how the whole path fits together  
+2. **Week-by-week:** [`Study Plan.md`](Study%20Plan.md) (48 weeks / 6 blocks)  
+3. **Session home:** [`Dashboard.md`](Dashboard.md)  
+4. **Day 1 lesson:** [`Modules/00-Foundations/00-01-AI-Engineering-Mindset.md`](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)  
+5. **India detail:** [`Career/India-AI-Career-Learning-Plan.md`](Career/India-AI-Career-Learning-Plan.md)  
+6. Progress: [`Tracker/GenAI-Masterclass-Tracker.xlsx`](Tracker/GenAI-Masterclass-Tracker.xlsx)
 
 ---
 
 ## Who this is for
 
-| Role | Outcome |
-|------|---------|
-| **Senior → Staff AI Engineer** | Design, build, evaluate, and operate agentic systems |
-| **Staff → Principal Engineer** | Lead architecture reviews and org-wide AI tradeoffs |
-| **Tech Lead → Engineering Manager** | Hire, govern risk, run AI roadmaps, pass EM interviews |
+| Profile | Path |
+|---------|------|
+| **Basic programming, little/no AI (default)** | **Track D** — [COURSE.md](COURSE.md) |
+| Senior → Staff / Principal AI Engineer | Track A — [Master Study Roadmap](Master%20Study%20Roadmap.md) |
+| Tech Lead → Engineering Manager | Tracks B/C — [Learning Path](Learning%20Path.md) |
 
 ---
 
-## Curriculum spine (Phases 0–11)
+## Primary course spine (12 months)
 
-| Phase | Focus | Why it is mandatory for Staff+ |
-|------:|-------|--------------------------------|
-| 0 | GenAI ideas · Python · APIs · Math | Learn from scratch, then engineer services |
-| 1 | LLM Foundations (+ DeepSeek) | Multi-provider fluency |
-| 2 | Agents + **LangGraph** | Stateful production agents |
-| 3 | RAG | Grounded enterprise knowledge |
-| 4 | Multi-Agent + **MCP depth** | Orchestration & tool governance |
-| 5 | Voice & Multimodal | Real product surfaces |
-| 6 | LLMOps & eval research | Ship gates, not vibes |
-| 7 | Fine-Tuning | Honest prompt vs RAG vs FT decisions |
-| 8 | Production (K8s, GPU, cost) | Deploy and operate |
-| 9 | AI Security | OWASP LLM / injection |
-| 10 | System Design · Coding Agents · Product | Cursor/Codex/Claude Code + SD interviews |
-| 11 | Leadership & EM prep | Hire, roadmap, STAR, mocks |
+| Block | Months | Theme |
+|------:|--------|-------|
+| 1 | 1–2 | GenAI ideas · Python · APIs |
+| 2 | 3–4 | LLM apps · prompting · tools |
+| 3 | 5–6 | RAG · bounded agents |
+| 4 | 7–8 | Evals · safety |
+| 5 | 9–10 | Docker · cost · inference awareness |
+| 6 | 11–12 | Specialize · job applications |
 
 ---
 
@@ -50,45 +44,25 @@ Sheet ↔ doc ↔ resource workflow: [`Tracker/SYNC-WORKFLOW.md`](Tracker/SYNC-W
 
 | Path | Purpose |
 |------|---------|
-| [`Master Study Roadmap.md`](Master%20Study%20Roadmap.md) | Canonical phase order + detailed resource maps |
-| [`Dashboard.md`](Dashboard.md) | Daily home |
-| [`Study Plan.md`](Study%20Plan.md) | ~30-week execution plan |
-| [`Modules/`](Modules/) | Deep handbook chapters |
-| [`System Design/`](System%20Design/) | Product design interviews |
-| [`Leadership/`](Leadership/) · [`Career/`](Career/) | EM / Principal interview prep |
-| [`Tracker/`](Tracker/) | Excel progress tracker + resource links |
-| [`Cheatsheets/`](Cheatsheets/) | Fast revision |
-| [`Resources/`](Resources/) · [`Papers/`](Papers/) | Resource & paper databases |
-| [`Projects/`](Projects/) | Portfolio project ladder |
-
----
-
-## Tracker setup
-
-1. Open `Tracker/GenAI-Masterclass-Tracker.xlsx` in Excel (or upload to Google Sheets).
-2. On **Config**, set:
-   - **Local Root** = this repo path + `/`
-   - After GitHub push: **GitHub Base** = `https://github.com/<you>/<repo>/blob/main/` and **Link Mode** = `GitHub`
-3. Use **Dashboard** sheet → set current **Week #**.
-4. Update **Status** on Modules as you go.
-
-Rebuild resources from handbook Further Reading:
-
-```bash
-python3 Tracker/build_tracker_xlsx.py
-```
+| [`COURSE.md`](COURSE.md) | **Default north star** — beginner → India jobs |
+| [`Study Plan.md`](Study%20Plan.md) | 48-week execution |
+| [`Modules/`](Modules/) | Deep handbook chapters (use Track D scope) |
+| [`Master Study Roadmap.md`](Master%20Study%20Roadmap.md) | Advanced Staff+/EM extension |
+| [`Career/India-AI-Career-Learning-Plan.md`](Career/India-AI-Career-Learning-Plan.md) | India market detail for Track D |
+| [`System Design/`](System%20Design/) · [`Leadership/`](Leadership/) | Advanced / year 2+ |
+| [`Tracker/`](Tracker/) | Excel progress tracker |
 
 ---
 
 ## Study loop
 
-1. Pick current **Phase** (Master Roadmap).
-2. Pick next module (sheet **Next 5** or Study Plan).
-3. Need depth → **Open Doc**. Only need a link → **Resources** filter by Item ID / phase tags.
-4. Mark Status **Done** when lab + judgment note are finished.
+1. Open current **Block / Week** in Study Plan.  
+2. Open one module — follow **Track D scope** (concepts + lab).  
+3. Commit to GitHub.  
+4. Mark progress Done when lab ships.
 
 ---
 
 ## License & intent
 
-Educational handbook for personal mastery and interview preparation. Keep API keys and secrets out of the repo.
+Educational handbook for personal mastery and career transition. Keep API keys out of the repo.

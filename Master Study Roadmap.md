@@ -1,15 +1,17 @@
-# Master Study Roadmap
+# Master Study Roadmap — Advanced Extension (Tracks A–C)
 
-> **Canonical learning order** for Staff / Principal AI Engineer and AI Engineering Manager roles.
-> This document is the north star. Module handbook chapters (`Modules/`) are the deep content; this roadmap tells you **what to learn, in what order, with which resources, and what to ship**.
+> **Not the default beginner path.**  
+> If you have **basic programming and little/no AI background**, use **[COURSE.md](COURSE.md)** and **[Study Plan](Study%20Plan.md)** (Track D) first.
+>
+> This roadmap is the **year-2+ / Staff / Principal / EM** extension: full Phases 0–11 at interview depth.
 
-**Related:** [Study Plan](Study%20Plan.md) · [Learning Path](Learning%20Path.md) · [Project Portfolio](Projects/Project-Portfolio.md) · [Resource Database](Resources/Resource-Database.md) · [Paper Database](Papers/Paper-Database.md) · [Dashboard](Dashboard.md)
+**Related:** [COURSE.md](COURSE.md) (primary) · [Study Plan](Study%20Plan.md) · [Learning Path](Learning%20Path.md) · [Dashboard](Dashboard.md)
 
 ---
 
-## Why this roadmap exists
+## Why this advanced roadmap exists
 
-The original course is strong on **project-driven agentic AI**. Staff+ roles also require:
+The primary course (Track D) ships hireable GenAI builders. Staff+ roles also require:
 
 | Gap area | Why it is mandatory now |
 |----------|-------------------------|
@@ -744,7 +746,10 @@ If you complete this roadmap, your portfolio should include:
 
 ## Next step
 
+**Beginners / Track D:** ignore this page for year 1 → open **[COURSE.md](COURSE.md)**.
+
+**Advanced (Tracks A–C):**
+
 1. Pin [Dashboard](Dashboard.md)  
-2. Start **Phase 0 Day 1** → [00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)  
-3. Then Python/APIs → Math → [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) (optional [00-03](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md)) → Phase 1  
-4. Track hours and artifacts in [Progress Tracker](Progress%20Tracker.md) and the Excel tracker
+2. Start Phase 0 → [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) then follow phase tables above  
+3. Track hours in [Progress Tracker](Progress%20Tracker.md) and the Excel tracker

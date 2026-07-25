@@ -1,5 +1,12 @@
 # 10-04 — Cost & Latency Optimization for LLM Systems
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Full**  
+> ₹ / 1K queries estimate for your app.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2h · spreadsheet lab 2h · SLO workshop 1.5h) |

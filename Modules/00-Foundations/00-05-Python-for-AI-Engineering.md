@@ -1,5 +1,12 @@
 # 00-05 — Python for AI Engineering
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Full (go slow)**  
+> Take 2 weeks if Python is basic. Ship scripts + venv.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 7–8 hours (read 2h · labs 4h · packaging review 1–2h) |

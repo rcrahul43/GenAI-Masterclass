@@ -2,57 +2,53 @@
 
 Favorite / pin this page. Use it as your study home.
 
-**North star:** [`Master Study Roadmap.md`](Master%20Study%20Roadmap.md) — Phases 0–11 with detailed resource maps  
-**Progress tracker:** [`Tracker/GenAI-Masterclass-Tracker.xlsx`](Tracker/GenAI-Masterclass-Tracker.xlsx) · [Sync workflow](Tracker/SYNC-WORKFLOW.md)
+**Default course:** [`COURSE.md`](COURSE.md) — Beginner → India GenAI jobs (Track D)  
+**This week’s plan:** [`Study Plan.md`](Study%20Plan.md)  
+**Progress:** [`Tracker/GenAI-Masterclass-Tracker.xlsx`](Tracker/GenAI-Masterclass-Tracker.xlsx) · [Sync workflow](Tracker/SYNC-WORKFLOW.md)
 
 ---
 
-## Start a session
+## Your track
 
-1. Open the current **Phase** in [Master Study Roadmap](Master%20Study%20Roadmap.md).
-2. Open this week in [Study Plan](Study%20Plan.md) (or set Week # on the Excel Dashboard).
-3. Study **one module** only (sheet **Next 5** or [Progress Tracker](Progress%20Tracker.md)).
-4. Pull today’s resources from that phase’s **Resource map** (docs / paper / book / YouTube / GitHub).
-5. Mark Status **Done** when lab + judgment note are finished.
+| Select | Path |
+|--------|------|
+| **D (default)** | [COURSE.md](COURSE.md) + [India plan](Career/India-AI-Career-Learning-Plan.md) |
+| A / B / C | [Learning Path](Learning%20Path.md) + [Master Study Roadmap](Master%20Study%20Roadmap.md) (advanced) |
+
+**If you have basic programming and no AI background → Track D is already selected for you.**
 
 ---
 
-## Reading order (for long modules)
+## Start a session (Track D)
 
-1. Learning Objectives  
-2. When / When NOT  
-3. Diagram  
+1. Open this week in [Study Plan](Study%20Plan.md).  
+2. Open **one module** only.  
+3. Read the **Track D scope** box → Core Concepts → Lab.  
+4. Commit to GitHub.  
+5. Mark Status **Done** when the week’s ship item exists.
+
+---
+
+## Block 1 — start here
+
+1. **[00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)** ← Week 1  
+2. [00-05 Python](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md) — Weeks 2–3 (go slow)  
+3. [00-06 APIs](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) — Weeks 4–5  
+4. [00-04 Math](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) — Week 6 **light**  
+5. [00-02 Rules→Agents](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) — Week 7 **skim**
+
+> Do not open LangGraph, multi-agent, or BankCo on day one.
+
+---
+
+## Reading order (inside a module)
+
+1. Track D scope box  
+2. Learning Objectives  
+3. Core Concepts  
 4. Lab / Implementation  
-5. Failure Modes  
-6. Interview Questions (2 aloud)  
-7. Revision Notes  
-8. Further Reading (official URLs only)
-
----
-
-## Phase 0 — start here (from scratch)
-
-1. **[00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)** ← begin here  
-2. [00-05 Python for AI Engineering](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md)  
-3. [00-06 APIs for AI Engineering](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md)  
-4. [00-04 Mathematics for AI Engineering](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md)  
-5. [00-02 From Rules to Agents](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) · optional [00-03 BankCo](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md)
-
-> Later modules stay Staff+/interview depth — follow this order; do not open BankCo or LangGraph on day one.
-
-Then Phase 1 → [01-01 Transformer](Modules/01-LLM-Engineering/01-01-Transformer-Architecture.md).
-
----
-
-## Tracks (pick one)
-
-| Track | Follow |
-|-------|--------|
-| IC | Master Roadmap Phases 0–11 at full depth |
-| EM | Same phases; lighter labs on GPU/FT; heavy Phase 11 + 12-06 |
-| Hybrid | IC days + Leadership days |
-
-More detail: [Learning Path](Learning%20Path.md)
+5. Revision Notes  
+6. (Optional later) Interview Questions / Further Reading  
 
 ---
 
@@ -60,12 +56,9 @@ More detail: [Learning Path](Learning%20Path.md)
 
 | Need | Page |
 |------|------|
-| Phase roadmap + resources | [Master Study Roadmap](Master%20Study%20Roadmap.md) |
-| Weekly execution | [Study Plan](Study%20Plan.md) |
-| Week template | [Weekly Planner](Weekly%20Planner.md) |
-| Excel tracker | [Tracker/](Tracker/) |
+| Entire course design | [COURSE.md](COURSE.md) |
+| 48-week plan | [Study Plan](Study%20Plan.md) |
+| India career detail | [Track D plan](Career/India-AI-Career-Learning-Plan.md) |
+| Advanced Staff+ roadmap | [Master Study Roadmap](Master%20Study%20Roadmap.md) |
 | All chapters | [TOC](TABLE_OF_CONTENTS.md) |
-| Cheatsheets | [Cheatsheet Index](Cheatsheets/Cheatsheet-Index.md) |
 | Projects | [Project Portfolio](Projects/Project-Portfolio.md) |
-| Papers | [Paper Database](Papers/Paper-Database.md) |
-| Resources | [Resource Database](Resources/Resource-Database.md) |

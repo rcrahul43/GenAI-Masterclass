@@ -2,13 +2,20 @@
 
 > **Filename note:** This file is still named `00-01-AI-Engineering-Mindset.md` for link stability. The chapter is the **beginner on-ramp**, not a Principal/EM judgment drill.
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Full**  
+> Do the whole chapter. This is day one.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 3–4 hours (read 1.5h · tiny labs 1.5h · notes 30–45 min) |
 | **Difficulty** | Beginner |
 | **Prerequisites** | Curiosity. Optional: you have used ChatGPT / Claude / Gemini as a user. No ML background required. |
 | **Module** | 00 — Foundations |
-| **Related** | [00-05](00-05-Python-for-AI-Engineering.md) · [00-06](00-06-APIs-for-AI-Engineering.md) · [00-04](00-04-Mathematics-for-AI-Engineering.md) · [00-02](00-02-From-Rules-to-Agents.md) · [00-03](00-03-BankCo-Decision-Support-Warmup.md) · [01-01](../01-LLM-Engineering/01-01-Transformer-Architecture.md) · [01-05](../01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) · [Study Plan](../../Study%20Plan.md) · [Master Study Roadmap](../../Master%20Study%20Roadmap.md) |
+| **Related** | [COURSE.md](../../COURSE.md) · [00-05](00-05-Python-for-AI-Engineering.md) · [00-06](00-06-APIs-for-AI-Engineering.md) · [00-04](00-04-Mathematics-for-AI-Engineering.md) · [00-02](00-02-From-Rules-to-Agents.md) · [00-03](00-03-BankCo-Decision-Support-Warmup.md) · [01-01](../01-LLM-Engineering/01-01-Transformer-Architecture.md) · [Study Plan](../../Study%20Plan.md) |
 
 ---
 

@@ -1,5 +1,12 @@
 # 08-01 — Evaluation Lifecycle (Offline + Online)
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Full**  
+> Golden set ≥30 questions + pass/fail script.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 6–7 hours (read 2.5h · lab 4h · eval plan memo 1h) |

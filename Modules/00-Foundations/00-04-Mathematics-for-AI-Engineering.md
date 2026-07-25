@@ -1,5 +1,12 @@
 # 00-04 — Mathematics for AI Engineering
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Light**  
+> Cosine similarity + embeddings intuition only; skip proof-heavy sections.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 6–7 hours (read 2h · labs 3h · eval memo 1–2h) |

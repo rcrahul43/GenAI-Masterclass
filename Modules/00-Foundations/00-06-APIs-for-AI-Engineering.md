@@ -1,5 +1,12 @@
 # 00-06 — APIs for AI Engineering
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **CORE** · Depth: **Full**  
+> Ship one typed FastAPI POST endpoint.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 7–8 hours (read 2h · FastAPI lab 3h · protocol review 2h) |

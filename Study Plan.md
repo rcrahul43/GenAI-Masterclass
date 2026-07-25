@@ -1,242 +1,160 @@
-# Study Plan
+# Study Plan — Primary Course (Track D)
 
-> Day-to-day execution of the **[Master Study Roadmap](Master%20Study%20Roadmap.md)** (Phases 0–11).
-> Prefer the Master Roadmap for sequencing and resource maps; use this file for weekly execution.
+> **Default path:** Beginner → India GenAI jobs (basic programming, no AI required).  
+> North star: **[COURSE.md](COURSE.md)** · Detail: **[India AI Career Learning Plan](Career/India-AI-Career-Learning-Plan.md)**  
+> Advanced Staff+/EM path (year 2+): [Master Study Roadmap](Master%20Study%20Roadmap.md) · Tracks A–C in [Learning Path](Learning%20Path.md)
 
-**Related:** [Dashboard](Dashboard.md) · [Weekly Planner](Weekly%20Planner.md) · [Learning Path](Learning%20Path.md) · [Master Study Roadmap](Master%20Study%20Roadmap.md) · [Progress Tracker](Progress%20Tracker.md)
-
----
-
-## Assumptions
-
-| Parameter | Default |
-|-----------|---------|
-| Available hours / week | **12–15** (adjustable) |
-| Primary stack | Python, FastAPI, **LangGraph**, OpenAI + Claude + Gemini + **DeepSeek** |
-| Target role | Staff/Principal AI Engineer **or** Engineering Manager (AI) |
-| Timeline | **~30 weeks** balanced (Phases 0–11) · **20–22 weeks** intensive · **16 weeks** sprint (skip Phase 0 labs) |
-| Output artifacts | GitHub portfolio + design memos + STAR bank + mock scores |
+**Related:** [Dashboard](Dashboard.md) · [Weekly Planner](Weekly%20Planner.md) · [Progress Tracker](Progress%20Tracker.md)
 
 ---
 
-## Canonical order = Master Study Roadmap
+## Assumptions (your profile)
 
-Do **not** follow the old compressed module-week table as the primary path. Study in this order:
-
-| Phase | Weeks | Theme | Flagship |
-|------:|------:|-------|----------|
-| **0** | 3 | GenAI ideas · Python · APIs · Math · Rules→Agents | Hello-LLM CLI + FastAPI warmup |
-| **1** | 2 | LLM Foundations + multi-provider | Chat CLI + cost estimator |
-| **2** | 2 | Agent Fundamentals + LangGraph | Customer Support Agent |
-| **3** | 3 | RAG | Internal Knowledge Assistant |
-| **4** | 3 | Multi-Agent · MCP depth · A2A | Travel Planner + Research Assistant |
-| **5** | 2 | Voice & Multimodal | Voice Assistant + Document Reader |
-| **6** | 3 | LLMOps & eval research | Eval Dashboard + Monitoring |
-| **7** | 2 | Fine-Tuning | Domain LoRA model |
-| **8** | 3 | Production (Docker/K8s/GPU/cost) | Deployed agent platform |
-| **9** | 1 | AI Security | Red-team + OWASP sign-off |
-| **10** | 3 | System Design · Coding Agents · Product | 6–8 design writeups |
-| **11** | 4 | Leadership & EM prep | STAR bank + mocks |
-
-Full topic lists, papers, books, docs, YouTube, and GitHub maps: **[Master Study Roadmap](Master%20Study%20Roadmap.md)**.
+| Parameter | Value |
+|-----------|--------|
+| Prior AI | None |
+| Programming | Basic → standardize on **Python** |
+| Hours / week | **10–12** |
+| Timeline | **~48 weeks (12 months)** across 6 blocks |
+| Budget | Cheap/free APIs (DeepSeek, Gemini tier, Ollama) |
+| Goal | Portfolio + GenAI Application Engineer applications |
 
 ---
 
-## Daily Plan (Weekday Template — ~2.5 hours)
+## Daily rhythm (~2 hours weekdays)
 
-| Block | Duration | Activity | Output |
-|-------|----------|----------|--------|
-| **A — Concept** | 45 min | Read one module section (Core Concepts → Implementation) | Annotated notes |
-| **B — Build** | 60 min | Hands-on lab / coding assignment | Working code + tests |
-| **C — Production judgment** | 30 min | Write: WHEN / WHEN NOT / tradeoffs / failure modes | ½-page memo |
-| **D — Interview drill** | 15 min | 2 questions (Senior + Staff/Principal or EM) aloud | Voice note or written answer |
+| Block | Duration | Activity |
+|-------|----------|----------|
+| **A — Concept** | 40 min | Track D scope + Core Concepts only |
+| **B — Build** | 60 min | Lab / project slice |
+| **C — Note** | 20 min | 5–10 lines in your words + Git commit |
 
-### Weekend (~7 hours — aligns with roadmap schedule)
-
-| Day | Duration | Activity |
-|-----|----------|----------|
-| Saturday | 4 h | Hands-on project implementation |
-| Sunday | 3 h | Project review + notes + interview practice |
-
-Suggested weekday split from the Master Roadmap: Mon theory · Tue docs/papers · Wed coding · Thu project · Fri papers/revision.
+Weekend: Sat 3h build · Sun 1–2h revision + 5 questions aloud.
 
 ---
 
-## Phase → Week execution table (balanced ~30 weeks)
+## Block → Week execution table (primary course)
 
-| Week | Phase | Modules / materials | Project slice | Interview focus |
-|-----:|------:|---------------------|---------------|-----------------|
-| 1 | 0 | **00-01 GenAI From Scratch** | Hello-LLM CLI (or mock) | AI vs ML vs GenAI vs LLM |
-| 2 | 0 | 00-05 Python, 00-06 APIs, 00-04 Math | FastAPI + Pydantic warmup + cosine util | Async + typing · embeddings |
-| 3 | 0 | **00-02** Rules→Agents · optional **00-03** BankCo | When-not-to-agent memo · (optional) retention rules lab | Rules vs LLM vs agent |
-| 4 | 1 | 01-01, 01-02 | Token cost CLI | Attention / KV cache |
-| 5 | 1 | 01-04, 01-05, 02-01, 02-02 | Multi-provider + tools (incl. DeepSeek) | Provider tradeoffs |
-| 6 | 2 | 03-01, 03-02 | Support agent v0 | Agent loop |
-| 7 | 2 | 03-03, 03-04 | LangGraph HITL support agent | Pattern selection |
-| 8 | 3 | 04-01, 04-02 | Ingest + chunking | Chunking tradeoffs |
-| 9 | 3 | 04-03 | Hybrid + rerank | Hallucination control |
-| 10 | 3 | 04-04 | Knowledge Assistant v1 | HyDE / advanced RAG |
-| 11 | 4 | 05-01, 05-02 | Travel Planner | Coordination failures |
-| 12 | 4 | 05-03, 07-01, 07-04 | MCP server + gateway | MCP governance |
-| 13 | 4 | 07-02, 07-03 | Research Assistant | A2A / async |
-| 14 | 5 | 06-01 | Voice Assistant | Latency budgets |
-| 15 | 5 | 06-02 | Document Reader | Multimodal grounding |
-| 16 | 6 | 08-01 | Golden set + DeepEval | Eval strategy |
-| 17 | 6 | 08-02 | Tracing / LangSmith / OTel | Observability design |
-| 18 | 6 | 08-03 | Ship gates + Promptfoo | Guardrails |
-| 19 | 7 | 09-01, 09-02 | LoRA experiment | Prompt vs RAG vs FT |
-| 20 | 7 | 09-03 | Serve adapter | Serving tradeoffs |
-| 21 | 8 | 10-01, 01-03 | FastAPI + vLLM gateway | GPU inference |
-| 22 | 8 | 10-02 | Docker + Kubernetes + CI | K8s deploy |
-| 23 | 8 | 10-03, 10-04 | Redis/Kafka + cost dash | Cost/latency design |
-| 24 | 9 | 11-01, 11-02 | Red-team suite | OWASP LLM / injection |
-| 25 | 10 | 12-05, Design-Cursor, Design-Copilot | Coding agent design | Coding agent arch |
-| 26 | 10 | 12-06 + ChatGPT/Perplexity/RAG designs | Product one-pager | Product + SD |
-| 27 | 10 | Remaining System Designs | Design portfolio pack | Full design interview |
-| 28 | 11 | Leading AI Teams, Hiring | Scorecard + roadmap | EM behavioral |
-| 29 | 11 | Governance + STAR | STAR bank #1–8 | Leadership stories |
-| 30 | 11 | Career guides + mocks + capstone | Capstone polish · offer loop | Panel / weakest dims |
+### Block 1 — Foundations (Weeks 1–8)
 
-> **EM track:** From Phase 2 onward, add ≥2 h/week from `Leadership/` and `Career/EM-Interview-Guide.md`.
+| Week | Focus | Modules | Ship |
+|-----:|-------|---------|------|
+| 1 | GenAI vocabulary | **[00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)** | Hello-LLM (or mock); Labs A–C |
+| 2 | Python basics for AI | [00-05](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md) (slow) | `venv`, functions, types, one script |
+| 3 | Python continued | 00-05 | Async hello; package a tiny module |
+| 4 | HTTP + FastAPI | [00-06](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) | POST JSON endpoint |
+| 5 | FastAPI + Pydantic | 00-06 | Validation + error responses |
+| 6 | Embeddings intuition | [00-04](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) **light** | Cosine similarity on 5 sentences |
+| 7 | Rules vs LLM vs agent | [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) **skim** | Half-page “when not to agent” memo |
+| 8 | Block 1 integration | Review 00-01→00-06 | Warmup API + README |
 
-> **Intensive (~22 weeks):** Only if you already ship LLM features — compress Phase 0 to **00-01 + Python/API skim** (do not skip GenAI vocabulary); combine Phase 5+9; start Phase 11 mocks earlier.
-
-> **Sprint (experienced LLM engineers — ~16 weeks):** Skim 00-01; skip other Phase 0 labs; start at Phase 1; compress Phases 5–7. **Not for absolute beginners.**
+**Exit Block 1:** Explain tokens/hallucination; call an LLM API; ship a typed FastAPI endpoint.
 
 ---
 
-## Monthly Plan (balanced path)
+### Block 2 — LLM apps (Weeks 9–16)
 
-### Month 1 — Foundations → Single Agent
+| Week | Focus | Modules | Ship |
+|-----:|-------|---------|------|
+| 9 | How LLMs feel inside | [01-01](Modules/01-LLM-Engineering/01-01-Transformer-Architecture.md) **intuition** + Karpathy talk | 10-bullet notes |
+| 10 | Tokens & cost | [01-02](Modules/01-LLM-Engineering/01-02-Tokenization-Context-Windows.md) | Cost estimator CLI |
+| 11–12 | Providers (India-cost) | [01-05](Modules/01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) | Gemini + DeepSeek (+ one more) comparison table |
+| 13 | Routing awareness | [01-04](Modules/01-LLM-Engineering/01-04-Model-Routing-LiteLLM.md) **skim** | Optional LiteLLM hello |
+| 14 | Production prompts | [02-01](Modules/02-Prompt-Engineering/02-01-Production-Prompt-Engineering.md) | Prompt versions for one task |
+| 15–16 | Structured outputs + tools | [02-02](Modules/02-Prompt-Engineering/02-02-Structured-Outputs-Tool-Calling.md) | **Document helper** FastAPI (JSON extract) |
 
-**Goal:** GenAI vocabulary + first model call + Python/API fluency + multi-provider LLM + bounded support agent.
-
-| Deliverable | Done when |
-|-------------|-----------|
-| Hello-LLM CLI | Chat call with roles + token usage (mock OK at first) |
-| Warmup API | Async FastAPI + Pydantic + cosine util |
-| Multi-provider CLI | OpenAI + Claude + Gemini + DeepSeek with cost report |
-| Support Agent | LangGraph + step budget + audit log |
-| STAR #1–2 | Delivery + technical decision |
-
-### Month 2 — RAG → Multi-Agent
-
-**Goal:** Citation-backed RAG + multi-agent + MCP.
-
-| Deliverable | Done when |
-|-------------|-----------|
-| Knowledge Assistant | Hybrid search + citations + abstain |
-| Travel Planner | ≥3 specialists + validator |
-| MCP gateway | Auth + allowlist + audit |
-| STAR #3–4 | Cross-team + incident |
-
-### Month 3 — Multimodal → LLMOps → Fine-Tune
-
-**Goal:** Voice/docs + eval platform + FT decision.
-
-| Deliverable | Done when |
-|-------------|-----------|
-| Voice + Doc Reader | Latency + grounded Q&A measured |
-| Eval Dashboard | Golden ≥100; CI gate |
-| FT memo | Prompt vs RAG vs LoRA with numbers |
-| STAR #5–6 | Hiring + influence |
-
-### Month 4 — Production → Security → Design
-
-**Goal:** Deploy, secure, design like Principal.
-
-| Deliverable | Done when |
-|-------------|-----------|
-| K8s staging | Probes, canary, cost dashboard |
-| Security review | OWASP LLM Top 10 + injection CI |
-| Design pack | ≥6 System Design writeups |
-| Coding agent + product memos | 12-05 / 12-06 complete |
-
-### Month 5–6 — Leadership + Capstone + Offers
-
-**Goal:** Portfolio conversion and interview loops.
-
-| Deliverable | Done when |
-|-------------|-----------|
-| Capstone | Advanced/Expert project from roadmap ladder |
-| STAR #7–8 | Principal EM stories |
-| Mocks | ≥6 scored (IC + EM) |
-| Resume | 5 quantified AI bullets |
+**Exit Block 2:** Document helper with schema-validated JSON.
 
 ---
 
-## Project Timeline (roadmap ladder)
+### Block 3 — RAG + agent (Weeks 17–24)
 
-| Level | Projects | When |
-|-------|----------|------|
-| Beginner | Customer Support Agent · Internal Knowledge Bot | Phases 2–3 |
-| Intermediate | Research Assistant · SQL Agent · Meeting Assistant · Resume Analyzer | Phases 4–6 |
-| Advanced | Multi-Agent Coding Assistant · AI PM · Architecture Reviewer · Incident Response · EM Assistant | Phases 8–11 |
-| Expert | Complete Engineering Organization Agent (11 roles) | Capstone |
+| Week | Focus | Modules | Ship |
+|-----:|-------|---------|------|
+| 17–18 | RAG architecture + chunking | [04-01](Modules/04-RAG/04-01-RAG-Architecture.md), [04-02](Modules/04-RAG/04-02-Chunking-Metadata-Embeddings.md) | Ingest sample policy PDFs |
+| 19 | Hybrid search awareness | [04-03](Modules/04-RAG/04-03-Vector-DB-Hybrid-Search-Reranking.md) **skim** | Citations in answers |
+| 20 | RAG polish | 04-01–04-03 | **Policy FAQ bot** (EN + Hindi queries OK) |
+| 21–22 | Agent loop + tools/memory | [03-01](Modules/03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md), [03-02](Modules/03-Agentic-Fundamentals/03-02-Tools-Memory-Control-Flow.md) | Support agent, ≤3 tools, step budget |
+| 23 | LangGraph light | [03-04](Modules/03-Agentic-Fundamentals/03-04-LangGraph-Production-Agents.md) **light** | Same agent + HITL or checkpoint |
+| 24 | Block 3 demo week | — | Record 5-min demo of FAQ + agent |
 
-See [Projects/Project-Portfolio.md](Projects/Project-Portfolio.md).
-
----
-
-## Reading Timeline (papers — minimum)
-
-| Phase | Must-read | Why |
-|-------|-----------|-----|
-| 1 | Attention Is All You Need | Shared vocabulary |
-| 2 | ReAct · Chain of Thought | Agent loop interviews |
-| 3 | RAG (Lewis) · HyDE | Grounding baseline |
-| 4 | Toolformer · MCP spec | Tools + protocols |
-| 6 | InstructGPT + eval literature | Eval credibility |
-| 7 | LoRA · QLoRA | Fine-tune tradeoffs |
-| 9 | OWASP LLM Top 10 | Security loops |
-| 10 | Tree of Thoughts · Self-RAG (selective) | Design fluency |
-
-Full databases: [Papers/Paper-Database.md](Papers/Paper-Database.md) · [Resources/Resource-Database.md](Resources/Resource-Database.md)
+**Exit Block 3:** Two repos — RAG FAQ with citations; bounded support agent.
 
 ---
 
-## Mock Interview Schedule
+### Block 4 — Quality + safety (Weeks 25–32)
 
-| Week | Type | Focus |
-|-----:|------|-------|
-| 3 | Warmup | Rules vs LLM vs agent (after 00-02) |
-| 7 | Senior AI Eng | Agent fundamentals |
-| 10 | Staff AI Eng | RAG architecture |
-| 13 | Principal design | Multi-agent + MCP + cost |
-| 18 | Staff + evals | Eval strategy / ship gates |
-| 23 | Staff + infra | K8s / GPU / cost |
-| 24 | Security | OWASP LLM / injection |
-| 28 | EM behavioral | STAR leadership |
-| 29 | Full panel | Design + coding + behavioral |
-| 30 | Offer rehearsal | Weakest dimensions only |
+| Week | Focus | Modules | Ship |
+|-----:|-------|---------|------|
+| 25–27 | Evaluation | [08-01](Modules/08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) | Golden set ≥30 Qs + pass/fail script |
+| 28 | Observability | [08-02](Modules/08-Evaluation-LLMOps/08-02-Observability-LangSmith-OTel.md) **skim** | Log model, tokens, latency |
+| 29–30 | Guardrails | [08-03](Modules/08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) | Refuse unsafe / overclaim paths |
+| 31 | OWASP awareness | [11-01](Modules/11-Security-Safety/11-01-OWASP-LLM-Top-10.md) **skim** | Checklist in README |
+| 32 | Optional BFSI drill | [00-03](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) optional | Policy-in-code retention slice **or** rest week |
 
-Track in [Interview Tracker.md](Interview%20Tracker.md).
+**Exit Block 4:** README section “How I measure quality.”
 
 ---
 
-## Intensity Dial
+### Block 5 — Deploy + cost + DC awareness (Weeks 33–40)
+
+| Week | Focus | Modules | Ship |
+|-----:|-------|---------|------|
+| 33–34 | Production FastAPI habits | [10-01](Modules/10-Production-Infrastructure/10-01-FastAPI-AI-Backends.md) | Harden RAG API |
+| 35–36 | Docker | [10-02](Modules/10-Production-Infrastructure/10-02-Docker-Kubernetes-CICD.md) **Docker only** | `Dockerfile` + run locally |
+| 37–38 | Cost & latency | [10-04](Modules/10-Production-Infrastructure/10-04-Cost-Latency-Optimization.md) | ₹ / 1K queries sheet |
+| 39 | Inference awareness | [01-03](Modules/01-LLM-Engineering/01-03-Inference-Serving-vLLM.md) **skim** + Ollama | API vs local note |
+| 40 | Deploy demo | — | Free/cheap cloud or recorded deploy demo |
+
+**Exit Block 5:** Dockerized demo + cost note (India data-center-era signal).
+
+---
+
+### Block 6 — Specialize + job loop (Weeks 41–48)
+
+Pick **one** path:
+
+| Path | Weeks 41–44 | Weeks 45–48 |
+|------|-------------|-------------|
+| **A Enterprise RAG** | Deepen 04-03; skim 04-04 | Flagship “BharatCorp Policy Assistant” + applications |
+| **B Agents for ops** | 03-03; skim 05-01 | Ticket triage agent + HITL + applications |
+| **C Infra / inference** | 01-03 deeper; 10-02 concepts; 10-04 | Serving notes + load test + applications |
+
+**Every week in Block 6 also:** resume bullets, 3 applications, explain RAG aloud.
+
+Light decision literacy anytime in Block 6: [09-02](Modules/09-Fine-Tuning/09-02-Prompting-vs-RAG-vs-FineTuning.md) (decision only — no LoRA training).
+
+---
+
+## What you skip in year 1
+
+Full multi-agent/MCP/A2A · voice/multimodal deep dives · LoRA training ops · Kafka/Ray · Phase 11 EM · 6–8 system designs (do **2** max: chat + RAG support) · paper marathon.
+
+Those live in [Master Study Roadmap](Master%20Study%20Roadmap.md) for year 2+.
+
+---
+
+## Intensity dial
 
 | Mode | Hours/week | Adjust |
 |------|------------|--------|
-| **Sprint** | 18–20 | ~16–18 weeks; experienced only — skim 00-01, skip other Phase 0 labs |
-| **Standard** | 12–15 | Follow ~30-week phase table |
-| **Marathon** | 6–8 | ~45 weeks; double each phase duration |
+| **Standard (recommended)** | 10–12 | Follow 48-week table |
+| **Busy season** | 6–8 | Double a block’s duration; never skip Block 1 |
+| **Advanced (only after job or strong portfolio)** | 12–15 | Switch to Master Study Roadmap / Track A |
 
 ---
 
-## Weekly Review Questions (Friday, 20 min)
+## Weekly review (Sunday, 15 min)
 
-1. Did I follow the **Master Study Roadmap** phase (not random modules)?
-2. What production judgment did I practice (cost / latency / safety / eval)?
-3. What failed in the lab, and what observability caught it?
-4. Can I teach this week’s topic in 10 minutes?
-5. Which interview answer is still weak?
-6. What is the single next commit for the portfolio project?
+1. Did I follow **COURSE.md / Track D** (not random advanced chapters)?  
+2. What did I **commit** to GitHub?  
+3. Can I demo this week’s work in 5 minutes?  
+4. What single next task unlocks next week?
 
 ---
 
-## Next Step
+## Next step
 
-1. Open **[Master Study Roadmap](Master%20Study%20Roadmap.md)** and bookmark Phase 0.  
-2. Start **Week 1**: [00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md).  
-3. Then Python/APIs → math → Phase 1. Log progress on [Dashboard](Dashboard.md).
+1. Open **[COURSE.md](COURSE.md)**.  
+2. Week 1 → **[00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)**.  
+3. Log progress on [Dashboard](Dashboard.md) / [Progress Tracker](Progress%20Tracker.md).

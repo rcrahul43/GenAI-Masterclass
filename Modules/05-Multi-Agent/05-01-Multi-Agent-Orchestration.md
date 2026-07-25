@@ -1,5 +1,12 @@
 # 05-01 — Multi-Agent Orchestration: When One Agent Is Not Enough
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **ADVANCED** · Depth: **Year 2+ / specialize**  
+> Block 6 path B skim only.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 5–6 hours (read 2.5h · lab 2.5h · tradeoff memo 1h) |

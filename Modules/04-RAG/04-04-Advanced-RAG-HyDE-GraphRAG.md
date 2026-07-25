@@ -1,5 +1,12 @@
 # 04-04 — Advanced RAG: HyDE, GraphRAG & Agentic RAG
 
+
+<!-- TRACK_D_SCOPE -->
+> **Track D scope (primary course):** **ADVANCED** · Depth: **Year 2+ / specialize**  
+> Block 6 path A skim only.  
+> Full course map: [COURSE.md](../../COURSE.md) · This week: [Study Plan](../../Study%20Plan.md)
+<!-- /TRACK_D_SCOPE -->
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 6–7 hours (read 2.5h · lab 3h · architecture comparison 1.5h) |
