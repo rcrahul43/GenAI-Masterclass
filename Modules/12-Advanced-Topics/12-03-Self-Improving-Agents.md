@@ -404,7 +404,8 @@ Self-improving agents close the loop with **generation, automated tests, and str
 
 | Title | URL | Difficulty | Reading Time | Why Read | Important Sections |
 |-------|-----|------------|--------------|----------|--------------------|
-| Reflexion | [Paper DB](../../Papers/Paper-Database.md#reflexion) | Advanced | 45 min | Verbal reinforcement | Architecture |
+| Reflexion (paper) | https://arxiv.org/abs/2303.11366 | Advanced | 45 min | Verbal reinforcement learning for agents | Architecture; reflection loop |
+| Reflexion (handbook notes) | [Paper DB](../../Papers/Paper-Database.md#reflexion) | Advanced | 10 min | Local summary + cross-links | Reflexion entry |
 | Eval lifecycle | [08-01](../08-Evaluation-LLMOps/08-01-Evaluation-Lifecycle.md) | Intermediate | 30 min | Hold-out sets | Gates |
 | DSPy | [12-04](12-04-DSPy-Programmatic-Prompting.md) | Advanced | 40 min | Systematic optimize | Optimizers |
 | OWASP LLM10 | [11-01](../11-Security-Safety/11-01-OWASP-LLM-Top-10.md) | Intermediate | 15 min | Retry cost | Budget |
