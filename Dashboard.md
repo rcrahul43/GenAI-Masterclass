@@ -48,11 +48,14 @@ Then Phase 1 → [01-01 Transformer](Modules/01-LLM-Engineering/01-01-Transforme
 
 | Track | Follow |
 |-------|--------|
-| IC | Master Roadmap Phases 0–11 at full depth |
-| EM | Same phases; lighter labs on GPU/FT; heavy Phase 11 + 12-06 |
-| Hybrid | IC days + Leadership days |
+| **D — India AI career (beginner)** | **[India AI Career Learning Plan](Career/India-AI-Career-Learning-Plan.md)** — basic programming, no AI yet |
+| A — IC Staff/Principal | Master Roadmap Phases 0–11 at full depth |
+| B — EM | Same phases; lighter labs on GPU/FT; heavy Phase 11 + 12-06 |
+| C — Hybrid | IC days + Leadership days |
 
 More detail: [Learning Path](Learning%20Path.md)
+
+**If you have basic programming and no AI background → choose Track D.**
 
 ---
 

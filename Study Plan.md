@@ -11,11 +11,13 @@
 
 | Parameter | Default |
 |-----------|---------|
-| Available hours / week | **12–15** (adjustable) |
+| Available hours / week | **12–15** (adjustable) · Track D often **10–12** |
 | Primary stack | Python, FastAPI, **LangGraph**, OpenAI + Claude + Gemini + **DeepSeek** |
-| Target role | Staff/Principal AI Engineer **or** Engineering Manager (AI) |
-| Timeline | **~30 weeks** balanced (Phases 0–11) · **20–22 weeks** intensive · **16 weeks** sprint (skip Phase 0 labs) |
+| Target role | Staff/Principal AI Engineer **or** Engineering Manager (AI) · **or Track D GenAI Application Engineer (India)** |
+| Timeline | **~30 weeks** Tracks A–C · **~12 months** [Track D](Career/India-AI-Career-Learning-Plan.md) · **20–22 weeks** intensive · **16 weeks** sprint (experienced only) |
 | Output artifacts | GitHub portfolio + design memos + STAR bank + mock scores |
+
+> **New to AI with basic programming?** Do **not** use the 30-week Staff table as your primary plan. Use **[Track D — India AI Career Learning Plan](Career/India-AI-Career-Learning-Plan.md)**.
 
 ---
 

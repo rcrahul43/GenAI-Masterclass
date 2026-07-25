@@ -16,7 +16,8 @@
 | 0.3 | Study Plan | [Study Plan.md](Study%20Plan.md) |
 | 0.4 | Weekly Planner | [Weekly Planner.md](Weekly%20Planner.md) |
 | 0.5 | Progress Tracker (learner) | [Progress Tracker.md](Progress%20Tracker.md) |
-| 0.6 | Learning Path (role tracks) | [Learning Path.md](Learning%20Path.md) |
+| 0.6 | Learning Path (role tracks A–D) | [Learning Path.md](Learning%20Path.md) |
+| 0.6b | **Track D — India AI Career Plan (beginner)** | [Career/India-AI-Career-Learning-Plan.md](Career/India-AI-Career-Learning-Plan.md) |
 | 0.7 | Interview Tracker | [Interview Tracker.md](Interview%20Tracker.md) |
 | 0.8 | Revision Planner | [Revision Planner.md](Revision%20Planner.md) |
 | 0.9 | Architecture Index | [Architecture Index.md](Architecture%20Index.md) |
@@ -217,6 +218,7 @@
 |---|-------|------|--------|
 | 17.1 | Principal / Staff Interview Guide | [Principal-Staff](Career/Principal-Staff-Interview-Guide.md) | ✅ done |
 | 17.2 | Engineering Manager Interview Guide | [EM-Guide](Career/EM-Interview-Guide.md) | ✅ done |
+| 17.3 | **India AI Career Learning Plan (Track D)** | [India-AI-Career](Career/India-AI-Career-Learning-Plan.md) | ✅ done |
 
 ---
 
