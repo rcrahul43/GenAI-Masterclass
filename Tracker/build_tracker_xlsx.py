@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import csv
 import re
 from pathlib import Path
 
@@ -14,6 +15,7 @@ from openpyxl.worksheet.datavalidation import DataValidation
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = Path(__file__).resolve().parent / "GenAI-Masterclass-Tracker.xlsx"
+RESOURCES_CSV = Path(__file__).resolve().parent / "Resources-from-chapters.csv"
 
 HEADER_FILL = PatternFill("solid", fgColor="1F4E79")
 HEADER_FONT = Font(color="FFFFFF", bold=True, size=11)
@@ -196,7 +198,22 @@ def _split_md_table_row(line: str) -> list[str] | None:
     return [p.strip() for p in line.strip().strip("|").split("|")]
 
 
+def _extract_http_url(cell: str) -> str | None:
+    cell = (cell or "").strip()
+    if cell.startswith("http://") or cell.startswith("https://"):
+        return cell
+    mm = re.search(r"\((https?://[^)]+)\)", cell)
+    return mm.group(1) if mm else None
+
+
 def parse_further_reading(path: Path) -> list[dict]:
+    """Parse Further Reading tables.
+
+    Supports:
+    - Title | URL | Difficulty | Reading Time | Why Read | Important Sections
+    - Resource | Why it matters | URL
+    - Markdown links with http(s) URLs anywhere in the row
+    """
     text = path.read_text(encoding="utf-8", errors="ignore")
     m = re.search(r"##\s+Further Reading\s*\n(.*?)(?=\n##\s|\Z)", text, re.S | re.I)
     if not m:
@@ -208,22 +225,53 @@ def parse_further_reading(path: Path) -> list[dict]:
         if not parts or len(parts) < 2:
             continue
         title = parts[0]
-        if title.lower() == "title" or set(title.replace(":", "")) <= {"-"}:
+        low = title.lower().strip()
+        if low in {"title", "resource"} or set(title.replace(":", "")) <= {"-"}:
             continue
-        url = parts[1]
-        if not url.startswith("http"):
+
+        url = None
+        url_idx = None
+        for i, cell in enumerate(parts):
+            found = _extract_http_url(cell)
+            if found:
+                url, url_idx = found, i
+                break
+        if not url:
             mm = re.search(r"\((https?://[^)]+)\)", line)
             if not mm:
                 continue
             url = mm.group(1)
+            url_idx = None
+
+        # Compact 3-col: Resource | Why | URL
+        if len(parts) == 3 and url_idx == 2:
+            difficulty = reading_time = important = ""
+            why = parts[1]
+        # Standard 6-col with URL in column 2
+        elif len(parts) >= 6 and url_idx == 1:
+            difficulty = parts[2]
+            reading_time = parts[3]
+            why = parts[4]
+            important = parts[5]
+        else:
+            others = [
+                p
+                for i, p in enumerate(parts)
+                if i != 0 and i != url_idx and not _extract_http_url(p)
+            ]
+            difficulty = others[0] if len(others) > 0 else ""
+            reading_time = others[1] if len(others) > 1 else ""
+            why = others[2] if len(others) > 2 else ""
+            important = others[3] if len(others) > 3 else ""
+
         rows.append(
             {
                 "title": title,
                 "url": url,
-                "difficulty": parts[2] if len(parts) > 2 else "",
-                "reading_time": parts[3] if len(parts) > 3 else "",
-                "why": parts[4] if len(parts) > 4 else "",
-                "important": parts[5] if len(parts) > 5 else "",
+                "difficulty": difficulty,
+                "reading_time": reading_time,
+                "why": why,
+                "important": important,
             }
         )
     if not rows:
@@ -289,9 +337,47 @@ def collect_resources() -> list[dict]:
     return out
 
 
+def write_resources_csv(resources: list[dict]) -> Path:
+    """Keep Resources-from-chapters.csv in sync with Further Reading extraction."""
+    fields = [
+        "Item Type",
+        "Item ID",
+        "Group",
+        "Res #",
+        "Title",
+        "URL",
+        "Difficulty",
+        "Reading Time",
+        "Why Read",
+        "Important Sections",
+        "Source File",
+    ]
+    with RESOURCES_CSV.open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=fields)
+        w.writeheader()
+        for r in resources:
+            w.writerow(
+                {
+                    "Item Type": r["item_type"],
+                    "Item ID": r["item_id"],
+                    "Group": r["group"],
+                    "Res #": r["res_n"],
+                    "Title": r["title"],
+                    "URL": r["url"],
+                    "Difficulty": r["difficulty"],
+                    "Reading Time": r["reading_time"],
+                    "Why Read": r["why"],
+                    "Important Sections": r["important"],
+                    "Source File": r["source_file"],
+                }
+            )
+    return RESOURCES_CSV
+
+
 def build() -> Path:
     modules = parse_modules()
     resources = collect_resources()
+    write_resources_csv(resources)
     wb = Workbook()
 
     # README
