@@ -127,7 +127,7 @@ Use before `v1.0.0` tag or PR to `main`:
 
 | Item | Detail |
 |------|--------|
-| **Module** | [00-03](../Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) *(after 00-01 + Python/APIs)* |
+| **Module** | [00-03](../Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) *(after 00-01 → 00-05/00-06 → 00-02)* |
 | **Scope** | FastAPI: signals → deterministic risk/offer → optional LLM draft → HITL approve |
 | **Resume bullets** | • Built FastAPI retention decision API with policy-in-code eligibility, LLM drafting on the edge, and HITL audit trail |
 | **Milestones** | M0: policy unit tests · M1: `/recommend` · M2: approval + audit · M3: console UI |

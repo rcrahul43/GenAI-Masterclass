@@ -39,7 +39,7 @@ They fail because:
 - latency broke the workflow,
 - or teams built an agent when a search box would have worked.
 
-The foundations chapter [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) introduces quality, latency, cost, and risk as the four currencies of GenAI work. AI product thinking turns those dimensions into roadmap and launch decisions.
+The foundations chapter [00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md) introduces quality, latency, cost, and risk as beginner habits. This chapter (with [08-03](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md)) turns those dimensions into roadmap and launch decisions.
 
 Staff/Principal question:
 

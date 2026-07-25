@@ -25,7 +25,7 @@ Do **not** follow the old compressed module-week table as the primary path. Stud
 
 | Phase | Weeks | Theme | Flagship |
 |------:|------:|-------|----------|
-| **0** | 2–3 | GenAI ideas · Python · APIs · Math | Hello-LLM CLI + FastAPI warmup |
+| **0** | 3 | GenAI ideas · Python · APIs · Math · Rules→Agents | Hello-LLM CLI + FastAPI warmup |
 | **1** | 2 | LLM Foundations + multi-provider | Chat CLI + cost estimator |
 | **2** | 2 | Agent Fundamentals + LangGraph | Customer Support Agent |
 | **3** | 3 | RAG | Internal Knowledge Assistant |
@@ -67,42 +67,41 @@ Suggested weekday split from the Master Roadmap: Mon theory · Tue docs/papers �
 | Week | Phase | Modules / materials | Project slice | Interview focus |
 |-----:|------:|---------------------|---------------|-----------------|
 | 1 | 0 | **00-01 GenAI From Scratch** | Hello-LLM CLI (or mock) | AI vs ML vs GenAI vs LLM |
-| 2 | 0 | 00-05 Python, 00-06 APIs | FastAPI + Pydantic warmup | Async + typing |
-| 2b | 0 | 00-04 Math *(same week or +3 days)* | Cosine / NN lab | Embeddings whiteboard |
-| 3 | 1 | 01-01, 01-02 | Token cost CLI | Attention / KV cache |
-| 4 | 1 | 01-04, 01-05, 02-01, 02-02 | Multi-provider + tools (incl. DeepSeek) | Provider tradeoffs |
-| 5 | 2 | 03-01, 03-02 | Support agent v0 | Agent loop |
-| 6 | 2 | 03-03, 03-04 | LangGraph HITL support agent | Pattern selection |
-| 7 | 3 | 04-01, 04-02 | Ingest + chunking | Chunking tradeoffs |
-| 8 | 3 | 04-03 | Hybrid + rerank | Hallucination control |
-| 9 | 3 | 04-04 | Knowledge Assistant v1 | HyDE / advanced RAG |
-| 10 | 4 | 05-01, 05-02 | Travel Planner | Coordination failures |
-| 11 | 4 | 05-03, 07-01, 07-04 | MCP server + gateway | MCP governance |
-| 12 | 4 | 07-02, 07-03 | Research Assistant | A2A / async |
-| 13 | 5 | 06-01 | Voice Assistant | Latency budgets |
-| 14 | 5 | 06-02 | Document Reader | Multimodal grounding |
-| 15 | 6 | 08-01 | Golden set + DeepEval | Eval strategy |
-| 16 | 6 | 08-02 | Tracing / LangSmith / OTel | Observability design |
-| 17 | 6 | 08-03 | Ship gates + Promptfoo | Guardrails |
-| 18 | 7 | 09-01, 09-02 | LoRA experiment | Prompt vs RAG vs FT |
-| 19 | 7 | 09-03 | Serve adapter | Serving tradeoffs |
-| 20 | 8 | 10-01, 01-03 | FastAPI + vLLM gateway | GPU inference |
-| 21 | 8 | 10-02 | Docker + Kubernetes + CI | K8s deploy |
-| 22 | 8 | 10-03, 10-04 | Redis/Kafka + cost dash | Cost/latency design |
-| 23 | 9 | 11-01, 11-02 | Red-team suite | OWASP LLM / injection |
-| 24 | 10 | 12-05, Design-Cursor, Design-Copilot | Coding agent design | Coding agent arch |
-| 25 | 10 | 12-06 + ChatGPT/Perplexity/RAG designs | Product one-pager | Product + SD |
-| 26 | 10 | Remaining System Designs | Design portfolio pack | Full design interview |
-| 27 | 11 | Leading AI Teams, Hiring | Scorecard + roadmap | EM behavioral |
-| 28 | 11 | Governance + STAR | STAR bank #1–8 | Leadership stories |
-| 29 | 11 | Career guides + mocks | Capstone polish | Panel simulation |
-| 30 | 11 | Capstone + offer loop | Org Agent / flagship | Weakest dims only |
+| 2 | 0 | 00-05 Python, 00-06 APIs, 00-04 Math | FastAPI + Pydantic warmup + cosine util | Async + typing · embeddings |
+| 3 | 0 | **00-02** Rules→Agents · optional **00-03** BankCo | When-not-to-agent memo · (optional) retention rules lab | Rules vs LLM vs agent |
+| 4 | 1 | 01-01, 01-02 | Token cost CLI | Attention / KV cache |
+| 5 | 1 | 01-04, 01-05, 02-01, 02-02 | Multi-provider + tools (incl. DeepSeek) | Provider tradeoffs |
+| 6 | 2 | 03-01, 03-02 | Support agent v0 | Agent loop |
+| 7 | 2 | 03-03, 03-04 | LangGraph HITL support agent | Pattern selection |
+| 8 | 3 | 04-01, 04-02 | Ingest + chunking | Chunking tradeoffs |
+| 9 | 3 | 04-03 | Hybrid + rerank | Hallucination control |
+| 10 | 3 | 04-04 | Knowledge Assistant v1 | HyDE / advanced RAG |
+| 11 | 4 | 05-01, 05-02 | Travel Planner | Coordination failures |
+| 12 | 4 | 05-03, 07-01, 07-04 | MCP server + gateway | MCP governance |
+| 13 | 4 | 07-02, 07-03 | Research Assistant | A2A / async |
+| 14 | 5 | 06-01 | Voice Assistant | Latency budgets |
+| 15 | 5 | 06-02 | Document Reader | Multimodal grounding |
+| 16 | 6 | 08-01 | Golden set + DeepEval | Eval strategy |
+| 17 | 6 | 08-02 | Tracing / LangSmith / OTel | Observability design |
+| 18 | 6 | 08-03 | Ship gates + Promptfoo | Guardrails |
+| 19 | 7 | 09-01, 09-02 | LoRA experiment | Prompt vs RAG vs FT |
+| 20 | 7 | 09-03 | Serve adapter | Serving tradeoffs |
+| 21 | 8 | 10-01, 01-03 | FastAPI + vLLM gateway | GPU inference |
+| 22 | 8 | 10-02 | Docker + Kubernetes + CI | K8s deploy |
+| 23 | 8 | 10-03, 10-04 | Redis/Kafka + cost dash | Cost/latency design |
+| 24 | 9 | 11-01, 11-02 | Red-team suite | OWASP LLM / injection |
+| 25 | 10 | 12-05, Design-Cursor, Design-Copilot | Coding agent design | Coding agent arch |
+| 26 | 10 | 12-06 + ChatGPT/Perplexity/RAG designs | Product one-pager | Product + SD |
+| 27 | 10 | Remaining System Designs | Design portfolio pack | Full design interview |
+| 28 | 11 | Leading AI Teams, Hiring | Scorecard + roadmap | EM behavioral |
+| 29 | 11 | Governance + STAR | STAR bank #1–8 | Leadership stories |
+| 30 | 11 | Career guides + mocks + capstone | Capstone polish · offer loop | Panel / weakest dims |
 
 > **EM track:** From Phase 2 onward, add ≥2 h/week from `Leadership/` and `Career/EM-Interview-Guide.md`.
 
-> **Intensive (~22 weeks):** Merge Phase 0 into Week 1 skim; combine Phase 5+9; start Phase 11 mocks earlier.
+> **Intensive (~22 weeks):** Only if you already ship LLM features — compress Phase 0 to **00-01 + Python/API skim** (do not skip GenAI vocabulary); combine Phase 5+9; start Phase 11 mocks earlier.
 
-> **Sprint (experienced LLM engineers — ~16 weeks):** Skip Phase 0 labs; start at Phase 1; compress Phases 5–7.
+> **Sprint (experienced LLM engineers — ~16 weeks):** Skim 00-01; skip other Phase 0 labs; start at Phase 1; compress Phases 5–7. **Not for absolute beginners.**
 
 ---
 
@@ -200,13 +199,14 @@ Full databases: [Papers/Paper-Database.md](Papers/Paper-Database.md) · [Resourc
 
 | Week | Type | Focus |
 |-----:|------|-------|
-| 6 | Senior AI Eng | Agent fundamentals |
-| 9 | Staff AI Eng | RAG architecture |
-| 12 | Principal design | Multi-agent + MCP + cost |
-| 17 | Staff + evals | Eval strategy / ship gates |
-| 22 | Staff + infra | K8s / GPU / cost |
-| 23 | Security | OWASP LLM / injection |
-| 27 | EM behavioral | STAR leadership |
+| 3 | Warmup | Rules vs LLM vs agent (after 00-02) |
+| 7 | Senior AI Eng | Agent fundamentals |
+| 10 | Staff AI Eng | RAG architecture |
+| 13 | Principal design | Multi-agent + MCP + cost |
+| 18 | Staff + evals | Eval strategy / ship gates |
+| 23 | Staff + infra | K8s / GPU / cost |
+| 24 | Security | OWASP LLM / injection |
+| 28 | EM behavioral | STAR leadership |
 | 29 | Full panel | Design + coding + behavioral |
 | 30 | Offer rehearsal | Weakest dimensions only |
 
@@ -218,7 +218,7 @@ Track in [Interview Tracker.md](Interview%20Tracker.md).
 
 | Mode | Hours/week | Adjust |
 |------|------------|--------|
-| **Sprint** | 18–20 | ~16–18 weeks; Phase 0 skim only |
+| **Sprint** | 18–20 | ~16–18 weeks; experienced only — skim 00-01, skip other Phase 0 labs |
 | **Standard** | 12–15 | Follow ~30-week phase table |
 | **Marathon** | 6–8 | ~45 weeks; double each phase duration |
 

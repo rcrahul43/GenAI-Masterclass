@@ -28,8 +28,10 @@ The original course is strong on **project-driven agentic AI**. Staff+ roles als
 
 **Total duration (balanced, 12–15 h/week):** ~30–32 weeks across Phases 0–11  
 **Intensive (18–20 h/week):** ~20–22 weeks  
-**Sprint (experienced LLM engineers):** skim 00-01; skip other Phase 0 labs; compress Phases 1–4 into 6 weeks  
-**Absolute beginners:** do not skip 00-01 — it is the on-ramp before math, frameworks, or BankCo drills
+**Sprint (experienced LLM engineers only):** skim 00-01; skip other Phase 0 labs; compress Phases 1–4 into 6 weeks  
+**Absolute beginners:** do **not** skim or skip 00-01 — it is the on-ramp before math, frameworks, or BankCo drills
+
+> **Depth note:** Phase 0 `00-01` is beginner-friendly. From `00-02` onward (and Phases 1–11), chapters keep Staff / Principal / EM interview depth. Follow the progressive order; do not jump to BankCo or LangGraph on day one.
 
 ---
 
@@ -37,7 +39,7 @@ The original course is strong on **project-driven agentic AI**. Staff+ roles als
 
 | Phase | Name | Weeks | Primary modules | Flagship project |
 |------:|------|------:|-----------------|------------------|
-| **0** | AI Foundations | 2–3 | 00-01 → 00-05 → 00-06 → 00-04 (+ 00-02/00-03 after first LLM call) | Hello-LLM CLI + FastAPI warmup |
+| **0** | AI Foundations | 3 | 00-01 → 00-05 → 00-06 → 00-04 → 00-02 (+ optional 00-03) | Hello-LLM CLI + FastAPI warmup |
 | **1** | LLM Foundations | 2 | 01-01 → 01-05, 02-01, 02-02 | Multi-provider chat CLI + cost estimator |
 | **2** | Agent Fundamentals | 2 | 03-01 → 03-04 | Customer Support Agent |
 | **3** | RAG | 3 | 04-01 → 04-04 | Internal Company Knowledge Assistant |
@@ -85,7 +87,7 @@ Daily micro-loop inside each study block: **Concept → Build → Production jud
 
 ---
 
-# Phase 0 — AI Foundations (2–3 weeks)
+# Phase 0 — AI Foundations (3 weeks)
 
 **Goal:** Learn GenAI from scratch — vocabulary and a first model call — then gain the Python, API, and math fluency so later LLM modules feel engineered, not magical.
 
@@ -743,5 +745,6 @@ If you complete this roadmap, your portfolio should include:
 ## Next step
 
 1. Pin [Dashboard](Dashboard.md)  
-2. Start **Phase 0 Day 1** → [00-04 Mathematics for AI Engineering](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md)  
-3. Track hours and artifacts in [Progress Tracker](Progress%20Tracker.md) and the Excel tracker
+2. Start **Phase 0 Day 1** → [00-01 GenAI From Scratch](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)  
+3. Then Python/APIs → Math → [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) (optional [00-03](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md)) → Phase 1  
+4. Track hours and artifacts in [Progress Tracker](Progress%20Tracker.md) and the Excel tracker

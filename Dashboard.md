@@ -36,7 +36,9 @@ Favorite / pin this page. Use it as your study home.
 2. [00-05 Python for AI Engineering](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md)  
 3. [00-06 APIs for AI Engineering](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md)  
 4. [00-04 Mathematics for AI Engineering](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md)  
-5. After your first LLM call: [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) · optional [00-03](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md)
+5. [00-02 From Rules to Agents](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) · optional [00-03 BankCo](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md)
+
+> Later modules stay Staff+/interview depth — follow this order; do not open BankCo or LangGraph on day one.
 
 Then Phase 1 → [01-01 Transformer](Modules/01-LLM-Engineering/01-01-Transformer-Architecture.md).
 

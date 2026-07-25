@@ -52,8 +52,9 @@ The handbook had drifted toward a compressed 16-week module sprint. It is now an
 ## From-scratch revision (2026-07-25)
 
 - **[00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)** rewritten as **GenAI From Scratch** (plain vocabulary, simple diagrams, Hello-LLM / mock labs).
-- Phase 0 order is now **00-01 → 00-05 → 00-06 → 00-04**, with **00-02 / 00-03 after** the first model call.
-- Dashboard, Study Plan, Weekly Planner, Learning Path, and README updated to match.
+- Phase 0 order is now **00-01 → 00-05 → 00-06 → 00-04 → 00-02** (+ optional **00-03**).
+- Full-course consistency pass: Roadmap Day-1 CTA, Study Plan / Weekly Planner weeks, TOC study order, Resource Database Phase 0, Architecture Index trust-zone patterns, Career Q mapping, broken `08-02` Related links, tracker WEEK_PLAN + STAR module links, Intensive/Sprint beginner gates.
+- **Not rewritten:** Modules `01`–`12`, System Design, and Leadership keep Staff+/interview depth — sequencing and pointers were corrected so beginners do not land there first.
 
 ## Quality Notes
 

@@ -34,7 +34,7 @@ Most “AI retention” pitches fail because they:
 - auto-send emails that violate offer authority and brand compliance,
 - and ignore that RMs—not models—carry the client relationship.
 
-This warm-up is the **smallest credible production slice** of BankCo’s internal retention assistant. It builds on [00-01](00-01-AI-Engineering-Mindset.md) (trust zones + when GenAI helps) and [00-02](00-02-From-Rules-to-Agents.md) (when rules beat agents). It foreshadows [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) (agent loop with tools) and [08-03](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) (ship criteria for regulated assistive AI).
+This warm-up is the **smallest credible production slice** of BankCo’s internal retention assistant. Trust zones are **previewed** in [00-01](00-01-AI-Engineering-Mindset.md); when rules beat agents is taught in [00-02](00-02-From-Rules-to-Agents.md); the full policy-first design is implemented **here**. It foreshadows [03-01](../03-Agentic-Fundamentals/03-01-Agent-Anatomy-and-Loop.md) (agent loop with tools) and [08-03](../08-Evaluation-LLMOps/08-03-Guardrails-Ship-Criteria.md) (ship criteria for regulated assistive AI).
 
 **Core thesis:** Decision-support agents **recommend**; humans **commit**. If your system can email a customer without an RM click, you built the wrong product class.
 

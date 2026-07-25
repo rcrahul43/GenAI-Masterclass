@@ -37,18 +37,18 @@ You design and ship AI systems. Interviews test architecture, failure modes, cos
 
 | Phase | Weeks | Must-complete | Depth rule |
 |-------|-------|---------------|------------|
-| 0 Foundations | 1–3 | **00-01 first**, then 00-05, 00-06, 00-04 (+ 00-02/00-03 after first call) | Implement every lab |
-| 1 LLM | 3–4 | 01-*, 02-* | All four providers (incl. DeepSeek) |
-| 2 Agents | 5–6 | 03-* | **LangGraph** fluency required |
-| 3 RAG | 7–9 | 04-* | Hybrid + rerank mandatory |
-| 4 Multi-Agent | 10–12 | 05-*, 07-* (incl. **07-04 MCP depth**) | MCP gateway + multi-agent project |
-| 5 Multimodal | 13–14 | 06-* | Voice or doc project shipped |
-| 6 LLMOps | 15–17 | 08-* | Eval CI gate |
-| 7 Fine-Tune | 18–19 | 09-* | Written FT decision memo |
-| 8 Production | 20–22 | 10-* + 01-03 depth | **K8s + GPU + cost** |
-| 9 Security | 23 | 11-* | OWASP + injection CI |
-| 10 Design | 24–26 | System Design + 12-05 + 12-06 | 6–8 designs |
-| 11 Leadership lite | 27–30 | STAR + mocks + selective Leadership | Convert to offers |
+| 0 Foundations | 1–3 | **00-01 → 00-05 → 00-06 → 00-04 → 00-02** (+ optional 00-03) | Implement every lab |
+| 1 LLM | 4–5 | 01-*, 02-* | All four providers (incl. DeepSeek) |
+| 2 Agents | 6–7 | 03-* | **LangGraph** fluency required |
+| 3 RAG | 8–10 | 04-* | Hybrid + rerank mandatory |
+| 4 Multi-Agent | 11–13 | 05-*, 07-* (incl. **07-04 MCP depth**) | MCP gateway + multi-agent project |
+| 5 Multimodal | 14–15 | 06-* | Voice or doc project shipped |
+| 6 LLMOps | 16–18 | 08-* | Eval CI gate |
+| 7 Fine-Tune | 19–20 | 09-* | Written FT decision memo |
+| 8 Production | 21–23 | 10-* + 01-03 depth | **K8s + GPU + cost** |
+| 9 Security | 24 | 11-* | OWASP + injection CI |
+| 10 Design | 25–27 | System Design + 12-05 + 12-06 | 6–8 designs |
+| 11 Leadership lite | 28–30 | STAR + mocks + selective Leadership | Convert to offers |
 
 ### IC Success Metrics
 

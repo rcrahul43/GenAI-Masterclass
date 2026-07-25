@@ -499,7 +499,7 @@ Fill ship criteria table for your capstone project.
 
 ## Stretch Project
 
-Adaptive gates: stricter policies for `risk=high` users ([00-01](../00-Foundations/00-01-AI-Engineering-Mindset.md)).
+Adaptive gates: stricter policies for `risk=high` users ([00-03](../00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) risk/offer tiers · [12-06](../12-Advanced-Topics/12-06-AI-Product-Thinking.md) launch gates).
 
 ---
 

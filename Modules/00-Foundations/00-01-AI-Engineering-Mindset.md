@@ -1,12 +1,14 @@
 # 00-01 — GenAI From Scratch: Core Ideas
 
+> **Filename note:** This file is still named `00-01-AI-Engineering-Mindset.md` for link stability. The chapter is the **beginner on-ramp**, not a Principal/EM judgment drill.
+
 | Meta | Value |
 |------|-------|
 | **Estimated Time** | 3–4 hours (read 1.5h · tiny labs 1.5h · notes 30–45 min) |
 | **Difficulty** | Beginner |
 | **Prerequisites** | Curiosity. Optional: you have used ChatGPT / Claude / Gemini as a user. No ML background required. |
 | **Module** | 00 — Foundations |
-| **Related** | [00-02](00-02-From-Rules-to-Agents.md) · [00-05](00-05-Python-for-AI-Engineering.md) · [00-06](00-06-APIs-for-AI-Engineering.md) · [01-01](../01-LLM-Engineering/01-01-Transformer-Architecture.md) · [01-05](../01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) · [Study Plan](../../Study%20Plan.md) · [Master Study Roadmap](../../Master%20Study%20Roadmap.md) |
+| **Related** | [00-05](00-05-Python-for-AI-Engineering.md) · [00-06](00-06-APIs-for-AI-Engineering.md) · [00-04](00-04-Mathematics-for-AI-Engineering.md) · [00-02](00-02-From-Rules-to-Agents.md) · [00-03](00-03-BankCo-Decision-Support-Warmup.md) · [01-01](../01-LLM-Engineering/01-01-Transformer-Architecture.md) · [01-05](../01-LLM-Engineering/01-05-Provider-SDKs-OpenAI-Claude-Gemini.md) · [Study Plan](../../Study%20Plan.md) · [Master Study Roadmap](../../Master%20Study%20Roadmap.md) |
 
 ---
 
@@ -43,7 +45,9 @@ Production judgment (cost, safety, audit trails, multi-agent systems) comes late
 ```mermaid
 flowchart LR
     A[You are here<br/>00-01 Ideas] --> B[Python + APIs<br/>00-05 · 00-06]
-    B --> C[How LLMs work<br/>Phase 1]
+    B --> M[Math intuition<br/>00-04]
+    M --> R[Rules → Agents<br/>00-02 · 00-03]
+    R --> C[How LLMs work<br/>Phase 1]
     C --> D[Prompts + tools<br/>Phase 1–2]
     D --> E[RAG + Agents<br/>Phase 2–3]
     E --> F[Production systems<br/>Phase 4+]
@@ -328,8 +332,8 @@ Ask a question that needs a private fact the model cannot know (e.g. “What is 
 | 2 | [00-05 Python](00-05-Python-for-AI-Engineering.md) | Typing, async, clean scripts |
 | 3 | [00-06 APIs](00-06-APIs-for-AI-Engineering.md) | FastAPI, schemas, HTTP for AI services |
 | 4 | [00-04 Math](00-04-Mathematics-for-AI-Engineering.md) | Vectors & similarity (needed for RAG later) |
-| 5 | Phase 1 — LLM Engineering | Transformers, tokens, providers, prompting |
-| 6 | [00-02](00-02-From-Rules-to-Agents.md) · [00-03](00-03-BankCo-Decision-Support-Warmup.md) | When rules beat agents; first decision-support design |
+| 5 | [00-02](00-02-From-Rules-to-Agents.md) · optional [00-03](00-03-BankCo-Decision-Support-Warmup.md) | When rules beat agents; first decision-support design |
+| 6 | Phase 1 — LLM Engineering | Transformers, tokens, providers, prompting |
 | 7 | Phases 2–11 | Agents, RAG, multi-agent, LLMOps, security, leadership |
 
 Full week-by-week plan: [Master Study Roadmap](../../Master%20Study%20Roadmap.md) · [Study Plan](../../Study%20Plan.md).
@@ -388,7 +392,7 @@ Answer in your own words (2–4 sentences each):
 - Start with **one prompt + one model call**.
 - Agents add **tools + memory + a loop** — only when needed.
 - Put **hard rules in code**; put **language in models**.
-- Next: Python craft → APIs → how LLMs work inside.
+- Next: Python craft → APIs → math intuition → rules vs agents → how LLMs work inside.
 
 ---
 

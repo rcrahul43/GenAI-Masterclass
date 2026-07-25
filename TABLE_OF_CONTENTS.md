@@ -29,6 +29,8 @@
 
 ## 1. Module 00 — Foundations
 
+> **Study order (not filename order):** [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) → [00-05](Modules/00-Foundations/00-05-Python-for-AI-Engineering.md) → [00-06](Modules/00-Foundations/00-06-APIs-for-AI-Engineering.md) → [00-04](Modules/00-Foundations/00-04-Mathematics-for-AI-Engineering.md) → [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md) → optional [00-03](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md).
+
 | # | Title | File | Status |
 |---|-------|------|--------|
 | 1.1 | GenAI From Scratch: Core Ideas | [00-01](Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) | ✅ done |

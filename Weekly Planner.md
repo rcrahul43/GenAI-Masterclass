@@ -91,7 +91,17 @@ Hours planned: __ / Hours actual: __
 | Interview | “Why asyncio for LLM I/O?” · embeddings whiteboard |
 | Exit criteria | Typed FastAPI service packaged with `pyproject.toml`; cosine lab works |
 
-### Week 3–4 — Phase 1: LLM Foundations
+### Week 3 — Phase 0: Rules → Agents (+ optional BankCo)
+
+| Field | Value |
+|-------|-------|
+| Modules | [00-02](Modules/00-Foundations/00-02-From-Rules-to-Agents.md), optional [00-03](Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) |
+| Resources | ReAct paper (skim) · OpenAI prompt guide · 00-02 architecture diagrams |
+| Project | When-not-to-agent memo; optional retention rules + HITL lab |
+| Interview | “When would you *not* use an agent?” |
+| Exit criteria | Can place a task on rules / classifier / one-shot LLM / agent spectrum |
+
+### Week 4–5 — Phase 1: LLM Foundations
 
 | Field | Value |
 |-------|-------|
@@ -100,7 +110,7 @@ Hours planned: __ / Hours actual: __
 | Project | Multi-provider chat CLI + cost/latency matrix |
 | Interview | Transformer whiteboard + provider tradeoffs |
 
-### Week 5–6 — Phase 2: Agent Fundamentals
+### Week 6–7 — Phase 2: Agent Fundamentals
 
 | Field | Value |
 |-------|-------|
@@ -109,7 +119,7 @@ Hours planned: __ / Hours actual: __
 | Project | **Customer Support Agent** (LangGraph + HITL) |
 | Interview | Agent loop critique · pattern selection |
 
-### Week 7–9 — Phase 3: RAG
+### Week 8–10 — Phase 3: RAG
 
 | Field | Value |
 |-------|-------|

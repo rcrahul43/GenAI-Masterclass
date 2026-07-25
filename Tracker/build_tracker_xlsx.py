@@ -55,24 +55,27 @@ SECTION_META = {
     "12-Advanced-Topics": ("12 Advanced Topics", 12, "IC"),
 }
 
+# Tracker "Week #" is a compact sprint index for the Excel sheet (not the ~30-week Study Plan calendar).
+# Progressive foundations order: 00-01 → 00-05 → 00-06 → 00-04 → 00-02 → 00-03.
 WEEK_PLAN = [
-    (0, "Foundations", "00-01|00-05|00-06|00-04", "Hello-LLM CLI + FastAPI warmup", "GenAI vocabulary", 12),
-    (1, "LLM Engineering I", "01-01|01-02", "Token cost estimator", "Transformer whiteboard", 12),
-    (2, "LLM Engineering II", "01-03|01-04|01-05", "LiteLLM FastAPI router", "Inference tradeoffs", 12),
-    (3, "Prompts & Tools", "02-01|02-02", "Structured router agent", "Tool-calling design", 12),
-    (4, "Agents I", "03-01|03-02", "Inquiry routing agent", "Agent loop critique", 12),
-    (5, "Agents II", "03-03|03-04", "LangGraph + checkpointing", "Pattern selection", 12),
-    (6, "RAG I", "04-01|04-02", "Ingestion + chunking", "Chunking tradeoffs", 12),
-    (7, "RAG II", "04-03|04-04", "Hybrid + rerank + citations", "Hallucination control", 12),
-    (8, "Multi-Agent", "05-01|05-02|05-03", "Travel planner multi-agent", "Coordination failures", 14),
-    (9, "Voice / Multimodal", "06-01|06-02", "ASR→LLM→TTS bot", "Latency budgets", 12),
-    (10, "Protocols", "07-01|07-02|07-03", "MCP + A2A negotiation", "Protocol design", 12),
-    (11, "Eval / LLMOps", "08-01|08-02|08-03", "Golden set + ship gate", "Eval strategy", 12),
-    (12, "Fine-Tuning", "09-01|09-02|09-03", "LoRA compare", "Prompt vs RAG vs FT", 12),
-    (13, "Production Infra", "10-01|10-02|10-03|10-04", "Dockerized agent API", "Cost/latency design", 14),
-    (14, "Security + Advanced", "11-01|11-02|12-01|12-02", "Red-team + Text2SQL", "Safety review", 14),
-    (15, "Advanced + Capstone", "12-03|12-04", "Capstone vertical slice", "Full design interview", 14),
-    (16, "Capstone + Mocks", "CAPSTONE", "Capstone v1 + 4 mocks", "Panel simulation", 16),
+    (0, "Foundations — GenAI + craft", "00-01|00-05|00-06|00-04", "Hello-LLM CLI + FastAPI warmup", "GenAI vocabulary", 12),
+    (1, "Foundations — Rules / BankCo", "00-02|00-03", "When-not-to-agent memo · BankCo rules", "Rules vs agent", 12),
+    (2, "LLM Engineering I", "01-01|01-02", "Token cost estimator", "Transformer whiteboard", 12),
+    (3, "LLM Engineering II", "01-03|01-04|01-05", "LiteLLM FastAPI router", "Inference tradeoffs", 12),
+    (4, "Prompts & Tools", "02-01|02-02", "Structured router agent", "Tool-calling design", 12),
+    (5, "Agents I", "03-01|03-02", "Inquiry routing agent", "Agent loop critique", 12),
+    (6, "Agents II", "03-03|03-04", "LangGraph + checkpointing", "Pattern selection", 12),
+    (7, "RAG I", "04-01|04-02", "Ingestion + chunking", "Chunking tradeoffs", 12),
+    (8, "RAG II", "04-03|04-04", "Hybrid + rerank + citations", "Hallucination control", 12),
+    (9, "Multi-Agent", "05-01|05-02|05-03", "Travel planner multi-agent", "Coordination failures", 14),
+    (10, "Voice / Multimodal", "06-01|06-02", "ASR→LLM→TTS bot", "Latency budgets", 12),
+    (11, "Protocols", "07-01|07-02|07-03|07-04", "MCP + A2A negotiation", "Protocol design", 12),
+    (12, "Eval / LLMOps", "08-01|08-02|08-03", "Golden set + ship gate", "Eval strategy", 12),
+    (13, "Fine-Tuning", "09-01|09-02|09-03", "LoRA compare", "Prompt vs RAG vs FT", 12),
+    (14, "Production Infra", "10-01|10-02|10-03|10-04", "Dockerized agent API", "Cost/latency design", 14),
+    (15, "Security + Advanced", "11-01|11-02|12-01|12-02", "Red-team + Text2SQL", "Safety review", 14),
+    (16, "Advanced + Capstone", "12-03|12-04|12-05|12-06", "Capstone vertical slice", "Full design interview", 14),
+    (17, "Capstone + Mocks", "CAPSTONE", "Capstone v1 + 4 mocks", "Panel simulation", 16),
 ]
 
 DESIGN_LINKS = {
@@ -93,20 +96,20 @@ DESIGN_LINKS = {
 
 PROJECTS = [
     ("P01", "Hello-LLM Explain-It Bot", "Foundations Projects", "Mini", 0, "00-01"),
-    ("P01b", "BankCo Decision Support", "Foundations Projects", "Mini", 0, "00-02, 00-03"),
-    ("P02", "Token Cost Estimator", "LLM Projects", "Mini", 1, "01-02"),
-    ("P03", "LiteLLM Gateway", "LLM Projects", "Mini", 2, "01-04, 01-05"),
-    ("P04", "Structured Router Agent", "Agent Projects", "Intermediate", 3, "02-02, 03-03"),
-    ("P05", "Inquiry Routing Agent", "Agent Projects", "Intermediate", 4, "03-01, 03-02"),
-    ("P06", "LangGraph Production Agent", "Agent Projects", "Intermediate", 5, "03-04"),
-    ("P07", "NovaCart RAG Assistant", "RAG Projects", "Production", 7, "04-01, 04-02, 04-03"),
-    ("P08", "Multi-Agent Travel Planner", "Multi-Agent Projects", "Production", 8, "05-01, 05-02"),
-    ("P09", "Voice Bot", "Multimodal Projects", "Intermediate", 9, "06-01"),
-    ("P10", "MCP + Negotiation Sim", "Protocol Projects", "Production", 10, "07-01, 07-02, 07-03"),
-    ("P11", "Eval Harness + Ship Gate", "LLMOps Projects", "Production", 11, "08-01, 08-03"),
-    ("P12", "LoRA Integration", "Fine-Tune Projects", "Intermediate", 12, "09-01, 09-02, 09-03"),
-    ("P13", "Deployed Agent API", "Infra Projects", "Production", 13, "10-01, 10-02, 10-04"),
-    ("P14", "Capstone Multi-Agent System", "Capstone", "Capstone", 16, "05-01, 04-01, 08-01, 11-01"),
+    ("P01b", "BankCo Decision Support", "Foundations Projects", "Mini", 1, "00-02, 00-03"),
+    ("P02", "Token Cost Estimator", "LLM Projects", "Mini", 2, "01-02"),
+    ("P03", "LiteLLM Gateway", "LLM Projects", "Mini", 3, "01-04, 01-05"),
+    ("P04", "Structured Router Agent", "Agent Projects", "Intermediate", 4, "02-02, 03-03"),
+    ("P05", "Inquiry Routing Agent", "Agent Projects", "Intermediate", 5, "03-01, 03-02"),
+    ("P06", "LangGraph Production Agent", "Agent Projects", "Intermediate", 6, "03-04"),
+    ("P07", "NovaCart RAG Assistant", "RAG Projects", "Production", 8, "04-01, 04-02, 04-03"),
+    ("P08", "Multi-Agent Travel Planner", "Multi-Agent Projects", "Production", 9, "05-01, 05-02"),
+    ("P09", "Voice Bot", "Multimodal Projects", "Intermediate", 10, "06-01"),
+    ("P10", "MCP + Negotiation Sim", "Protocol Projects", "Production", 11, "07-01, 07-02, 07-03"),
+    ("P11", "Eval Harness + Ship Gate", "LLMOps Projects", "Production", 12, "08-01, 08-03"),
+    ("P12", "LoRA Integration", "Fine-Tune Projects", "Intermediate", 13, "09-01, 09-02, 09-03"),
+    ("P13", "Deployed Agent API", "Infra Projects", "Production", 14, "10-01, 10-02, 10-04"),
+    ("P14", "Capstone Multi-Agent System", "Capstone", "Capstone", 17, "05-01, 04-01, 08-01, 11-01"),
 ]
 
 
@@ -881,13 +884,13 @@ def build() -> Path:
     ws.append(headers)
     style_header(ws, 1, len(headers))
     stories = [
-        ("S01", "Led AI feature idea→launch", "Project Experience", "Delivery", "Both", "00-01, 08-03"),
+        ("S01", "Led AI feature idea→launch", "Project Experience", "Delivery", "Both", "12-06, 08-03"),
         ("S02", "Cross-team alignment conflict", "Conflict Resolution", "People", "EM", "05-01"),
         ("S03", "Missed deadline recovery", "Execution", "Delivery", "Both", "10-02"),
         ("S04", "Hired/leveled AI engineer", "Hiring", "People", "EM", "08-01"),
         ("S05", "Hallucination/prod incident", "Technical Judgment", "Tech", "IC", "04-01, 11-02"),
         ("S06", "Said no to fine-tune/multi-agent", "Technical Judgment", "Tech", "IC", "09-02, 05-01"),
-        ("S07", "Influenced without authority", "Cross-Functional", "People", "Both", "00-01"),
+        ("S07", "Influenced without authority", "Cross-Functional", "People", "Both", "12-06"),
         ("S08", "Built mentorship rituals", "Leadership Profile", "People", "EM", "08-03"),
     ]
     for story in stories:

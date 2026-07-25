@@ -38,7 +38,7 @@ Only mark ✅ when lab + memo exist. Only mark ⭐ after a mock question on the 
 
 ## Phase checklist (high level)
 
-- [ ] Phase 0 — AI Foundations (math, Python, APIs)
+- [ ] Phase 0 — AI Foundations (GenAI ideas → Python → APIs → Math → Rules/Agents)
 - [ ] Phase 1 — LLM Foundations (+ DeepSeek)
 - [ ] Phase 2 — Agent Fundamentals (LangGraph)
 - [ ] Phase 3 — RAG

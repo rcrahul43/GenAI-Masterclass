@@ -232,9 +232,9 @@ Use [Behavioral STAR](../Leadership/Behavioral-STAR-Principal-EM.md) Pattern 23 
 | # | Question | Module |
 |---|----------|--------|
 | Q1 | What is an AI agent vs automation script? | [00-02](../Modules/00-Foundations/00-02-From-Rules-to-Agents.md) |
-| Q2 | How does AI engineering differ from ML research? | [00-01](../Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) |
+| Q2 | How does AI engineering differ from ML research? | [12-06](../Modules/12-Advanced-Topics/12-06-AI-Product-Thinking.md) · Chip Huyen *AI Engineering* (via [00-01 Further Reading](../Modules/00-Foundations/00-01-AI-Engineering-Mindset.md)) |
 | Q3 | Walk through BankCo decision-support architecture | [00-03](../Modules/00-Foundations/00-03-BankCo-Decision-Support-Warmup.md) |
-| Q4 | When should a company NOT invest in custom AI? | [00-01](../Modules/00-Foundations/00-01-AI-Engineering-Mindset.md) |
+| Q4 | When should a company NOT invest in custom AI / not use an agent? | [00-02](../Modules/00-Foundations/00-02-From-Rules-to-Agents.md) · [12-06](../Modules/12-Advanced-Topics/12-06-AI-Product-Thinking.md) |
 
 ### Module 01 — LLM Engineering (8 questions)
 
